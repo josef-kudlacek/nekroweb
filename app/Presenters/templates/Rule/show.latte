@@ -1,0 +1,27 @@
+{block content}
+    <h1 n:block="title">Pravidla hodin</h1>
+    <div class="container">
+        {if $rules}
+            <ul class="list-group">
+                {foreach $rules as $rule}
+                    {if $rule->IsActive}
+                        {switch $rule->Type}
+                            {case Povinné}
+                                <li class="list-group-item list-group-item-action list-group-item-danger">
+                                    {$rule->Description}
+                                </li>
+                            {case Info}
+                                <li class="list-group-item list-group-item-action list-group-item-info">
+                                    {$rule->Description}
+                                </li>
+                            {default}
+                                <li class="list-group-item list-group-item-action list-group-item-light">
+                                    {$rule->Description}
+                                </li>
+                        {/switch}
+                    {/if}
+                {/foreach}
+            </ul>
+        {/if}
+    </div>
+{/block}

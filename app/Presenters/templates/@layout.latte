@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="{$basePath}/favicon.ico">
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{$basePath}/fonts/fontawesome-all.min.css">
+	<link rel="stylesheet" href="{$basePath}/fonts/font-awesome.min.css">
+	<link rel="stylesheet" href="{$basePath}/fonts/ionicons.min.css">
+	<link rel="stylesheet" href="{$basePath}/css/Contact-Form-Clean.css">
+	<link rel="stylesheet" href="{$basePath}/css/Footer-Basic.css">
+	<link rel="stylesheet" href="{$basePath}/css/Footer-Dark.css">
+	<link rel="stylesheet" href="{$basePath}/css/Login-Form-Dark.css">
+	<link rel="stylesheet" href="{$basePath}/css/Navigation-with-Button.css">
+	<link rel="stylesheet" href="{$basePath}/css/styles.css">
+	<link rel="stylesheet" href="{$basePath}/css/Team-Boxed.css">
+	<link rel="stylesheet" href="{$basePath}/css/Team-Grid.css">
+
+
+	<title>Nekromancie R.B.{ifset title} – {include title|stripHtml}{/ifset}</title>
+
+	{block scripts}
+		<script src="{$basePath}/js/jquery.min.js"></script>
+		<script src="{$basePath}/js/bootstrap.min.js"></script>
+	{/block}
+</head>
+
+<body>
+	{include "Navbar/default.latte"}
+
+	{include content}
+
+    {include "Homepage/footer.latte"}
+</body>
+</html>

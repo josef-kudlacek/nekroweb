@@ -1,0 +1,23 @@
+{block content}
+    <h1 n:block="title">Postavy</h1>
+    <div class="team-boxed">
+        <div class="container">
+            <div class="row people">
+                {if $characters}
+                    {foreach $characters as $character}
+                        {if $character->IsActive}
+                            <div class="col-md-6 col-lg-4 item">
+                                <div class="box">
+                                    <img class="rounded-circle" src="{$basePath}/img/character/{$character->ImageName}" alt="{$character->ImageName}">
+                                    <h3 class="name">{$character->Name}</h3>
+                                    <p class="title">{$character->Type}</p>
+                                    <p class="description">{$character->Description}</p>
+                                </div>
+                            </div>
+                        {/if}
+                    {/foreach}
+                {/if}
+            </div>
+        </div>
+    </div>
+{/block}

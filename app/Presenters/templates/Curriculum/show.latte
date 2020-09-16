@@ -1,0 +1,42 @@
+{block content}
+    <h1 n:block="title">Osnovy</h1>
+    <div class="team-grid">
+        <div class="container">
+            <div class="row people">
+                {if $lessons}
+                    {var $year = 0}
+                    {foreach $lessons as $lesson}
+                        {if $lesson->YearNumber == $year}
+                            <tr>
+                                <td>{$lesson->LessonNumber}. <strong>{$lesson->Name}</strong></td>
+                            </tr>
+                        {else}
+                            {if $iterator->first}
+
+                            {else}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            {/if}
+                        {var $year = $lesson->YearNumber}
+                            <div class="col-md-4 col-lg-3 item curriculum-item">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>{$lesson->YearNumber}. ročník – {$lesson->CodeName}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                        {/if}
+                    {/foreach}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                {/if}
+            </div>
+        </div>
+    </div>
+{/block}

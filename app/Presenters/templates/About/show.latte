@@ -1,0 +1,17 @@
+{block content}
+    <h1 n:block="title">O předmětu</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-7 offset-3 col-about">
+                <ul class="timeline">
+                    {if $history}
+                        {foreach $history as $historyItem}
+                            <li><strong>{$historyItem->YearFrom}{ifset $historyItem->YearTo}/{$historyItem->YearTo}{/ifset}</strong><br />
+                            {$historyItem->Description}</li>
+                        {/foreach}
+                    {/if}
+                </ul>
+            </div>
+        </div>
+    </div>
+{/block}
