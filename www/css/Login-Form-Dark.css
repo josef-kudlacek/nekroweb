@@ -1,7 +1,5 @@
 .login-dark {
-  height: 600px;
-  /*background: #475d62 url(star-sky.jpg);*/
-  /*background-size: cover;*/
+  padding-top: 40%;
   position: relative;
 }
 

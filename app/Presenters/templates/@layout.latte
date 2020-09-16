@@ -30,6 +30,10 @@
 <body>
 	{include "Navbar/default.latte"}
 
+	{foreach $flashes as $flash}
+		<div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+	{/foreach}
+
 	{include content}
 
     {include "Homepage/footer.latte"}

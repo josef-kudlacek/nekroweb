@@ -1,0 +1,67 @@
+{layout false}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="{$basePath}/favicon.ico">
+    <link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$basePath}/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{$basePath}/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="{$basePath}/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="{$basePath}/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="{$basePath}/css/Footer-Basic.css">
+    <link rel="stylesheet" href="{$basePath}/css/Footer-Dark.css">
+    <link rel="stylesheet" href="{$basePath}/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="{$basePath}/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="{$basePath}/css/styles.css">
+    <link rel="stylesheet" href="{$basePath}/css/Team-Boxed.css">
+    <link rel="stylesheet" href="{$basePath}/css/Team-Grid.css">
+
+
+    <title>Nekromancie R.B.{ifset title} – {include title|stripHtml}{/ifset}</title>
+
+    {block scripts}
+        <script src="{$basePath}/js/jquery.min.js"></script>
+        <script src="{$basePath}/js/bootstrap.min.js"></script>
+        <script src="https://nette.github.io/resources/js/2/netteForms.min.js"></script>
+    {/block}
+</head>
+
+<body>
+    {block content}
+        <h1 n:block=title>Žádost o přístup</h1>
+        {foreach $flashes as $flash}
+            <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+        {/foreach}
+
+        <div class="login-dark">
+            <form n:name=registerForm>
+                <div class="form-group">
+                    <img src="{$basePath}/img/web/moudry-klobouk.png" width="100%" height="100%">
+                </div>
+                <div class="form-group">
+                    <input n:name=username class="form-control" placeholder="Kouzelnické jméno">
+                </div>
+                <div class="form-group">
+                    <input n:name=email class="form-control" placeholder="Kontaktní e-mailová adresa">
+                </div>
+                <div class="form-group">
+                    <input n:name=password class="form-control" placeholder="Heslo">
+                </div>
+                <div class="form-group">
+                    <input n:name=password2 class="form-control" placeholder="Heslo znovu">
+                </div>
+                <div class="form-group">
+                    <input n:name=send class="btn btn-primary btn-block">
+                </div>
+                <br />
+                <div class="text-center">
+                    <a class="btn btn-outline-light" href="{link Homepage:default}">Zpět na hlavní stránku</a>
+                </div>
+            </form>
+        </div>
+    {/block}
+</body>
+</html>
