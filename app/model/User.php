@@ -3,11 +3,18 @@
 
 namespace App\Model;
 
+use App\MyAuthenticator;
+use App\utils\Utils;
 use Nette;
 
 class User
 {
     private $database;
+
+    /** @var MyAuthenticator
+     * @inject
+     */
+    public $authentication;
 
     public function __construct(Nette\Database\Context $database)
     {
@@ -34,4 +41,5 @@ class User
             LAST_INSERT_ID(), ?);',
             $values->class);
     }
+
 }

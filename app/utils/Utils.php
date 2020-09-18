@@ -35,4 +35,31 @@ class Utils
 
         return $selectBoxArray;
     }
+
+    public static function generateString($length)
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+
+        return $randomString;
+    }
+
+    public static function sendEmail($recipient, $subject, $newPassword)
+    {
+        $to = $recipient;
+        $subject = $subject;
+
+        $message = "<p>Dobrý den,</p><p>Bylo Vám vygenerováno nové heslo: <strong>".$newPassword."</strong><br />
+                S pozdravem a přáním pěkného dne,<br /><a href=https://www.nekromancie.eu>www.nekromancie.eu</a></p>";
+
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= 'From: profesor Richard Bufler <joseph.kudlacek@gmail.com>' . "\r\n";
+
+        mail($to,$subject,$message,$headers);
+    }
 }

@@ -3,6 +3,7 @@
 
 namespace App;
 
+use App\utils\Utils;
 use Nette;
 
 
@@ -45,6 +46,39 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             $row->Role,
             ['name' => $row->Name, 'email' => $row->Email]
         );
+    }
+
+    public function forgotPassword($values)
+    {
+        $row = $this->database->query('
+            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive
+            FROM user
+            WHERE user.Name = ?;',
+            $values->username)
+            ->fetch();
+
+        if (!$row) {
+            throw new Nette\Security\AuthenticationException('User not found.');
+        }
+
+        if ($values->email != $row->Email) {
+            throw new Nette\Security\AuthenticationException('Invalid email.');
+        }
+
+        if (!$row->IsActive) {
+            throw new Nette\UnexpectedValueException('User is not active.');
+        }
+
+        $newPassword = Utils::generateString(12);
+        $newHashPassword = $this->hash($newPassword);
+
+        $this->database->query('
+            UPDATE user
+            SET Password = ?
+            WHERE user.Name = ?;',
+                $newHashPassword, $values->username);
+
+        Utils::sendEmail($row->Email, 'Žádost o nové heslo', $newPassword);
     }
 
     public function hash($password)

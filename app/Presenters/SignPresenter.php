@@ -121,4 +121,42 @@ class SignPresenter extends BasePresenter
             $this->flashMessage('Žádost o přístup nebyla doposud schválena. Pro urychlení zkuste kontaktovat pana profesora.' ,"danger");
         }
     }
+
+    protected function createComponentForgotForm(): Form
+    {
+        $form = new Form;
+
+        $form->addText('username', 'Kouzelnické jméno')
+            ->setRequired('Prosím vyplňte své kouzelnické jméno.')
+            ->setMaxLength(64);
+
+        $form->addText('email', 'Email:')
+            ->setRequired('Prosím vyplňte svůj kontaktní email.')
+            ->addRule(Form::EMAIL, 'Zadaný email nemá správný formát');
+
+        $form->addSubmit('send', 'Odeslat nové heslo');
+
+        $form->addProtection();
+
+        $form->onSuccess[] = [$this, 'forgotFormSucceeded'];
+
+        return $form;
+    }
+
+    public function forgotFormSucceeded(Form $form, \stdClass $values): void
+    {
+        try {
+            $this->transaction->startTransaction();
+            $this->authentication->forgotPassword($values);
+            $this->transaction->endTransaction();
+
+            $this->flashMessage('Na email ' . $values->email . ' bylo zasláno nové heslo.' ,"success");
+            $this->redirect('Homepage:default');
+
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            $this->flashMessage('Kouzelnické jméno nebo email nenalezeny.' ,"danger");
+        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
+            $this->flashMessage('Doposud nebyla schválena profesorem žádost o přístup a proto není možné vygenerovat nové heslo. Obraťte se na profesora.' ,"danger");
+        }
+    }
 }
