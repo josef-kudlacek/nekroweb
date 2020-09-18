@@ -22,4 +22,16 @@ class User
             ?, ?, ?, ?);',
             $values->username, $values->email, $values->password, 2);
     }
+
+    public function insertStudent($values)
+    {
+        $this->insertUser($values);
+
+        bdump($values);
+        return $this->database->query('
+            INSERT INTO student (UserId, ClassId)
+            VALUES(
+            LAST_INSERT_ID(), ?);',
+            $values->class);
+    }
 }

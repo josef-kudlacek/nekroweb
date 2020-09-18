@@ -23,6 +23,8 @@ services:
 	- App\Model\Character
 	- App\Model\Rule
 	- App\Model\Curriculum
+	- App\Model\StudyClass
+	- App\Model\Transaction
 	- App\Model\User
 	- App\MyAuthenticator
 	security.passwords: Nette\Security\Passwords(::PASSWORD_BCRYPT, [cost: 12])

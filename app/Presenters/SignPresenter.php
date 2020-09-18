@@ -7,6 +7,7 @@ use App\Model;
 use App\MyAuthenticator;
 use Nette;
 use Nette\Application\UI\Form;
+use App\Utils\Utils;
 
 class SignPresenter extends BasePresenter
 {
@@ -20,6 +21,16 @@ class SignPresenter extends BasePresenter
      */
     public $user;
 
+    /** @var Model\StudyClass
+     * @inject
+     */
+    public $studyClass;
+
+    /** @var Model\Transaction
+     * @inject
+     */
+    public $transaction;
+
     protected function createComponentRegisterForm(): Form
     {
         $form = new Form;
@@ -32,9 +43,11 @@ class SignPresenter extends BasePresenter
             ->setRequired('Prosím vyplňte svůj kontaktní email.')
             ->addRule(Form::EMAIL, 'Zadaný email nemá správný formát');
 
-        //$form->addSelect('class')
-        //    ->setItems($this->studyField->getStudyFields()->fetchPairs('id', 'nazev'))
-        //    ->setRequired();
+        $selectItems = Utils::prepareSelectBoxArray($this->studyClass->getAvailableClasses());
+
+        $form->addSelect('class')
+            ->setItems($selectItems)
+            ->setRequired();
 
         $form->addPassword('password', 'Heslo:')
             ->setRequired('Prosím vyplňte své heslo.')
@@ -59,7 +72,10 @@ class SignPresenter extends BasePresenter
         try {
             $values->password = $this->authentication->hash($values->password);
 
-            $this->user->insertUser($values);
+            $this->transaction->startTransaction();
+            $this->user->insertStudent($values);
+            $this->transaction->endTransaction();
+
             $this->flashMessage('Žádost o přístup proběhla úspěšně. Počkejte na její schválení profesorem.' ,"success");
             $this->redirect('Homepage:default');
 
@@ -95,6 +111,7 @@ class SignPresenter extends BasePresenter
     {
         try {
             $this->getUser()->login($values->username, $values->password);
+
             $this->flashMessage('Přihlášení proběhlo úspěšně.' ,"success");
             $this->redirect('Homepage:default');
 
