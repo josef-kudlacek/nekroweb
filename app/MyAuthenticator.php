@@ -22,51 +22,38 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
     {
         [$username, $password] = $credentials;
 
-        $row = $this->database->query('
-            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, role.Name AS Role
-            FROM user
-            INNER JOIN role
-            ON user.RoleId = role.Id;')
-            ->fetch();
-
-        if (!$row) {
-            throw new Nette\Security\AuthenticationException('User not found.');
+        try {
+            $user = $this->findUser($username);
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            throw $authenticationException;
+        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
+            throw $unexpectedValueException;
         }
 
-        if (!$this->passwords->verify($password, $row->Password)) {
+        if (!$this->passwords->verify($password, $user->Password)) {
             throw new Nette\Security\AuthenticationException('Invalid password.');
         }
 
-        if (!$row->IsActive) {
-            throw new Nette\UnexpectedValueException('User is not active.');
-        }
-
         return new Nette\Security\Identity(
-            $row->Id,
-            $row->Role,
-            ['name' => $row->Name, 'email' => $row->Email]
+            $user->Id,
+            $user->Role,
+            ['name' => $user->Name, 'email' => $user->Email]
         );
     }
 
     public function forgotPassword($values)
     {
-        $row = $this->database->query('
-            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive
-            FROM user
-            WHERE user.Name = ?;',
-            $values->username)
-            ->fetch();
-
-        if (!$row) {
-            throw new Nette\Security\AuthenticationException('User not found.');
+        try {
+            $user = $this->findUser($values-username);
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            throw $authenticationException;
+        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
+            throw $unexpectedValueException;
         }
 
-        if ($values->email != $row->Email) {
+
+        if ($values->email != $user->Email) {
             throw new Nette\Security\AuthenticationException('Invalid email.');
-        }
-
-        if (!$row->IsActive) {
-            throw new Nette\UnexpectedValueException('User is not active.');
         }
 
         $newPassword = Utils::generateString(12);
@@ -78,7 +65,58 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             WHERE user.Name = ?;',
                 $newHashPassword, $values->username);
 
-        Utils::sendEmail($row->Email, 'Žádost o nové heslo', $newPassword);
+        Utils::sendEmail($user->Email, 'Žádost o nové heslo', $newPassword);
+    }
+
+    public function changePassword($values, $username)
+    {
+        try {
+            $user = $this->findUser($username);
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            throw $authenticationException;
+        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
+            throw $unexpectedValueException;
+        }
+
+        bdump($values->oldpassword);
+        bdump($user);
+
+        if (!$this->passwords->verify($values->oldpassword, $user->Password)) {
+            throw new Nette\Security\AuthenticationException('Invalid password.');
+        }
+
+        $this->setPassword($values->newpassword, $username);
+    }
+
+    protected function findUser($username)
+    {
+        $user = $this->database->query('
+            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, role.Name AS Role
+            FROM user
+            INNER JOIN role
+            ON user.RoleId = role.Id
+            WHERE user.Name = ?;',
+                $username)
+                ->fetch();
+
+        if (!$user) {
+            throw new Nette\Security\AuthenticationException('User not found.');
+        }
+
+        if (!$user->IsActive) {
+            throw new Nette\UnexpectedValueException('User is not active.');
+        }
+
+        return $user;
+    }
+
+    protected function setPassword($newPassword, $username)
+    {
+        $this->database->query('
+            UPDATE user
+            SET Password = ?
+            WHERE user.Name = ?;',
+            $newPassword, $username);
     }
 
     public function hash($password)

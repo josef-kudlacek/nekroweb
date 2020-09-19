@@ -31,6 +31,15 @@ class SignPresenter extends BasePresenter
      */
     public $transaction;
 
+    public function actionLogout()
+    {
+        $this->getUser()->logout(true);
+        bdump($this->getUser());
+
+        $this->flashMessage('Odhlášení proběhlo úspěšně.','success');
+        $this->redirect('Homepage:default');
+    }
+
     protected function createComponentRegisterForm(): Form
     {
         $form = new Form;
@@ -49,14 +58,17 @@ class SignPresenter extends BasePresenter
             ->setItems($selectItems)
             ->setRequired();
 
-        $form->addPassword('password', 'Heslo:')
+        $form->addPassword('password')
             ->setRequired('Prosím vyplňte své heslo.')
             ->setMaxLength(32);
 
-        $form->addPassword('password2', 'Opakování hesla:')
+        $form->addPassword('password2')
             ->setRequired('Prosím vyplňte podruhé své heslo pro kontrolu.')
             ->setMaxLength(32)
-            ->addRule(Form::EQUAL,'Vyplněná hesla se neshodují.', $form['password']);;
+            ->addRule(Form::EQUAL,'Vyplněná hesla se neshodují.', $form['password']);
+
+        $form->addCheckbox('agreement')
+            ->setRequired('Musíte souhlasit s podmínkami používání!');
 
         $form->addSubmit('send', 'Zažádat');
 
