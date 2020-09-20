@@ -1,0 +1,60 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Moje docházka a aktivita</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $attendance}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark">Hodina</th>
+                    <th class="text-white bg-dark">Datum a čas</th>
+                    <th class="text-white bg-dark">Aktivita</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $attendance as $attendanceItem}
+                <tr>
+                    <td class="text-white bg-dark">{$attendanceItem->Number}. hodina</td>
+                    <td class="text-dark bg-light">{$attendanceItem->AttendanceDate|date:"%d. %m. %Y %H:%M:%S"}</td>
+                    <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">{$attendanceItem->ActivityPoints}</td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+
+        <h2>Legenda docházky</h2>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th class="text-white bg-dark">Docházka</th>
+                <th class="text-white bg-dark">Barva</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-white bg-dark">Přítomnost</td>
+                    <td class="text-dark bg-success">Zelená</td>
+                </tr>
+                <tr>
+                    <td class="text-white bg-dark">Přítomnost 1/2</td>
+                    <td class="text-dark bg-warning">Žlutá</td>
+                </tr>
+                <tr>
+                    <td class="text-white bg-dark">Omluveno</td>
+                    <td class="text-dark bg-info">Tmavě azurová</td>
+                </tr>
+                <tr>
+                    <td class="text-white bg-dark">Neomluveno</td>
+                    <td class="text-dark bg-danger">Červená</td>
+                </tr>
+                <tr>
+                    <td class="text-white bg-dark">Náhradní hodina</td>
+                    <td class="text-dark bg-default">Výchozí</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{/block}

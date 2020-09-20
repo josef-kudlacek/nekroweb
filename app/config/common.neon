@@ -20,6 +20,7 @@ di:
 services:
 	router: App\Router\RouterFactory::createRouter
 	- App\Model\About
+	- App\Model\Attendance
 	- App\Model\Character
 	- App\Model\Rule
 	- App\Model\Curriculum

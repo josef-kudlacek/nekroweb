@@ -4,7 +4,6 @@
 namespace App\Model;
 
 use App\MyAuthenticator;
-use App\utils\Utils;
 use Nette;
 
 class User

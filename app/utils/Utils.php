@@ -30,7 +30,13 @@ class Utils
         $selectBoxArray = array();
         foreach ($resultsetArray as $key => $value)
         {
-            $selectBoxArray[$value['ClassId']] = $value['Name']. ' (' . $value['YearFrom'] . '/' . $value['YearTo'] . ')';
+            $string = $value['Name']. ' (' . $value['YearFrom'];
+            if ($value['YearTo'])
+            {
+                $string = $string . '/' . $value['YearTo'];
+            }
+
+            $selectBoxArray[$value['ClassId']] = $string . ')';
         }
 
         return $selectBoxArray;

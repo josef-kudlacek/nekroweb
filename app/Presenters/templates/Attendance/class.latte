@@ -1,0 +1,88 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Přehled docházky a aktivity</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $attendance}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-white bg-dark">Student</th>
+                        <th class="text-white bg-dark">1. hodina</th>
+                        <th class="text-white bg-dark">2. hodina</th>
+                        <th class="text-white bg-dark">3. hodina</th>
+                        <th class="text-white bg-dark">4. hodina</th>
+                        <th class="text-white bg-dark">5. hodina</th>
+                        <th class="text-white bg-dark">6. hodina</th>
+                        <th class="text-white bg-dark">7. hodina</th>
+                        <th class="text-white bg-dark">8. hodina</th>
+                        <th class="text-white bg-dark">9. hodina</th>
+                        <th class="text-white bg-dark">10. hodina</th>
+                        <th class="text-white bg-dark">11. hodina</th>
+                        <th class="text-white bg-dark">12. hodina</th>
+                        <th class="text-white bg-dark">13. hodina</th>
+                        <th class="text-white bg-dark">14. hodina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {foreach $attendance as $attendanceItem}
+                    <tr>
+                        <td class="text-dark table-{$attendanceItem->HouseId|houseType}">{$attendanceItem->Name}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson1AT|attendanceType}">{$attendanceItem->Lesson1AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson2AT|attendanceType}">{$attendanceItem->Lesson2AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson3AT|attendanceType}">{$attendanceItem->Lesson3AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson4AT|attendanceType}">{$attendanceItem->Lesson4AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson5AT|attendanceType}">{$attendanceItem->Lesson5AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson6AT|attendanceType}">{$attendanceItem->Lesson6AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson7AT|attendanceType}">{$attendanceItem->Lesson7AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson8AT|attendanceType}">{$attendanceItem->Lesson8AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson9AT|attendanceType}">{$attendanceItem->Lesson9AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson10AT|attendanceType}">{$attendanceItem->Lesson10AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson11AT|attendanceType}">{$attendanceItem->Lesson11AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson12AT|attendanceType}">{$attendanceItem->Lesson12AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson13AT|attendanceType}">{$attendanceItem->Lesson13AP}</td>
+                        <td class="text-dark bg-{$attendanceItem->Lesson14AT|attendanceType}">{$attendanceItem->Lesson14AP}</td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+
+        <h2>Legenda docházky</h2>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th class="text-white bg-dark">Docházka</th>
+                <th class="text-white bg-dark">Barva</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-white bg-dark">Přítomnost</td>
+                <td class="text-dark bg-success">Zelená</td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">Přítomnost 1/2</td>
+                <td class="text-dark bg-warning">Žlutá</td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">Omluveno</td>
+                <td class="text-dark bg-info">Tmavě azurová</td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">Neomluveno</td>
+                <td class="text-dark bg-danger">Červená</td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">Náhradní hodina</td>
+                <td class="text-dark bg-default">Výchozí</td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">Nezapsáno</td>
+                <td class="text-white bg-dark">Černá</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{/block}
