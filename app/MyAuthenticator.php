@@ -40,8 +40,11 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             $user->Id,
             $user->Role,
             ['name' => $user->Name,
-            'email' => $user->Email,
-            'class' => $user->Class]
+                'email' => $user->Email,
+                'class' => $user->Class,
+                'classId' => $user->ClassId,
+                'semesterFrom' => $user->YearFrom,
+                'semesterTo' => $user->YearTo]
         );
     }
 
@@ -96,14 +99,18 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
     protected function findUser($username)
     {
         $user = $this->database->query('
-            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, role.Name AS Role, class.Name AS Class
+            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, 
+            role.Name AS Role, student.ClassId as ClassId, class.Name AS Class,
+            semester.YearFrom, semester.YearTo
             FROM user
             INNER JOIN role
             ON user.RoleId = role.Id
             INNER JOIN student
 			ON student.UserId = user.Id
 			INNER JOIN class
-			ON student.ClassId = class.Id
+			ON student.ClassId = class.Id			
+			INNER JOIN semester
+			ON semester.Id = class.SemesterId
 			WHERE user.Name = ?
 			ORDER BY class.FirstLesson DESC
 			LIMIT 1;',

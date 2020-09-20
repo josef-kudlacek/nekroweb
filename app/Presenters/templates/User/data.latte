@@ -16,6 +16,14 @@
                 <td><strong>{$user->getIdentity()->class}</strong></td>
             </tr>
             <tr>
+                <td class="text-white bg-dark">Školní rok:</td>
+                <td>
+                    <strong>{$user->getIdentity()->semesterFrom}
+                    {ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
+                    </strong>
+                </td>
+            </tr>
+            <tr>
                 <td class="text-white bg-secondary">Počet bodů za aktivitu:</td>
                 <td><strong>??</strong></td>
             </tr>
