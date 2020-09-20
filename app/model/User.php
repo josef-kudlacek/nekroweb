@@ -64,6 +64,23 @@ class User
                 $userId);
     }
 
+    public function getUserHistory($userId)
+    {
+        return $this->database->query('
+            SELECT semester.YearFrom, semester.YearTo, class.Name AS ClassName,
+            mark.Shortcut, student.CertificateDate
+            FROM student
+            INNER JOIN class
+            ON student.ClassId = class.Id
+            INNER JOIN semester
+            ON class.SemesterId = semester.Id
+            LEFT JOIN mark
+            ON student.Certificate = mark.Id
+            WHERE student.UserId = ?
+            ORDER BY class.FirstLesson;',
+            $userId);
+    }
+
     public function deleteUser($username)
     {
         return $this->database->query('

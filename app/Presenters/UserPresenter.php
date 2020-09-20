@@ -27,6 +27,15 @@ class UserPresenter extends BasePresenter
      */
     public $dbUser;
 
+    protected function startup()
+    {
+        parent::startup();
+        if (!$this->getUser()->loggedIn) {
+            $this->flashMessage('Přístup do této sekce je pouze pro přihlášené!','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     public function actionDeleteUser()
     {
         $this->transaction->startTransaction();
@@ -37,6 +46,12 @@ class UserPresenter extends BasePresenter
 
         $this->flashMessage('Odhlášení proběhlo úspěšně. Citlivé údaje byly odstraněny z databáze.','info');
         $this->redirect('Homepage:default');
+    }
+
+    public function renderHistory()
+    {
+        $userId = $this->user->getId();
+        $this->template->history = $this->dbUser->getUserHistory($userId);
     }
 
     protected function createComponentChangePassForm(): Form

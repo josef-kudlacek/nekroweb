@@ -14,6 +14,15 @@ class AttendancePresenter extends BasePresenter
         $this->attendance = $attendance;
     }
 
+    protected function startup()
+    {
+        parent::startup();
+        if (!$this->getUser()->loggedIn) {
+            $this->flashMessage('Přístup do této sekce je pouze pro přihlášené!','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     public function renderShow()
     {
         $userId = $this->user->getId();

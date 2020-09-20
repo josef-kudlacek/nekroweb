@@ -48,6 +48,18 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
         );
     }
 
+    public function isAllowed($role, $resource, $operation): bool
+    {
+        if ($role === 'Profesor') {
+            return true;
+        }
+        if ($role === 'Student' && $resource === 'history') {
+            return false;
+        }
+
+        return false;
+    }
+
     public function forgotPassword($values)
     {
         try {

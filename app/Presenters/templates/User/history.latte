@@ -1,0 +1,18 @@
+{block content}
+    <h1 n:block="title">Historie studia</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-7 offset-3 col-about">
+                <ul class="timeline">
+                    {if $history}
+                        {foreach $history as $historyItem}
+                            <li><strong>{$historyItem->YearFrom}{if $historyItem->YearTo}/{$historyItem->YearTo}{/if}</strong><br />
+                                <strong>Třída:</strong> {$historyItem->ClassName}<br />
+                                <strong>Vysvědčení:</strong> {$historyItem->Shortcut} {if $historyItem->CertificateDate}({$historyItem->CertificateDate|date:"%d. %m. %y"}){/if}</li>
+                        {/foreach}
+                    {/if}
+                </ul>
+            </div>
+        </div>
+    </div>
+{/block}
