@@ -28,6 +28,8 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             throw $authenticationException;
         } catch (Nette\UnexpectedValueException $unexpectedValueException) {
             throw $unexpectedValueException;
+        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
+            throw $invalidArgumentException;
         }
 
         if (!$this->passwords->verify($password, $user->Password)) {
@@ -37,7 +39,9 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
         return new Nette\Security\Identity(
             $user->Id,
             $user->Role,
-            ['name' => $user->Name, 'email' => $user->Email]
+            ['name' => $user->Name,
+            'email' => $user->Email,
+            'class' => $user->Class]
         );
     }
 
@@ -49,6 +53,8 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             throw $authenticationException;
         } catch (Nette\UnexpectedValueException $unexpectedValueException) {
             throw $unexpectedValueException;
+        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
+            throw $invalidArgumentException;
         }
 
 
@@ -76,10 +82,9 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             throw $authenticationException;
         } catch (Nette\UnexpectedValueException $unexpectedValueException) {
             throw $unexpectedValueException;
+        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
+            throw $invalidArgumentException;
         }
-
-        bdump($values->oldpassword);
-        bdump($user);
 
         if (!$this->passwords->verify($values->oldpassword, $user->Password)) {
             throw new Nette\Security\AuthenticationException('Invalid password.');
@@ -91,16 +96,26 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
     protected function findUser($username)
     {
         $user = $this->database->query('
-            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, role.Name AS Role
+            SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, role.Name AS Role, class.Name AS Class
             FROM user
             INNER JOIN role
             ON user.RoleId = role.Id
-            WHERE user.Name = ?;',
+            INNER JOIN student
+			ON student.UserId = user.Id
+			INNER JOIN class
+			ON student.ClassId = class.Id
+			WHERE user.Name = ?
+			ORDER BY class.FirstLesson DESC
+			LIMIT 1;',
                 $username)
                 ->fetch();
 
         if (!$user) {
             throw new Nette\Security\AuthenticationException('User not found.');
+        }
+
+        if (is_null($user->Email)) {
+            throw new Nette\InvalidArgumentException('User has invalid credentials.');
         }
 
         if (!$user->IsActive) {

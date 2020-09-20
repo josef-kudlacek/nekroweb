@@ -20,6 +20,12 @@ class UserPresenter extends BasePresenter
      */
     public $transaction;
 
+
+    /** @var Model\User
+     * @inject
+     */
+    public $dbUser;
+
     protected function createComponentChangePassForm(): Form
     {
         $form = new Form;
@@ -60,5 +66,19 @@ class UserPresenter extends BasePresenter
         } catch (Nette\Security\AuthenticationException $authenticationException) {
             $this->flashMessage('Původní heslo nesouhlasí. Heslo nemohlo být změněno.' ,"danger");
         }
+    }
+
+    public function actionDeleteUser()
+    {
+        $this->transaction->startTransaction();
+        $this->dbUser->deleteUser($this->user->getIdentity()->name);
+        $this->transaction->endTransaction();
+
+        $this->user->logout(true);
+
+        $this->flashMessage('Odhlášení proběhlo úspěšně. Citlivé údaje byly odstraněny z databáze.','info');
+        $this->redirect('Homepage:default');
+
+        $this->redirect('Homepage:default');
     }
 }

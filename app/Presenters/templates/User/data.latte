@@ -1,0 +1,29 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Moje údaje</h1>
+        <table class="table table-hover">
+            <tbody>
+            <tr>
+                <td class="text-white bg-dark">Kouzelnické jméno:</td>
+                <td><strong>{$user->getIdentity()->name}</strong></td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">E-mailová adresa:</td>
+                <td><strong>{$user->getIdentity()->email}</strong></td>
+            </tr>
+            <tr>
+                <td class="text-white bg-dark">Studovaná třída:</td>
+                <td><strong>{$user->getIdentity()->class}</strong></td>
+            </tr>
+            <tr>
+                <td class="text-white bg-secondary">Počet bodů za aktivitu:</td>
+                <td><strong>??</strong></td>
+            </tr>
+            <tr>
+                <td class="text-white bg-secondary">Počet bodů celkem:</td>
+                <td><strong>??</strong></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{/block}

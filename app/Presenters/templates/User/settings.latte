@@ -1,6 +1,9 @@
 {block content}
     <div class="container">
-        <h1 n:block="title">Změna hesla</h1>
+        <h1 n:block="title">Nastavení</h1>
+        <div class="form-group col-md-4 offset-md-4">
+            <h3><u>Změna hesla</u></h3>
+        </div>
         <form n:name=changePassForm>
             <ul class="errors" n:if="$form->hasErrors()">
                 <li n:foreach="$form->errors as $error">{$error}</li>
@@ -21,5 +24,12 @@
                 <input n:name=send class="btn btn-primary btn-block">
             </div>
         </form>
+        <div class="form-group col-md-4 offset-md-4">
+            <h3><u>Zrušení uživatele</u></h3>
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <label>Dojde ke smazání <abbr title="Jedná se o e-mailovou adresu a použité zašifrované heslo.">citlivých údajů</abbr> z databáze</label>
+            <a href="{link User:deleteUser}" class="btn btn-danger btn-block" role="button">Smazat</a>
+        </div>
     </div>
 {/block}

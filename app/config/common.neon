@@ -27,4 +27,5 @@ services:
 	- App\Model\Transaction
 	- App\Model\User
 	- App\MyAuthenticator
+	- App\Presenters\SignPresenter
 	security.passwords: Nette\Security\Passwords(::PASSWORD_BCRYPT, [cost: 12])

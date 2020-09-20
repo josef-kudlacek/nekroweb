@@ -34,7 +34,6 @@ class SignPresenter extends BasePresenter
     public function actionLogout()
     {
         $this->getUser()->logout(true);
-        bdump($this->getUser());
 
         $this->flashMessage('Odhlášení proběhlo úspěšně.','success');
         $this->redirect('Homepage:default');
@@ -131,6 +130,8 @@ class SignPresenter extends BasePresenter
             $this->flashMessage('Kouzelnické jméno nebo heslo není správně.' ,"danger");
         } catch (Nette\UnexpectedValueException $unexpectedValueException) {
             $this->flashMessage('Žádost o přístup nebyla doposud schválena. Pro urychlení zkuste kontaktovat pana profesora.' ,"danger");
+        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
+            $this->flashMessage('Kouzelnické jméno nenalezeno.' ,"danger");
         }
     }
 
