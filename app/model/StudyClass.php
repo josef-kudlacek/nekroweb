@@ -17,7 +17,7 @@ class StudyClass
     public function getClasses($firstLessonParameter, $lastLessonParameter)
     {
         return $this->database->query('
-            SELECT class.Id, class.Name, class.TimeFrom, class.TimeTo, class.FirstLesson, class.LastLesson, 
+            SELECT class.Id AS ClassId, class.Name, class.TimeFrom, class.TimeTo, class.FirstLesson, class.LastLesson, 
             semester.Id AS SemesterId, semester.YearFrom, semester.YearTo,
             year.Id AS YearId, year.Number, year.CodeName
             FROM necromancy.class class

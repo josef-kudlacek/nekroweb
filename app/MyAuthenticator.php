@@ -41,7 +41,7 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             $user->Role,
             ['name' => $user->Name,
                 'email' => $user->Email,
-                'class' => $user->Class,
+                'className' => $user->Class,
                 'classId' => $user->ClassId,
                 'semesterFrom' => $user->YearFrom,
                 'semesterTo' => $user->YearTo]

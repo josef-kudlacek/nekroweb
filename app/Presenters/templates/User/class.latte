@@ -1,0 +1,20 @@
+{block content}
+<div class="container">
+    <h1 n:block="title">Přepnout třídu</h1>
+    <div class="form-group col-md-4 offset-md-4">
+        <i>Umožní Ti přístup k materiálům z jiných let.</i>
+    </div>
+    <form n:name=changeClassForm>
+        <ul class="errors" n:if="$form->hasErrors()">
+            <li n:foreach="$form->errors as $error">{$error}</li>
+        </ul>
+        <div class="form-group col-md-4 offset-md-4">
+            <label>Výběr ze Tvých tříd nekromancie:</label>
+            <select n:name=class class="form-control" placeholder="Třída nekromancie"></select>
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <input n:name=send class="btn btn-primary btn-block">
+        </div>
+    </form>
+</div>
+{/block}

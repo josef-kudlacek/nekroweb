@@ -5,6 +5,7 @@ namespace App\Presenters;
 
 use App\Model;
 use App\MyAuthenticator;
+use App\utils\Utils;
 use Nette;
 use Nette\Application\UI\Form;
 
@@ -25,6 +26,18 @@ class UserPresenter extends BasePresenter
      * @inject
      */
     public $dbUser;
+
+    public function actionDeleteUser()
+    {
+        $this->transaction->startTransaction();
+        $this->dbUser->deleteUser($this->user->getIdentity()->name);
+        $this->transaction->endTransaction();
+
+        $this->user->logout(true);
+
+        $this->flashMessage('Odhlášení proběhlo úspěšně. Citlivé údaje byly odstraněny z databáze.','info');
+        $this->redirect('Homepage:default');
+    }
 
     protected function createComponentChangePassForm(): Form
     {
@@ -68,17 +81,44 @@ class UserPresenter extends BasePresenter
         }
     }
 
-    public function actionDeleteUser()
+    protected function createComponentChangeClassForm(): Form
     {
-        $this->transaction->startTransaction();
-        $this->dbUser->deleteUser($this->user->getIdentity()->name);
-        $this->transaction->endTransaction();
+        $form = new Form;
 
-        $this->user->logout(true);
+        $this->template->classes = $this->dbUser->getUserClasses($this->user->getId());
 
-        $this->flashMessage('Odhlášení proběhlo úspěšně. Citlivé údaje byly odstraněny z databáze.','info');
-        $this->redirect('Homepage:default');
+        $selectItems = Utils::prepareSelectBoxArray($this->template->classes);
 
-        $this->redirect('Homepage:default');
+        $form->addSelect('class')
+            ->setItems($selectItems)
+            ->setRequired();
+
+        $form->addSubmit('send', 'Přepnout třídu');
+
+        $form->addProtection();
+
+        $form->onSuccess[] = [$this, 'changeClassFormSucceeded'];
+
+        return $form;
+    }
+
+    public function changeClassFormSucceeded(Form $form, \stdClass $values): void
+    {
+        $classes = $this->template->classes->fetchAll();
+        $classId = array_search($values->class, array_column($classes, 'ClassId'));
+        $class = $classes[$classId];
+
+        try {
+            $this->user->getIdentity()->classId = $class->ClassId;
+            $this->user->getIdentity()->className = $class->Name;
+            $this->user->getIdentity()->semesterFrom = $class->YearFrom;
+            $this->user->getIdentity()->semesterTo = $class->YearTo;
+
+            $this->flashMessage('Třída úspěšně změněna. Vítej ve třídě '. $class->Name .'!' ,"success");
+            $this->redirect('User:data');
+
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            $this->flashMessage('Původní heslo nesouhlasí. Heslo nemohlo být změněno.' ,"danger");
+        }
     }
 }

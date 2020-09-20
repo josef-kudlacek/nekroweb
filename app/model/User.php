@@ -50,6 +50,21 @@ class User
             $values->class);
     }
 
+    public function getUserClasses($userId)
+    {
+        return $this->database->query('
+            SELECT student.ClassId as ClassId, class.Name AS Name,
+            semester.YearFrom, semester.YearTo
+            FROM student
+            INNER JOIN class
+            ON student.ClassId = class.Id
+            INNER JOIN semester
+            ON semester.Id = class.SemesterId
+            WHERE student.UserId = ?
+            ORDER BY class.FirstLesson DESC;',
+                $userId);
+    }
+
     public function deleteUser($username)
     {
         return $this->database->query('
