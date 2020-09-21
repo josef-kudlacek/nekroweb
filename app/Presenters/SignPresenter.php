@@ -31,6 +31,11 @@ class SignPresenter extends BasePresenter
      */
     public $transaction;
 
+    /** @var Model\Semester
+     * @inject
+     */
+    public $semester;
+
     public function actionLogout()
     {
         $this->getUser()->logout(true);
@@ -122,6 +127,9 @@ class SignPresenter extends BasePresenter
     {
         try {
             $this->getUser()->login($values->username, $values->password);
+            if ($this->getUser()->isInRole('Profesor')) {
+                Utils::setActualSemester($this->getUser()->getIdentity(), $this->semester->GetActualSemester());
+            }
 
             $this->flashMessage('Přihlášení proběhlo úspěšně.' ,"success");
             $this->redirect('Homepage:default');

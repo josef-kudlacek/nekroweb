@@ -1,0 +1,16 @@
+{block content}
+    <h1 n:block="title">Pravidla hodin</h1>
+    <div class="container">
+        {if suggestion}
+            <form>
+                {foreach $suggestion as $suggestionItem}
+                <div class="form-group">
+                    <span>{$suggestionItem->Name}</span>
+                    <label>{$suggestionItem->Datetime}</label>
+                    <label>{$suggestionItem->Text}</label>
+                </div>
+                {/foreach}
+            </form>
+        {/if}
+    </div>
+{/block}

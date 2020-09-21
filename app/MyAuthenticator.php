@@ -117,11 +117,11 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             FROM user
             INNER JOIN role
             ON user.RoleId = role.Id
-            INNER JOIN student
+            LEFT JOIN student
 			ON student.UserId = user.Id
-			INNER JOIN class
+			LEFT JOIN class
 			ON student.ClassId = class.Id			
-			INNER JOIN semester
+			LEFT JOIN semester
 			ON semester.Id = class.SemesterId
 			WHERE user.Name = ?
 			ORDER BY class.FirstLesson DESC

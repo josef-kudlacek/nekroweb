@@ -42,6 +42,15 @@ class Utils
         return $selectBoxArray;
     }
 
+    public static function setActualSemester($userIdentity, $actualSemester)
+    {
+        bdump($userIdentity);
+        $userIdentity->semesterId = $actualSemester->Id;
+        $userIdentity->semesterFrom = $actualSemester->YearFrom;
+        $userIdentity->semesterTo = $actualSemester->YearTo;
+        bdump($userIdentity);
+    }
+
     public static function generateString($length)
     {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

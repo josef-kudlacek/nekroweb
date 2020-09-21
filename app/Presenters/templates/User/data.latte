@@ -12,25 +12,28 @@
                 <td><strong>{$user->getIdentity()->email}</strong></td>
             </tr>
             <tr>
-                <td class="text-white bg-dark">Studovaná třída:</td>
-                <td><strong>{$user->getIdentity()->className}</strong></td>
-            </tr>
+                 <td class="text-white bg-dark">Školní rok:</td>
+                     <td>
+                         <strong>{$user->getIdentity()->semesterFrom}
+                         {ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
+                         </strong>
+                     </td>
+                 </tr>
             <tr>
-                <td class="text-white bg-dark">Školní rok:</td>
-                <td>
-                    <strong>{$user->getIdentity()->semesterFrom}
-                    {ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-white bg-secondary">Počet bodů za aktivitu:</td>
-                <td><strong>??</strong></td>
-            </tr>
-            <tr>
-                <td class="text-white bg-secondary">Počet bodů celkem:</td>
-                <td><strong>??</strong></td>
-            </tr>
+            {if $user->isInRole('Student')}
+                    <td class="text-white bg-dark">Studovaná třída:</td>
+                    <td><strong>{$user->getIdentity()->className}</strong></td>
+                </tr>
+
+                <tr>
+                    <td class="text-white bg-secondary">Počet bodů za aktivitu:</td>
+                    <td><strong>??</strong></td>
+                </tr>
+                <tr>
+                    <td class="text-white bg-secondary">Počet bodů celkem:</td>
+                    <td><strong>??</strong></td>
+                </tr>
+            {/if}
             </tbody>
         </table>
     </div>

@@ -31,8 +31,8 @@ class UserPresenter extends BasePresenter
     {
         parent::startup();
         if (!$this->getUser()->loggedIn) {
-            $this->flashMessage('Přístup do této sekce je pouze pro přihlášené!','danger');
-            $this->redirect('Homepage:default');
+            $this->flashMessage('Přístup do této sekce je pouze pro přihlášené. Přihlaste se prosím.','danger');
+            $this->redirect('Sign:in');
         }
     }
 

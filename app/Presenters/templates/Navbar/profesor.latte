@@ -53,16 +53,18 @@
                         </div>
                     </li>
                 </ul>
-                <li class="dropdown nav-item">
-                <span class="navbar-text actions" data-toggle="dropdown" style="color: #000;background-color: #506F7A;padding: .5em;border-radius: 10px;" aria-expanded="false" href="#">
-                    <strong>{$user->getIdentity()->name}</strong></span>
+                <li class="dropdown nav-item" aria-expanded="false">
+                    <a href="#" data-toggle="dropdown">
+                           <span class="navbar-text actions" style="color: #000;background-color: #506F7A;padding: .5em;border-radius: 10px;">
+                           <strong>{$user->getIdentity()->name}</strong></span>
+                    </a>
                     <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item" role="presentation" href="#">Historie studia</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Návrhy a připomínky</a>
                         <div class="dropdown-divider" role="presentation"></div>
                         <a class="dropdown-item" role="presentation" href="{link User:data}">Moje údaje</a>
                         <a class="dropdown-item" role="presentation" href="{link User:settings}">Nastavení</a>
-                        <a class="dropdown-item" role="presentation" href="#">Změna identity</a>
-                        <a class="dropdown-item" role="presentation" href="{link Sign:logout}">Odhlásit se</a></div>
+                        <a class="dropdown-item" role="presentation" href="{link Sign:logout}">Odhlásit se</a>
+                    </div>
                 </li>
             </div>
         </div>

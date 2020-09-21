@@ -24,6 +24,8 @@ services:
 	- App\Model\Character
 	- App\Model\Rule
 	- App\Model\Curriculum
+	- App\Model\Semester
+	- App\Model\Suggestion
 	- App\Model\StudyClass
 	- App\Model\Transaction
 	- App\Model\User
