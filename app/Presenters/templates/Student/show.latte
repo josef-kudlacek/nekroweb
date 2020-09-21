@@ -1,0 +1,40 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Správa studentů</h1>
+        <h2>Přehled studentů</h2>
+        {if $students}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark">Student</th>
+                    <th class="text-white bg-dark">Třída</th>
+                    <th class="text-white bg-dark">Aktivní</th>
+                    <th class="text-white bg-dark">Správa</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $students as $student}
+                <tr class="text-white bg-{$student->HouseId|houseType}">
+                    <td>{$student->UserName}</td>
+                    <td>{$student->ClassName}</td>
+                    <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
+                    <td>
+                        <a href="{link edit $student->UserId}" class="btn btn-secondary btn-sm"
+                           role="button">Upravit</a>
+                        <a href="{link delete $student->UserId, $student->ClassId}" class="btn btn-dark btn-sm"
+                           role="button">Odebrat</a>
+                        {if !$student->IsActive}
+                            <a href="{link active $student->UserId}" class="btn btn-light btn-sm"
+                                role="button">Aktivovat</a>
+                        {/if}
+                    </td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+
+    </div>
+{/block}

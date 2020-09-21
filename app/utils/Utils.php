@@ -42,13 +42,30 @@ class Utils
         return $selectBoxArray;
     }
 
+    public static function prepareSemesterSelectBoxArray($databaseResultSet)
+    {
+        $resultsetArray = $databaseResultSet->fetchAll();
+
+        $selectBoxArray = array();
+        foreach ($resultsetArray as $key => $value)
+        {
+            $string = $value['YearFrom'];
+            if ($value['YearTo'])
+            {
+                $string = $string . '/' . $value['YearTo'];
+            }
+
+            $selectBoxArray[$value['SemesterId']] = $string;
+        }
+
+        return $selectBoxArray;
+    }
+
     public static function setActualSemester($userIdentity, $actualSemester)
     {
-        bdump($userIdentity);
         $userIdentity->semesterId = $actualSemester->Id;
         $userIdentity->semesterFrom = $actualSemester->YearFrom;
         $userIdentity->semesterTo = $actualSemester->YearTo;
-        bdump($userIdentity);
     }
 
     public static function generateString($length)

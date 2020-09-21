@@ -22,11 +22,14 @@ services:
 	- App\Model\About
 	- App\Model\Attendance
 	- App\Model\Character
+	- App\Model\Disquisition
+	- App\Model\Homework
 	- App\Model\Rule
 	- App\Model\Curriculum
 	- App\Model\Semester
 	- App\Model\Suggestion
 	- App\Model\StudyClass
+	- App\Model\Student
 	- App\Model\Transaction
 	- App\Model\User
 	- App\MyAuthenticator

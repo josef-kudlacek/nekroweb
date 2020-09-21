@@ -35,9 +35,9 @@
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Správa roku</a>
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" role="presentation" href="#">Archy z hodin</a>
-                            <a class="dropdown-item" role="presentation" href="#">Docházka</a>
-                            <a class="dropdown-item" role="presentation" href="#">Domácí úkoly</a>
-                            <a class="dropdown-item" role="presentation" href="#">Výklady</a>
+                            <a class="dropdown-item" role="presentation" href="{link Attendance:admin}">Docházka</a>
+                            <a class="dropdown-item" role="presentation" href="{link Homework:show}">Domácí úkoly</a>
+                            <a class="dropdown-item" role="presentation" href="{link Disquisition:show}">Výklady</a>
                             <div class="dropdown-divider" role="presentation"></div>
                             <a class="dropdown-item" role="presentation" href="#">Celoroční soutěž</a>
                             <a class="dropdown-item" role="presentation" href="#">Zkouška Smrti</a>
@@ -47,9 +47,9 @@
                     <li class="dropdown nav-item">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Správa výuky</a>
                         <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="#">Správa studentů</a>
-                            <a class="dropdown-item" role="presentation" href="#">Správa semestrů</a>
-                            <a class="dropdown-item" role="presentation" href="#">Správa tříd</a>
+                            <a class="dropdown-item" role="presentation" href="{link StudyClass:show}">Správa tříd</a>
+                            <a class="dropdown-item" role="presentation" href="{link Student:show}">Správa studentů</a>
+                            <a class="dropdown-item" role="presentation" href="{link Semester:show}">Správa semestrů</a>
                         </div>
                     </li>
                 </ul>
@@ -59,6 +59,7 @@
                            <strong>{$user->getIdentity()->name}</strong></span>
                     </a>
                     <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="{link Semester:change}">Změnit semestr</a>
                         <a class="dropdown-item disabled" role="presentation" href="#">Návrhy a připomínky</a>
                         <div class="dropdown-divider" role="presentation"></div>
                         <a class="dropdown-item" role="presentation" href="{link User:data}">Moje údaje</a>

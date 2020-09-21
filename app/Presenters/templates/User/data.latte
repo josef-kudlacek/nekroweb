@@ -14,8 +14,7 @@
             <tr>
                  <td class="text-white bg-dark">Školní rok:</td>
                      <td>
-                         <strong>{$user->getIdentity()->semesterFrom}
-                         {ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
+                         <strong>{$user->getIdentity()->semesterFrom}{ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
                          </strong>
                      </td>
                  </tr>

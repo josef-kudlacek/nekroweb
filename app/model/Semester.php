@@ -22,4 +22,12 @@ class Semester
             ORDER BY semester.YearFrom DESC, semester.YearTo DESC
             LIMIT 1;')->fetch();
     }
+
+    public function GetSemesters()
+    {
+        return $this->database->query('
+            SELECT semester.Id AS SemesterId, semester.YearFrom, semester.YearTo
+            FROM semester
+            ORDER BY semester.YearFrom DESC, semester.YearTo DESC;');
+    }
 }
