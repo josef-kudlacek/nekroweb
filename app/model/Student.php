@@ -9,6 +9,11 @@ class Student
 {
     private $database;
 
+    /** @var Model\User
+     * @inject
+     */
+    public $dbUser;
+
     public function __construct(Nette\Database\Context $database)
     {
         $this->database = $database;
@@ -51,15 +56,36 @@ class Student
             $studentId, $classId);
     }
 
+    public function insertStudent($values)
+    {
+        $this->insertUser($values->username, $values->isactive);
+
+        $this->database->query('
+            SELECT @id := 
+            (SELECT Id FROM user WHERE Name = @username);');
+
+        $this->database->query('
+            SELECT @houseId := ?,
+            @classId := ?;',
+            $values->house, $values->class);
+
+        return $this->database->query('
+            INSERT INTO student (UserId, ClassId, HouseId)
+            VALUES(
+            @id, @classId, @houseId)
+            ON DUPLICATE KEY UPDATE
+            HouseId = @houseId;');
+    }
+
     public function updateStudent($studentId, $values)
     {
         $this->updateStudentInfo($studentId, $values);
 
         try {
             return $this->database->query('
-                UPDATE student
+                UPDATE IGNORE student
                 SET ClassId = ?,
-                HouseId = ?
+                HouseId = ?                
                 WHERE UserId = ?;',
                     $values->class, $values->house, $studentId)->getRowCount();
         } catch (Nette\Database\ForeignKeyConstraintViolationException $foreignKeyConstraintViolationException) {
@@ -96,5 +122,21 @@ class Student
             WHERE Id = ?;',
                 $values->username, $values->email, $values->isactive,
                 $studentId);
+    }
+
+    private function insertUser($username, $isactive)
+    {
+        $this->database->query('
+            SELECT @username := ?,
+            @roleId := 2,
+            @isactive := ?;',
+            $username, $isactive);
+
+        return $this->database->query('
+            INSERT INTO user (Name, RoleId, IsActive)
+            VALUES(
+            @username, @roleId, @isactive)
+            ON DUPLICATE KEY UPDATE
+            Name = Name;');
     }
 }

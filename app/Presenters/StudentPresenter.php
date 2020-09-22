@@ -55,7 +55,7 @@ class StudentPresenter extends BasePresenter
     public function actionActive($studentId, $studentName)
     {
         $this->dbUser->activeUser($studentId);
-        $this->flashMessage('Studentovi '. $studentName .' byl povolen přístup na nekroweb.','success');
+        $this->flashMessage('Studentovi jménem'. $studentName .' byl povolen přístup na nekroweb.','success');
         $this->redirect('Student:show');
     }
 
@@ -107,10 +107,10 @@ class StudentPresenter extends BasePresenter
             ->setRequired('Prosím vyplňte kouzelnické jméno.')
             ->setMaxLength(64);
 
-        $form->addText('email')
-            ->addRule(Form::EMAIL, 'Zadaný email nemá správný formát');
+        $form->addText('email');
 
-        $selectClasses = Utils::prepareSelectBoxArray($this->studyClass->getAvailableClasses());
+        $semesterId = $this->user->getIdentity()->semesterId;
+        $selectClasses = Utils::prepareSelectBoxArray($this->studyClass->getClassesBySemester($semesterId));
 
         $form->addSelect('class')
             ->setItems($selectClasses)
@@ -136,6 +136,8 @@ class StudentPresenter extends BasePresenter
     public function studentFormSucceeded(Form $form, \stdClass $values): void
     {
         $studentId = $this->getParameter('studentId');
+        $values = Utils::convertEmptyToNull($form->getValues());
+
         $this->transaction->startTransaction();
 
         if ($studentId) {
@@ -146,8 +148,9 @@ class StudentPresenter extends BasePresenter
             }
 
         } else {
-            $this->dbUser->insertStudent($values);
+            $this->student->insertStudent($values);
         }
+
 
         $this->transaction->endTransaction();
         $this->redirect('Student:show');

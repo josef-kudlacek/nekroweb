@@ -35,4 +35,19 @@ class StudyClass
         $currentDate = date("Y-m-d");
         return $this->getClasses($currentDate, $currentDate);
     }
+
+    public function getClassesBySemester($semesterId)
+    {
+        return $this->database->query('
+            SELECT class.Id AS ClassId, class.Name, class.TimeFrom, class.TimeTo, class.FirstLesson, class.LastLesson, 
+            semester.Id AS SemesterId, semester.YearFrom, semester.YearTo,
+            year.Id AS YearId, year.Number, year.CodeName
+            FROM necromancy.class class
+            INNER JOIN necromancy.semester semester
+            ON class.SemesterId = semester.Id
+            INNER JOIN necromancy.year year
+            ON class.YearId = year.Id
+            WHERE semester.Id = ?;',
+                $semesterId);
+    }
 }

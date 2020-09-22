@@ -1,0 +1,31 @@
+{block content}
+    <div class="container">
+        <h1 n:block=title>Přidat studenta</h1>
+        {foreach $flashes as $flash}
+            <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+        {/foreach}
+        <form n:name=studentForm>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=username class="form-control" placeholder="Kouzelnické jméno">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <select n:name=house class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <select n:name=class class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-5">
+                <label class="form-check-label">
+                    <input n:name=isactive class="form-check-input" class="form-control" checked>
+                    Student má přístup povolen.
+                </label>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=send class="btn btn-secondary btn-block" value="Přidat studenta">
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href="{link Student:show}">Zpět</a>
+            </div>
+        </form>
+   </div>
+{/block}

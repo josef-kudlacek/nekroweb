@@ -48,10 +48,10 @@ class User
         return $this->database->query('
             INSERT INTO user (Name, Email, Password, RoleId)
             VALUES(
-            ?, ?, ?, @roleId)
+            ?, @email, @password, @roleId)
             ON DUPLICATE KEY UPDATE
             Email = @email, Password = @password, RoleId = @roleId;',
-            $values->username, $values->email, $values->password);
+            $values->username);
     }
 
     public function getUserClasses($userId)

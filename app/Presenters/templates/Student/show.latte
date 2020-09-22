@@ -2,6 +2,10 @@
     <div class="container">
         <h1 n:block="title">Správa studentů</h1>
         <h2>Přehled studentů</h2>
+        <div class="form-group col-md-4 offset-md-5">
+            <a href="{link create}" class="btn btn-primary btn-sm"
+                role="button">Přidat studenta do semestru</a>
+        </div>
         {if $students}
         <table class="table table-bordered">
             <thead>
@@ -35,6 +39,5 @@
         {else}
         Nenalezen žádný záznam.
         {/if}
-
     </div>
 {/block}
