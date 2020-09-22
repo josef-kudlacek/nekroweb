@@ -39,7 +39,7 @@ class UserPresenter extends BasePresenter
     public function actionDeleteUser()
     {
         $this->transaction->startTransaction();
-        $this->dbUser->deleteUser($this->user->getIdentity()->name);
+        $this->dbUser->deleteUser($this->user->getId());
         $this->transaction->endTransaction();
 
         $this->user->logout(true);

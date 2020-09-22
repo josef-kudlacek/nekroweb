@@ -36,6 +36,11 @@ class SignPresenter extends BasePresenter
      */
     public $semester;
 
+    /** @var Model\House
+     * @inject
+     */
+    public $house;
+
     public function actionLogout()
     {
         $this->getUser()->logout(true);
@@ -51,6 +56,11 @@ class SignPresenter extends BasePresenter
         $form->addText('username', 'Kouzelnické jméno')
             ->setRequired('Prosím vyplňte své kouzelnické jméno.')
             ->setMaxLength(64);
+
+        $selectHouses = $this->house->getHouses()->fetchPairs('Id', 'Name');
+
+        $form->addSelect('house')
+            ->setItems($selectHouses);
 
         $form->addText('email', 'Email:')
             ->setRequired('Prosím vyplňte svůj kontaktní email.')

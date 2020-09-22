@@ -70,7 +70,7 @@
   transform: translateY(1px);
 }
 
-#frm-registerForm-class{
+.login-dark form .form-control {
   background-color: #1e2833;
 }
 

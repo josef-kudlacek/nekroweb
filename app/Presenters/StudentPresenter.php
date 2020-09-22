@@ -4,6 +4,8 @@
 namespace App\Presenters;
 
 use App\Model;
+use App\utils\Utils;
+use Nette\Application\UI\Form;
 
 class StudentPresenter extends BasePresenter
 {
@@ -13,6 +15,21 @@ class StudentPresenter extends BasePresenter
      * @inject
      */
     public $transaction;
+
+    /** @var Model\User
+     * @inject
+     */
+    public $dbUser;
+
+    /** @var Model\StudyClass
+     * @inject
+     */
+    public $studyClass;
+
+    /** @var Model\House
+     * @inject
+     */
+    public $house;
 
     public function __construct(Model\Student $student)
     {
@@ -35,10 +52,24 @@ class StudentPresenter extends BasePresenter
         $this->template->students = $this->student->getActualStudents($semesterId);
     }
 
+    public function actionActive($studentId, $studentName)
+    {
+        $this->dbUser->activeUser($studentId);
+        $this->flashMessage('Studentovi '. $studentName .' byl povolen přístup na nekroweb.','success');
+        $this->redirect('Student:show');
+    }
+
     public function actionDelete($studentId, $classId)
     {
         $this->transaction->startTransaction();
+
         $result = $this->student->deleteStudent($studentId, $classId);
+        $studentClasses = $this->dbUser->getUserClasses($studentId);
+        bdump($studentClasses);
+        if ($studentClasses) {
+            $this->dbUser->deleteUser($studentId);
+        }
+
         $this->transaction->endTransaction();
 
         if ($result !== 1) {
@@ -47,6 +78,78 @@ class StudentPresenter extends BasePresenter
             $this->flashMessage('Student úspěšně odebrán ze třídy a semestru.', "success");
         }
 
+        $this->redirect('Student:show');
+    }
+
+    public function actionEdit($studentId, $classId)
+    {
+        $student = $this->student->getStudent($studentId, $classId)->fetch();
+        if (!$student) {
+            $this->flashMessage('Student nenalezen.', "danger");;
+            $this->redirect('Student:show');
+        }
+
+        $this->template->student = $student;
+        $this['studentForm']->setDefaults([
+                'username' => $student->UserName,
+                'email' => $student->Email,
+                'class' => $student->ClassId,
+                'house' => $student->HouseId,
+                'isactive' => $student->IsActive
+        ]);
+    }
+
+    protected function createComponentStudentForm(): Form
+    {
+        $form = new Form;
+
+        $form->addText('username')
+            ->setRequired('Prosím vyplňte kouzelnické jméno.')
+            ->setMaxLength(64);
+
+        $form->addText('email')
+            ->addRule(Form::EMAIL, 'Zadaný email nemá správný formát');
+
+        $selectClasses = Utils::prepareSelectBoxArray($this->studyClass->getAvailableClasses());
+
+        $form->addSelect('class')
+            ->setItems($selectClasses)
+            ->setRequired();
+
+        $selectHouses = $this->house->getHouses()->fetchPairs('Id', 'Name');
+
+        $form->addSelect('house')
+            ->setItems($selectHouses)
+            ->setRequired();
+
+        $form->addCheckbox('isactive');
+
+        $form->addSubmit('send', 'Upravit');
+
+        $form->addProtection();
+
+        $form->onSuccess[] = [$this, 'studentFormSucceeded'];
+
+        return $form;
+    }
+
+    public function studentFormSucceeded(Form $form, \stdClass $values): void
+    {
+        $studentId = $this->getParameter('studentId');
+        $this->transaction->startTransaction();
+
+        if ($studentId) {
+            $result = $this->student->updateStudent($studentId, $values);
+
+            if ($result < 0) {
+                $this->flashMessage('Student má již záznamy vázané k třídě a nelze mu ji změnit.','info');
+            }
+
+        } else {
+            $this->dbUser->insertStudent($values);
+        }
+
+        $this->transaction->endTransaction();
         $this->redirect('Student:show');
     }
 

@@ -20,33 +20,38 @@ class User
         $this->database = $database;
     }
 
-    public function insertUser($values)
+    public function insertStudent($values)
     {
-        $this->checkUser($values->username);
+        $this->insertUser($values);
+        $this->database->query('
+            SELECT @id := 
+            (SELECT Id FROM user WHERE Name = ?);',
+            $values->username);
+
+        return $this->database->query('
+            INSERT IGNORE INTO student (UserId, ClassId, HouseId)
+            VALUES(
+            @id, ?, ?);',
+            $values->class, $values->house);
+    }
+
+    private function insertUser($values)
+    {
+        $this->checkUser($values->username, $values->email);
 
         $this->database->query('
             SELECT @email := ?,
-            @password := ?;',
+            @password := ?,
+            @roleId := 2;',
             $values->email, $values->password);
 
         return $this->database->query('
             INSERT INTO user (Name, Email, Password, RoleId)
             VALUES(
-            ?, ?, ?, ?)
+            ?, ?, ?, @roleId)
             ON DUPLICATE KEY UPDATE
-            Email = @email, Password = @password;',
-            $values->username, $values->email, $values->password, 2);
-    }
-
-    public function insertStudent($values)
-    {
-        $this->insertUser($values);
-
-        return $this->database->query('
-            INSERT IGNORE INTO student (UserId, ClassId)
-            VALUES(
-            LAST_INSERT_ID(), ?);',
-            $values->class);
+            Email = @email, Password = @password, RoleId = @roleId;',
+            $values->username, $values->email, $values->password);
     }
 
     public function getUserClasses($userId)
@@ -81,26 +86,35 @@ class User
             $userId);
     }
 
-    public function deleteUser($username)
+    public function deleteUser($studentId)
     {
         return $this->database->query('
             UPDATE user
             SET Password = NULL,
             Email = NULL,
             IsActive = 0
-            WHERE Name = ?;',
-                $username);
+            WHERE Id = ?;',
+                $studentId);
     }
 
-    private function checkUser($username)
+    public function activeUser($studentId)
+    {
+        return $this->database->query('
+            UPDATE user
+            SET IsActive = 1
+            WHERE Id = ?;',
+            $studentId);
+    }
+
+    private function checkUser($username, $email)
     {
         $user = $this->database->query('
             SELECT Name
             FROM user
-            WHERE Name = ?
-            AND Email IS NOT NULL
+            WHERE (Name = ?
+            OR Email = ?)
             AND Password IS NOT NULL;',
-            $username)
+            $username, $email)
             ->fetch();
 
         if (!is_null($user)) {

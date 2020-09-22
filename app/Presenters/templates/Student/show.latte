@@ -19,12 +19,12 @@
                     <td>{$student->ClassName}</td>
                     <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
                     <td>
-                        <a href="{link edit $student->UserId}" class="btn btn-secondary btn-sm"
+                        <a href="{link edit $student->UserId, $student->ClassId}" class="btn btn-secondary btn-sm"
                            role="button">Upravit</a>
                         <a href="{link delete $student->UserId, $student->ClassId}" class="btn btn-dark btn-sm"
                            role="button">Odebrat</a>
                         {if !$student->IsActive}
-                            <a href="{link active $student->UserId}" class="btn btn-light btn-sm"
+                            <a href="{link active $student->UserId, $student->UserName}" class="btn btn-light btn-sm"
                                 role="button">Aktivovat</a>
                         {/if}
                     </td>
