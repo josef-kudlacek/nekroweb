@@ -1,0 +1,22 @@
+{block content}
+    <div class="container">
+        <h1 n:block=title>Přidat semestr</h1>
+        {foreach $flashes as $flash}
+            <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+        {/foreach}
+        <form n:name=semesterForm>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=YearFrom class="form-control">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=YearTo class="form-control">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=send class="btn btn-secondary btn-block" value="Přidat semestr">
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href="{link Semester:show}">Zpět</a>
+            </div>
+        </form>
+   </div>
+{/block}

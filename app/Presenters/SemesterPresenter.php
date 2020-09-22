@@ -16,6 +16,25 @@ class SemesterPresenter extends BasePresenter
         $this->semester = $semester;
     }
 
+    public function renderShow()
+    {
+        $this->template->semesters = $this->semester->getSemesters();
+    }
+
+    public function actionEdit($semesterId)
+    {
+        $semester = $this->semester->GetSemesterById($semesterId)->fetch();
+        if (!$semester) {
+            $this->flashMessage('Semestr nenalezen.', "danger");;
+            $this->redirect('Semester:show');
+        }
+
+        $this['semesterForm']->setDefaults([
+            'YearFrom' => $semester->YearFrom,
+            'YearTo' => $semester->YearTo
+        ]);
+    }
+
     protected function createComponentChangeSemesterForm(): Form
     {
         $form = new Form;
@@ -49,6 +68,46 @@ class SemesterPresenter extends BasePresenter
         $this->flashMessage('Semestr úspěšně změněn. Vítej ve školním roce '.
             $semester->YearFrom . '/.' . $semester->YearFrom . '!' ,"success");
         $this->redirect('Homepage:default');
+    }
+
+    protected function createComponentSemesterForm(): Form
+    {
+        $form = new Form;
+
+        $form->addText('YearFrom')
+            ->setRequired('Prosím vyplňte začátek.')
+            ->setMaxLength(4)
+            ->addRule($form::INTEGER, 'Začátek semestru musí být číslo')
+            ->addRule($form::LENGTH, 'Konec semestru musí mít %d čísel', 4);
+
+        $form->addText('YearTo')
+            ->setMaxLength(4);
+
+        $form->addSubmit('send');
+
+        $form->addProtection();
+
+        $form->onSuccess[] = [$this, 'semesterFormSucceeded'];
+
+        return $form;
+    }
+
+    public function semesterFormSucceeded(Form $form, \stdClass $values): void
+    {
+        $semesterId = $this->getParameter('semesterId');
+        $values = Utils::convertEmptyToNull($form->getValues());
+
+        if ($semesterId) {
+            $this->semester->updateSemester($values, $semesterId);
+            $this->flashMessage('Semestr '.
+                $values->YearFrom . '/.' . $values->YearFrom . ' úspěšně upraven.', 'success');
+        } else {
+            $this->semester->insertSemester($values);
+            $this->flashMessage('Semestr '.
+                $values->YearFrom . '/.' . $values->YearFrom . ' úspěšně vložen.', 'success');
+        }
+
+        $this->redirect('Semester:show');
     }
 
 

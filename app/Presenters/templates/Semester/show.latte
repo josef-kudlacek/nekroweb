@@ -1,0 +1,35 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Správa semestrů</h1>
+        <h2>Přehled semestrů</h2>
+        <div class="form-group col-md-4 offset-md-5">
+            <a href="{link create}" class="btn btn-primary btn-sm"
+                role="button">Přidat semestr</a>
+        </div>
+        {if $semesters}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark">Začátek</th>
+                    <th class="text-white bg-dark">Konec</th>
+                    <th class="text-white bg-dark">Správa semestru</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $semesters as $semester}
+                <tr class="table-{$semester->YearTo|semesterType}">
+                    <td>{$semester->YearFrom}</td>
+                    <td>{$semester->YearTo}</td>
+                    <td>
+                        <a href="{link edit $semester->SemesterId}" class="btn btn-secondary btn-sm"
+                           role="button">Upravit</a>
+                    </td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

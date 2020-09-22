@@ -59,4 +59,15 @@ class Filter
 
         return $houseColor;
     }
+
+    public static function semesterType($YearTo)
+    {
+        $semesterColor = 'primary';
+
+        if ($YearTo) {
+            $semesterColor = 'secondary';
+        }
+
+        return $semesterColor;
+    }
 }
