@@ -14,9 +14,11 @@
             <tbody>
             {foreach $attendance as $attendanceItem}
                 <tr>
-                    <td class="text-white bg-dark">{$attendanceItem->Number}. hodina</td>
-                    <td class="text-dark bg-light">{$attendanceItem->AttendanceDate|date:"%d. %m. %Y %H:%M:%S"}</td>
-                    <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">{$attendanceItem->ActivityPoints}</td>
+                    <td class="text-white bg-dark">{$attendanceItem->LessonNumber}. hodina ({$attendanceItem->LessonName})</td>
+                    <td class="text-dark bg-light">{$attendanceItem->AttendanceDate|date:"%d. %m. %Y"}</td>
+                    <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
+                        {$attendanceItem->ActivityPoints}+<abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityOverall}</abbr>
+                    </td>
                 </tr>
             {/foreach}
             </tbody>
