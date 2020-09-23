@@ -65,7 +65,6 @@ class StudentPresenter extends BasePresenter
 
         $result = $this->student->deleteStudent($studentId, $classId);
         $studentClasses = $this->dbUser->getUserClasses($studentId);
-        bdump($studentClasses);
         if ($studentClasses) {
             $this->dbUser->deleteUser($studentId);
         }

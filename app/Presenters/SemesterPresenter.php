@@ -35,41 +35,6 @@ class SemesterPresenter extends BasePresenter
         ]);
     }
 
-    protected function createComponentChangeSemesterForm(): Form
-    {
-        $form = new Form;
-
-        $this->template->semesters = $this->semester->getSemesters();
-
-        $selectItems = Utils::prepareSemesterSelectBoxArray($this->template->semesters);
-
-        $form->addSelect('semester')
-            ->setItems($selectItems)
-            ->setRequired();
-
-        $form->addSubmit('send', 'Přepnout semestr');
-
-        $form->addProtection();
-
-        $form->onSuccess[] = [$this, 'changeSemesterFormSucceeded'];
-
-        return $form;
-    }
-
-    public function changeSemesterFormSucceeded(Form $form, \stdClass $values): void
-    {
-        $semesters = $this->template->semesters->fetchAll();
-        $SemesterId = array_search($values->semester, array_column($semesters, 'SemesterId'));
-        $semester = $semesters[$SemesterId];
-
-        $this->user->getIdentity()->semesterFrom = $semester->YearFrom;
-        $this->user->getIdentity()->semesterTo = $semester->YearTo;
-        $this->user->getIdentity()->semesterId = $semester->SemesterId;
-        $this->flashMessage('Semestr úspěšně změněn. Vítej ve školním roce '.
-            $semester->YearFrom . '/.' . $semester->YearFrom . '!' ,"success");
-        $this->redirect('Homepage:default');
-    }
-
     protected function createComponentSemesterForm(): Form
     {
         $form = new Form;
@@ -110,5 +75,39 @@ class SemesterPresenter extends BasePresenter
         $this->redirect('Semester:show');
     }
 
+    protected function createComponentChangeSemesterForm(): Form
+    {
+        $form = new Form;
+
+        $this->template->semesters = $this->semester->getSemesters();
+
+        $selectItems = Utils::prepareSemesterSelectBoxArray($this->template->semesters);
+
+        $form->addSelect('semester')
+            ->setItems($selectItems)
+            ->setRequired();
+
+        $form->addSubmit('send', 'Přepnout semestr');
+
+        $form->addProtection();
+
+        $form->onSuccess[] = [$this, 'changeSemesterFormSucceeded'];
+
+        return $form;
+    }
+
+    public function changeSemesterFormSucceeded(Form $form, \stdClass $values): void
+    {
+        $semesters = $this->template->semesters->fetchAll();
+        $SemesterId = array_search($values->semester, array_column($semesters, 'SemesterId'));
+        $semester = $semesters[$SemesterId];
+
+        $this->user->getIdentity()->semesterFrom = $semester->YearFrom;
+        $this->user->getIdentity()->semesterTo = $semester->YearTo;
+        $this->user->getIdentity()->semesterId = $semester->SemesterId;
+        $this->flashMessage('Semestr úspěšně změněn. Vítej ve školním roce '.
+            $semester->YearFrom . '/.' . $semester->YearFrom . '!' ,"success");
+        $this->redirect('Homepage:default');
+    }
 
 }

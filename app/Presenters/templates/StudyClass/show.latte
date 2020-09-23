@@ -1,0 +1,49 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Správa tříd</h1>
+        <h2>Přehled tříd</h2>
+        <div class="form-group col-md-4 offset-md-5">
+            <a href="{link create}" class="btn btn-primary btn-sm"
+                role="button">Přidat třídu do semestru</a>
+        </div>
+        {if $studyClass}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark">Osnovy</th>
+                    <th class="text-white bg-dark">Třída</th>
+                    <th class="text-white bg-dark">První hodina</th>
+                    <th class="text-white bg-dark">Poslední hodina</th>
+                    <th class="text-white bg-dark">Čas od</th>
+                    <th class="text-white bg-dark">Čas do</th>
+                    <th class="text-white bg-dark">Počet studentů</th>
+                    <th class="text-white bg-dark">Správa třídy</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $studyClass as $studyClassItem}
+                <tr class="table-warning">
+                    <td>{$studyClassItem->CodeName}</td>
+                    <td>{$studyClassItem->Name}</td>
+                    <td>{$studyClassItem->FirstLesson|date:'%d.%m.%Y'}</td>
+                    <td>{$studyClassItem->LastLesson|date:'%d.%m.%Y'}</td>
+                    <td>{$studyClassItem->TimeFrom|date:'%H:%M:%S'}</td>
+                    <td>{$studyClassItem->TimeTo|date:'%H:%M:%S'}</td>
+                    <td>{$studyClassItem->StudentsCount}</td>
+                    <td>
+                        <a href="{link edit $studyClassItem->ClassId}" class="btn btn-secondary btn-sm"
+                           role="button">Upravit</a>
+                        {if $studyClassItem->StudentsCount <= 1}
+                        <a href="{link delete $studyClassItem->ClassId}" class="btn btn-dark btn-sm"
+                           role="button">Odebrat</a>
+                        {/if}
+                    </td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}
