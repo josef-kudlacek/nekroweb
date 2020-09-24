@@ -1,0 +1,24 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Zapsat hodinu</h1>
+        <h2>Zápis hodiny u třídy {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
+        {if $students}
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-white bg-dark">Jméno</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach $students as $student}
+                    <tr>
+                        <td>{$student->UserName}</td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

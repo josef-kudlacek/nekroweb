@@ -1,0 +1,69 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Třídní kniha</h1>
+        <h2>Přehled tříd</h2>
+        {if $classes}
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-white bg-dark">Třída</th>
+                            <th class="text-white bg-dark">Den</th>
+                            <th class="text-white bg-dark">Čas od</th>
+                            <th class="text-white bg-dark">Čas do</th>
+                            <th class="text-white bg-dark">Počet studentů</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $classes as $class}
+                        <tr class="table-warning">
+                            <td>{$class->Name}</td>
+                            <td>{$class->FirstLesson|weekDayCZ}</td>
+                            <td>{$class->TimeFrom|date:'%H:%M:%S'}</td>
+                            <td>{$class->TimeTo|date:'%H:%M:%S'}</td>
+                            <td>{$class->StudentsCount}</td>
+                            <td>
+                                <a href="{link create $class->ClassId}" class="btn btn-primary btn-sm"
+                                    role="button">Zapsat hodinu</a>
+                            </td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+                {else}
+                Nenalezen žádný záznam.
+                {/if}
+
+        <h2>Přehled odučených hodin</h2>
+        {if $classAttendance}
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-white bg-dark">Třída</th>
+                    <th class="text-white bg-dark">Datum konání</th>
+                    <th class="text-white bg-dark">Aktivita</th>
+                    <th class="text-white bg-dark">Správa</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach $classAttendance as $attendance}
+                    <tr>
+                        <td class="text-white bg-dark">{$attendance->ClassName}</td>
+                        <td class="text-dark bg-light">{$attendance->AttendanceDate|date:"%d. %m. %Y"}</td>
+                        <td class="text-white bg-dark">{$attendance->LessonNumber}. hodina ({$attendance->LessonName})</td>
+                        <td>
+                            <a href="{link detail $attendance->ClassId, $attendance->LessonId}" class="btn btn-secondary btn-sm"
+                               role="button">Detail</a>
+                            <a href="{link edit $attendance->ClassId, $attendance->LessonId}" class="btn btn-dark btn-sm"
+                               role="button">Upravit</a>
+                            <a href="{link delete $attendance->ClassId, $attendance->LessonId}" class="btn btn-light btn-sm"
+                               role="button">Odebrat</a>
+                        </td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

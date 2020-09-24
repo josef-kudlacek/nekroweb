@@ -50,7 +50,8 @@ class StudyClass
             LEFT JOIN student
             ON student.ClassId = class.Id
             WHERE semester.Id = ?
-            GROUP BY class.Id;',
+            GROUP BY class.Id
+            ORDER BY class.Name;',
                 $semesterId);
     }
 

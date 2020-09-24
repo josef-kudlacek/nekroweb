@@ -175,4 +175,20 @@ class Attendance
             ORDER BY user.Name;',
                 $classId);
     }
+
+    public function getAttendancesBySemesterId($semesterId)
+    {
+        return $this->database->query('
+            SELECT attendance.StudentClassId AS ClassId, attendance.LessonId, class.Name AS ClassName,
+            attendance.AttendanceDate, lesson.Number AS LessonNumber, lesson.Name AS LessonName
+            FROM attendance
+            INNER JOIN class
+            ON attendance.StudentClassId = class.Id
+            INNER JOIN lesson
+            ON attendance.LessonId = lesson.Id
+            WHERE class.SemesterId = ?
+            GROUP BY attendance.StudentClassId, attendance.LessonId
+            ORDER BY class.Name, lesson.Number;',
+                $semesterId);
+    }
 }

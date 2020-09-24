@@ -20,7 +20,9 @@ di:
 services:
 	router: App\Router\RouterFactory::createRouter
 	- App\Model\About
+	- App\Model\ActivityType
 	- App\Model\Attendance
+	- App\Model\AttendanceType
 	- App\Model\Character
 	- App\Model\Disquisition
 	- App\Model\Homework

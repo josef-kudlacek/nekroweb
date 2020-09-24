@@ -70,4 +70,10 @@ class Filter
 
         return $semesterColor;
     }
+
+    public static function weekDayCZ($date)
+    {
+        $weekDay = array('Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota');
+        return $weekDay[(integer)$date->format('w')];
+    }
 }

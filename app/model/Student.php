@@ -56,6 +56,23 @@ class Student
             $studentId, $classId);
     }
 
+    public function getStudentsByClassId($classId)
+    {
+        return $this->database->query("
+            SELECT user.Id AS UserId, user.name AS UserName, user.IsActive, user.Email,
+            student.HouseId, house.Name AS HouseName, 
+            student.ClassId, class.Name AS ClassName
+            FROM student
+            INNER JOIN user
+            ON user.Id = student.UserId
+            INNER JOIN class
+            ON class.Id = student.ClassId
+            LEFT JOIN house
+            ON house.Id = student.HouseId
+            WHERE student.ClassId = ?;",
+            $classId);
+    }
+
     public function insertStudent($values)
     {
         $this->insertUser($values->username, $values->isactive);
