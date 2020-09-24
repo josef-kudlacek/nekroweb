@@ -16,6 +16,15 @@ class SemesterPresenter extends BasePresenter
         $this->semester = $semester;
     }
 
+    protected function startup()
+    {
+        parent::startup();
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     public function renderShow()
     {
         $this->template->semesters = $this->semester->getSemesters();

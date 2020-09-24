@@ -31,6 +31,15 @@ class StudyClassPresenter extends BasePresenter
         $this->studyClass = $studyClass;
     }
 
+    protected function startup()
+    {
+        parent::startup();
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     public function renderShow()
     {
         $semesterId = $this->getUser()->getIdentity()->semesterId;
