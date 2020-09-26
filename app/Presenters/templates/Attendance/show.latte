@@ -8,7 +8,7 @@
                 <tr>
                     <th class="text-white bg-dark">Hodina</th>
                     <th class="text-white bg-dark">Datum a čas</th>
-                    <th class="text-white bg-dark">Aktivita</th>
+                    <th class="text-white bg-dark">Body</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,7 +17,9 @@
                     <td class="text-white bg-dark">{$attendanceItem->LessonNumber}. hodina ({$attendanceItem->LessonName})</td>
                     <td class="text-dark bg-light">{$attendanceItem->AttendanceDate|date:"%d. %m. %Y"}</td>
                     <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
-                        {$attendanceItem->ActivityPoints}+<abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityOverall}</abbr>
+                        {$attendanceItem->ActivityPoints}{if $attendanceItem->ActivityOverall} +
+                        <abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityOverall}</abbr>
+                        {/if}
                     </td>
                 </tr>
             {/foreach}

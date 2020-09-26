@@ -12,6 +12,7 @@ class Utils
         {
             if (is_array($value))
             {
+                $values[$key] = Utils::convertEmptyToNull($value);
                 continue;
             }
 

@@ -5,6 +5,7 @@ namespace App\Presenters;
 
 use App\utils\Filter;
 use Nette;
+use Nette\Application\UI\Form;
 
 
 class BasePresenter extends Nette\Application\UI\Presenter
@@ -33,5 +34,14 @@ class BasePresenter extends Nette\Application\UI\Presenter
         $this->template->addFilter('weekDayCZ', function ($number) {
             return Filter::weekDayCZ($number);
         });
+    }
+
+    public function errorForm(Form $form){
+        if($form->getErrors()){
+            foreach ($form->getErrors() as $value)
+            {
+                $this->flashMessage($value,'danger');
+            }
+        }
     }
 }

@@ -31,6 +31,13 @@ class AttendancePresenter extends BasePresenter
      */
     public $activityTpe;
 
+    /** @var Model\Lesson
+     * @inject
+     */
+    public $lesson;
+
+    protected $YearId;
+
     public function __construct(Model\Attendance $attendance)
     {
         $this->attendance = $attendance;
@@ -45,7 +52,7 @@ class AttendancePresenter extends BasePresenter
         }
     }
 
-    public function renderAdmin()
+    public function actionAdmin()
     {
         $this->checkAccess();
 
@@ -58,21 +65,30 @@ class AttendancePresenter extends BasePresenter
     public function renderDetail($ClassId, $LessonId)
     {
         $this->checkAccess();
-
-
     }
 
-    public function renderCreate($ClassId)
+    public function actionCreate($ClassId)
     {
         $this->checkAccess();
 
+        $this->template->attendancetypes = $this->attendanceType->getAttendanceTypes()->fetchAll();
         $this->template->students = $this->student->getStudentsByClassId($ClassId);
         $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
+
+        $YearId = $this->template->class->YearId;
+        $this->template->lessons =$this->lesson->getLessonsByYear($YearId)->fetchAll();
     }
 
     public function renderEdit($ClassId, $LessonId)
     {
         $this->checkAccess();
+
+        $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
+        $this->template->attendancetypes = $this->attendanceType->getAttendanceTypes()->fetchAll();
+        $this->template->classAttendance = $this->attendance->GetAttendancesByClassAndLesson($ClassId, $LessonId)->fetchAll();
+
+        $YearId = $this->template->class->YearId;
+        $this->template->lessons =$this->lesson->getLessonsByYear($YearId)->fetchAll();
     }
 
     public function actionDelete($ClassId, $LessonId)
@@ -100,21 +116,24 @@ class AttendancePresenter extends BasePresenter
     {
         $form = new Form;
 
-        $attendancetypes = $this->attendanceType->getAttendanceTypes()->fetchPairs('Id', 'Name');
-        $form->addSelect('attendancetype')
-            ->setItems($attendancetypes)
+        $form->addSelect('LessonId');
+
+        $form->addText('AttendanceDate')
             ->setRequired();
 
-        $form->addText('card')
-            ->setMaxLength(4)
-            ->addRule($form::INTEGER, 'Vložte platné číslo karty');
+        $form->addInteger('StudentClassId');
 
-        $form->addCheckbox('isactive');
+        $form->addInteger('StudentUserId');
 
-        $form->addSubmit('send', 'Upravit');
+        $form->addCheckbox('AttendanceTypeId');
+
+        $form->addInteger('AttendanceCard');
+
+        $form->addSubmit('send', 'Zapsat');
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'attendanceFormSucceeded'];
 
         return $form;
@@ -122,25 +141,21 @@ class AttendancePresenter extends BasePresenter
 
     public function attendanceFormSucceeded(Form $form, \stdClass $values): void
     {
-        $studentId = $this->getParameter('studentId');
-        $values = Utils::convertEmptyToNull($form->getValues());
+        $values = $form->getHttpData($form::DATA_TEXT);
+        $this->checkAccess();
 
-        $this->transaction->startTransaction();
+        $values = $this->prepareAttendanceData($values);
 
-        if ($studentId) {
-            $result = $this->student->updateStudent($studentId, $values);
-
-            if ($result < 0) {
-                $this->flashMessage('Student má již záznamy vázané k třídě a nelze mu ji změnit.','info');
-            }
+        if ($this->getParameter('LessonId'))
+        {
+            $values = Utils::convertEmptyToNull($values);
+            $this->attendance->updateAttendances($values, $this->getParameter('LessonId'));
 
         } else {
-            $this->student->insertStudent($values);
+            $this->attendance->insertAttendances($values);
         }
 
-
-        $this->transaction->endTransaction();
-        $this->redirect('Student:show');
+        $this->redirect('Attendance:admin');
     }
 
     private function checkAccess()
@@ -149,5 +164,27 @@ class AttendancePresenter extends BasePresenter
             $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
             $this->redirect('Homepage:default');
         }
+    }
+
+    private function prepareAttendanceData($values)
+    {
+        $studentIds = array_keys($values['StudentUserId']);
+        $studentsData = array();
+
+
+        foreach ($studentIds as $student) {
+            $studentItem = array(
+                "StudentUserId" => $values['StudentUserId'][$student],
+                "StudentClassId" => $values['StudentClassId'][$student],
+                "LessonId" => $values['LessonId'],
+                "AttendanceDate" => $values['AttendanceDate'],
+                "AttendanceTypeId" => $values['AttendanceTypeId'][$student],
+                "AttendanceCard" => $values['AttendanceCard'][$student],
+            );
+
+            array_push($studentsData, $studentItem);
+        }
+
+        return $studentsData;
     }
 }

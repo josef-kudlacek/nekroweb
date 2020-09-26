@@ -69,7 +69,8 @@ class Student
             ON class.Id = student.ClassId
             LEFT JOIN house
             ON house.Id = student.HouseId
-            WHERE student.ClassId = ?;",
+            WHERE student.ClassId = ?
+            ORDER BY user.name;",
             $classId);
     }
 

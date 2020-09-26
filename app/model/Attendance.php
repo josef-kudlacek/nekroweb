@@ -3,7 +3,6 @@
 
 namespace App\model;
 
-use App\MyAuthenticator;
 use Nette;
 
 class Attendance
@@ -24,7 +23,7 @@ class Attendance
             SUM(ActivityPoints) AS ActivityOverall, 
             GROUP_CONCAT(CONCAT_WS(" ", activity.ActivityPoints, CONCAT("(", activitytype.Name, ")"))
                     SEPARATOR " + ") AS ActivityDescription,
-            activity.ActivityPoints, attendance.AttendanceCard
+            attendancetype.Points AS ActivityPoints, attendance.AttendanceCard
             FROM attendance
             INNER JOIN attendancetype
             ON attendancetype.Id = attendance.AttendanceTypeId
@@ -45,7 +44,7 @@ class Attendance
             ON student.HouseId = house.Id
             WHERE student.UserId = ?
             AND student.ClassId = ?
-            GROUP BY user.Name
+            GROUP BY user.Name, lesson.Number
             ORDER BY lesson.Number;',
                 $userId, $classId);
     }
@@ -190,5 +189,43 @@ class Attendance
             GROUP BY attendance.StudentClassId, attendance.LessonId
             ORDER BY class.Name, lesson.Number;',
                 $semesterId);
+    }
+
+    public function GetAttendancesByClassAndLesson($classId, $lessonId)
+    {
+        return $this->database->query('
+            SELECT attendance.Id AS AttendanceId, lesson.Id AS LessonId, lesson.Name AS LessonName, attendance.AttendanceDate,
+            attendance.StudentUserId, user.Name AS StudentName, student.HouseId,
+            attendancetype.Id AS AttendanceTypeId, attendancetype.Name AS AttendanceType,
+            attendance.AttendanceCard
+            FROM attendance
+            INNER JOIN user
+            ON user.Id = attendance.StudentUserId
+            INNER JOIN lesson
+            ON lesson.Id = attendance.LessonId
+            INNER JOIN attendancetype
+            ON attendance.AttendanceTypeId = attendancetype.Id
+            INNER JOIN student
+            ON attendance.StudentUserId = student.UserId
+            AND attendance.StudentClassId = student.ClassId
+            WHERE attendance.StudentClassId = ?
+            AND attendance.LessonId = ?
+            ORDER BY user.name;',
+            $classId, $lessonId);
+    }
+
+    public function insertAttendances($values)
+    {
+        return $this->database->query('INSERT INTO attendance', $values);
+    }
+
+    public function updateAttendances($values)
+    {
+        bdump($values);
+
+        return $this->database->table('attendance')->where('StudentClassId = ? AND LessonId = ?',
+                $values[0]['StudentClassId'],
+                $values[0]['LessonId'])
+            ->update($values);
     }
 }
