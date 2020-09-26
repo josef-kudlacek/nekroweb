@@ -17,7 +17,8 @@ class Activity
     public function getStudentsAttendance($classId, $lessonId)
     {
         return $this->database->query('
-            SELECT attendance.Id AS AttendanceId, student.HouseId, user.Name AS UserName
+            SELECT attendance.Id AS AttendanceId, student.HouseId,
+            user.Name AS UserName, user.Id AS UserId
             FROM attendance
             INNER JOIN attendancetype
             ON attendancetype.Id = attendance.AttendanceTypeId
@@ -33,6 +34,10 @@ class Activity
             $classId, $lessonId);
     }
 
+    public function insertActivity($values)
+    {
+        return $this->database->query('INSERT INTO activity', $values);
+    }
 
 
 }

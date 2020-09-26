@@ -17,8 +17,8 @@ class ActivityType
     public function getActivityTypes()
     {
         return $this->database->query('
-            SELECT Id, Name
-            FROM attendancetype;');
+            SELECT Id, Name, Label
+            FROM activitytype;');
     }
 
 }

@@ -36,7 +36,10 @@ class AttendancePresenter extends BasePresenter
      */
     public $lesson;
 
-    protected $YearId;
+    /** @var Model\Transaction
+     * @inject
+     */
+    public $transaction;
 
     public function __construct(Model\Attendance $attendance)
     {
@@ -141,21 +144,25 @@ class AttendancePresenter extends BasePresenter
 
     public function attendanceFormSucceeded(Form $form, \stdClass $values): void
     {
-        $values = $form->getHttpData($form::DATA_TEXT);
         $this->checkAccess();
 
+        $values = $form->getHttpData($form::DATA_TEXT);
         $values = $this->prepareAttendanceData($values);
 
+        $this->transaction->startTransaction();
         if ($this->getParameter('LessonId'))
         {
             $values = Utils::convertEmptyToNull($values);
             $this->attendance->updateAttendances($values, $this->getParameter('LessonId'));
 
+            $this->transaction->endTransaction();
+            $this->redirect('Activity:edit', array($values[0]['StudentClassId'], $values[0]['LessonId']));
         } else {
             $this->attendance->insertAttendances($values);
-        }
 
-        $this->redirect('Attendance:admin');
+            $this->transaction->endTransaction();
+            $this->redirect('Activity:create', array($values[0]['StudentClassId'], $values[0]['LessonId']));
+        }
     }
 
     private function checkAccess()

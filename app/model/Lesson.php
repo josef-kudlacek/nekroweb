@@ -14,6 +14,16 @@ class Lesson
         $this->database = $database;
     }
 
+    public function getLessonById($LessonId)
+    {
+        return $this->database->query('
+            SELECT Id, Number, Name
+            FROM lesson            
+            WHERE lesson.Id = ?
+            ORDER BY lesson.Number;',
+            $LessonId);
+    }
+
     public function getLessonsByYear($YearId)
     {
         return $this->database->query('
