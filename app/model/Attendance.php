@@ -221,11 +221,13 @@ class Attendance
 
     public function updateAttendances($values)
     {
-        bdump($values);
-
-        return $this->database->table('attendance')->where('StudentClassId = ? AND LessonId = ?',
-                $values[0]['StudentClassId'],
-                $values[0]['LessonId'])
-            ->update($values);
+        foreach ($values as $key => $value)
+        {
+            $this->database->table('attendance')->where('StudentUserId = ? AND StudentClassId = ? AND LessonId = ?',
+                $values[$key]['StudentUserId'],
+                $values[$key]['StudentClassId'],
+                $values[$key]['LessonId'])
+                ->update($values[$key]);
+        }
     }
 }
