@@ -169,7 +169,7 @@ class Attendance
             ON user.Id = student.UserId
             INNER JOIN house
             ON student.HouseId = house.Id
-            WHERE student.ClassId = 39
+            WHERE student.ClassId = ?
             GROUP BY user.Name
             ORDER BY user.Name;',
                 $classId);
