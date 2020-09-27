@@ -122,6 +122,16 @@ class AttendancePresenter extends BasePresenter
     public function actionDelete($ClassId, $LessonId)
     {
         $this->checkAccess();
+
+        $this->transaction->startTransaction();
+        $this->attendance->deleteAttendances($ClassId, $LessonId);
+        $this->transaction->endTransaction();
+
+        $class = $this->studyClass->getClassById($ClassId)->fetch();
+        $lesson = $this->lesson->getLessonById($LessonId)->fetch();
+        $this->flashMessage('Docházka a aktivita třídy ' . $class->Name . ' na ' . $lesson->Number . '. hodině ('.
+            $lesson->Name .') byla úspěšně smazána.','success');
+        $this->redirect('Attendance:admin');
     }
 
     public function renderShow()

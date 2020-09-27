@@ -270,6 +270,18 @@ class Attendance
         }
     }
 
+    public function deleteAttendances($ClassId, $LessonId)
+    {
+        return $this->database->query('
+            DELETE activity.*, attendance.*
+            FROM attendance
+            LEFT JOIN activity
+            ON attendance.Id = activity.AttendanceId
+            WHERE attendance.StudentClassId = ?
+            AND attendance.LessonId = ?;',
+            $ClassId, $LessonId);
+    }
+
     public function excuseStudent($AttendanceId)
     {
         return $this->database->query('

@@ -49,11 +49,12 @@
             Nenalezen žádný záznam.
         {/if}
         <div class="text-center">
-                <a class="btn btn-warning" href="{link Attendance:edit, $class->ClassId, $lesson->Id}">Upravit docházku a aktivitu třídy</a>
+            <a class="btn btn-warning" href="{link Attendance:edit, $class->ClassId, $lesson->Id}">Upravit docházku a aktivitu třídy</a>
+            <a class="btn btn-danger" href="{link Attendance:delete, $class->ClassId, $lesson->Id}">Smazat docházku a aktivitu třídy</a>
         </div>
         <br />
         <div class="text-center">
-                <a class="btn btn-primary" href="{link Attendance:admin}">Zpět</a>
+            <a class="btn btn-primary" href="{link Attendance:admin}">Zpět</a>
         </div>
     </div>
 {/block}
