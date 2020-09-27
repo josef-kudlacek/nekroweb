@@ -68,6 +68,35 @@ class Activity
             $classId, $lessonId);
     }
 
+    public function getStudentSum($studentId, $classId)
+    {
+        return $this->database->query('
+            SELECT 
+            (SELECT
+            SUM(attendancetype.Points)
+            FROM attendance
+            INNER JOIN attendancetype
+            ON attendance.AttendanceTypeId = attendancetype.Id
+            WHERE attendance.StudentUserId = ?
+            AND attendance.StudentClassId = ?
+            GROUP BY attendance.StudentUserId
+            ) AS attendancePoints,
+            (
+            SELECT
+            SUM(activity.ActivityPoints)
+            FROM attendance
+            INNER JOIN attendancetype
+            ON attendance.AttendanceTypeId = attendancetype.Id
+            LEFT JOIN activity
+            ON activity.AttendanceId = attendance.Id
+            WHERE attendance.StudentUserId = ?
+            AND attendance.StudentClassId = ?
+            GROUP BY attendance.StudentUserId
+            ) AS activityPoints; 
+            ',
+            $studentId, $classId, $studentId, $classId);
+    }
+
     public function insertActivity($values)
     {
         foreach ($values as $key => $value)

@@ -17,16 +17,16 @@
                          <strong>{$user->getIdentity()->semesterFrom}{ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
                          </strong>
                      </td>
-                 </tr>
-            <tr>
+            </tr>
             {if $user->isInRole('Student')}
+                <tr>
                     <td class="text-white bg-dark">Studovaná třída:</td>
                     <td><strong>{$user->getIdentity()->className}</strong></td>
                 </tr>
 
                 <tr>
-                    <td class="text-white bg-secondary">Počet bodů za aktivitu:</td>
-                    <td><strong>??</strong></td>
+                    <td class="text-white bg-secondary">Počet bodů za docházku a aktivitu:</td>
+                    <td><strong>{$points->attendancePoints? $points->attendancePoints : 0} + {$points->activityPoints? $points->activityPoints : 0}</strong></td>
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů celkem:</td>

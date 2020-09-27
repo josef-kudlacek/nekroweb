@@ -4,6 +4,7 @@
 namespace App\Presenters;
 
 use App\Model;
+use App\model\Activity;
 use App\MyAuthenticator;
 use App\utils\Utils;
 use Nette;
@@ -15,6 +16,11 @@ class UserPresenter extends BasePresenter
      * @inject
      */
     public $authentication;
+
+    /** @var Activity
+     * @inject
+     */
+    public $activity;
 
     /** @var Model\Transaction
      * @inject
@@ -33,6 +39,16 @@ class UserPresenter extends BasePresenter
         if (!$this->getUser()->loggedIn) {
             $this->flashMessage('Přístup do této sekce je pouze pro přihlášené. Přihlaste se prosím.','danger');
             $this->redirect('Sign:in');
+        }
+    }
+
+    public function actionData()
+    {
+        if ($this->getUser()->isInRole('Student')) {
+            $studentId = $this->getUser()->getId();
+            $classId = $this->getUser()->getIdentity()->classId;
+
+            $this->template->points = $this->activity->getStudentSum($studentId, $classId)->fetch();
         }
     }
 
