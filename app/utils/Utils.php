@@ -3,7 +3,7 @@
 
 namespace App\utils;
 
-define ('FILE_ABSOLUTE_PATH', 'C:/xampp/htdocs/nekroweb/www');
+define ('FILE_ABSOLUTE_PATH', 'C:\xampp\htdocs\nekroweb\www');
 
 class Utils
 {

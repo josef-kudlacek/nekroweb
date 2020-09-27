@@ -5,7 +5,9 @@ namespace App\Presenters;
 
 use App\Model;
 use App\utils\Utils;
+use Nette\Application\BadRequestException;
 use Nette\Application\UI\Form;
+use Nette\Application\Responses\FileResponse;
 
 class ArcPresenter extends BasePresenter
 {
@@ -44,6 +46,25 @@ class ArcPresenter extends BasePresenter
     {
         $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
         $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
+    }
+
+    public function actionDownload($fileName)
+    {
+        $filepath =  Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'arch' . DIRECTORY_SEPARATOR . $fileName;
+        $httpResponse = $this->context->getService("httpResponse");
+        $httpResponse->setHeader("Pragma", "public");
+        $httpResponse->setHeader("Expires", 0);
+        $httpResponse->setHeader("Content-Description", "File Transfer");
+        $httpResponse->setHeader("Content-Length", filesize($filepath));
+
+        try {
+            $response = new FileResponse($filepath, $fileName, "application/pdf", true);
+            bdump($response);
+            $this->sendResponse($response);
+        } catch (BadRequestException $e) {
+            $this->flashMessage('Soubor ' . $fileName . ' neexistuje nebo není čitelný.','danger');
+            $this->redirect('Homepage:default');
+        }
     }
 
     protected function createComponentArcForm(): Form

@@ -62,7 +62,7 @@
                         </td>
                         {if $attendance->FileName}
                             <td>
-                                <a href="{link Arc:new $attendance->ClassId, $attendance->LessonId}" class="btn btn-secondary btn-sm"
+                                <a href="{link Arc:download $attendance->FileName}" class="btn btn-secondary btn-sm"
                                    role="button">Zobrazit Arch</a>
                             </td>
                         {else}
