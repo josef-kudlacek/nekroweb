@@ -18,13 +18,16 @@ class Filter
                 $attendanceColor = 'warning';
                 break;
             case 3:
-                $attendanceColor = 'info';
+                $attendanceColor = 'secondary';
                 break;
             case 4:
                 $attendanceColor = 'danger';
                 break;
             case 5:
                 $attendanceColor = 'default';
+                break;
+            case 6:
+                $attendanceColor = 'info';
                 break;
             default:
                 $attendanceColor = 'dark';

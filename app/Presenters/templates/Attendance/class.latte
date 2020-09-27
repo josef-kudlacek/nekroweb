@@ -108,40 +108,6 @@
             Nenalezen žádný záznam.
         {/if}
 
-        <h2>Legenda</h2>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th class="text-white bg-dark">Docházka</th>
-                <th class="text-white bg-dark">Barva</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="text-white bg-dark">Přítomnost</td>
-                <td class="text-dark bg-success">Zelená</td>
-            </tr>
-            <tr>
-                <td class="text-white bg-dark">Přítomnost 1/2</td>
-                <td class="text-dark bg-warning">Žlutá</td>
-            </tr>
-            <tr>
-                <td class="text-white bg-dark">Omluveno</td>
-                <td class="text-dark bg-info">Tmavě azurová</td>
-            </tr>
-            <tr>
-                <td class="text-white bg-dark">Neomluveno</td>
-                <td class="text-dark bg-danger">Červená</td>
-            </tr>
-            <tr>
-                <td class="text-white bg-dark">Náhradní hodina</td>
-                <td class="text-dark bg-default">Výchozí</td>
-            </tr>
-            <tr>
-                <td class="text-white bg-dark">Nezapsáno</td>
-                <td class="text-white bg-dark">Černá</td>
-            </tr>
-            </tbody>
-        </table>
+        {include "../Attendance/legend.latte"}
     </div>
 {/block}
