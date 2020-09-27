@@ -21,6 +21,11 @@ class AttendancePresenter extends BasePresenter
      */
     public $student;
 
+    /** @var Model\User
+     * @inject
+     */
+    public $dbUser;
+
     /** @var Model\AttendanceType
      * @inject
      */
@@ -65,9 +70,27 @@ class AttendancePresenter extends BasePresenter
         $this->template->classAttendance = $this->attendance->getAttendancesBySemesterId($semesterId);
     }
 
-    public function renderDetail($ClassId, $LessonId)
+    public function actionDetail($ClassId, $LessonId)
     {
         $this->checkAccess();
+
+        $this->template->attendance = $this->attendance->getClassAttendanceSummary($ClassId, $LessonId)->fetchAll();
+    }
+
+    public function handleExcuse($AttendanceId, $StudentId)
+    {
+        $this->checkAccess();
+
+        $this->transaction->startTransaction();
+        $this->attendance->excuseStudent($AttendanceId);
+        $this->transaction->endTransaction();
+
+        $student = $this->dbUser->GetUserById($StudentId)->fetch();
+        $this->flashMessage('Studentovi jménem '. $student->Name .' byla omluvena hodina.','success');
+
+        $classId = $this->getParameter("ClassId");
+        $lessonId = $this->getParameter("LessonId");
+        $this->redirect('Attendance:detail', array($classId, $lessonId));
     }
 
     public function actionCreate($ClassId)
@@ -158,6 +181,7 @@ class AttendancePresenter extends BasePresenter
             $this->transaction->endTransaction();
             $this->redirect('Activity:edit', array($values[0]['StudentClassId'], $values[0]['LessonId']));
         } else {
+            $values = Utils::convertEmptyToNull($values);
             $this->attendance->insertAttendances($values);
 
             $this->transaction->endTransaction();

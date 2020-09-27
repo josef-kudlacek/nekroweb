@@ -191,6 +191,45 @@ class Attendance
                 $semesterId);
     }
 
+    public function getClassAttendanceSummary($classId, $lessonId)
+    {
+        return $this->database->query('
+            SELECT DISTINCT attendance.Id AS AttendanceId,
+            attendance.StudentClassId AS ClassId, attendance.LessonId AS LessonId,
+            house.Id AS HouseId, user.Id AS StudentId, user.Name AS StudentName,            
+            attendancetype.Id AS AttendanceTypeId,
+            attendancetype.Name AS AttendanceTypeName,
+            attendancetype.Points AS AttendanceTypePoints,
+            SUM(activity.ActivityPoints) AS ActivityPoints,
+            GROUP_CONCAT(CONCAT_WS(" ", activity.ActivityPoints, CONCAT("(",
+            activitytype.Name, ")"))
+            SEPARATOR " + ") AS ActivityDescription,
+            MIN(attendance.AttendanceCard) AS AttendanceCard
+            FROM attendance
+            INNER JOIN attendancetype
+            ON attendancetype.Id = attendance.AttendanceTypeId
+            LEFT JOIN activity
+            ON activity.AttendanceId = attendance.Id
+            LEFT JOIN activitytype
+            ON activitytype.Id = activity.ActivityTypeId
+            INNER JOIN student
+            ON student.UserId = attendance.StudentUserId
+            AND student.ClassId = attendance.StudentClassId
+            INNER JOIN lesson
+            ON lesson.Id = attendance.LessonId
+            INNER JOIN class
+            ON class.Id = attendance.StudentClassId
+            INNER JOIN user
+            ON user.Id = student.UserId
+            INNER JOIN house
+            ON student.HouseId = house.Id
+            WHERE student.ClassId = ?
+            AND attendance.LessonId = ?
+            GROUP BY user.Name
+            ORDER BY user.Name;',
+            $classId, $lessonId);
+    }
+
     public function GetAttendancesByClassAndLesson($classId, $lessonId)
     {
         return $this->database->query('
@@ -229,5 +268,14 @@ class Attendance
                 $values[$key]['LessonId'])
                 ->update($values[$key]);
         }
+    }
+
+    public function excuseStudent($AttendanceId)
+    {
+        return $this->database->query('
+            UPDATE attendance
+            SET AttendanceTypeId = 3
+            WHERE Id = ?;',
+            $AttendanceId);
     }
 }

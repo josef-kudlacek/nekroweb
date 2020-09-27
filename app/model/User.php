@@ -54,6 +54,15 @@ class User
             $values->username);
     }
 
+    public function GetUserById($userId)
+    {
+        return $this->database->query('
+            SELECT Id, Name, Email, IsActive
+            FROM user
+            WHERE Id = ?;',
+            $userId);
+    }
+
     public function getUserClasses($userId)
     {
         return $this->database->query('

@@ -93,7 +93,9 @@ class ActivityPresenter extends BasePresenter
         $this->activity->insertActivity($values);
         $this->transaction->endTransaction();
 
-        $this->redirect('Attendance:admin');
+        $classId = $this->getParameter("ClassId");
+        $lessonId = $this->getParameter("LessonId");
+        $this->redirect('Attendance:detail', array($classId, $lessonId));
     }
 
     protected function prepareActivityData($values)

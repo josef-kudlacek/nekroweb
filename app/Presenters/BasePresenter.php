@@ -11,6 +11,11 @@ use Nette\Application\UI\Form;
 class BasePresenter extends Nette\Application\UI\Presenter
 {
 
+    protected function startup()
+    {
+        parent::startup();
+    }
+
     protected function beforeRender()
     {
         $this->loadTemplateFilters();

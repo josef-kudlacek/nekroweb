@@ -1,0 +1,52 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Přehled docházky a aktivity</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $attendance}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-white bg-dark">Student</th>
+                        <th class="text-white bg-dark">Docházka</th>
+                        <th class="text-white bg-dark">Body</th>
+                        <th class="text-white bg-dark">Karta</th>
+                        <th class="text-white bg-dark">Správa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {foreach $attendance as $attendanceItem}
+                    <tr>
+                        <td class="table-{$attendanceItem->HouseId|houseType}">
+                        <a href="https://bradavice.eu//ukaz.php?name={urlencode($attendanceItem->StudentName|encodeToWin1250)}" target="_blank"
+                            class="text-{$attendanceItem->HouseId|houseType}">{$attendanceItem->StudentName}</a>
+                        </td>
+                        <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
+                            {$attendanceItem->AttendanceTypeName}
+                        </td>
+                        <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
+                            {$attendanceItem->AttendanceTypePoints}{if $attendanceItem->ActivityPoints} +
+                            <abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityPoints}</abbr>
+                            {/if}
+                        </td>
+                        <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
+                            {$attendanceItem->AttendanceCard}
+                        </td>
+                        <td>
+                            <a href="{link edit $attendanceItem->ClassId, $attendanceItem->LessonId}" class="btn btn-secondary btn-sm"
+                                role="button">Upravit</a>
+                            <a href="{link delete $attendanceItem->ClassId, $attendanceItem->LessonId}" class="btn btn-dark btn-sm"
+                                role="button">Smazat</a>
+                            {if $attendanceItem->AttendanceTypeName == "Neomluveno"}
+                            <a href="{link excuse! $attendanceItem->AttendanceId, $attendanceItem->StudentId}"
+                                class="btn btn-light btn-sm" role="button">Omluvit</a>
+                            {/if}
+                        </td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}
