@@ -23,10 +23,13 @@
                     <td class="text-white bg-dark">Studovaná třída:</td>
                     <td><strong>{$user->getIdentity()->className}</strong></td>
                 </tr>
-
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů za docházku a aktivitu:</td>
                     <td><strong>{$points->attendancePoints? $points->attendancePoints : 0} + {$points->activityPoints? $points->activityPoints : 0}</strong></td>
+                </tr>
+                <tr>
+                    <td class="text-white bg-secondary">Počet bodů za známky:</td>
+                    <td><strong>??</strong></td>
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů celkem:</td>
