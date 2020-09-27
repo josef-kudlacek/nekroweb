@@ -21,4 +21,13 @@ class Arc
             VALUES (?, ?, ?);',
             $values->ClassId, $values->LessonId, $values->FileName);
     }
+
+    public function deleteArc($arcName)
+    {
+        return $this->database->query('
+            DELETE
+            FROM arc
+            WHERE arc.FileName = ?;',
+            $arcName);
+    }
 }

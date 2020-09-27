@@ -8,6 +8,8 @@ use App\utils\Utils;
 use Nette\Application\BadRequestException;
 use Nette\Application\UI\Form;
 use Nette\Application\Responses\FileResponse;
+use Nette\Utils\FileSystem;
+
 
 class ArcPresenter extends BasePresenter
 {
@@ -46,6 +48,19 @@ class ArcPresenter extends BasePresenter
     {
         $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
         $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
+    }
+
+    public function actionDelete($fileName)
+    {
+        $filepath =  Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'arch' . DIRECTORY_SEPARATOR . $fileName;
+        FileSystem::delete($filepath);
+
+        $this->transaction->startTransaction();
+        $this->arc->deleteArc($fileName);
+        $this->transaction->endTransaction();
+
+        $this->flashMessage('Arch '. $fileName .' úspěšně smazán.','success');
+        $this->redirect('Attendance:admin');
     }
 
     public function actionDownload($fileName)

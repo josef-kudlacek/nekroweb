@@ -63,7 +63,9 @@
                         {if $attendance->FileName}
                             <td>
                                 <a href="{link Arc:download $attendance->FileName}" class="btn btn-secondary btn-sm"
-                                   role="button">Zobrazit Arch</a>
+                                   role="button">Stáhnout</a>
+                                <a href="{link Arc:delete $attendance->FileName}" class="btn btn-danger btn-sm"
+                                   role="button">Smazat</a>
                             </td>
                         {else}
                             <td>
