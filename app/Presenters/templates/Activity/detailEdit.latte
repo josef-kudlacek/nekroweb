@@ -1,0 +1,98 @@
+{block content}
+<script>
+    $(document).ready(function() {
+        $("input").change(function() {
+            var studentid = $(this).attr("student");
+            var target = $("[name='SUMA-"+studentid+"']");
+            var currentvalue = target.val();
+
+            var suma = parseInt(currentvalue, 10) + parseInt($(this).val(), 10);
+            target.val(suma);
+        });
+    });
+</script>
+
+
+    <div class="container">
+        <h1 n:block="title">Upravit aktivitu na hodině</h1>
+        <h2>{$lesson->Number}. hodina ({$lesson->Name}) třídy {$class->Name} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $student}
+        <form n:name="activityForm">
+            <div class="row">
+                <div class="col text-white text-center bg-dark">
+                    Jméno studenta
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Součet všech hodnot">SUMA</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Odpovědi na otázky">Otázky</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Popis činností">RPG</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Zapojení a obsah">Diskuze</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Celoroční soutěž">CS</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Pokusy o kouzlení">Kouzla</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Aktivita v rámci zpracování Zkoušky Smrti">ZS</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Otázka z minule na začátku hodiny">Pamatovák</abbr>
+                </div>
+                <div class="col-sm-1 text-white text-center bg-dark border border-dark">
+                    <abbr title="Nahlášení chyby k opravě">Chyba</abbr>
+                </div>
+            </div>
+                <input name="AttendanceId[{$student->UserId}]" class="form-control" type="integer" value="{$student->AttendanceId}" hidden>
+                <div class="row">
+                    <div class="col table-{$student->HouseId|houseType}">
+                      <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
+                            class="text-{$student->HouseId|houseType}">{$student->UserName}</a>
+                    </div>
+                    <input name="SUMA-{$student->UserId}" value="{$student->ActivityPointsOverall? $student->ActivityPointsOverall : 0}" class="col-sm-1 text-white text-center bg-dark border border-gray" maxlength="2" disabled>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="Question[{$student->UserId}]" value="{$student->Question}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="RPG[{$student->UserId}]" value="{$student->RPG}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="Discussion[{$student->UserId}]" value="{$student->Discussion}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="YearCompetition[{$student->UserId}]" value="{$student->YearCompetition}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="Spell[{$student->UserId}]" value="{$student->Spell}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="ExamDeath[{$student->UserId}]" value="{$student->ExamDeath}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="Rememberall[{$student->UserId}]" value="{$student->Rememberall}" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-sm-1">
+                        <input student="{$student->UserId}" name="Mistake[{$student->UserId}]" value="{$student->Mistake}" class="form-control" maxlength="2">
+                    </div>
+                </div>
+                <br />
+                <div class="text-center">
+                    <input n:name=send class="btn btn-secondary btn-block" value="Zapsat aktivitu v hodině">
+                </div>
+                <br />
+                <div class="text-center">
+                    <a class="btn btn-primary" href="{link Attendance:admin}">Do třídní knihy</a>
+                </div>
+            </form>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

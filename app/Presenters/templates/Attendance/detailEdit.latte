@@ -1,21 +1,20 @@
 {block content}
 <div class="container">
     <h1 n:block="title">Upravit docházku</h1>
-    <h2>Úprava docházky na hodině u třídy {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
-    {if $classAttendance}
+    <h2>Úprava docházky {$student->UserName} na {$student->LessonNumber}. hodině ({$student->LessonName})
+    třídy {$student->ClassName} za školní rok {$student->YearFrom}{if $student->YearTo}/{$student->YearTo}{/if}</h2>
+    {if $student}
     <form n:name="attendanceForm">
         <div class="row">
             <label class="col">
                 Hodina:
                 <select name=LessonId class="form-control">
-                {foreach $lessons as $lesson}
-                    <option value="{$lesson->Id}" {if $classAttendance[0]->LessonId == $lesson->Id}selected{/if}>{$lesson->Number}. {$lesson->Name}</option>
-                {/foreach}
+                    <option value="{$student->LessonId}" selected>{$student->LessonNumber}. {$student->LessonName}</option>
                 </select>
             </label>
             <label class="col">
                 Datum konání:
-                <input n:name=AttendanceDate value="{$classAttendance[0]->AttendanceDate|date:'%Y-%m-%d'}" type="date" class="form-control">
+                <input n:name=AttendanceDate value="{$student->AttendanceDate|date:'%Y-%m-%d'}" type="date" class="form-control">
             </label>
         </div>
         <div class="row">
@@ -44,35 +43,33 @@
                 Karta
             </div>
         </div>
-        {foreach $classAttendance as $attendanceItem}
-        <input name="StudentUserId[{$attendanceItem->StudentUserId}]" class="form-control" type="number" value="{$attendanceItem->StudentUserId}" hidden>
-        <input name="StudentClassId[{$attendanceItem->StudentUserId}]" class="form-control" type="number" value="{$class->ClassId}" hidden>
+        <input name="StudentUserId[{$student->UserId}]" class="form-control" type="number" value="{$student->UserId}" hidden>
+        <input name="StudentClassId[{$student->UserId}]" class="form-control" type="number" value="{$student->ClassId}" hidden>
         <div class="row">
-            <div class="col table-{$attendanceItem->HouseId|houseType}">
-                      <a href="https://bradavice.eu//ukaz.php?name={urlencode($attendanceItem->StudentName|encodeToWin1250)}" target="_blank"
-                            class="text-{$attendanceItem->HouseId|houseType}">{$attendanceItem->StudentName}</a>
+            <div class="col table-{$student->HouseId|houseType}">
+                      <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
+                            class="text-{$student->HouseId|houseType}">{$student->UserName}</a>
             </div>
             {foreach $attendancetypes as $attendanceTypeItem}
                 <label class="col-sm-1 text-center border border-dark form-check-label">
                     <div class="col">
-                        <input class="form-check-input" type="radio" name="AttendanceTypeId[{$attendanceItem->StudentUserId}]" value="{$attendanceTypeItem->Id}"
-                        {if $attendanceItem->AttendanceTypeId == $attendanceTypeItem->Id}checked{/if}>
+                        <input class="form-check-input" type="radio" name="AttendanceTypeId[{$student->UserId}]" value="{$attendanceTypeItem->Id}"
+                        {if $student->AttendanceTypeId == $attendanceTypeItem->Id}checked{/if}>
                         {$attendanceTypeItem->Points}
                     </div>
                 </label>
             {/foreach}
             <div class="col-md-1">
-                <input name="AttendanceCard[{$attendanceItem->StudentUserId}]" value="{$attendanceItem->AttendanceCard}" class="form-control" maxlength="4">
+                <input name="AttendanceCard[{$student->UserId}]" value="{$student->AttendanceCard}" class="form-control" maxlength="4">
             </div>
         </div>
-        {/foreach}
         <br />
         <div class="text-center">
             <input n:name=send class="btn btn-secondary btn-block" value="Zapsat docházku">
         </div>
         <br />
         <div class="text-center">
-            <a class="btn btn-primary" href="{link Attendance:admin}">Zpět</a>
+            <a class="btn btn-primary" href="{link Attendance:admin}">Zpět do třídní knihy</a>
         </div>
     </form>
     {else}

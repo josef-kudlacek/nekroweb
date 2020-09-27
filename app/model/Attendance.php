@@ -253,6 +253,31 @@ class Attendance
             $classId, $lessonId);
     }
 
+    public function GetAttendanceById($attendanceId)
+    {
+        return $this->database->query('
+            SELECT attendance.Id AS AttendanceId, user.Id AS UserId, user.Name AS UserName, student.HouseId AS HouseId,
+            attendancetype.Id AS AttendanceTypeId, attendancetype.Name AS AttendanceName, lesson.Id AS LessonId,
+            attendance.AttendanceCard, attendance.AttendanceDate, class.Id As ClassId,
+            class.Name AS ClassName, semester.YearFrom, semester.YearTo, lesson.Number AS LessonNumber, lesson.Name AS LessonName
+            FROM attendance
+            INNER JOIN user
+            ON attendance.StudentUserId = user.Id
+            INNER JOIN student
+            ON student.UserId = attendance.StudentUserId
+            AND student.ClassId = attendance.StudentClassId
+            INNER JOIN class
+            ON attendance.StudentClassId = class.Id
+            INNER JOIN lesson
+            ON attendance.LessonId = lesson.Id
+            INNER JOIN attendancetype
+            ON attendance.AttendanceTypeId = attendancetype.Id
+            INNER JOIN semester
+            ON semester.Id = class.SemesterId
+            WHERE attendance.Id = ?;',
+            $attendanceId);
+    }
+
     public function insertAttendances($values)
     {
         return $this->database->query('INSERT INTO attendance', $values);
@@ -267,6 +292,16 @@ class Attendance
                 $values[$key]['StudentClassId'],
                 $values[$key]['LessonId'])
                 ->update($values[$key]);
+        }
+    }
+
+    public function updateAttendance($values, $attendanceId)
+    {
+        foreach ($values as $key => $value)
+        {
+        $this->database->table('attendance')->where('Id = ?',
+            $attendanceId)
+            ->update($values[$key]);
         }
     }
 

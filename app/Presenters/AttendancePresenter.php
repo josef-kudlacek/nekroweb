@@ -36,6 +36,12 @@ class AttendancePresenter extends BasePresenter
      */
     public $activityTpe;
 
+    /** @var Model\Activity
+     * @inject
+     */
+    public $activity;
+
+
     /** @var Model\Lesson
      * @inject
      */
@@ -77,6 +83,14 @@ class AttendancePresenter extends BasePresenter
         $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
         $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
         $this->template->attendance = $this->attendance->getClassAttendanceSummary($ClassId, $LessonId)->fetchAll();
+    }
+
+    public function actionDetailEdit($AttendanceId)
+    {
+        $this->checkAccess();
+
+        $this->template->attendancetypes = $this->attendanceType->getAttendanceTypes()->fetchAll();
+        $this->template->student = $this->attendance->GetAttendanceById($AttendanceId)->fetch();
     }
 
     public function handleExcuse($AttendanceId, $StudentId)
@@ -156,8 +170,7 @@ class AttendancePresenter extends BasePresenter
 
         $form->addSelect('LessonId');
 
-        $form->addText('AttendanceDate')
-            ->setRequired();
+        $form->addText('AttendanceDate');
 
         $form->addInteger('StudentClassId');
 
@@ -165,7 +178,7 @@ class AttendancePresenter extends BasePresenter
 
         $form->addCheckbox('AttendanceTypeId');
 
-        $form->addInteger('AttendanceCard');
+        $form->addText('AttendanceCard');
 
         $form->addSubmit('send', 'Zapsat');
 
@@ -182,21 +195,26 @@ class AttendancePresenter extends BasePresenter
         $this->checkAccess();
 
         $values = $form->getHttpData($form::DATA_TEXT);
+        $values = Utils::convertEmptyToNull($values);
         $values = $this->prepareAttendanceData($values);
 
+        if($this->getParameter('AttendanceId'))
+        {
+            $this->processOneRow($values);
+        }
+
         $this->transaction->startTransaction();
+
         if ($this->getParameter('LessonId'))
         {
-            $values = Utils::convertEmptyToNull($values);
-            $this->attendance->updateAttendances($values, $this->getParameter('LessonId'));
-
+            $this->attendance->updateAttendances($values);
             $this->transaction->endTransaction();
+
             $this->redirect('Activity:edit', array($values[0]['StudentClassId'], $values[0]['LessonId']));
         } else {
-            $values = Utils::convertEmptyToNull($values);
             $this->attendance->insertAttendances($values);
-
             $this->transaction->endTransaction();
+
             $this->redirect('Activity:create', array($values[0]['StudentClassId'], $values[0]['LessonId']));
         }
     }
@@ -207,6 +225,17 @@ class AttendancePresenter extends BasePresenter
             $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
             $this->redirect('Homepage:default');
         }
+    }
+
+    private function processOneRow($values)
+    {
+        $attendanceId = $this->getParameter('AttendanceId');
+
+        $this->transaction->startTransaction();
+        $this->attendance->updateAttendance($values, $attendanceId);
+        $this->transaction->endTransaction();
+
+        $this->redirect('Activity:detailEdit', array($attendanceId, $values[0]['StudentClassId'], $values[0]['LessonId']));
     }
 
     private function prepareAttendanceData($values)

@@ -26,6 +26,11 @@ class ActivityPresenter extends BasePresenter
      */
     public $lesson;
 
+    /** @var Model\Attendance
+     * @inject
+     */
+    public $attendance;
+
     /** @var Model\Transaction
      * @inject
      */
@@ -59,6 +64,14 @@ class ActivityPresenter extends BasePresenter
         $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
 
         $this->template->students = $this->activity->getStudentsActivity($ClassId, $LessonId);
+    }
+
+    public function actionDetailEdit($attendanceId, $ClassId, $LessonId)
+    {
+        $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
+        $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
+
+        $this->template->student = $this->activity->getStudentActivity($attendanceId)->fetch();
     }
 
 
@@ -104,6 +117,7 @@ class ActivityPresenter extends BasePresenter
 
         $classId = $this->getParameter("ClassId");
         $lessonId = $this->getParameter("LessonId");
+
         $this->redirect('Attendance:detail', array($classId, $lessonId));
     }
 
