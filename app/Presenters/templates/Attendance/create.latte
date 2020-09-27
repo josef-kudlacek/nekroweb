@@ -49,8 +49,9 @@
                 <input name="StudentUserId[{$student->UserId}]" class="form-control" type="integer" value="{$student->UserId}" hidden>
                 <input name="StudentClassId[{$student->UserId}]" class="form-control" type="integer" value="{$class->ClassId}" hidden>
                 <div class="row">
-                    <div class="col form-control text-white bg-{$student->HouseId|houseType}">
-                      {$student->UserName}
+                    <div class="col table-{$student->HouseId|houseType}">
+                      <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
+                            class="text-{$student->HouseId|houseType}">{$student->UserName}</a>
                     </div>
                     {foreach $attendancetypes as $attendanceTypeItem}
                         <label class="col-sm-1 text-center border border-dark form-check-label">

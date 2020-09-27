@@ -76,4 +76,10 @@ class Filter
         $weekDay = array('Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota');
         return $weekDay[(integer)$date->format('w')];
     }
+
+    public static function encodeToCharset($stringUrl, $charset)
+    {
+        $stringUrl = iconv("UTF-8", $charset, $stringUrl);
+        return $stringUrl;
+    }
 }

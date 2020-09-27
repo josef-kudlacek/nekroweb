@@ -34,6 +34,10 @@ class BasePresenter extends Nette\Application\UI\Presenter
         $this->template->addFilter('weekDayCZ', function ($number) {
             return Filter::weekDayCZ($number);
         });
+
+        $this->template->addFilter('encodeToWin1250', function ($stringUrl) {
+            return Filter::encodeToCharset($stringUrl, "windows-1250");
+        });
     }
 
     public function errorForm(Form $form){

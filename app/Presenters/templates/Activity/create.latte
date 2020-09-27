@@ -53,8 +53,9 @@
                 {foreach $students as $student}
                 <input name="AttendanceId[{$student->UserId}]" class="form-control" type="integer" value="{$student->AttendanceId}" hidden>
                 <div class="row">
-                    <div class="col form-control text-white bg-{$student->HouseId|houseType}">
-                      {$student->UserName}
+                    <div class="col table-{$student->HouseId|houseType}">
+                      <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
+                            class="text-{$student->HouseId|houseType}">{$student->UserName}</a>
                     </div>
                     <input name="SUMA-{$student->UserId}" value="0" class="col-sm-1 text-white text-center bg-dark border border-gray" maxlength="2" disabled>
                     <div class="col-sm-1">

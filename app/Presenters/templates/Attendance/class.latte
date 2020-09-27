@@ -26,7 +26,10 @@
                 <tbody>
                 {foreach $attendance as $attendanceItem}
                     <tr>
-                        <td class="text-dark table-{$attendanceItem->HouseId|houseType}">{$attendanceItem->StudentName}</td>
+                        <td class="table-{$attendanceItem->HouseId|houseType}">
+                        <a href="https://bradavice.eu//ukaz.php?name={urlencode($attendanceItem->StudentName|encodeToWin1250)}" target="_blank"
+                            class="text-{$attendanceItem->HouseId|houseType}">{$attendanceItem->StudentName}</a>
+                        </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson1AT|attendanceType}">
                             {$attendanceItem->Lesson1ATP}{if $attendanceItem->Lesson1AP} +
                             <abbr title="{$attendanceItem->Lesson1Desc}">{$attendanceItem->Lesson1AP}</abbr>

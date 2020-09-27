@@ -18,8 +18,9 @@
             </thead>
             <tbody>
             {foreach $students as $student}
-                <tr class="text-white bg-{$student->HouseId|houseType}">
-                    <td>{$student->UserName}</td>
+                <tr class="text-{$student->HouseId|houseType} table-{$student->HouseId|houseType}">
+                    <td><a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
+                            class="text-{$student->HouseId|houseType}">{$student->UserName}</a></td>
                     <td>{$student->ClassName}</td>
                     <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
                     <td>
