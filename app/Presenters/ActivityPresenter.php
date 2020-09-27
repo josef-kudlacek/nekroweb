@@ -53,6 +53,15 @@ class ActivityPresenter extends BasePresenter
         $this->template->students = $this->activity->getStudentsAttendance($ClassId, $LessonId);
     }
 
+    public function actionEdit($ClassId, $LessonId)
+    {
+        $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
+        $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
+
+        $this->template->students = $this->activity->getStudentsActivity($ClassId, $LessonId);
+    }
+
+
     protected function createComponentActivityForm(): Form
     {
         $form = new Form;

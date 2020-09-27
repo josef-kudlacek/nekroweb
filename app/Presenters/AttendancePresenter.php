@@ -74,6 +74,8 @@ class AttendancePresenter extends BasePresenter
     {
         $this->checkAccess();
 
+        $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
+        $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
         $this->template->attendance = $this->attendance->getClassAttendanceSummary($ClassId, $LessonId)->fetchAll();
     }
 
