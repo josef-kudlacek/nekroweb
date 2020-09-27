@@ -127,6 +127,7 @@ class StudentPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'studentFormSucceeded'];
 
         return $form;

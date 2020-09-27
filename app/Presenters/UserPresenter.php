@@ -91,6 +91,7 @@ class UserPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'changePassFormSucceeded'];
 
         return $form;
@@ -128,6 +129,7 @@ class UserPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'changeClassFormSucceeded'];
 
         return $form;

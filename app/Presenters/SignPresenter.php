@@ -88,6 +88,7 @@ class SignPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'registerFormSucceeded'];
 
         return $form;
@@ -128,6 +129,7 @@ class SignPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'signInFormSucceeded'];
 
         return $form;
@@ -169,6 +171,7 @@ class SignPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'forgotFormSucceeded'];
 
         return $form;

@@ -61,6 +61,7 @@ class SemesterPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'semesterFormSucceeded'];
 
         return $form;
@@ -100,6 +101,7 @@ class SemesterPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'changeSemesterFormSucceeded'];
 
         return $form;

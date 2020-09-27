@@ -3,6 +3,7 @@
 
 namespace App\utils;
 
+define ('FILE_ABSOLUTE_PATH', 'C:/xampp/htdocs/nekroweb/www');
 
 class Utils
 {
@@ -94,5 +95,10 @@ class Utils
         $headers .= 'From: profesor Richard Bufler <joseph.kudlacek@gmail.com>' . "\r\n";
 
         mail($to,$subject,$message,$headers);
+    }
+
+    public static function getAbsolutePath()
+    {
+        return FILE_ABSOLUTE_PATH;
     }
 }

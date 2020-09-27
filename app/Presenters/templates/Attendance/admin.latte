@@ -43,6 +43,7 @@
                     <th class="text-white bg-dark">Datum konání</th>
                     <th class="text-white bg-dark">Aktivita</th>
                     <th class="text-white bg-dark">Správa</th>
+                    <th class="text-white bg-dark">Arch</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -59,6 +60,17 @@
                             <a href="{link delete $attendance->ClassId, $attendance->LessonId}" class="btn btn-light btn-sm"
                                role="button">Odebrat</a>
                         </td>
+                        {if $attendance->FileName}
+                            <td>
+                                <a href="{link Arc:new $attendance->ClassId, $attendance->LessonId}" class="btn btn-secondary btn-sm"
+                                   role="button">Zobrazit Arch</a>
+                            </td>
+                        {else}
+                            <td>
+                                <a href="{link Arc:new $attendance->ClassId, $attendance->LessonId}" class="btn btn-primary btn-sm"
+                                   role="button">Přidat Arch</a>
+                            </td>
+                        {/if}
                     </tr>
                 {/foreach}
                 </tbody>

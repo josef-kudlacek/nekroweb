@@ -117,6 +117,7 @@ class StudyClassPresenter extends BasePresenter
 
         $form->addProtection();
 
+        $form->onError[] = array($this, 'errorForm');
         $form->onSuccess[] = [$this, 'studyClassFormSucceeded'];
 
         return $form;
