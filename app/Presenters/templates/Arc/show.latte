@@ -6,21 +6,21 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th class="text-white bg-dark">Třída</th>
-                            <th class="text-white bg-dark">Hodina</th>
-                            <th class="text-white bg-dark">Datum konání</th>
-                            <th class="text-white bg-dark">Arch</th>
+                            <th class="text-white bg-dark text-center">Třída</th>
+                            <th class="text-white bg-dark text-center">Hodina</th>
+                            <th class="text-white bg-dark text-center">Datum konání</th>
+                            <th class="text-white bg-dark text-center">Arch</th>
                         </tr>
                     </thead>
                     <tbody>
                     {foreach $arcs as $arc}
-                        <tr class="table-warning">
-                            <td>{$arc->ClassName}</td>
-                            <td>{$arc->LessonNumber}. {$arc->LessonName}</td>
-                            <td>{$arc->AttendanceDate|weekDayCZ} ({$arc->AttendanceDate|date:'%d.%m.%Y'})</td>
-                            <td>
+                        <tr>
+                            <td class="text-white bg-dark align-middle">{$arc->ClassName}</td>
+                            <td class="text-dark bg-light align-middle">{$arc->LessonNumber}. {$arc->LessonName}</td>
+                            <td class="table-warning align-middle">{$arc->AttendanceDate|weekDayCZ} ({$arc->AttendanceDate|date:'%d.%m.%Y'})</td>
+                            <td class="text-white bg-dark align-middle text-center">
                                 {if $arc->FileName}
-                                <a href="{link Arc:download $arc->FileName}" class="btn btn-secondary btn-sm"
+                                <a href="{link Arc:download $arc->FileName}" class="btn btn-primary btn-sm"
                                    role="button">Stáhnout arch</a>
                                 {/if}
                             </td>
