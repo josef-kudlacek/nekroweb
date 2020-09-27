@@ -38,20 +38,32 @@ class ArcPresenter extends BasePresenter
     protected function startup()
     {
         parent::startup();
-        if (!$this->getUser()->isInRole('Profesor')) {
-            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
-            $this->redirect('Homepage:default');
+        if (!$this->getUser()->loggedIn) {
+            $this->flashMessage('Přístup do této sekce je pouze pro přihlášené. Přihlaste se prosím.','danger');
+            $this->redirect('Sign:in');
         }
+    }
+
+    public function actionShow()
+    {
+        $classId = $this->getUser()->getIdentity()->classId;
+
+        $this->template->class = $this->studyClass->getClassById($classId)->fetch();
+        $this->template->arcs = $this->arc->getArcsByClass($classId);
     }
 
     public function actionNew($ClassId, $LessonId)
     {
+        $this->checkAccess();
+
         $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
         $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
     }
 
     public function actionDelete($fileName)
     {
+        $this->checkAccess();
+
         $filepath =  Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'arch' . DIRECTORY_SEPARATOR . $fileName;
         FileSystem::delete($filepath);
 
@@ -108,6 +120,8 @@ class ArcPresenter extends BasePresenter
 
     public function arcFormSucceeded(Form $form, \stdClass $values): void
     {
+        $this->checkAccess();
+
         $values = Utils::convertEmptyToNull($form->getValues());
         $fileName = $this->createArcName();
         $values->FileName = $fileName;
@@ -127,6 +141,14 @@ class ArcPresenter extends BasePresenter
         $generateNamePart = Utils::generateString(28);
 
         return $dateNamePart.$generateNamePart.'.pdf';
+    }
+
+    private function checkAccess()
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
     }
 
 }

@@ -53,4 +53,12 @@ class BasePresenter extends Nette\Application\UI\Presenter
             }
         }
     }
+
+    private function checkAccess()
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
 }

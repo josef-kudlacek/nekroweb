@@ -69,7 +69,6 @@ class AttendancePresenter extends BasePresenter
     public function actionAdmin()
     {
         $this->checkAccess();
-
         $semesterId = $this->getUser()->getIdentity()->semesterId;
 
         $this->template->classes = $this->studyClass->getClassesBySemester($semesterId);

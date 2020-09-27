@@ -1,0 +1,35 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Archy z hodin</h1>
+        <h2>Přehled archů třídy {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
+        {if $arcs}
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-white bg-dark">Třída</th>
+                            <th class="text-white bg-dark">Hodina</th>
+                            <th class="text-white bg-dark">Datum konání</th>
+                            <th class="text-white bg-dark">Arch</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $arcs as $arc}
+                        <tr class="table-warning">
+                            <td>{$arc->ClassName}</td>
+                            <td>{$arc->LessonNumber}. {$arc->LessonName}</td>
+                            <td>{$arc->AttendanceDate|weekDayCZ} ({$arc->AttendanceDate|date:'%d.%m.%Y'})</td>
+                            <td>
+                                {if $arc->FileName}
+                                <a href="{link Arc:download $arc->FileName}" class="btn btn-secondary btn-sm"
+                                   role="button">Stáhnout arch</a>
+                                {/if}
+                            </td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+                {else}
+                Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}
