@@ -22,6 +22,11 @@ class UserPresenter extends BasePresenter
      */
     public $activity;
 
+    /** @var Model\StudyClass
+     * @inject
+     */
+    public $studyClass;
+
     /** @var Model\Transaction
      * @inject
      */
@@ -137,9 +142,8 @@ class UserPresenter extends BasePresenter
 
     public function changeClassFormSucceeded(Form $form, \stdClass $values): void
     {
-        $classes = $this->template->classes->fetchAll();
-        $classId = array_search($values->class, array_column($classes, 'ClassId'));
-        $class = $classes[$classId];
+        $studentId = $this->user->getId();
+        $class = $this->studyClass->getStudentClassById($values->class, $studentId)->fetch();
 
         try {
             $this->user->getIdentity()->classId = $class->ClassId;

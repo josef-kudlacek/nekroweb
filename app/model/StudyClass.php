@@ -75,6 +75,27 @@ class StudyClass
             $studyClassId);
     }
 
+    public function getStudentClassById($studyClassId, $studentId)
+    {
+        return $this->database->query('
+            SELECT class.Id AS ClassId, class.Name, class.TimeFrom, class.TimeTo,
+            DATE_FORMAT(class.FirstLesson, "%Y-%m-%d") AS FirstLesson, 
+            DATE_FORMAT(class.LastLesson, "%Y-%m-%d") AS LastLesson, 
+            semester.Id AS SemesterId, semester.YearFrom, semester.YearTo,
+            year.Id AS YearId, year.Number, year.CodeName, COUNT(student.UserId) AS StudentsCount
+            FROM necromancy.class class
+            INNER JOIN necromancy.semester semester
+            ON class.SemesterId = semester.Id
+            INNER JOIN necromancy.year year
+            ON class.YearId = year.Id
+            INNER JOIN student
+            ON student.ClassId = class.Id
+            WHERE class.Id = ?
+            AND student.UserId = ?
+            GROUP BY class.Id;',
+            $studyClassId, $studentId);
+    }
+
     public function insertClass($values)
     {
         return $this->database->query('
