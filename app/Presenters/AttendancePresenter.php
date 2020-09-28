@@ -4,7 +4,7 @@
 namespace App\Presenters;
 
 use App\Model;
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette\Application\UI\Form;
 
 class AttendancePresenter extends BasePresenter
@@ -85,7 +85,7 @@ class AttendancePresenter extends BasePresenter
         $this->checkAccess();
 
         $this->template->attendance = $this->attendance->getClassAttendanceSummary($ClassId, $LessonId)->fetchAll();
-        $this->template->arc = $this->arc->getArcsByClass($ClassId)->fetch();
+        $this->template->arc = $this->arc->getArcsByAttendance($ClassId, $LessonId)->fetch();
     }
 
     public function actionDetailEdit($AttendanceId)

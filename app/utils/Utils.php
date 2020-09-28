@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\utils;
+namespace App\Utils;
 
-define ('FILE_ABSOLUTE_PATH', 'C:\xampp\htdocs\nekroweb\www');
+define ('FILE_ABSOLUTE_PATH', '/home/users/bufler/nekromancie.eu/web/');
 
 class Utils
 {
@@ -87,11 +87,16 @@ class Utils
         $to = $recipient;
         $subject = $subject;
 
-        $message = "<p>Dobrý den,</p><p>Bylo Vám vygenerováno nové heslo: <strong>".$newPassword."</strong><br />
+        $message = "<html>";
+        $message .= "<body style=\"font-family:Arial; \">";
+        $message .= "<p>Dobrý den,</p><p>Bylo Vám vygenerováno nové heslo: <strong>".$newPassword."</strong><br />
                 S pozdravem a přáním pěkného dne,<br /><a href=https://www.nekromancie.eu>www.nekromancie.eu</a></p>";
+        $message .= "</body><br />";
+        $message .= "</html><br />";
 
         $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
+        $headers .= "Content-Transfer-Encoding: 7bit" . "\r\n";
         $headers .= 'From: profesor Richard Bufler <joseph.kudlacek@gmail.com>' . "\r\n";
 
         mail($to,$subject,$message,$headers);

@@ -4,7 +4,7 @@
 namespace App\Presenters;
 
 use App\Model;
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette\Application\UI\Form;
 
 class SemesterPresenter extends BasePresenter
@@ -117,7 +117,7 @@ class SemesterPresenter extends BasePresenter
         $this->user->getIdentity()->semesterTo = $semester->YearTo;
         $this->user->getIdentity()->semesterId = $semester->SemesterId;
         $this->flashMessage('Semestr úspěšně změněn. Vítej ve školním roce '.
-            $semester->YearFrom . '/.' . $semester->YearFrom . '!' ,"success");
+            $semester->YearFrom . '/' . $semester->YearTo . '!' ,"success");
         $this->redirect('Homepage:default');
     }
 

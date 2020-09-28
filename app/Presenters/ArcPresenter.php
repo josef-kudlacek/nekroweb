@@ -4,7 +4,7 @@
 namespace App\Presenters;
 
 use App\Model;
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette\Application\BadRequestException;
 use Nette\Application\UI\Form;
 use Nette\Application\Responses\FileResponse;
@@ -89,7 +89,6 @@ class ArcPresenter extends BasePresenter
 
         try {
             $response = new FileResponse($filepath, $downloadName, "application/pdf", true);
-            bdump($response);
             $this->sendResponse($response);
         } catch (BadRequestException $e) {
             $this->flashMessage('Soubor ' . $fileName . ' neexistuje nebo není čitelný.','danger');

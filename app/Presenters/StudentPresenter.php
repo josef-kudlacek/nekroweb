@@ -4,7 +4,7 @@
 namespace App\Presenters;
 
 use App\Model;
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette\Application\UI\Form;
 
 class StudentPresenter extends BasePresenter
@@ -55,7 +55,7 @@ class StudentPresenter extends BasePresenter
     public function actionActive($studentId, $studentName)
     {
         $this->dbUser->activeUser($studentId);
-        $this->flashMessage('Studentovi jménem'. $studentName .' byl povolen přístup na nekroweb.','success');
+        $this->flashMessage('Studentovi jménem '. $studentName .' byl povolen přístup na nekroweb.','success');
         $this->redirect('Student:show');
     }
 

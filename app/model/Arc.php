@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\model;
+namespace App\Model;
 
 use Nette;
 
@@ -30,6 +30,26 @@ class Arc
             WHERE arc.FileName = ?
             GROUP BY arc.FileName;',
             $fileName);
+    }
+
+    public function getArcsByAttendance($classId, $lessonId)
+    {
+        return $this->database->query('
+            SELECT attendance.AttendanceDate, lesson.Number AS LessonNumber, lesson.Name AS LessonName,
+            arc.FileName, class.Name AS ClassName, lesson.Id AS LessonId, class.Id AS ClassId
+            FROM attendance
+            INNER JOIN lesson
+            ON attendance.LessonId = lesson.Id
+            INNER JOIN class
+            ON attendance.StudentClassId = class.Id
+            LEFT JOIN arc
+            ON arc.ClassId = attendance.StudentClassId
+            AND arc.LessonId = attendance.LessonId
+            WHERE attendance.StudentClassId = ?
+            AND attendance.LessonId = ?
+            GROUP BY lesson.Number
+            ORDER BY lesson.Number;',
+            $classId, $lessonId);
     }
 
     public function getArcsByClass($classId)

@@ -4,7 +4,7 @@
 namespace App\Presenters;
 
 use App\Model;
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette\Application\UI\Form;
 
 class StudyClassPresenter extends BasePresenter

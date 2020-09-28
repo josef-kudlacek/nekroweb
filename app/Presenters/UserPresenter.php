@@ -4,9 +4,8 @@
 namespace App\Presenters;
 
 use App\Model;
-use App\model\Activity;
 use App\MyAuthenticator;
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette;
 use Nette\Application\UI\Form;
 
@@ -17,7 +16,7 @@ class UserPresenter extends BasePresenter
      */
     public $authentication;
 
-    /** @var Activity
+    /** @var Model\Activity
      * @inject
      */
     public $activity;

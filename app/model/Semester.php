@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\model;
+namespace App\Model;
 
 use Nette;
 

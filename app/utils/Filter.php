@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\utils;
+namespace App\Utils;
 
 
 class Filter

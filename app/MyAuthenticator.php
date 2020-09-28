@@ -3,7 +3,7 @@
 
 namespace App;
 
-use App\utils\Utils;
+use App\Utils\Utils;
 use Nette;
 
 
@@ -63,7 +63,7 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
     public function forgotPassword($values)
     {
         try {
-            $user = $this->findUser($values-username);
+            $user = $this->findUser($values->username);
         } catch (Nette\Security\AuthenticationException $authenticationException) {
             throw $authenticationException;
         } catch (Nette\UnexpectedValueException $unexpectedValueException) {

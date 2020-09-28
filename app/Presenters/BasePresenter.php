@@ -3,7 +3,7 @@
 
 namespace App\Presenters;
 
-use App\utils\Filter;
+use App\Utils\Filter;
 use Nette;
 use Nette\Application\UI\Form;
 

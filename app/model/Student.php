@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\model;
+namespace App\Model;
 
 use Nette;
 
@@ -76,11 +76,12 @@ class Student
 
     public function insertStudent($values)
     {
-        $this->insertUser($values->username, $values->isactive);
+        $this->insertUser($values->username);
 
         $this->database->query('
             SELECT @id := 
-            (SELECT Id FROM user WHERE Name = @username);');
+            (SELECT Id FROM user WHERE Name = ?);',
+            $values->username);
 
         $this->database->query('
             SELECT @houseId := ?,
@@ -142,19 +143,14 @@ class Student
                 $studentId);
     }
 
-    private function insertUser($username, $isactive)
+    private function insertUser($username)
     {
-        $this->database->query('
-            SELECT @username := ?,
-            @roleId := 2,
-            @isactive := ?;',
-            $username, $isactive);
-
         return $this->database->query('
             INSERT INTO user (Name, RoleId, IsActive)
             VALUES(
-            @username, @roleId, @isactive)
+            ?, 2, 0)
             ON DUPLICATE KEY UPDATE
-            Name = Name;');
+            Name = Name;',
+            $username);
     }
 }
