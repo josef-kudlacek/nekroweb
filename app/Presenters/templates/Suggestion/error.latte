@@ -1,0 +1,45 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Nahlášené chyby</h1>
+        <div class="text-center">
+                <a class="btn btn-info" href="{link Suggestion:addError}">Nahlásit chybu</a>
+        </div>
+        <h2>Přehled nahlášených chyb</h2>
+        {if $errors}
+            <table class="table table-bordered">
+                <thead>
+                <tr class="text-white bg-dark">
+                    <th class="col-md-1">Datum</th>
+                    <th class="col-1">Nahlásil</th>
+                    <th class="col">Popis chyby</th>
+                    <th class="col-1">Obrázek</th>
+                    <th class="col-1">Stav řešení</th>
+                    <th class="col-1">Reakce</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach $errors as $error}
+                    <tr>
+                        <td class="col-md-1 text-dark bg-light">{$error->Date|date:"%d. %m. %Y"}</td>
+                        <td class="col-1 table-{$error->HouseId|houseType}">
+                            <a href="https://bradavice.eu//ukaz.php?name={urlencode($error->UserName|encodeToWin1250)}" target="_blank"
+                            class="text-{$error->HouseId|houseType}">{$error->UserName}</a>
+                        </td>
+                        <td class="col table-{$error->HouseId|houseType}">{$error->Description}</td>
+                        <td class="col-1 table-{$error->HouseId|houseType}">
+                        {if $error->FileName}
+                            <a href="{$basePath}/error/{$error->FileName}" class="btn btn-primary btn-sm" target="_blank"
+                               role="button">Zobrazit obrázek</a>
+                        {/if}
+                        </td>
+                        <td class="col-1 text-white bg-dark">{$error->State? Opraveno : Neopraveno}</td>
+                        <td class="col-1 text-white bg-dark">{$error->Reaction}</td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

@@ -275,3 +275,11 @@ h2 {
   text-align: left;
 }
 
+td {
+  white-space: normal !important;
+  word-wrap: break-word;
+}
+table {
+  table-layout: fixed;
+}
+
