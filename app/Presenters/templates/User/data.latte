@@ -5,15 +5,15 @@
             <tbody>
             <tr>
                 <td class="text-white bg-dark">Kouzelnické jméno:</td>
-                <td><strong>{$user->getIdentity()->name}</strong></td>
+                <td class="text-dark bg-white"><strong>{$user->getIdentity()->name}</strong></td>
             </tr>
             <tr>
                 <td class="text-white bg-dark">E-mailová adresa:</td>
-                <td><strong>{$user->getIdentity()->email}</strong></td>
+                <td class="text-dark bg-white"><strong>{$user->getIdentity()->email}</strong></td>
             </tr>
             <tr>
                  <td class="text-white bg-dark">Školní rok:</td>
-                     <td>
+                     <td class="text-dark bg-white">
                          <strong>{$user->getIdentity()->semesterFrom}{ifset $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/ifset}
                          </strong>
                      </td>
@@ -21,19 +21,19 @@
             {if $user->isInRole('Student')}
                 <tr>
                     <td class="text-white bg-dark">Studovaná třída:</td>
-                    <td><strong>{$user->getIdentity()->className}</strong></td>
+                    <td class="text-dark bg-white"><strong>{$user->getIdentity()->className}</strong></td>
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů za docházku a aktivitu:</td>
-                    <td><strong>{$points->attendancePoints? $points->attendancePoints : 0} + {$points->activityPoints? $points->activityPoints : 0}</strong></td>
+                    <td class="text-dark bg-white"><strong>{$points->attendancePoints? $points->attendancePoints : 0} + {$points->activityPoints? $points->activityPoints : 0}</strong></td>
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů za známky:</td>
-                    <td><strong>??</strong></td>
+                    <td class="text-dark bg-white"><strong>??</strong></td>
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů celkem:</td>
-                    <td><strong>??</strong></td>
+                    <td class="text-dark bg-white"><strong>??</strong></td>
                 </tr>
             {/if}
             </tbody>

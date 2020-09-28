@@ -41,6 +41,11 @@ class AttendancePresenter extends BasePresenter
      */
     public $activity;
 
+    /** @var Model\Arc
+     * @inject
+     */
+    public $arc;
+
 
     /** @var Model\Lesson
      * @inject
@@ -79,9 +84,8 @@ class AttendancePresenter extends BasePresenter
     {
         $this->checkAccess();
 
-        $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
-        $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
         $this->template->attendance = $this->attendance->getClassAttendanceSummary($ClassId, $LessonId)->fetchAll();
+        $this->template->arc = $this->arc->getArcsByClass($ClassId)->fetch();
     }
 
     public function actionDetailEdit($AttendanceId)

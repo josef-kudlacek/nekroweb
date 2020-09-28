@@ -1,7 +1,9 @@
 {block content}
     <div class="container">
         <h1 n:block="title">Přehled docházky a aktivity</h1>
-        <h2>{$lesson->Number}. hodina ({$lesson->Name}) třídy {$class->Name} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        <h2>{$arc->LessonNumber}. hodina ({$arc->LessonName})<br />
+            třídy {$arc->ClassName} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}
+        </h2>
         {if $attendance}
             <table class="table table-bordered">
                 <thead>
@@ -46,9 +48,25 @@
         {else}
             Nenalezen žádný záznam.
         {/if}
-        <div class="text-center">
-            <a class="btn btn-warning" href="{link Attendance:edit, $class->ClassId, $lesson->Id}">Upravit docházku a aktivitu třídy</a>
-            <a class="btn btn-danger" href="{link Attendance:delete, $class->ClassId, $lesson->Id}">Smazat docházku a aktivitu třídy</a>
+        <div class="offset-md-3">
+            <a class="btn btn-warning" href="{link Attendance:edit, $arc->ClassId, $arc->LessonId}">Upravit docházku a aktivitu třídy</a>
+            <a class="btn btn-danger" href="{link Attendance:delete, $arc->ClassId, $arc->LessonId}">Smazat docházku a aktivitu třídy</a>
+        </div>
+        <br />
+        <div class="offset-md-5">
+            {if $arc->FileName}
+                <td>
+                    <a class="btn btn-secondary btn-sm" href="{link Arc:download $arc->FileName}"
+                       role="button">Stáhnout arch</a>
+                    <a class="btn btn-danger btn-sm" href="{link Arc:delete $arc->FileName}"
+                       role="button">Smazat arch</a>
+                </td>
+            {else}
+                <td>
+                    <a class="btn btn-info btn-sm" href="{link Arc:new $arc->ClassId, $arc->LessonId}"
+                       role="button">Přidat Arch</a>
+                </td>
+            {/if}
         </div>
         <br />
         <div class="text-center">

@@ -77,6 +77,9 @@ class ArcPresenter extends BasePresenter
 
     public function actionDownload($fileName)
     {
+        $arcInfo = $this->arc->getArcName($fileName)->fetch();
+        $downloadName = $this->createArcNameforDown($arcInfo);
+
         $filepath =  Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'arch' . DIRECTORY_SEPARATOR . $fileName;
         $httpResponse = $this->context->getService("httpResponse");
         $httpResponse->setHeader("Pragma", "public");
@@ -85,7 +88,7 @@ class ArcPresenter extends BasePresenter
         $httpResponse->setHeader("Content-Length", filesize($filepath));
 
         try {
-            $response = new FileResponse($filepath, $fileName, "application/pdf", true);
+            $response = new FileResponse($filepath, $downloadName, "application/pdf", true);
             bdump($response);
             $this->sendResponse($response);
         } catch (BadRequestException $e) {
@@ -135,6 +138,14 @@ class ArcPresenter extends BasePresenter
         $this->redirect('Attendance:admin');
     }
 
+    private function checkAccess()
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     private function createArcName()
     {
         $dateNamePart = date("Ymd");
@@ -143,12 +154,9 @@ class ArcPresenter extends BasePresenter
         return $dateNamePart.$generateNamePart.'.pdf';
     }
 
-    private function checkAccess()
+    private function createArcNameforDown($arcInfo)
     {
-        if (!$this->getUser()->isInRole('Profesor')) {
-            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
-            $this->redirect('Homepage:default');
-        }
+        return date("Ymd", strtotime($arcInfo->AttendanceDate)) . '_' . $arcInfo->ClassName . '_' . $arcInfo->LessonNumber  . '_arch.pdf';
     }
 
 }

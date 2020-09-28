@@ -6,21 +6,25 @@
         {/foreach}
         <form n:name=studentForm>
             <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Kouzelnické jméno:</strong></label>
                 <input n:name=username class="form-control" placeholder="Kouzelnické jméno">
             </div>
             <div class="form-group col-md-4 offset-md-4">
-                            <select n:name=house class="form-control"></select>
+                <label><strong>Kolej:</strong></label>
+                <select n:name=house class="form-control"></select>
             </div>
             <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Email:</strong></label>
                 <input n:name=email class="form-control" placeholder="Kontaktní e-mailová adresa">
             </div>
             <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Třída:</strong></label>
                 <select n:name=class class="form-control"></select>
             </div>
             <div class="form-group col-md-4 offset-md-5">
                 <label class="form-check-label">
                     <input n:name=isactive class="form-check-input" class="form-control">
-                    Student má přístup povolen.
+                    Student má <abbr title="Může se přihlásit.">povolen přístup</abbr>.
                 </label>
             </div>
             <div class="form-group col-md-4 offset-md-4">
