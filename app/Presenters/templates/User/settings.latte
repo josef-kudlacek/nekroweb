@@ -5,9 +5,6 @@
             <h3><u>Změna hesla</u></h3>
         </div>
         <form n:name=changePassForm>
-            <ul class="errors" n:if="$form->hasErrors()">
-                <li n:foreach="$form->errors as $error">{$error}</li>
-            </ul>
             <div class="form-group col-md-4 offset-md-4">
                 <label>Původní heslo:</label>
                 <input n:name=oldpassword class="form-control" placeholder="Heslo">
