@@ -80,7 +80,7 @@ class ArcPresenter extends BasePresenter
         $arcInfo = $this->arc->getArcName($fileName)->fetch();
         $downloadName = $this->createArcNameforDown($arcInfo);
 
-        $filepath =  Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'arch' . DIRECTORY_SEPARATOR . $fileName;
+        $filepath =  Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'arch' . DIRECTORY_SEPARATOR . $fileName . '.pdf';
         $httpResponse = $this->context->getService("httpResponse");
         $httpResponse->setHeader("Pragma", "public");
         $httpResponse->setHeader("Expires", 0);
