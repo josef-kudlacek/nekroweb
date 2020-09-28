@@ -36,8 +36,23 @@ class Error
             ORDER BY error.Date, error.Id;');
     }
 
+    public function getErrorById($errorId)
+    {
+        return $this->database->query('
+            SELECT error.Id AS ErrorId, error.Date,
+            error.FileName, error.Description, error.State, error.Reaction 
+            FROM suggestionerror error
+            WHERE error.Id = ?;',
+            $errorId);
+    }
+
     public function insertError($values)
     {
         return $this->database->table('suggestionerror')->insert($values);
+    }
+
+    public function updateError($values)
+    {
+        return $this->database->table('suggestionerror')->where('Id', $values['Id'])->update($values);
     }
 }

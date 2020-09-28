@@ -14,7 +14,7 @@
                     <th class="col">Popis chyby</th>
                     <th class="col-1">Obrázek</th>
                     <th class="col-1">Stav řešení</th>
-                    <th class="col-1">Reakce</th>
+                    <th class="col-1">Reagovat</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,8 +32,15 @@
                                role="button">Zobrazit obrázek</a>
                         {/if}
                         </td>
-                        <td class="col-1 text-dark bg-{$error->State? success : warning}">{$error->State? Opraveno : Neopraveno}</td>
-                        <td class="col-1 text-dark bg-{$error->State? success : warning}">{$error->Reaction}</td>
+                        <td class="col-1 text-white bg-dark">{$error->State? Opraveno : Neopraveno}<br/>
+                            {$error->Reaction}
+                        </td>
+                        <td class="col-1 text-white bg-dark">
+                            {if !$error->State}
+                                <a href="{link Suggestion:resolution $error->ErrorId}" class="btn btn-success btn-sm"
+                                   role="button">Vyřešit</a>
+                            {/if}
+                        </td>
                     </tr>
                 {/foreach}
                 </tbody>

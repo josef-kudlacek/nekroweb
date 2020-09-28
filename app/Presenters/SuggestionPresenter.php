@@ -47,6 +47,16 @@ class SuggestionPresenter extends BasePresenter
         $this->template->errors = $this->error->getErrors();
     }
 
+    public function actionErrorAdmin()
+    {
+        $this->template->errors = $this->error->getErrors();
+    }
+
+    public function actionResolution($errorId)
+    {
+        $this->template->error = $this->error->getErrorById($errorId)->fetch();
+    }
+
     protected function createComponentAddErrorForm(): Form
     {
         $form = new Form;
@@ -83,6 +93,40 @@ class SuggestionPresenter extends BasePresenter
 
         $this->flashMessage('Chyba úspěšně nahlášena.','success');
         $this->redirect('Suggestion:error');
+    }
+
+    protected function createComponentErrorResolutionForm(): Form
+    {
+        $form = new Form;
+
+        $form->addInteger('Id');
+
+        $form->addCheckbox('State');
+
+        $form->addTextArea('Reaction')
+            ->setRequired();
+
+        $form->addSubmit('send');
+
+        $form->addProtection();
+
+        $form->onError[] = array($this, 'errorForm');
+        $form->onSuccess[] = [$this, 'errorResolutionFormSucceeded'];
+
+        return $form;
+    }
+
+    public function errorResolutionFormSucceeded(Form $form): void
+    {
+        $values = $form->values;
+
+        bdump($values);
+        $this->transaction->startTransaction();
+        $this->error->updateError($values);
+        $this->transaction->endTransaction();
+
+        $this->flashMessage('Vyjádření k chybě zaznamenáno.','success');
+        $this->redirect('Suggestion:errorAdmin');
     }
 
     private function createErrorFile($file)
