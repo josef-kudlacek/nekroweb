@@ -103,7 +103,7 @@ class SignPresenter extends BasePresenter
             $this->user->insertStudent($values);
             $this->transaction->endTransaction();
 
-            $this->flashMessage('Žádost o přístup proběhla úspěšně. Počkejte na její schválení profesorem.' ,"success");
+            $this->flashMessage('Žádost o přístup proběhla úspěšně. Pro její schválení napište sovu profesorovi a sdělte mu pro potvrzení použitý mail.' ,"success");
             $this->redirect('Homepage:default');
 
         } catch (Nette\Security\AuthenticationException $authenticationException) {
