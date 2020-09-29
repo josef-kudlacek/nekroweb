@@ -248,6 +248,11 @@ class AttendancePresenter extends BasePresenter
 
 
         foreach ($studentIds as $student) {
+            if (!isset($values['AttendanceTypeId'][$student])) {
+                continue;
+            }
+
+
             $studentItem = array(
                 "StudentUserId" => $values['StudentUserId'][$student],
                 "StudentClassId" => $values['StudentClassId'][$student],
