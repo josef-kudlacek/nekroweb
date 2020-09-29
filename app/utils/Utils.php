@@ -3,7 +3,7 @@
 
 namespace App\Utils;
 
-define ('FILE_ABSOLUTE_PATH', '/home/users/bufler/nekromancie.eu/web/');
+define ('FILE_ABSOLUTE_PATH', '/home/users/bufler/nekromancie.eu/web/www');
 
 class Utils
 {

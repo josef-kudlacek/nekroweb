@@ -121,7 +121,7 @@ class AttendancePresenter extends BasePresenter
         $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
 
         $YearId = $this->template->class->YearId;
-        $this->template->lessons =$this->lesson->getLessonsByYear($YearId)->fetchAll();
+        $this->template->lessons =$this->lesson->getClassRemainingLessons($YearId, $ClassId)->fetchAll();
     }
 
     public function renderEdit($ClassId, $LessonId)

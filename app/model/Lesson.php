@@ -34,4 +34,18 @@ class Lesson
             $YearId);
     }
 
+    public function getClassRemainingLessons($YearId, $ClassId)
+    {
+        return $this->database->query('
+            SELECT lesson.Id, lesson.Number, lesson.Name
+            FROM lesson
+            WHERE lesson.Year = ?
+            AND lesson.Id NOT IN
+            (SELECT attendance.LessonId
+            FROM attendance
+            WHERE attendance.StudentClassId = ?)
+            ORDER BY lesson.Number;',
+            $YearId, $ClassId);
+    }
+
 }
