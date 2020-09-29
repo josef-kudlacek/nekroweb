@@ -76,7 +76,7 @@ class Student
 
     public function insertStudent($values)
     {
-        $this->insertUser($values->username);
+        $this->insertUser($values->username, $values->isactive);
 
         $this->database->query('
             SELECT @id := 
@@ -143,14 +143,14 @@ class Student
                 $studentId);
     }
 
-    private function insertUser($username)
+    private function insertUser($username, $isactive)
     {
         return $this->database->query('
             INSERT INTO user (Name, RoleId, IsActive)
             VALUES(
-            ?, 2, 0)
+            ?, 2, ?)
             ON DUPLICATE KEY UPDATE
             Name = Name;',
-            $username);
+            $username, $isactive);
     }
 }

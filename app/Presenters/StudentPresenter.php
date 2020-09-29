@@ -137,6 +137,8 @@ class StudentPresenter extends BasePresenter
     {
         $studentId = $this->getParameter('studentId');
         $values = Utils::convertEmptyToNull($form->getValues());
+        $values->isactive = (int) $values->isactive;
+        bdump($values);
 
         $this->transaction->startTransaction();
 
