@@ -35,6 +35,7 @@
                 {/if}
 
         <h2>Přehled odučených hodin</h2>
+        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $classAttendance}
             <table class="table table-bordered">
                 <thead>
@@ -46,7 +47,7 @@
                     <th class="text-white bg-dark">Arch</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="filter">
                 {foreach $classAttendance as $attendance}
                     <tr>
                         <td class="text-white bg-dark">{$attendance->ClassName}</td>

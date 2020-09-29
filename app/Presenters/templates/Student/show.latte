@@ -1,11 +1,12 @@
 {block content}
     <div class="container">
         <h1 n:block="title">Správa studentů</h1>
-        <h2>Přehled studentů</h2>
         <div class="form-group col-md-4 offset-md-5">
             <a href="{link create}" class="btn btn-primary btn-sm"
                 role="button">Přidat studenta do semestru</a>
         </div>
+         <h2>Přehled studentů</h2>
+        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $students}
         <table class="table table-bordered">
             <thead>
@@ -16,7 +17,7 @@
                     <th class="text-white bg-dark">Správa studenta</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="filter">
             {foreach $students as $student}
                 <tr class="table-{$student->HouseId|houseType}">
                     <td><a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"

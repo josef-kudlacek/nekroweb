@@ -1,11 +1,12 @@
 {block content}
     <div class="container">
         <h1 n:block="title">Správa semestrů</h1>
-        <h2>Přehled semestrů</h2>
         <div class="form-group col-md-4 offset-md-5">
             <a href="{link create}" class="btn btn-primary btn-sm"
                 role="button">Přidat semestr</a>
         </div>
+        <h2>Přehled semestrů</h2>
+        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $semesters}
         <table class="table table-bordered">
             <thead>
@@ -15,7 +16,7 @@
                     <th class="text-white bg-dark">Správa semestru</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="filter">
             {foreach $semesters as $semester}
                 <tr class="table-{$semester->YearTo|semesterType}">
                     <td>{$semester->YearFrom}</td>

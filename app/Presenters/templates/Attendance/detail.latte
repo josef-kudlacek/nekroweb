@@ -4,6 +4,7 @@
         <h2>{$arc->LessonNumber}. hodina ({$arc->LessonName})<br />
             třídy {$arc->ClassName} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}
         </h2>
+        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $attendance}
             <table class="table table-bordered">
                 <thead>
@@ -15,7 +16,7 @@
                         <th class="text-white bg-dark">Správa</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="filter">
                 {foreach $attendance as $attendanceItem}
                     <tr>
                         <td class="table-{$attendanceItem->HouseId|houseType}">
