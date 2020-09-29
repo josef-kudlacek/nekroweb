@@ -137,7 +137,7 @@ class SuggestionPresenter extends BasePresenter
             $fileType = substr($file->name, -5, 5);
             $fileName = $dateNamePart . '-' . $generateNamePart . $fileType;
 
-            $file->move(Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'error' . DIRECTORY_SEPARATOR . $fileName);
+            $file->move(Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'printscreens' . DIRECTORY_SEPARATOR . $fileName);
         }
 
         return $fileName;
