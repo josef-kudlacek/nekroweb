@@ -89,15 +89,18 @@ class Utils
 
         $message = "<html>";
         $message .= "<body style=\"font-family:Arial; \">";
-        $message .= "<p>Dobrý den,</p><p>Bylo Vám vygenerováno nové heslo: <strong>".$newPassword."</strong><br />
-                S pozdravem a přáním pěkného dne,<br /><a href=https://www.nekromancie.eu>www.nekromancie.eu</a></p>";
+        $message .= "<p>Dobrý den,<br />";
+        $message .= "Na základě Vašeho zapomenutého hesla Vám bylo vygenerováno heslo nové: <strong>".$newPassword."</strong>.<br />";
+        $message .= "Heslo si můžete kdykoliv změnit v nastavení.</p>";
+        $message .= "<p><i>S pozdravem a přáním pěkného dne,<br /> R.B.</i><br />";
+        $message .= "<a href=https://www.nekromancie.eu>www.nekromancie.eu</a></p>";
         $message .= "</body><br />";
         $message .= "</html><br />";
 
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
         $headers .= "Content-Transfer-Encoding: 7bit" . "\r\n";
-        $headers .= 'From: profesor Richard Bufler <joseph.kudlacek@gmail.com>' . "\r\n";
+        $headers .= 'From: Profesor Richard Bufler <joseph.kudlacek@gmail.com>' . "\r\n";
 
         mail($to,$subject,$message,$headers);
     }
