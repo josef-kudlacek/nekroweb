@@ -86,7 +86,7 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
             WHERE user.Name = ?;',
                 $newHashPassword, $values->username);
 
-        Utils::sendEmail($user->Email, 'Žádost o nové heslo', $newPassword);
+        Utils::sendEmail($user->Email, 'Nekroweb: Žádost o nové heslo', $newPassword);
     }
 
     public function changePassword($values, $username)
