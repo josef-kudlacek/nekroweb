@@ -279,7 +279,3 @@ td {
   white-space: normal !important;
   word-wrap: break-word;
 }
-table {
-  table-layout: fixed;
-}
-

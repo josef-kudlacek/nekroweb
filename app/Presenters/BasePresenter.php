@@ -32,6 +32,10 @@ class BasePresenter extends Nette\Application\UI\Presenter
             return Filter::houseType($houseId);
         });
 
+        $this->template->addFilter('markType', function ($markId) {
+            return Filter::markType($markId);
+        });
+
         $this->template->addFilter('semesterType', function ($YearTo) {
             return Filter::semesterType($YearTo);
         });

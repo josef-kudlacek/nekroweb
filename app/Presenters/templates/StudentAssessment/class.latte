@@ -1,0 +1,77 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Přehled známek</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $assessments}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-white bg-dark">Student</th>
+                        <th class="text-white bg-dark">ZS</th>
+                        <th class="text-white bg-dark">Esej</th>
+                        <th class="text-white bg-dark">1.PDÚ</th>
+                        <th class="text-white bg-dark">2.PDÚ</th>
+                        <th class="text-white bg-dark">1.NDÚ</th>
+                        <th class="text-white bg-dark">2.NDÚ</th>
+                        <th class="text-white bg-dark">3.NDÚ</th>
+                        <th class="text-white bg-dark">4.NDÚ</th>
+                        <th class="text-white bg-dark">5.NDÚ</th>
+                        <th class="text-white bg-dark">6.NDÚ</th>
+                        <th class="text-white bg-dark">7.NDÚ</th>
+                        <th class="text-white bg-dark">8.NDÚ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {foreach $assessments as $assessment}
+                    <tr>
+                        <td class="table-{$assessment->HouseId|houseType}">
+                        <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessment->StudentName|encodeToWin1250)}"
+                            class="text-dark" target="_blank">{$assessment->StudentName}</a>
+                        </td>
+                        <td class="text-dark bg-{$assessment->ZSid|markType}">
+                            {$assessment->ZS}
+                        </td>
+                        <td class="text-dark bg-{$assessment->Esejid|markType}">
+                            {$assessment->Esej}
+                        </td>
+                        <td class="text-dark bg-{$assessment->PDU1id|markType}">
+                            {$assessment->PDU1}
+                        </td>
+                        <td class="text-dark bg-{$assessment->PDU2|markType}">
+                            {$assessment->PDU2}
+                        </td>
+                        <td class="text-dark bg-{$assessment->NDU1id|markType}">
+                            {$assessment->NDU1}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU2id|markType}">
+                            {$assessment->NDU2}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU3id|markType}">
+                            {$assessment->NDU3}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU4id|markType}">
+                            {$assessment->NDU4}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU5id|markType}">
+                            {$assessment->NDU5}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU6id|markType}">
+                            {$assessment->NDU6}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU7id|markType}">
+                            {$assessment->NDU7}
+                        </td>
+                         <td class="text-dark bg-{$assessment->NDU8id|markType}">
+                            {$assessment->NDU8}
+                        </td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+
+        {include "../StudentAssessment/legend.latte"}
+    </div>
+{/block}

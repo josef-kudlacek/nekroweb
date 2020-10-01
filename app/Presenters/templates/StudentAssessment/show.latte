@@ -1,0 +1,34 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Moje známky</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $assessment}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark text-center">Kód</th>
+                    <th class="text-white bg-dark text-center">Název</th>
+                    <th class="text-white bg-dark text-center">Známka</th>
+                    <th class="text-white bg-dark text-center">Datum</th>
+                    <th class="text-white bg-dark text-center">Komentář</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $assessment as $assessmentItem}
+                <tr class="text-dark bg-{$assessmentItem->MarkId|markType}">
+                    <td>{$assessmentItem->HomeworkCode}</td>
+                    <td>{$assessmentItem->AssessmentName}</td>
+                    <td>{$assessmentItem->MarkName}</td>
+                    <td>{$assessmentItem->AssessmentDate|date:"%d. %m. %Y"}</td>
+                    <td>{$assessmentItem->AssessmentComment}</td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+
+        {include "../StudentAssessment/legend.latte"}
+    </div>
+{/block}

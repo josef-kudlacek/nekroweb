@@ -63,6 +63,36 @@ class Filter
         return $houseColor;
     }
 
+    public static function markType($markId)
+    {
+        $markColor = 'dark';
+
+        switch ($markId) {
+            case 1:
+                $markColor = 'danger';
+                break;
+            case 2:
+                $markColor = 'success';
+                break;
+            case 3:
+                $markColor = 'primary';
+                break;
+            case 4:
+                $markColor = 'secondary';
+                break;
+            case 5:
+                $markColor = 'warning';
+                break;
+            case 6:
+                $markColor = 'light';
+                break;
+            default:
+                $markColor = 'dark';
+        }
+
+        return $markColor;
+    }
+
     public static function semesterType($YearTo)
     {
         $semesterColor = 'primary';

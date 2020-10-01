@@ -30,11 +30,13 @@ services:
 	- App\Model\Error
 	- App\Model\Lesson
 	- App\Model\Homework
+	- App\Model\HomeworkType
 	- App\Model\House
 	- App\Model\Rule
 	- App\Model\Curriculum
 	- App\Model\Semester
 	- App\Model\Suggestion
+	- App\Model\StudentAssessment
 	- App\Model\StudyClass
 	- App\Model\Student
 	- App\Model\Transaction

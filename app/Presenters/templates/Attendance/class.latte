@@ -7,20 +7,20 @@
                 <thead>
                     <tr>
                         <th class="text-white bg-dark">Student</th>
-                        <th class="text-white bg-dark">1. hodina</th>
-                        <th class="text-white bg-dark">2. hodina</th>
-                        <th class="text-white bg-dark">3. hodina</th>
-                        <th class="text-white bg-dark">4. hodina</th>
-                        <th class="text-white bg-dark">5. hodina</th>
-                        <th class="text-white bg-dark">6. hodina</th>
-                        <th class="text-white bg-dark">7. hodina</th>
-                        <th class="text-white bg-dark">8. hodina</th>
-                        <th class="text-white bg-dark">9. hodina</th>
-                        <th class="text-white bg-dark">10. hodina</th>
-                        <th class="text-white bg-dark">11. hodina</th>
-                        <th class="text-white bg-dark">12. hodina</th>
-                        <th class="text-white bg-dark">13. hodina</th>
-                        <th class="text-white bg-dark">14. hodina</th>
+                        <th class="text-white bg-dark">#1</th>
+                        <th class="text-white bg-dark">#2</th>
+                        <th class="text-white bg-dark">#3</th>
+                        <th class="text-white bg-dark">#4</th>
+                        <th class="text-white bg-dark">#5</th>
+                        <th class="text-white bg-dark">#6</th>
+                        <th class="text-white bg-dark">#7</th>
+                        <th class="text-white bg-dark">#8</th>
+                        <th class="text-white bg-dark">#9</th>
+                        <th class="text-white bg-dark">#10</th>
+                        <th class="text-white bg-dark">#11</th>
+                        <th class="text-white bg-dark">#12</th>
+                        <th class="text-white bg-dark">#13</th>
+                        <th class="text-white bg-dark">#14</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,7 +28,7 @@
                     <tr>
                         <td class="table-{$attendanceItem->HouseId|houseType}">
                         <a href="https://bradavice.eu//ukaz.php?name={urlencode($attendanceItem->StudentName|encodeToWin1250)}" target="_blank"
-                            class="text-{$attendanceItem->HouseId|houseType}">{$attendanceItem->StudentName}</a>
+                            class="text-dark">{$attendanceItem->StudentName}</a>
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson1AT|attendanceType}">
                             {$attendanceItem->Lesson1ATP}{if $attendanceItem->Lesson1AP} +

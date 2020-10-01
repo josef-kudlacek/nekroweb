@@ -5,7 +5,7 @@ namespace App\Model;
 
 use Nette;
 
-class Homework
+class HomeworkType
 {
     private $database;
 
@@ -14,6 +14,11 @@ class Homework
         $this->database = $database;
     }
 
-
+    public function getHomeworkTypes()
+    {
+        return $this->database
+            ->table('homeworktype')
+            ->select('*');
+    }
 
 }
