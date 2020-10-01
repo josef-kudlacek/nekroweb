@@ -1,0 +1,41 @@
+{block content}
+    <div class="container">
+        <h1 n:block=title>Upravit známku</h1>
+        {foreach $flashes as $flash}
+            <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+        {/foreach}
+        <form n:name=assessmentForm>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Třída:</strong></label>
+                <select n:name=StudentClassId class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Student:</strong></label>
+                <input class="form-control" id="selectFilter" type="text" placeholder="Filtrovat">
+                <select n:name=StudentUserId id="filter" class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Úkol:</strong></label>
+                <select n:name=AssessmentId class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Známka:</strong></label>
+                <select n:name=MarkId class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Datum:</strong></label>
+                <input n:name=Date type="date" class="form-control">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Komentář:</strong></label>
+                <textarea n:name=Comment class="form-control" rows="5" maxlength="255"></textarea>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=send class="btn btn-secondary btn-block" value="Přidat">
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href="{link Assessment:show}">Zpět</a>
+            </div>
+        </form>
+   </div>
+{/block}

@@ -3,6 +3,7 @@
         <h1 n:block="title">Přehled docházky a aktivity</h1>
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $attendance}
+            <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat řádky tabulky">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -23,7 +24,7 @@
                         <th class="text-white bg-dark">#14</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="filter">
                 {foreach $attendance as $attendanceItem}
                     <tr>
                         <td class="table-{$attendanceItem->HouseId|houseType}">
@@ -31,73 +32,59 @@
                             class="text-dark">{$attendanceItem->StudentName}</a>
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson1AT|attendanceType}">
-                            {$attendanceItem->Lesson1ATP}{if $attendanceItem->Lesson1AP} +
-                            <abbr title="{$attendanceItem->Lesson1Desc}">{$attendanceItem->Lesson1AP}</abbr>
+                            {$attendanceItem->Lesson1ATP}{if $attendanceItem->Lesson1AP}+<abbr title="{$attendanceItem->Lesson1Desc}">{$attendanceItem->Lesson1AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson2AT|attendanceType}">
-                            {$attendanceItem->Lesson2ATP}{if $attendanceItem->Lesson2AP} +
-                                <abbr title="{$attendanceItem->Lesson2Desc}">{$attendanceItem->Lesson2AP}</abbr>
+                            {$attendanceItem->Lesson2ATP}{if $attendanceItem->Lesson2AP}+<abbr title="{$attendanceItem->Lesson2Desc}">{$attendanceItem->Lesson2AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson3AT|attendanceType}">
-                            {$attendanceItem->Lesson3ATP}{if $attendanceItem->Lesson3AP} +
-                                <abbr title="{$attendanceItem->Lesson3Desc}">{$attendanceItem->Lesson3AP}</abbr>
+                            {$attendanceItem->Lesson3ATP}{if $attendanceItem->Lesson3AP}+<abbr title="{$attendanceItem->Lesson3Desc}">{$attendanceItem->Lesson3AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson4AT|attendanceType}">
-                            {$attendanceItem->Lesson4ATP}{if $attendanceItem->Lesson4AP} +
-                                <abbr title="{$attendanceItem->Lesson4Desc}">{$attendanceItem->Lesson4AP}</abbr>
+                            {$attendanceItem->Lesson4ATP}{if $attendanceItem->Lesson4AP}+<abbr title="{$attendanceItem->Lesson4Desc}">{$attendanceItem->Lesson4AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson5AT|attendanceType}">
-                            {$attendanceItem->Lesson5ATP}{if $attendanceItem->Lesson5AP} +
-                                <abbr title="{$attendanceItem->Lesson5Desc}">{$attendanceItem->Lesson5AP}</abbr>
+                            {$attendanceItem->Lesson5ATP}{if $attendanceItem->Lesson5AP}+<abbr title="{$attendanceItem->Lesson5Desc}">{$attendanceItem->Lesson5AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson6AT|attendanceType}">
-                            {$attendanceItem->Lesson6ATP}{if $attendanceItem->Lesson6AP} +
-                                <abbr title="{$attendanceItem->Lesson6Desc}">{$attendanceItem->Lesson6AP}</abbr>
+                            {$attendanceItem->Lesson6ATP}{if $attendanceItem->Lesson6AP}+<abbr title="{$attendanceItem->Lesson6Desc}">{$attendanceItem->Lesson6AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson7AT|attendanceType}">
-                            {$attendanceItem->Lesson7ATP}{if $attendanceItem->Lesson7AP} +
-                                <abbr title="{$attendanceItem->Lesson7Desc}">{$attendanceItem->Lesson7AP}</abbr>
+                            {$attendanceItem->Lesson7ATP}{if $attendanceItem->Lesson7AP}+<abbr title="{$attendanceItem->Lesson7Desc}">{$attendanceItem->Lesson7AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson8AT|attendanceType}">
-                            {$attendanceItem->Lesson8ATP}{if $attendanceItem->Lesson8AP} +
-                                <abbr title="{$attendanceItem->Lesson8Desc}">{$attendanceItem->Lesson8AP}</abbr>
+                            {$attendanceItem->Lesson8ATP}{if $attendanceItem->Lesson8AP}+<abbr title="{$attendanceItem->Lesson8Desc}">{$attendanceItem->Lesson8AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson9AT|attendanceType}">
-                            {$attendanceItem->Lesson9ATP}{if $attendanceItem->Lesson9AP} +
-                                <abbr title="{$attendanceItem->Lesson9Desc}">{$attendanceItem->Lesson9AP}</abbr>
+                            {$attendanceItem->Lesson9ATP}{if $attendanceItem->Lesson9AP}+<abbr title="{$attendanceItem->Lesson9Desc}">{$attendanceItem->Lesson9AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson10AT|attendanceType}">
-                            {$attendanceItem->Lesson10ATP}{if $attendanceItem->Lesson10AP} +
-                                <abbr title="{$attendanceItem->Lesson10Desc}">{$attendanceItem->Lesson10AP}</abbr>
+                            {$attendanceItem->Lesson10ATP}{if $attendanceItem->Lesson10AP}+<abbr title="{$attendanceItem->Lesson10Desc}">{$attendanceItem->Lesson10AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson11AT|attendanceType}">
-                            {$attendanceItem->Lesson11ATP}{if $attendanceItem->Lesson11AP} +
-                                <abbr title="{$attendanceItem->Lesson11Desc}">{$attendanceItem->Lesson11AP}</abbr>
+                            {$attendanceItem->Lesson11ATP}{if $attendanceItem->Lesson11AP}+<abbr title="{$attendanceItem->Lesson11Desc}">{$attendanceItem->Lesson11AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson12AT|attendanceType}">
-                            {$attendanceItem->Lesson12ATP}{if $attendanceItem->Lesson12AP} +
-                                <abbr title="{$attendanceItem->Lesson12Desc}">{$attendanceItem->Lesson12AP}</abbr>
+                            {$attendanceItem->Lesson12ATP}{if $attendanceItem->Lesson12AP}+<abbr title="{$attendanceItem->Lesson12Desc}">{$attendanceItem->Lesson12AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson13AT|attendanceType}">
-                            {$attendanceItem->Lesson13ATP}{if $attendanceItem->Lesson13AP} +
-                                <abbr title="{$attendanceItem->Lesson13Desc}">{$attendanceItem->Lesson13AP}</abbr>
+                            {$attendanceItem->Lesson13ATP}{if $attendanceItem->Lesson13AP}+<abbr title="{$attendanceItem->Lesson13Desc}">{$attendanceItem->Lesson13AP}</abbr>
                             {/if}
                         </td>
                         <td class="text-dark bg-{$attendanceItem->Lesson14AT|attendanceType}">
-                            {$attendanceItem->Lesson14ATP}{if $attendanceItem->Lesson14AP} +
-                                <abbr title="{$attendanceItem->Lesson14Desc}">{$attendanceItem->Lesson14AP}</abbr>
+                            {$attendanceItem->Lesson14ATP}{if $attendanceItem->Lesson14AP}+<abbr title="{$attendanceItem->Lesson14Desc}">{$attendanceItem->Lesson14AP}</abbr>
                             {/if}
                         </td>
                     </tr>

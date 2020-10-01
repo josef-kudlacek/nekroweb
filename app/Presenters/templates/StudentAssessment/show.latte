@@ -16,10 +16,10 @@
             <tbody>
             {foreach $assessment as $assessmentItem}
                 <tr class="text-dark bg-{$assessmentItem->MarkId|markType}">
-                    <td>{$assessmentItem->HomeworkCode}</td>
-                    <td>{$assessmentItem->AssessmentName}</td>
+                    <td class="text-white bg-dark">{$assessmentItem->HomeworkCode}</td>
+                    <td class="text-white bg-dark">{$assessmentItem->AssessmentName}</td>
+                    <td class="text-dark bg-light">{$assessmentItem->AssessmentDate|date:"%d. %m. %Y"}</td>
                     <td>{$assessmentItem->MarkName}</td>
-                    <td>{$assessmentItem->AssessmentDate|date:"%d. %m. %Y"}</td>
                     <td>{$assessmentItem->AssessmentComment}</td>
                 </tr>
             {/foreach}

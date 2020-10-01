@@ -1,0 +1,51 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Domácí úkoly</h1>
+        <div class="form-group col-md-4 offset-md-5">
+            <a href="{link create}" class="btn btn-primary btn-sm"
+                role="button">Přidat známku</a>
+        </div>
+        <h2>Zadané známky</h2>
+        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
+        {if $assessments}
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-white bg-dark">Třída</th>
+                    <th class="text-white bg-dark">Student</th>
+                    <th class="text-white bg-dark">Typ</th>
+                    <th class="text-white bg-dark">Úkol</th>
+                    <th class="text-white bg-dark">Známka</th>
+                    <th class="text-white bg-dark">Datum</th>
+                    <th class="text-white bg-dark">Komentář</th>
+                    <th class="text-white bg-dark">Správa</th>
+                </tr>
+                </thead>
+                <tbody id="filter">
+                {foreach $assessments as $assessment}
+                    <tr class="table-{$assessment->HouseId|houseType}">
+                        <td>{$assessment->ClassName}</td>
+                        <td>
+                            <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessment->UserName|encodeToWin1250)}" target="_blank"
+                                class="text-dark">{$assessment->UserName}</a>
+                        </td>
+                        <td class="text-white bg-dark">{$assessment->HomeworkCode}</td>
+                        <td class="text-white bg-dark">{$assessment->AssessmentName}</td>
+                        <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->MarkValue}</td>
+                        <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->AssessmentDate|date:"%d. %m. %Y"}</td>
+                        <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->AssessmentComment}</td>
+                        <td>
+                            <a href="{link edit $assessment->StudentId, $assessment->ClassId, $assessment->AssessmentId}" class="btn btn-secondary btn-sm"
+                                role="button">Upravit</a>
+                            <a href="{link delete $assessment->StudentId, $assessment->ClassId, $assessment->AssessmentId}" class="btn btn-dark btn-sm"
+                                role="button">Smazat</a>
+                        </td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

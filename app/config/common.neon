@@ -23,12 +23,14 @@ services:
 	- App\Model\Activity
 	- App\Model\ActivityType
 	- App\Model\Arc
+	- App\Model\Assessment
 	- App\Model\Attendance
 	- App\Model\AttendanceType
 	- App\Model\Character
 	- App\Model\Disquisition
 	- App\Model\Error
 	- App\Model\Lesson
+	- App\Model\Mark
 	- App\Model\Homework
 	- App\Model\HomeworkType
 	- App\Model\House

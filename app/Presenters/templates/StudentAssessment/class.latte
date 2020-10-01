@@ -3,14 +3,11 @@
         <h1 n:block="title">Přehled známek</h1>
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $assessments}
+            <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat řádky tabulky">
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th class="text-white bg-dark">Student</th>
-                        <th class="text-white bg-dark">ZS</th>
-                        <th class="text-white bg-dark">Esej</th>
-                        <th class="text-white bg-dark">1.PDÚ</th>
-                        <th class="text-white bg-dark">2.PDÚ</th>
                         <th class="text-white bg-dark">1.NDÚ</th>
                         <th class="text-white bg-dark">2.NDÚ</th>
                         <th class="text-white bg-dark">3.NDÚ</th>
@@ -19,26 +16,18 @@
                         <th class="text-white bg-dark">6.NDÚ</th>
                         <th class="text-white bg-dark">7.NDÚ</th>
                         <th class="text-white bg-dark">8.NDÚ</th>
+                        <th class="text-white bg-dark">1.PDÚ</th>
+                        <th class="text-white bg-dark">2.PDÚ</th>
+                        <th class="text-white bg-dark">Esej</th>
+                        <th class="text-white bg-dark">ZS</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="filter">
                 {foreach $assessments as $assessment}
                     <tr>
                         <td class="table-{$assessment->HouseId|houseType}">
                         <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessment->StudentName|encodeToWin1250)}"
                             class="text-dark" target="_blank">{$assessment->StudentName}</a>
-                        </td>
-                        <td class="text-dark bg-{$assessment->ZSid|markType}">
-                            {$assessment->ZS}
-                        </td>
-                        <td class="text-dark bg-{$assessment->Esejid|markType}">
-                            {$assessment->Esej}
-                        </td>
-                        <td class="text-dark bg-{$assessment->PDU1id|markType}">
-                            {$assessment->PDU1}
-                        </td>
-                        <td class="text-dark bg-{$assessment->PDU2|markType}">
-                            {$assessment->PDU2}
                         </td>
                         <td class="text-dark bg-{$assessment->NDU1id|markType}">
                             {$assessment->NDU1}
@@ -63,6 +52,18 @@
                         </td>
                          <td class="text-dark bg-{$assessment->NDU8id|markType}">
                             {$assessment->NDU8}
+                        </td>
+                        <td class="text-dark bg-{$assessment->PDU1id|markType}">
+                            {$assessment->PDU1}
+                        </td>
+                        <td class="text-dark bg-{$assessment->PDU2|markType}">
+                            {$assessment->PDU2}
+                        </td>
+                        <td class="text-dark bg-{$assessment->Esejid|markType}">
+                            {$assessment->Esej}
+                        </td>
+                        <td class="text-dark bg-{$assessment->ZSid|markType}">
+                            {$assessment->ZS}
                         </td>
                     </tr>
                 {/foreach}
