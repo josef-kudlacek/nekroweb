@@ -23,7 +23,8 @@ class Student
     {
         return $this->database->query('
             SELECT user.Id AS UserId, user.Name AS UserName, user.IsActive,
-            house.Id AS HouseId, student.ClassId, class.Name AS ClassName
+            user.Email, house.Id AS HouseId, student.ClassId,
+            class.Name AS ClassName
             FROM student
             INNER JOIN user
             ON user.Id = student.UserId

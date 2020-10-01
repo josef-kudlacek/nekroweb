@@ -12,6 +12,7 @@
             <thead>
                 <tr>
                     <th class="text-white bg-dark">Student</th>
+                    <th class="text-white bg-dark">Email</th>
                     <th class="text-white bg-dark">Třída</th>
                     <th class="text-white bg-dark">Aktivní</th>
                     <th class="text-white bg-dark">Správa studenta</th>
@@ -22,6 +23,7 @@
                 <tr class="table-{$student->HouseId|houseType}">
                     <td><a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
                             class="text-{$student->HouseId|houseType}">{$student->UserName}</a></td>
+                    <td>{$student->Email}</td>
                     <td>{$student->ClassName}</td>
                     <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
                     <td>

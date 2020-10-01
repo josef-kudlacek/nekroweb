@@ -9,31 +9,31 @@
             <table class="table table-bordered">
                 <thead>
                 <tr class="text-white bg-dark">
-                    <th class="col-md-1">Datum</th>
-                    <th class="col-1">Nahlásil</th>
+                    <th>Datum</th>
+                    <th>Nahlásil</th>
                     <th class="col">Popis chyby</th>
-                    <th class="col-1">Obrázek</th>
+                    <th>Obrázek</th>
                     <th class="col-1">Stav řešení</th>
-                    <th class="col-1">Reakce</th>
+                    <th class="col">Reakce</th>
                 </tr>
                 </thead>
                 <tbody>
                 {foreach $errors as $error}
                     <tr>
-                        <td class="col-md-1 text-dark bg-light">{$error->Date|date:"%d. %m. %Y"}</td>
-                        <td class="col-1 table-{$error->HouseId|houseType}">
+                        <td class="text-dark bg-light">{$error->Date|date:"%d. %m. %Y"}</td>
+                        <td class="table-{$error->HouseId|houseType}">
                             <a href="https://bradavice.eu//ukaz.php?name={urlencode($error->UserName|encodeToWin1250)}" target="_blank"
                             class="text-{$error->HouseId|houseType}">{$error->UserName}</a>
                         </td>
                         <td class="col table-{$error->HouseId|houseType}">{$error->Description}</td>
-                        <td class="col-1 table-{$error->HouseId|houseType}">
+                        <td class="table-{$error->HouseId|houseType}">
                         {if $error->FileName}
                             <a href="{$basePath}/printscreens/{$error->FileName}" class="btn btn-primary btn-sm" target="_blank"
                                role="button">Zobrazit obrázek</a>
                         {/if}
                         </td>
                         <td class="col-1 text-dark bg-{$error->State? success : warning}">{$error->State? Opraveno : Neopraveno}</td>
-                        <td class="col-1 text-dark bg-{$error->State? success : warning}">{$error->Reaction}</td>
+                        <td class="col text-dark bg-{$error->State? success : warning}">{$error->Reaction}</td>
                     </tr>
                 {/foreach}
                 </tbody>
