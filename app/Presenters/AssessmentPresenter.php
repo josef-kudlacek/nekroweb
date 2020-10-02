@@ -63,18 +63,21 @@ class AssessmentPresenter extends BasePresenter
         $this->template->assessments = $this->assessment->getAssessmentBySemester($SemesterId);
     }
 
-    public function renderEdit($StudentId, $ClassId, $AssessmentId)
+    public function renderEdit($StudentAssessmentId)
     {
-        $SemesterId = $this->getUser()->getIdentity()->semesterId;
-        $this->template->assessments = $this->assessment->getAssessmentBySemester($SemesterId);
+        $assessment = $this->assessment->getStudentAssessment($StudentAssessmentId)->fetch();
+        $this->template->assessment = $assessment;
+
+        $assessment->Date = $assessment->Date->format('Y-m-d');
+        $this['assessmentForm']->setDefaults($assessment);
     }
 
-    public function actionDelete($StudentId, $ClassId, $AssessmentId)
+    public function actionDelete($StudentAssessmentId)
     {
-        $asessment = $this->assessment->getStudentAssessment($StudentId, $ClassId, $AssessmentId)->fetch();
+        $asessment = $this->assessment->getStudentAssessment($StudentAssessmentId)->fetch();
 
         $this->transaction->startTransaction();
-        $this->assessment->deleteAssessment($StudentId, $ClassId, $AssessmentId);
+        $this->assessment->deleteAssessment($StudentAssessmentId);
         $this->transaction->endTransaction();
 
         $this->flashMessage('Studentovi ' . $asessment->UserName . ' byla známka ' . $asessment->MarkName . ' za úkol ('.
@@ -92,6 +95,7 @@ class AssessmentPresenter extends BasePresenter
 
         $form = new Form;
 
+        $form->addText('Id');
 
         $form->addSelect('StudentClassId')
             ->setItems($classes);
@@ -121,13 +125,23 @@ class AssessmentPresenter extends BasePresenter
 
     public function assessmentFormSucceeded(Form $form, \stdClass $values): void
     {
+
         $values = Utils::convertEmptyToNull($form->values);
 
+        bdump($values);
         $this->transaction->startTransaction();
-        $this->assessment->insertAssessment($values);
-        $this->transaction->endTransaction();
+        if ($values->Id)
+        {
+            $this->assessment->updateAssessment($values);
 
-        $this->flashMessage('Známka úspěšně přidána.','success');
+            $this->flashMessage('Známka úspěšně změněna.','success');
+        } else {
+            $this->assessment->insertAssessment($values);
+
+            $this->flashMessage('Známka úspěšně přidána.','success');
+        }
+
+        $this->transaction->endTransaction();
         $this->redirect('Assessment:show');
     }
 

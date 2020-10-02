@@ -13,6 +13,7 @@
             <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
         {/foreach}
         <form n:name=assessmentForm>
+            <input n:name=Id class="form-control" type="integer" hidden>
             <div class="form-group col-md-4 offset-md-4">
                 <label><strong>Třída:</strong></label>
                 <select n:name=StudentClassId class="form-control"></select>

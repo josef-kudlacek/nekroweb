@@ -5,6 +5,7 @@
             <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
         {/foreach}
         <form n:name=assessmentForm>
+            <input n:name=Id class="form-control" type="integer" hidden>
             <div class="form-group col-md-4 offset-md-4">
                 <label><strong>Třída:</strong></label>
                 <select n:name=StudentClassId class="form-control"></select>
@@ -31,7 +32,7 @@
                 <textarea n:name=Comment class="form-control" rows="5" maxlength="255"></textarea>
             </div>
             <div class="form-group col-md-4 offset-md-4">
-                <input n:name=send class="btn btn-secondary btn-block" value="Přidat">
+                <input n:name=send class="btn btn-secondary btn-block" value="Upravit">
             </div>
             <div class="text-center">
                 <a class="btn btn-primary" href="{link Assessment:show}">Zpět</a>

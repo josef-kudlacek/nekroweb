@@ -35,9 +35,9 @@
                         <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->AssessmentDate|date:"%d. %m. %Y"}</td>
                         <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->AssessmentComment}</td>
                         <td>
-                            <a href="{link edit $assessment->StudentId, $assessment->ClassId, $assessment->AssessmentId}" class="btn btn-secondary btn-sm"
+                            <a href="{link edit $assessment->StudentAssessmentId}" class="btn btn-secondary btn-sm"
                                 role="button">Upravit</a>
-                            <a href="{link delete $assessment->StudentId, $assessment->ClassId, $assessment->AssessmentId}" class="btn btn-dark btn-sm"
+                            <a href="{link delete $assessment->StudentAssessmentId}" class="btn btn-dark btn-sm"
                                 role="button">Smazat</a>
                         </td>
                     </tr>
