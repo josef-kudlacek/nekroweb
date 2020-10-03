@@ -1,6 +1,10 @@
 <div>
     <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button">
         <a class="navbar-brand" href="{link Homepage:default}">Nekromancie<span class="text-primary">R.B.</span></a>
+        <a class="nav-year text-light" href="{link User:class}">
+            {$user->getIdentity()->className}
+            ({$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if})
+        </a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
             <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
         </button>

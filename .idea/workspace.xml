@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change include to 1.2.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.2/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.2/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +112,7 @@
       <workItem from="1601579814231" duration="8079000" />
       <workItem from="1601650362368" duration="6157000" />
       <workItem from="1601719662606" duration="3772000" />
-      <workItem from="1601747866506" duration="1675000" />
+      <workItem from="1601747866506" duration="4471000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fixes and prepare activity.">
       <created>1601141112613</created>
@@ -413,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601722878695</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="CSS changes.">
+      <created>1601749895671</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1601749895671</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Handle change of student classes." />
     <MESSAGE value="Name of arc for download. Arc added for attendance detail. Layout fixes." />
     <MESSAGE value="Add errors report and layout changes." />
     <MESSAGE value="Add reaction to errors." />
@@ -457,16 +465,18 @@
     <MESSAGE value="Minor fix of reaction in errors." />
     <MESSAGE value="Change css and js include." />
     <MESSAGE value="Change include to 1.2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change include to 1.2." />
+    <MESSAGE value="CSS changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS changes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="161" key="#Plugins/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601133537657" />
-    <state x="727" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601217921957">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1193" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601750513079">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1193" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750513079" />
     <state x="727" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601217921957" />
     <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601570504422">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -526,14 +536,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1241" y="129" width="1083" height="834" key="find.popup" timestamp="1601722865999">
+    <state x="-1241" y="129" width="1083" height="834" key="find.popup" timestamp="1601752557667">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1241" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601722865999" />
-    <state x="-1304" y="240" key="run.anything.popup" timestamp="1601238697962">
+    <state x="-1241" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601752557667" />
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1601750242426">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601238697962" />
+    <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601296017842">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
