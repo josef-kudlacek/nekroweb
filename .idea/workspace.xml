@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change include to 1.2.">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/vendor/nette/database" />
+      <path value="$PROJECT_DIR$/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/vendor/nette/forms" />
+      <path value="$PROJECT_DIR$/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/vendor/nette/mail" />
+      <path value="$PROJECT_DIR$/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/thanks" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1i3PsHnLfwifbTQwymqEvAJgKgp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nekroweb\www\include-1.2" />
+      <recent name="C:\xampp\htdocs\nekroweb\www" />
+      <recent name="C:\xampp\htdocs\nekroweb\www\include-1.1." />
+      <recent name="C:\xampp\htdocs\nekroweb\arch" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="" />
+      <created>1601133512099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601133512099</updated>
+      <workItem from="1601133514784" duration="25000" />
+      <workItem from="1601133552278" duration="124000" />
+      <workItem from="1601133738651" duration="17114000" />
+      <workItem from="1601151388510" duration="200000" />
+      <workItem from="1601151809955" duration="612000" />
+      <workItem from="1601152876797" duration="752000" />
+      <workItem from="1601190885426" duration="43512000" />
+      <workItem from="1601288493691" duration="27732000" />
+      <workItem from="1601404706261" duration="6801000" />
+      <workItem from="1601483489233" duration="5559000" />
+      <workItem from="1601566550122" duration="7353000" />
+      <workItem from="1601579814231" duration="8079000" />
+      <workItem from="1601650362368" duration="6157000" />
+      <workItem from="1601719662606" duration="3772000" />
+      <workItem from="1601747866506" duration="1675000" />
+    </task>
+    <task id="LOCAL-00001" summary="Minor fixes and prepare activity.">
+      <created>1601141112613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601141112613</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added inserting of activity.">
+      <created>1601149234754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601149234754</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix updating od attendance.">
+      <created>1601151305818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601151305818</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix show class attendance.">
+      <created>1601153614587</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601153614587</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add urls to E-Bradavice.">
+      <created>1601200395530</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601200395530</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added detail of attendance and minor fixes with redirecting.">
+      <created>1601206721119</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601206721119</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added update of activites and change of edit ender.">
+      <created>1601209865319</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601209865319</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Show activity and attendance points. Minor fix.">
+      <created>1601216704135</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601216704135</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added deleting of attendance and activity.">
+      <created>1601217713931</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601217713931</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix colors of attendance and displaying of attendance legend.">
+      <created>1601218428819</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601218428819</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added editing of student attendance and activity.">
+      <created>1601228762307</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601228762307</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added possibility to upload arch.">
+      <created>1601233352948</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601233352948</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Download arch.">
+      <created>1601237637160</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1601237637160</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Delete arch.">
+      <created>1601238128196</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1601238128196</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Download arch for students.">
+      <created>1601239675843</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1601239675843</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Change layout for students and center header of tables.">
+      <created>1601240136789</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1601240136789</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Change layout for students and center header of tables.">
+      <created>1601240241288</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601240241288</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Change layout of from errors.">
+      <created>1601290460440</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1601290460440</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Handle change of student classes.">
+      <created>1601290912255</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1601290912255</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Name of arc for download. Arc added for attendance detail. Layout fixes.">
+      <created>1601295891944</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1601295891944</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add errors report and layout changes.">
+      <created>1601304746757</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1601304746757</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add reaction to errors.">
+      <created>1601307279915</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1601307279915</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Prod fixes">
+      <created>1601315143997</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1601315143997</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fix Path for files arc and suggestion errors">
+      <created>1601321169424</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1601321169424</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Fix path for files and get remaining lessons for attendance.">
+      <created>1601405455835</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1601405455835</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add filter for tables.">
+      <created>1601406397859</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1601406397859</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fix in/active student.">
+      <created>1601407623001</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1601407623001</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fix path for upload errors.">
+      <created>1601407705129</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1601407705129</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Minor fixes about attendance.">
+      <created>1601410770473</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1601410770473</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Change of text">
+      <created>1601415883534</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1601415883534</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Change text of mail about forgotten password.">
+      <created>1601484202722</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1601484202722</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Change text of mail about forgotten password.">
+      <created>1601484875118</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1601484875118</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add homeworks summary for class and student.">
+      <created>1601572667504</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1601572667504</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add possibility for create assessment of homeworks. Filter tables.">
+      <created>1601588252106</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1601588252106</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add email and change column sizes.">
+      <created>1601588829307</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1601588829307</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add manage of homework assessments.">
+      <created>1601653208109</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1601653208109</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Minor fixes or namespace.">
+      <created>1601667616489</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1601667616489</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Responsive tables on mobile phone.">
+      <created>1601719944783</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1601719944783</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add scrollbar to tables on mobile phone.">
+      <created>1601720277755</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1601720277755</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Fix padding of top and bottom.">
+      <created>1601721076683</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1601721076683</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Minor fix of reaction in errors.">
+      <created>1601721422338</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1601721422338</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Change css and js include.">
+      <created>1601722777714</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1601722777714</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Change include to 1.2.">
+      <created>1601722878695</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1601722878695</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Handle change of student classes." />
+    <MESSAGE value="Name of arc for download. Arc added for attendance detail. Layout fixes." />
+    <MESSAGE value="Add errors report and layout changes." />
+    <MESSAGE value="Add reaction to errors." />
+    <MESSAGE value="Prod fixes" />
+    <MESSAGE value="Fix Path for suggestion errors" />
+    <MESSAGE value="Fix Path for files arc and suggestion errors" />
+    <MESSAGE value="Fix path for files and get remaining lessons for attendance." />
+    <MESSAGE value="Add filter for tables." />
+    <MESSAGE value="Fix in/active student." />
+    <MESSAGE value="Fix path for upload errors." />
+    <MESSAGE value="Minor fixes about attendance." />
+    <MESSAGE value="Change of text" />
+    <MESSAGE value="Change text of mail about forgotten password." />
+    <MESSAGE value="Add homeworks summary for class and student." />
+    <MESSAGE value="Add possibility for create assessment of homeworks. Filter tables." />
+    <MESSAGE value="Add email and change column sizes." />
+    <MESSAGE value="Add manage of homework assessments." />
+    <MESSAGE value="Minor fixes or namespace." />
+    <MESSAGE value="Responsive tables on mobile phone." />
+    <MESSAGE value="Add scrollbar to tables on mobile phone." />
+    <MESSAGE value="Fix padding of top and bottom." />
+    <MESSAGE value="Minor fix of reaction in errors." />
+    <MESSAGE value="Change css and js include." />
+    <MESSAGE value="Change include to 1.2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change include to 1.2." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="161" key="#Plugins/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601133537657" />
+    <state x="727" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601217921957">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="727" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601217921957" />
+    <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601570504422">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601570504422" />
+    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601581894401">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601581894401" />
+    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601407595857">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601407595857" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1601142931626">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
+    <state x="-1196" y="243" key="NewPhpClassDialog" timestamp="1601585249172">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601585249172" />
+    <state x="-1117" y="217" key="VCS.ChangeListViewerDialog" timestamp="1601406792406">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601722881618">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601722881618" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601484879289" />
+    <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601292357425" />
+    <state x="78" y="0" width="1465" height="1027" maximized="true" key="dock-window-1" timestamp="1601584580335">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="78" y="0" width="1465" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601584580335" />
+    <state x="158" y="0" width="1574" height="1027" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601568868482" />
+    <state x="0" y="0" width="1576" height="1027" maximized="true" key="dock-window-2" timestamp="1601584580336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="1576" height="1027" maximized="true" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601584580336" />
+    <state x="0" y="0" width="1474" height="1027" maximized="true" key="dock-window-3" timestamp="1601572367123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="1474" height="1027" maximized="true" key="dock-window-3/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601572367123" />
+    <state x="89" y="0" width="1438" height="1027" maximized="true" key="dock-window-4" timestamp="1601231432538">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="89" y="0" width="1438" height="1027" maximized="true" key="dock-window-4/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601231432538" />
+    <state x="114" y="0" width="1574" height="847" maximized="true" key="dock-window-5" timestamp="1601239900060">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="114" y="0" width="1574" height="847" maximized="true" key="dock-window-5/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601239900060" />
+    <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6" timestamp="1601240267313">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
+    <state x="-1241" y="129" width="1083" height="834" key="find.popup" timestamp="1601722865999">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1241" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601722865999" />
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1601238697962">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601238697962" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601296017842">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601296017842" />
+  </component>
+</project>
