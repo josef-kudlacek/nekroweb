@@ -33,13 +33,15 @@
                                role="button">Zobrazit obrázek</a>
                         {/if}
                         </td>
-                        <td class="col-1 text-dark bg-{$error->State? success : warning}">{$error->State? Opraveno : Neopraveno}<br/>
-                            {$error->Reaction}
+                        <td class="col-1 text-dark bg-{$error->State? success : warning}">
+                            {$error->State? Opraveno : Neopraveno}
                         </td>
                         <td class="col text-dark bg-{$error->State? success : warning}">
                             {if !$error->State}
                                 <a href="{link Suggestion:resolution $error->ErrorId}" class="btn btn-success btn-sm"
                                    role="button">Vyřešit</a>
+                            {else}
+                                {$error->Reaction}
                             {/if}
                         </td>
                     </tr>
