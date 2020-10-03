@@ -3,6 +3,7 @@
         <h1 n:block="title">Třídní kniha</h1>
         <h2>Přehled tříd</h2>
         {if $classes}
+        <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -30,6 +31,7 @@
                     {/foreach}
                     </tbody>
                 </table>
+        </div>
                 {else}
                 Nenalezen žádný záznam.
                 {/if}
@@ -37,6 +39,7 @@
         <h2>Přehled odučených hodin</h2>
         <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $classAttendance}
+        <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
                 <tr>
@@ -78,6 +81,7 @@
                 {/foreach}
                 </tbody>
             </table>
+        </div>
         {else}
             Nenalezen žádný záznam.
         {/if}

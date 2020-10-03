@@ -4,6 +4,7 @@
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $attendance}
             <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat řádky tabulky">
+            <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -91,6 +92,7 @@
                 {/foreach}
                 </tbody>
             </table>
+        </div>
         {else}
             Nenalezen žádný záznam.
         {/if}

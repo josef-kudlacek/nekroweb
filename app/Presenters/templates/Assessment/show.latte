@@ -8,6 +8,7 @@
         <h2>Zadané známky</h2>
         <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $assessments}
+        <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
                 <tr>
@@ -44,6 +45,7 @@
                 {/foreach}
                 </tbody>
             </table>
+        </div>
         {else}
             Nenalezen žádný záznam.
         {/if}

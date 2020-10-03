@@ -3,6 +3,7 @@
         <h1 n:block="title">Moje docházka a aktivita</h1>
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $attendance}
+        <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -25,6 +26,7 @@
             {/foreach}
             </tbody>
         </table>
+        </div>
         {else}
         Nenalezen žádný záznam.
         {/if}

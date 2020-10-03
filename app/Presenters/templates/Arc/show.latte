@@ -3,6 +3,7 @@
         <h1 n:block="title">Archy z hodin</h1>
         <h2>Přehled archů třídy {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
         {if $arcs}
+        <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -28,6 +29,7 @@
                     {/foreach}
                     </tbody>
                 </table>
+        </div>
                 {else}
                 Nenalezen žádný záznam.
         {/if}

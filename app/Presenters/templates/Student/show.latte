@@ -8,6 +8,7 @@
          <h2>Přehled studentů</h2>
         <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $students}
+        <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -40,6 +41,7 @@
             {/foreach}
             </tbody>
         </table>
+        </div>
         {else}
         Nenalezen žádný záznam.
         {/if}
