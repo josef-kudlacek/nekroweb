@@ -1,77 +1,75 @@
 <div>
     <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button">
-        <div class="container">
-            <a class="navbar-brand" href="{link Homepage:default}">Nekromancie<span class="text-primary">R.B.</span></a>
-            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-                <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Základní sekce</a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="{link About:show}">O předmětu</a>
-                            <a class="dropdown-item" role="presentation" href="{link Character:show}">Postavy</a>
-                            <a class="dropdown-item" role="presentation" href="{link Curriculum:show}">Osnovy</a>
-                            <a class="dropdown-item" role="presentation" href="{link Rule:show}">Pravidla hodin</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Hodnocení hodin</a>
-                        </div>
-                    </li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">E-Bradavice</a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="https://bradavice.eu//kabinety.php?tab=56778" target="_blank">Kabinet</a>
-                            <a class="dropdown-item" role="presentation" href="https://bradavice.eu//ucebna/chat.php?ucebna=1025" target="_blank">Učebna</a>
-                            <div class="dropdown-divider" role="presentation"></div>
-                            <a class="dropdown-item" role="presentation" href="https://bradavice.eu/posta.php?zobraz=psat&komu=56778" target="_blank">Poslat R.B. sovu</a>
-                        </div>
-                    </li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Moje sekce</a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="{link Attendance:show}">Moje docházka a aktivita</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Domácí úkoly</a>
-                            <a class="dropdown-item " role="presentation" href="{link StudentAssessment:show}">Moje známky</a>
-                            <div class="dropdown-divider" role="presentation"></div>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Celoroční soutěž</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Zkouška Smrti</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Vysvědčení</a>
-                        </div>
-                    </li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Moje třída</a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="{link Arc:show }">Archy hodin</a>
-                            <a class="dropdown-item" role="presentation" href="{link Attendance:class}">Docházka a aktivita</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Výklady</a>
-                            <a class="dropdown-item" role="presentation" href="{link StudentAssessment:class}">Známky</a>
-                            <div class="dropdown-divider" role="presentation"></div>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Rozdané karty</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Přehled bodů</a>
-                        </div>
-                    </li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Ostatní</a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item disabled" role="presentation" href="#">Hodnotit hodiny</a>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Přidat hlášku</a>
-                            <div class="dropdown-divider" role="presentation"></div>
-                            <a class="dropdown-item disabled" role="presentation" href="#">Návrhy a připomínky</a>
-                            <a class="dropdown-item" role="presentation" href="{link Suggestion:error}">Nahlášené chyby</a>
-                        </div>
-                    </li>
-
-                </ul>
-                <li class="dropdown nav-item" aria-expanded="false">
-                    <a href="#" data-toggle="dropdown" >
-                           <span class="navbar-text actions" style="color: #000;background-color: #506F7A;padding: .5em;border-radius: 10px;">
-                            <strong>{$user->getIdentity()->name}</strong></span>
-                    </a>
+        <a class="navbar-brand" href="{link Homepage:default}">Nekromancie<span class="text-primary">R.B.</span></a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Základní sekce</a>
                     <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item" role="presentation" href="{link User:class}">Přepnout třídu</a>
-                        <a class="dropdown-item" role="presentation" href="{link User:history}">Historie studia</a>
-                        <div class="dropdown-divider" role="presentation"></div>
-                        <a class="dropdown-item" role="presentation" href="{link User:data}">Moje údaje</a>
-                        <a class="dropdown-item" role="presentation" href="{link User:settings}">Nastavení</a>
-                        <a class="dropdown-item" role="presentation" href="{link Sign:logout}">Odhlásit se</a>
+                        <a class="dropdown-item" role="presentation" href="{link About:show}">O předmětu</a>
+                        <a class="dropdown-item" role="presentation" href="{link Character:show}">Postavy</a>
+                        <a class="dropdown-item" role="presentation" href="{link Curriculum:show}">Osnovy</a>
+                        <a class="dropdown-item" role="presentation" href="{link Rule:show}">Pravidla hodin</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Hodnocení hodin</a>
                     </div>
                 </li>
-            </div>
+                <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">E-Bradavice</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="https://bradavice.eu//kabinety.php?tab=56778" target="_blank">Kabinet</a>
+                        <a class="dropdown-item" role="presentation" href="https://bradavice.eu//ucebna/chat.php?ucebna=1025" target="_blank">Učebna</a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item" role="presentation" href="https://bradavice.eu/posta.php?zobraz=psat&komu=56778" target="_blank">Poslat R.B. sovu</a>
+                    </div>
+                </li>
+                <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Moje sekce</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="{link Attendance:show}">Moje docházka a aktivita</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Domácí úkoly</a>
+                        <a class="dropdown-item " role="presentation" href="{link StudentAssessment:show}">Moje známky</a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Celoroční soutěž</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Zkouška Smrti</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Vysvědčení</a>
+                    </div>
+                </li>
+                <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Moje třída</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="{link Arc:show }">Archy hodin</a>
+                        <a class="dropdown-item" role="presentation" href="{link Attendance:class}">Docházka a aktivita</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Výklady</a>
+                        <a class="dropdown-item" role="presentation" href="{link StudentAssessment:class}">Známky</a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Rozdané karty</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Přehled bodů</a>
+                    </div>
+                </li>
+                <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Ostatní</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item disabled" role="presentation" href="#">Hodnotit hodiny</a>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Přidat hlášku</a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item disabled" role="presentation" href="#">Návrhy a připomínky</a>
+                        <a class="dropdown-item" role="presentation" href="{link Suggestion:error}">Nahlášené chyby</a>
+                    </div>
+                </li>
+
+            </ul>
+            <li class="dropdown nav-item" aria-expanded="false">
+                <a href="#" data-toggle="dropdown" >
+                       <span class="navbar-text actions" style="color: #000;background-color: #506F7A;padding: .5em;border-radius: 10px;">
+                        <strong>{$user->getIdentity()->name}</strong></span>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" role="presentation" href="{link User:class}">Přepnout třídu</a>
+                    <a class="dropdown-item" role="presentation" href="{link User:history}">Historie studia</a>
+                    <div class="dropdown-divider" role="presentation"></div>
+                    <a class="dropdown-item" role="presentation" href="{link User:data}">Moje údaje</a>
+                    <a class="dropdown-item" role="presentation" href="{link User:settings}">Nastavení</a>
+                    <a class="dropdown-item" role="presentation" href="{link Sign:logout}">Odhlásit se</a>
+                </div>
+            </li>
         </div>
     </nav>
 </div>

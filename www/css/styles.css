@@ -302,3 +302,8 @@ td {
   border-radius: 10px;
   background-color: #ffffff;
 }
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
