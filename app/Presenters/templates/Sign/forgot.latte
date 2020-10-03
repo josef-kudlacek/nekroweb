@@ -1,3 +1,4 @@
+{var $include = 'include-1.1'}
 {layout false}
 <!DOCTYPE html>
 <html>
@@ -6,25 +7,25 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="icon" href="{$basePath}/favicon.ico">
-    <link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{$basePath}/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="{$basePath}/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="{$basePath}/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="{$basePath}/css/Contact-Form-Clean.css">
-    <link rel="stylesheet" href="{$basePath}/css/Footer-Basic.css">
-    <link rel="stylesheet" href="{$basePath}/css/Footer-Dark.css">
-    <link rel="stylesheet" href="{$basePath}/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="{$basePath}/css/Navigation-with-Button.css">
-    <link rel="stylesheet" href="{$basePath}/css/styles.css">
-    <link rel="stylesheet" href="{$basePath}/css/Team-Boxed.css">
-    <link rel="stylesheet" href="{$basePath}/css/Team-Grid.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Footer-Basic.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Footer-Dark.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/styles.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Team-Boxed.css">
+    <link rel="stylesheet" href="{$basePath}/{$include}/css/Team-Grid.css">
 
 
     <title>Nekromancie R.B.{ifset title} – {include title|stripHtml}{/ifset}</title>
 
     {block scripts}
-        <script src="{$basePath}/js/jquery.min.js"></script>
-        <script src="{$basePath}/js/bootstrap.min.js"></script>
+        <script src="{$basePath}/{$include}/js/jquery.min.js"></script>
+        <script src="{$basePath}/{$include}/js/bootstrap.min.js"></script>
         <script src="https://nette.github.io/resources/js/2/netteForms.min.js"></script>
     {/block}
 </head>
