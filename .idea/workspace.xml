@@ -19,7 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Quick shortcut for change semester/class." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show active years in curriculum.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Evaluation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/Functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/guest.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/guest.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/fa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/fontawesome-all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/ionicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/ionicons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.3/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.3/fonts/ionicons.svg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +127,7 @@
       <workItem from="1601650362368" duration="6157000" />
       <workItem from="1601719662606" duration="3772000" />
       <workItem from="1601747866506" duration="4891000" />
+      <workItem from="1601810222219" duration="8130000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fixes and prepare activity.">
       <created>1601141112613</created>
@@ -423,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601752583831</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Show active years in curriculum.">
+      <created>1601810473124</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1601810473124</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +470,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add errors report and layout changes." />
     <MESSAGE value="Add reaction to errors." />
     <MESSAGE value="Prod fixes" />
     <MESSAGE value="Fix Path for suggestion errors" />
@@ -467,7 +494,8 @@
     <MESSAGE value="Change include to 1.2." />
     <MESSAGE value="CSS changes." />
     <MESSAGE value="Quick shortcut for change semester/class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Quick shortcut for change semester/class." />
+    <MESSAGE value="Show active years in curriculum." />
+    <option name="LAST_COMMIT_MESSAGE" value="Show active years in curriculum." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -495,10 +523,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="-1196" y="243" key="NewPhpClassDialog" timestamp="1601585249172">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1601818535090">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601585249172" />
+    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812233004" />
+    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601818535090" />
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog" timestamp="1601406792406">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -512,10 +541,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601292357425" />
-    <state x="78" y="0" width="1465" height="1027" maximized="true" key="dock-window-1" timestamp="1601584580335">
+    <state x="0" y="0" width="1610" height="1027" maximized="true" key="dock-window-1" timestamp="1601814932485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="78" y="0" width="1465" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601584580335" />
+    <state x="0" y="0" width="1610" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601814932485" />
     <state x="158" y="0" width="1574" height="1027" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601568868482" />
     <state x="0" y="0" width="1576" height="1027" maximized="true" key="dock-window-2" timestamp="1601584580336">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -545,9 +574,9 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601296017842">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601812170633">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601296017842" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812170633" />
   </component>
 </project>

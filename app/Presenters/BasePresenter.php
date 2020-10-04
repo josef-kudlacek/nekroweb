@@ -4,6 +4,7 @@
 namespace App\Presenters;
 
 use App\Utils\Filter;
+use App\Utils\Functions;
 use Nette;
 use Nette\Application\UI\Form;
 
@@ -19,6 +20,7 @@ class BasePresenter extends Nette\Application\UI\Presenter
     protected function beforeRender()
     {
         $this->loadTemplateFilters();
+        $this->loadTemplateFunctions();
     }
 
     private function loadTemplateFilters()
@@ -46,6 +48,13 @@ class BasePresenter extends Nette\Application\UI\Presenter
 
         $this->template->addFilter('encodeToWin1250', function ($stringUrl) {
             return Filter::encodeToCharset($stringUrl, "windows-1250");
+        });
+    }
+
+    private function loadTemplateFunctions()
+    {
+        $this->template->addFunction('countPercentStars', function ($starsCount, $starsSum) {
+            return Functions::calculatePercentStars($starsCount, $starsSum);
         });
     }
 

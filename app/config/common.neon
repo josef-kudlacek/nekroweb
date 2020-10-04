@@ -29,6 +29,7 @@ services:
 	- App\Model\Character
 	- App\Model\Disquisition
 	- App\Model\Error
+	- App\Model\Evaluation
 	- App\Model\Lesson
 	- App\Model\Mark
 	- App\Model\Homework
