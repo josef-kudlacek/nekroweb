@@ -21,6 +21,7 @@ class Curriculum
             FROM necromancy.lesson lesson
             INNER JOIN necromancy.year year
             ON lesson.Year = year.Id
+            WHERE year.IsActive = 1
             ORDER BY lesson.Year, lesson.Number;');
     }
 
