@@ -131,4 +131,45 @@ class User
         }
     }
 
+    public function getStudentSum($studentId, $classId)
+    {
+        $this->database->query('
+            SELECT @InStudentUserId := ?,
+            @InStudentClassId := ?;
+            ', $studentId, $classId);
+
+        return $this->database->query('
+            	SELECT 
+	            (SELECT
+	            SUM(attendancetype.Points)
+	            FROM attendance
+	            INNER JOIN attendancetype
+	            ON attendance.AttendanceTypeId = attendancetype.Id
+	            WHERE attendance.StudentUserId = @InStudentUserId
+	            AND attendance.StudentClassId = @InStudentClassId
+	            GROUP BY attendance.StudentUserId
+	            ) AS attendancePoints,
+	            (
+	            SELECT
+	            SUM(activity.ActivityPoints)
+	            FROM attendance
+	            INNER JOIN attendancetype
+	            ON attendance.AttendanceTypeId = attendancetype.Id
+	            LEFT JOIN activity
+	            ON activity.AttendanceId = attendance.Id
+	            WHERE attendance.StudentUserId = @InStudentUserId
+	            AND attendance.StudentClassId = @InStudentClassId
+	            GROUP BY attendance.StudentUserId
+	            ) AS activityPoints,
+	            (
+	            SELECT SUM(mark.Value)
+	            FROM studentassessment
+	            INNER JOIN mark
+	            ON mark.Id = studentassessment.MarkId
+	            WHERE studentassessment.StudentUserId = @InStudentUserId
+	            AND studentassessment.StudentClassId = @InStudentClassId
+	            ) AS markPoints; 
+                ');
+    }
+
 }

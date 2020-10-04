@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade include.">
-      <change beforePath="$PROJECT_DIR$/app/utils/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Functions.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change of guest.latte">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +113,8 @@
       <workItem from="1601650362368" duration="6157000" />
       <workItem from="1601719662606" duration="3772000" />
       <workItem from="1601747866506" duration="4891000" />
-      <workItem from="1601810222219" duration="21534000" />
-    </task>
-    <task id="LOCAL-00001" summary="Minor fixes and prepare activity.">
-      <created>1601141112613</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1601141112613</updated>
+      <workItem from="1601810222219" duration="21723000" />
+      <workItem from="1601835385186" duration="2086000" />
     </task>
     <task id="LOCAL-00002" summary="Added inserting of activity.">
       <created>1601149234754</created>
@@ -454,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601833348125</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Change of guest.latte">
+      <created>1601833591416</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1601833591417</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +478,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix Path for files arc and suggestion errors" />
     <MESSAGE value="Fix path for files and get remaining lessons for attendance." />
     <MESSAGE value="Add filter for tables." />
     <MESSAGE value="Fix in/active student." />
@@ -498,7 +502,8 @@
     <MESSAGE value="Show evaluations." />
     <MESSAGE value="Add evaluation of attendances." />
     <MESSAGE value="Upgrade include." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade include." />
+    <MESSAGE value="Change of guest.latte" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change of guest.latte" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -535,10 +540,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601833351373">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601833595691">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601833351373" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601833595691" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601819466301" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />

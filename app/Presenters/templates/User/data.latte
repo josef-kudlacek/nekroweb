@@ -29,11 +29,11 @@
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů za známky:</td>
-                    <td class="text-dark bg-white"><strong>??</strong></td>
+                    <td class="text-dark bg-white"><strong>{$points->markPoints? $points->markPoints : 0}</strong></td>
                 </tr>
                 <tr>
                     <td class="text-white bg-secondary">Počet bodů celkem:</td>
-                    <td class="text-dark bg-white"><strong>??</strong></td>
+                    <td class="text-dark bg-white"><strong>{$points->attendancePoints+$points->activityPoints+$points->markPoints}</strong></td>
                 </tr>
             {/if}
             </tbody>

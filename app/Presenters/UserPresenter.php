@@ -52,7 +52,7 @@ class UserPresenter extends BasePresenter
             $studentId = $this->getUser()->getId();
             $classId = $this->getUser()->getIdentity()->classId;
 
-            $this->template->points = $this->activity->getStudentSum($studentId, $classId)->fetch();
+            $this->template->points = $this->dbUser->getStudentSum($studentId, $classId)->fetch();
         }
     }
 
