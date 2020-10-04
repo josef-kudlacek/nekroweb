@@ -1,0 +1,31 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Přidat Hodnocení hodiny</h1>
+        <h2>Hodiny třídy {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        <form n:name="evaluationForm">
+            <input n:name=StarsCount class="form-control" type="number" value="0" hidden>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Hodina:</strong></label>
+                <select n:name=AttendanceId class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Hodnocení:</strong></label>
+                <div class="StarsCount">
+                {for $counter = 5; $counter > 0; $counter--}
+                    <span><input type="radio" name="StarsCount" id="{$counter}" value="{$counter}"><label for="{$counter}"></label></span>
+                {/for}
+                </div>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Komentář:</strong></label>
+                <textarea n:name=Description class="form-control" rows="5" maxlength="800"></textarea>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=send class="btn btn-secondary btn-block" value="Přidat hodnocení">
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href="{link Evaluation:admin}">Zpět</a>
+            </div>
+        </form>
+    </div>
+{/block}

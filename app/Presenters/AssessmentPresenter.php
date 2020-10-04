@@ -128,7 +128,6 @@ class AssessmentPresenter extends BasePresenter
 
         $values = Utils::convertEmptyToNull($form->values);
 
-        bdump($values);
         $this->transaction->startTransaction();
         if ($values->Id)
         {

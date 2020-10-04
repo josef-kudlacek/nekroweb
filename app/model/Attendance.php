@@ -17,7 +17,7 @@ class Attendance
     public function getAttendanceByStudent($userId, $classId)
     {
         return $this->database->query('
-            SELECT house.Id AS HouseId, user.Name AS StudentName,
+            SELECT attendance.Id, house.Id AS HouseId, user.Name AS StudentName,
             attendance.AttendanceTypeId, attendancetype.Name AS AttendanceName, 
             lesson.Number AS LessonNumber, lesson.Name AS LessonName, attendance.AttendanceDate,
             SUM(ActivityPoints) AS ActivityOverall, 

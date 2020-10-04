@@ -317,3 +317,38 @@ a.nav-year {
     padding-left: 0px;
   }
 }
+
+.StarsCount {
+  float: left;
+  width: 300px;
+}
+.StarsCount span {
+  position: relative;
+}
+.StarsCount span input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+.StarsCount span label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #007bff;
+  border-color: #007bff;
+  border-style: solid;
+  font-size: 30px;
+  margin-right: 2px;
+  line-height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.StarsCount span:hover ~ span label,
+.StarsCount span:hover label,
+.StarsCount span.checked label,
+.StarsCount span.checked ~ span label {
+  background: #537DA7;
+  border-color: #FFFFFF;
+}

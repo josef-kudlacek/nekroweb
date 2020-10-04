@@ -38,4 +38,11 @@ $(document).ready(function(){
     $(function() {
         $("#filter select").filterByText($("#selectFilter"));
     });
+
+    $('.StarsCount input').click(function () {
+        $("#frm-evaluationForm-StarsCount").val($(this).val());
+
+        $(".StarsCount span").removeClass('checked');
+        $(this).parent().addClass('checked');
+    });
 });
