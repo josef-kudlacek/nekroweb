@@ -3,7 +3,6 @@
 
 namespace App\Model;
 
-use http\Exception\InvalidArgumentException;
 use Nette;
 
 class Evaluation

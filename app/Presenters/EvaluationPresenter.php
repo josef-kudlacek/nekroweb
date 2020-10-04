@@ -5,7 +5,6 @@ namespace App\Presenters;
 
 use App\Model;
 use App\Utils\Utils;
-use http\Exception\InvalidArgumentException;
 use Nette\Application\UI\Form;
 
 class EvaluationPresenter extends BasePresenter
