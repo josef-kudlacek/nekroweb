@@ -8,6 +8,6 @@ class Functions
 {
     public static function calculatePercentStars($starsCount, $starsSum)
     {
-        return ($starsCount/$starsSum)*100;
+        return round(($starsCount/$starsSum), 2)*100;
     }
 }
