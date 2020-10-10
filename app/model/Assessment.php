@@ -14,6 +14,31 @@ class Assessment
         $this->database = $database;
     }
 
+    public function getAssessmentsBySemester($semesterId)
+    {
+        $this->database->query('
+            SELECT @SemesterId := ?;
+            ', $semesterId);
+
+        return $this->database->query('
+            SELECT assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, assessment.Weight AS AssessmentWeight,
+            year.Number, year.CodeName, homework.Code AS HomeworkCode, homeworktype.Name AS HomeworkTypeName, semesterassesment.SemesterId
+            FROM assessment
+            INNER JOIN year
+            ON assessment.YearId = year.Id
+            LEFT JOIN homework
+            ON assessment.Id = homework.AssessmentId
+            LEFT JOIN homeworktype
+            ON homework.HomeworkTypeId = homeworktype.Id
+            LEFT JOIN semesterassesment
+            ON assessment.Id = semesterassesment.AssessmentId
+            AND semesterassesment.SemesterId = @SemesterId
+            INNER JOIN class
+            ON class.YearId = year.Id
+            AND class.SemesterId = @SemesterId
+            ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId, homework.Code;');
+    }
+
     public function getAssessmentBySemester($SemesterId)
     {
         return $this->database->query('
@@ -85,5 +110,17 @@ class Assessment
             FROM studentassessment
             WHERE studentassessment.Id = ?;',
             $StudentAssessmentId);
+    }
+
+    public function addAssessmentToSemester($values)
+    {
+        return $this->database->table('semesterassesment')->insert($values);
+    }
+
+    public function removeAssessmentFromSemester($assessmentId, $semesterId)
+    {
+        return $this->database->table('semesterassesment')
+            ->where('AssessmentId = ? AND SemesterId = ?', $assessmentId, $semesterId)
+            ->delete();
     }
 }

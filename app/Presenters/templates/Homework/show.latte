@@ -1,0 +1,49 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Správa úkolů</h1>
+        <div class="form-group col-md-4 offset-md-5">
+            <a href="{link create}" class="btn btn-primary btn-sm"
+                role="button">Vytvořit úkol</a>
+        </div>
+        <h2>Přehled tříd</h2>
+        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
+        {if $assessments}
+        <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark">Název</th>
+                    <th class="text-white bg-dark">Váha</th>
+                    <th class="text-white bg-dark">Další info</th>
+                    <th class="text-white bg-dark">Ročník</th>
+                    <th class="text-white bg-dark">Správa</th>
+                </tr>
+            </thead>
+            <tbody id="filter">
+            {foreach $assessments as $assessmentItem}
+                <tr class="table-{$assessmentItem->AssessmentWeight|assessmentWeight}">
+                    <td>{$assessmentItem->AssessmentName}</td>
+                    <td>{$assessmentItem->AssessmentWeight}</td>
+                    <td>{$assessmentItem->HomeworkCode} – {$assessmentItem->HomeworkTypeName}</td>
+                    <td>{$assessmentItem->Number}. {$assessmentItem->CodeName}</td>
+                    <td>
+                        <a href="{link edit $assessmentItem->AssessmentId}" class="btn btn-secondary btn-sm"
+                           role="button">Upravit</a>
+                        {if $assessmentItem->SemesterId}
+                            <a href="{link delete $assessmentItem->AssessmentId}" class="btn btn-dark btn-sm"
+                               role="button">Odebrat ze semestru</a>
+                        {else}
+                            <a href="{link add $assessmentItem->AssessmentId}" class="btn btn-primary btn-sm"
+                               role="button">Přidat do semestru</a>
+                        {/if}
+                    </td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        </div>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

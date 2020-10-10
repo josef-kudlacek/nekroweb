@@ -6,6 +6,27 @@ namespace App\Utils;
 
 class Filter
 {
+    public static function assessmentWeight($assessmentWeight)
+    {
+        $assessmentColor = 'default';
+
+        switch ($assessmentWeight) {
+            case 1:
+                $assessmentColor = 'secondary';
+                break;
+            case 2:
+                $assessmentColor = 'primary';
+                break;
+            case 3:
+                $assessmentColor = 'success';
+                break;
+            default:
+                $assessmentColor = 'warning';
+        }
+
+        return $assessmentColor;
+    }
+
     public static function attendanceType($attendanceTypeId)
     {
         $attendanceColor = 'default';

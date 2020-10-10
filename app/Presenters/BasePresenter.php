@@ -25,6 +25,9 @@ class BasePresenter extends Nette\Application\UI\Presenter
 
     private function loadTemplateFilters()
     {
+        $this->template->addFilter('assessmentWeight', function ($assessmentWeight) {
+            return Filter::assessmentWeight($assessmentWeight);
+        });
 
         $this->template->addFilter('attendanceType', function ($attendance) {
             return Filter::attendanceType($attendance);
