@@ -14,6 +14,30 @@ class Assessment
         $this->database = $database;
     }
 
+    public function getAssessmentByIdAndSemester($AssessmentId, $SemesterId)
+    {
+        return $this->database->query('
+            SELECT assessment.Id, assessment.Name, assessment.Weight, year.Number, year.CodeName, year.Id AS YearId,
+            homework.HomeworkTypeId, homework.Task, semesterassessment.Code, homeworktype.Name AS HomeWorkTypeName, 
+            semesterassessment.SemesterId
+            FROM assessment
+            INNER JOIN year
+            ON assessment.YearId = year.Id
+            LEFT JOIN homework
+            ON assessment.Id = homework.AssessmentId
+            LEFT JOIN homeworktype
+            ON homework.HomeworkTypeId = homeworktype.Id
+            LEFT JOIN semesterassessment
+            ON assessment.Id = semesterassessment.AssessmentId
+            AND semesterassessment.SemesterId = ?
+            INNER JOIN class
+            ON class.YearId = year.Id
+            AND class.SemesterId = semesterassessment.SemesterId
+            WHERE assessment.Id = ?
+            ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId, semesterassessment.Code;
+                ', $SemesterId, $AssessmentId);
+    }
+
     public function getAssessmentsBySemester($semesterId)
     {
         $this->database->query('

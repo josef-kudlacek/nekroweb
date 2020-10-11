@@ -23,9 +23,17 @@ class SemesterAssessment
             $semesterAssessment->SemesterId, $semesterAssessment->AssessmentId, $semesterAssessment->Code);
     }
 
+    public function updateRecord($values)
+    {
+        return $this->database->table('semesterassessment')
+            ->where('SemesterId = ? AND AssessmentId = ?', $values['SemesterId'], $values['AssessmentId'])
+            ->update($values);
+    }
+
     public function addAssessmentToSemester($values)
     {
-        return $this->database->table('semesterassessment')->insert($values);
+        return $this->database->table('semesterassessment')
+            ->insert($values);
     }
 
     public function removeAssessmentFromSemester($assessmentId, $semesterId)

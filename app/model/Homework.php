@@ -42,4 +42,11 @@ class Homework
             $homework->AssessmentId, $homework->HomeworkTypeId, $homework->Task);
     }
 
+    public function updateHomework($values)
+    {
+        return $this->database->table('homework')
+            ->where('AssessmentId', $values['AssessmentId'])
+            ->update($values);
+    }
+
 }
