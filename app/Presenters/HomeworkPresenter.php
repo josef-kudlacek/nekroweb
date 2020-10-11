@@ -62,7 +62,6 @@ class HomeworkPresenter extends BasePresenter
         $semesterId = $this->user->getIdentity()->semesterId;
         $assessment = $this->assessment->getAssessmentByIdAndSemester($assessmentId, $semesterId)->fetch();
 
-        bdump($assessment);
         $this['homeworkForm']->setDefaults($assessment);
     }
 
@@ -137,8 +136,6 @@ class HomeworkPresenter extends BasePresenter
     {
 
         $values = Utils::convertEmptyToNull($form->values);
-
-        bdump($values);
 
         $assessment = $this->prepareAssessment($values);
         $homework = $this->prepareHomework($values);

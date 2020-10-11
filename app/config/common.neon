@@ -26,6 +26,7 @@ services:
 	- App\Model\Assessment
 	- App\Model\Attendance
 	- App\Model\AttendanceType
+	- App\Model\Card
 	- App\Model\Character
 	- App\Model\Disquisition
 	- App\Model\Error

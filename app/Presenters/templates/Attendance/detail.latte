@@ -13,7 +13,6 @@
                         <th class="text-white bg-dark">Student</th>
                         <th class="text-white bg-dark">Docházka</th>
                         <th class="text-white bg-dark">Body</th>
-                        <th class="text-white bg-dark">Karta</th>
                         <th class="text-white bg-dark">Správa</th>
                     </tr>
                 </thead>
@@ -31,9 +30,6 @@
                             {$attendanceItem->AttendanceTypePoints}{if $attendanceItem->ActivityPoints} +
                             <abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityPoints}</abbr>
                             {/if}
-                        </td>
-                        <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
-                            {$attendanceItem->AttendanceCard}
                         </td>
                         <td>
                             <a href="{link detailEdit $attendanceItem->AttendanceId}" class="btn btn-secondary btn-sm"

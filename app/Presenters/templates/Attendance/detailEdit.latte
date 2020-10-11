@@ -39,9 +39,6 @@
             <div class="col-sm-1 text-black text-center bg-success border border-dark">
                 <abbr title="Omluveno předem">0+</abbr>
             </div>
-            <div class="col-md-1 text-white text-center bg-dark">
-                Karta
-            </div>
         </div>
         <input name="StudentUserId[{$student->UserId}]" class="form-control" type="number" value="{$student->UserId}" hidden>
         <input name="StudentClassId[{$student->UserId}]" class="form-control" type="number" value="{$student->ClassId}" hidden>
@@ -59,9 +56,6 @@
                     </div>
                 </label>
             {/foreach}
-            <div class="col-md-1">
-                <input name="AttendanceCard[{$student->UserId}]" value="{$student->AttendanceCard}" class="form-control" maxlength="4">
-            </div>
         </div>
         <br />
         <div class="text-center">

@@ -1,0 +1,43 @@
+{block content}
+    <script>
+        $(function() {
+            $('#frm-cardForm-StudentUserId').filterByText($('#filterStudent'));
+        });
+    </script>
+    <div class="container">
+        <h1 n:block=title>Upravit udělení karty</h1>
+        {foreach $flashes as $flash}
+            <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+        {/foreach}
+        <form n:name=cardForm>
+            <input n:name=Id class="form-control" type="integer" hidden>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Student:</strong></label>
+                <input class="form-control" id="filterStudent" type="text" placeholder="Filtrovat">
+                 <select n:name=StudentUserId class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Třída:</strong></label>
+                 <select n:name=StudentClassId class="form-control"></select>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Číslo karty:</strong></label>
+                <input n:name=CardNumber type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Datum:</strong></label>
+                <input n:name=Date type="datetime-local" class="form-control">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Důvod:</strong></label>
+                <textarea n:name=Reason class="form-control" rows="5" maxlength="80"></textarea>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=send class="btn btn-secondary btn-block" value="Upravit">
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href="{link Card:admin}">Zpět</a>
+            </div>
+        </form>
+   </div>
+{/block}

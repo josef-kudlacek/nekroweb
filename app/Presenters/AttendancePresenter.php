@@ -181,8 +181,6 @@ class AttendancePresenter extends BasePresenter
 
         $form->addCheckbox('AttendanceTypeId');
 
-        $form->addText('AttendanceCard');
-
         $form->addSubmit('send', 'Zapsat');
 
         $form->addProtection();
@@ -259,7 +257,6 @@ class AttendancePresenter extends BasePresenter
                 "LessonId" => $values['LessonId'],
                 "AttendanceDate" => $values['AttendanceDate'],
                 "AttendanceTypeId" => $values['AttendanceTypeId'][$student],
-                "AttendanceCard" => $values['AttendanceCard'][$student],
             );
 
             array_push($studentsData, $studentItem);
