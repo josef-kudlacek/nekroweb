@@ -153,7 +153,7 @@ class StudyClass
                 ON attendance.AttendanceTypeId = attendancetype.Id
                 LEFT JOIN activity
                 ON activity.AttendanceId = attendance.Id
-                WHERE student.ClassId = 36
+                WHERE student.ClassId = @InStudentClassId
                 GROUP BY student.UserId
                 ORDER BY user.Name
                 ) as T1, 
@@ -167,7 +167,7 @@ class StudyClass
                 AND student.ClassId = attendance.StudentClassId
                 LEFT JOIN attendancetype
                 ON attendance.AttendanceTypeId = attendancetype.Id
-                WHERE student.ClassId = 36
+                WHERE student.ClassId = @InStudentClassId
                 GROUP BY student.UserId
                 ORDER BY user.Name
                 ) as T2,
@@ -181,7 +181,7 @@ class StudyClass
                 AND student.ClassId = studentassessment.StudentClassId
                 LEFT JOIN mark
                 ON mark.Id = studentassessment.MarkId
-                WHERE student.ClassId = 36
+                WHERE student.ClassId = @InStudentClassId
                 GROUP BY student.UserId
                 ORDER BY user.Name
                 ) as T3
