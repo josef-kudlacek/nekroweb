@@ -64,10 +64,6 @@ class StudentPresenter extends BasePresenter
         $this->transaction->startTransaction();
 
         $result = $this->student->deleteStudent($studentId, $classId);
-        $studentClasses = $this->dbUser->getUserClasses($studentId);
-        if ($studentClasses) {
-            $this->dbUser->deleteUser($studentId);
-        }
 
         $this->transaction->endTransaction();
 
