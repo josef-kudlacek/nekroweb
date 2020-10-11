@@ -22,7 +22,7 @@ class Assessment
 
         return $this->database->query('
             SELECT assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, assessment.Weight AS AssessmentWeight,
-            year.Number, year.CodeName, homework.Code AS HomeworkCode, homeworktype.Name AS HomeworkTypeName, semesterassesment.SemesterId
+            year.Number, year.CodeName, semesterassessment.Code AS HomeworkCode, homeworktype.Name AS HomeworkTypeName, semesterassessment.SemesterId
             FROM assessment
             INNER JOIN year
             ON assessment.YearId = year.Id
@@ -30,20 +30,20 @@ class Assessment
             ON assessment.Id = homework.AssessmentId
             LEFT JOIN homeworktype
             ON homework.HomeworkTypeId = homeworktype.Id
-            LEFT JOIN semesterassesment
-            ON assessment.Id = semesterassesment.AssessmentId
-            AND semesterassesment.SemesterId = @SemesterId
+            LEFT JOIN semesterassessment
+            ON assessment.Id = semesterassessment.AssessmentId
+            AND semesterassessment.SemesterId = @SemesterId
             INNER JOIN class
             ON class.YearId = year.Id
             AND class.SemesterId = @SemesterId
-            ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId, homework.Code;');
+            ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId, semesterassessment.Code;');
     }
 
     public function getAssessmentBySemester($SemesterId)
     {
         return $this->database->query('
             SELECT studentassessment.Id AS StudentAssessmentId, class.Id AS ClassId, user.Id AS StudentId,
-            user.Name AS UserName, student.HouseId, class.Name AS ClassName, homework.Code AS HomeworkCode,
+            user.Name AS UserName, student.HouseId, class.Name AS ClassName, semesterassessment.Code AS HomeworkCode,
             assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, mark.Value AS MarkValue,
             mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
             studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints
@@ -61,6 +61,9 @@ class Assessment
             ON mark.Id = studentassessment.MarkId
             INNER JOIN homework
             ON homework.AssessmentId = assessment.Id
+            INNER JOIN semesterassessment
+            ON assessment.Id = semesterassessment.AssessmentId
+            AND semesterassessment.SemesterId = class.SemesterId 
             WHERE class.SemesterId = ?
             ORDER BY class.name, user.name, assessment.Name;',
             $SemesterId);
@@ -70,7 +73,7 @@ class Assessment
     {
         return $this->database->query('
             SELECT studentassessment.Id, class.Id AS ClassId, user.Id AS StudentUserId,
-            user.Name AS UserName, student.HouseId, class.Name AS ClassName, homework.Code AS HomeworkCode,
+            user.Name AS UserName, student.HouseId, class.Name AS ClassName, semesterassessment.Code AS HomeworkCode,
             assessment.Id AS AssessmentId, mark.Name AS MarkName, assessment.Name AS AssessmentName,
             mark.Value AS MarkValue, mark.Id AS MarkId, studentassessment.`Comment`,
             studentassessment.Date, studentassessment.ResultPoints
@@ -88,6 +91,9 @@ class Assessment
             ON mark.Id = studentassessment.MarkId
             INNER JOIN homework
             ON homework.AssessmentId = assessment.Id
+            INNER JOIN semesterassessment
+            ON assessment.Id = semesterassessment.AssessmentId
+            AND semesterassessment.SemesterId = class.SemesterId
             WHERE studentassessment.Id = ?
             ORDER BY class.name, user.name, assessment.Name;',
             $StudentAssessmentId);
@@ -95,12 +101,12 @@ class Assessment
 
     public function insertAssessment($values)
     {
-        return $this->database->table('studentassessment')->insert($values);
+        return $this->database->table('assessment')->insert($values);
     }
 
     public function updateAssessment($values)
     {
-        return $this->database->table('studentassessment')->where('Id', $values['Id'])->update($values);
+        return $this->database->table('assessment')->where('Id', $values['Id'])->update($values);
     }
 
     public function deleteAssessment($StudentAssessmentId)
@@ -110,17 +116,5 @@ class Assessment
             FROM studentassessment
             WHERE studentassessment.Id = ?;',
             $StudentAssessmentId);
-    }
-
-    public function addAssessmentToSemester($values)
-    {
-        return $this->database->table('semesterassesment')->insert($values);
-    }
-
-    public function removeAssessmentFromSemester($assessmentId, $semesterId)
-    {
-        return $this->database->table('semesterassesment')
-            ->where('AssessmentId = ? AND SemesterId = ?', $assessmentId, $semesterId)
-            ->delete();
     }
 }

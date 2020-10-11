@@ -17,15 +17,29 @@ class Homework
     public function getHomeworksBySemester($SemesterId)
     {
         return $this->database->query("
-            SELECT assessment.Id, CONCAT(homework.Code, ' - ', assessment.Name) AS HomeworkName
-            FROM semesterassesment
+            SELECT assessment.Id, CONCAT(semesterassessment.Code, ' - ', assessment.Name) AS HomeworkName
+            FROM semesterassessment
             INNER JOIN assessment
-            ON assessment.Id = semesterassesment.AssessmentId
+            ON assessment.Id = semesterassessment.AssessmentId
             INNER JOIN homework
             ON homework.AssessmentId = assessment.Id
-            WHERE semesterassesment.SemesterId = ?
-            ORDER BY homework.HomeworkTypeId, homework.Code;",
+            WHERE semesterassessment.SemesterId = ?
+            ORDER BY homework.HomeworkTypeId, semesterassessment.Code;",
             $SemesterId);
+    }
+
+    public function insertHomework($values)
+    {
+        return $this->database->table('homework')->insert($values);
+    }
+
+    public function createRecord($homework)
+    {
+        return $this->database->query('
+            INSERT INTO homework (AssessmentId, HomeworkTypeId, Task)
+            VALUES(
+            IFNULL(?, LAST_INSERT_ID()), ?, ?);',
+            $homework->AssessmentId, $homework->HomeworkTypeId, $homework->Task);
     }
 
 }

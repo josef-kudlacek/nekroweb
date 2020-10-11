@@ -38,6 +38,7 @@ services:
 	- App\Model\Rule
 	- App\Model\Curriculum
 	- App\Model\Semester
+	- App\Model\SemesterAssessment
 	- App\Model\Suggestion
 	- App\Model\StudentAssessment
 	- App\Model\StudyClass

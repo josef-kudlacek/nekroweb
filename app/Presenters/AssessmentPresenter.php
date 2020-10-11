@@ -11,6 +11,11 @@ class AssessmentPresenter extends BasePresenter
 {
     private $assessment;
 
+    /** @var Model\StudentAssessment
+     * @inject
+     */
+    public $studentAssessment;
+
     /** @var Model\StudyClass
      * @inject
      */
@@ -131,11 +136,11 @@ class AssessmentPresenter extends BasePresenter
         $this->transaction->startTransaction();
         if ($values->Id)
         {
-            $this->assessment->updateAssessment($values);
+            $this->studentAssessment->updateAssessment($values);
 
             $this->flashMessage('Známka úspěšně změněna.','success');
         } else {
-            $this->assessment->insertAssessment($values);
+            $this->studentAssessment->insertAssessment($values);
 
             $this->flashMessage('Známka úspěšně přidána.','success');
         }

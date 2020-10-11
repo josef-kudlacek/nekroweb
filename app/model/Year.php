@@ -21,4 +21,16 @@ class Year
             FROM year          
             ORDER BY Number, CodeName;');
     }
+
+    public function getYearsBySemester($semesterId)
+    {
+        return $this->database->query('
+            SELECT year.*
+            FROM class
+            INNER JOIN year
+            ON class.YearId = year.Id
+            WHERE class.SemesterId = ?
+            ORDER BY year.Number;',
+                $semesterId);
+    }
 }
