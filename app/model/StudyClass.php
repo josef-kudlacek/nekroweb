@@ -130,4 +130,63 @@ class StudyClass
             WHERE Id = ?;',
                 $studyClassId);
     }
+
+    public function getClassPointsSum($studyClassId)
+    {
+        $this->database->query('
+            SELECT @InStudentClassId := ?;
+            ', $studyClassId);
+
+        return $this->database->query('
+            	SELECT T1.Name AS StudentName, T1.HouseId, T2.AttendancePoints,
+            	T1.ActivityPoints, T3.MarkPoints
+                FROM
+                (
+                SELECT user.Name, student.HouseId, IFNULL(SUM(activity.ActivityPoints), 0) AS ActivityPoints
+                FROM student
+                INNER JOIN user
+                ON student.UserId = user.Id
+                LEFT JOIN attendance
+                ON student.UserId = attendance.StudentUserId
+                AND student.ClassId = attendance.StudentClassId
+                LEFT JOIN attendancetype
+                ON attendance.AttendanceTypeId = attendancetype.Id
+                LEFT JOIN activity
+                ON activity.AttendanceId = attendance.Id
+                WHERE student.ClassId = 36
+                GROUP BY student.UserId
+                ORDER BY user.Name
+                ) as T1, 
+                (
+                SELECT user.Name, IFNULL(SUM(attendancetype.Points), 0) AS AttendancePoints
+                FROM student
+                INNER JOIN user
+                ON student.UserId = user.Id
+                LEFT JOIN attendance
+                ON student.UserId = attendance.StudentUserId
+                AND student.ClassId = attendance.StudentClassId
+                LEFT JOIN attendancetype
+                ON attendance.AttendanceTypeId = attendancetype.Id
+                WHERE student.ClassId = 36
+                GROUP BY student.UserId
+                ORDER BY user.Name
+                ) as T2,
+                (
+                SELECT user.Name, IFNULL(SUM(mark.Value), 0) AS MarkPoints
+                FROM student
+                INNER JOIN user
+                ON student.UserId = user.Id
+                LEFT JOIN studentassessment
+                ON student.UserId = studentassessment.StudentUserId
+                AND student.ClassId = studentassessment.StudentClassId
+                LEFT JOIN mark
+                ON mark.Id = studentassessment.MarkId
+                WHERE student.ClassId = 36
+                GROUP BY student.UserId
+                ORDER BY user.Name
+                ) as T3
+                WHERE T1.Name = T2.Name
+                AND T2.Name = T3.Name;
+                ');
+    }
 }

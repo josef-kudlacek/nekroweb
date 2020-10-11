@@ -1,0 +1,46 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Přehled získaných bodů</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $students}
+            <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat řádky tabulky">
+            <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-white bg-dark">Student</th>
+                        <th class="text-white bg-dark">Docházka</th>
+                        <th class="text-white bg-dark">Aktivita</th>
+                        <th class="text-white bg-dark">Známky</th>
+                        <th class="text-white bg-dark">Celkem</th>
+                    </tr>
+                </thead>
+                <tbody id="filter">
+                {foreach $students as $student}
+                    <tr class="table-{$student->HouseId|houseType}">
+                        <td>
+                            <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->StudentName|encodeToWin1250)}" target="_blank"
+                                class="text-dark">{$student->StudentName}</a>
+                        </td>
+                        <td>
+                            {$student->AttendancePoints}
+                        </td>
+                        <td>
+                            {$student->ActivityPoints}
+                        </td>
+                        <td>
+                            {$student->MarkPoints}
+                        </td>
+                        <td>
+                            {$student->AttendancePoints + $student->ActivityPoints + $student->MarkPoints}
+                        </td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        </div>
+        {else}
+            Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

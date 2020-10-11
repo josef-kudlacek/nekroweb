@@ -34,20 +34,30 @@ class StudyClassPresenter extends BasePresenter
     protected function startup()
     {
         parent::startup();
-        if (!$this->getUser()->isInRole('Profesor')) {
-            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
-            $this->redirect('Homepage:default');
+        if (!$this->getUser()->loggedIn) {
+            $this->flashMessage('Přístup do této sekce je pouze pro přihlášené. Přihlaste se prosím.','danger');
+            $this->redirect('Sign:in');
         }
+    }
+
+    public function renderPoints()
+    {
+        $classId = $this->getUser()->getIdentity()->classId;
+        $this->template->students = $this->studyClass->getClassPointsSum($classId);
     }
 
     public function renderShow()
     {
+        $this->checkAccess();
+
         $semesterId = $this->getUser()->getIdentity()->semesterId;
         $this->template->studyClass = $this->studyClass->getClassesBySemester($semesterId);
     }
 
     public function renderCreate()
     {
+        $this->checkAccess();
+
         $this['studyClassForm']->setDefaults([
             'semester' => $this->getUser()->getIdentity()->semesterId
         ]);
@@ -55,6 +65,8 @@ class StudyClassPresenter extends BasePresenter
 
     public function actionEdit($ClassId)
     {
+        $this->checkAccess();
+
         $studyClass = $this->studyClass->getClassById($ClassId)->fetch();
         if (!$studyClass) {
             $this->flashMessage('Třída nenalezena.', "danger");;
@@ -74,6 +86,8 @@ class StudyClassPresenter extends BasePresenter
 
     public function actionDelete($ClassId)
     {
+        $this->checkAccess();
+
         $this->transaction->startTransaction();
         $this->studyClass->deleteClassById($ClassId);
         $this->transaction->endTransaction();
@@ -141,5 +155,13 @@ class StudyClassPresenter extends BasePresenter
 
         $this->transaction->endTransaction();
         $this->redirect('StudyClass:show');
+    }
+
+    private function checkAccess()
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
     }
 }
