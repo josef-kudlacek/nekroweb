@@ -3,9 +3,8 @@
         <h1 n:block="title">Přehled rozdaných karet</h1>
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $cards}
-            <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat řádky tabulky">
             <div class="table-responsive">
-            <table class="table table-bordered">
+            <table id="table" class="table table-bordered">
                 <thead>
                     <tr>
                         <th class="text-white bg-dark">Student</th>

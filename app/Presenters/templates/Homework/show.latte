@@ -6,10 +6,9 @@
                 role="button">Vytvořit úkol</a>
         </div>
         <h2>Přehled tříd</h2>
-        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $assessments}
         <div class="table-responsive">
-        <table class="table table-bordered">
+        <table id="table" class="table table-bordered">
             <thead>
                 <tr>
                     <th class="text-white bg-dark">Název</th>

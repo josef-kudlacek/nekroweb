@@ -45,4 +45,21 @@ $(document).ready(function(){
         $(".StarsCount span").removeClass('checked');
         $(this).parent().addClass('checked');
     });
+
+    $('#table').DataTable( {
+        "language": {
+            "lengthMenu": "Zobrazit _MENU_ záznamů na stránku",
+            "zeroRecords": "Nenalezen žádný záznam. Omlouváme se.",
+            "info": "Zobrazeno _PAGE_ stránek z _PAGES_",
+            "infoEmpty": "Žádné záznamy nejsou k dispozici.",
+            "infoFiltered": "(Filtrováno z celkového počtu _MAX_ záznamů.)",
+            "search": "Filtrovat:",
+            "paginate": {
+                "previous": "Předchozí",
+                "next": "Následující",
+            }
+        },
+        "lengthMenu": [[5, 10, 15, 20, -1], [5, 10, 15, 20, "Vše"]],
+        "pageLength": -1
+    } );
 });

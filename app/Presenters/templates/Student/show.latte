@@ -6,10 +6,9 @@
                 role="button">Přidat studenta do semestru</a>
         </div>
          <h2>Přehled studentů</h2>
-        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $students}
         <div class="table-responsive">
-        <table class="table table-bordered">
+        <table id="table" class="table table-bordered">
             <thead>
                 <tr>
                     <th class="text-white bg-dark">Student</th>

@@ -6,9 +6,8 @@
                 role="button">Přidat semestr</a>
         </div>
         <h2>Přehled semestrů</h2>
-        <input class="form-control" id="tableFilter" type="text" placeholder="Filtrovat">
         {if $semesters}
-        <table class="table table-bordered">
+        <table id="table" class="table table-bordered">
             <thead>
                 <tr>
                     <th class="text-white bg-dark">Začátek</th>
