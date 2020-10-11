@@ -18,7 +18,7 @@
                     <th class="text-white bg-dark">Správa</th>
                 </tr>
             </thead>
-            <tbody id="filter">
+            <tbody>
             {foreach $assessments as $assessmentItem}
                 <tr class="table-{$assessmentItem->AssessmentWeight|assessmentWeight}">
                     <td>{$assessmentItem->AssessmentName}</td>

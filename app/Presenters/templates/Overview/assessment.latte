@@ -1,23 +1,24 @@
 {block content}
     <div class="container">
         <h1 n:block="title">Přehled známek</h1>
-        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        <h2>Školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $assessments}
             <div class="table-responsive">
             <table id="table" class="table table-bordered">
                 <thead>
                     <tr>
+                        <th class="text-white bg-dark">Třída</th>
                         <th class="text-white bg-dark">Student</th>
-                        <th class="text-white bg-dark">1.NDÚ</th>
-                        <th class="text-white bg-dark">2.NDÚ</th>
-                        <th class="text-white bg-dark">3.NDÚ</th>
-                        <th class="text-white bg-dark">4.NDÚ</th>
-                        <th class="text-white bg-dark">5.NDÚ</th>
-                        <th class="text-white bg-dark">6.NDÚ</th>
-                        <th class="text-white bg-dark">7.NDÚ</th>
-                        <th class="text-white bg-dark">8.NDÚ</th>
-                        <th class="text-white bg-dark">1.PDÚ</th>
-                        <th class="text-white bg-dark">2.PDÚ</th>
+                        <th class="text-white bg-dark">1.N</th>
+                        <th class="text-white bg-dark">2.N</th>
+                        <th class="text-white bg-dark">3.N</th>
+                        <th class="text-white bg-dark">4.N</th>
+                        <th class="text-white bg-dark">5.N</th>
+                        <th class="text-white bg-dark">6.N</th>
+                        <th class="text-white bg-dark">7.N</th>
+                        <th class="text-white bg-dark">8.N</th>
+                        <th class="text-white bg-dark">1.P</th>
+                        <th class="text-white bg-dark">2.P</th>
                         <th class="text-white bg-dark">Esej</th>
                         <th class="text-white bg-dark">ZS</th>
                     </tr>
@@ -26,8 +27,11 @@
                 {foreach $assessments as $assessment}
                     <tr>
                         <td class="table-{$assessment->HouseId|houseType}">
-                        <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessment->StudentName|encodeToWin1250)}"
-                            class="text-dark" target="_blank">{$assessment->StudentName}</a>
+                            {$assessment->ClassName}
+                        </td>
+                        <td class="table-{$assessment->HouseId|houseType}">
+                            <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessment->StudentName|encodeToWin1250)}"
+                                class="text-dark" target="_blank">{$assessment->StudentName}</a>
                         </td>
                         <td class="text-dark bg-{$assessment->NDU1id|markType}">
                             {$assessment->NDU1}

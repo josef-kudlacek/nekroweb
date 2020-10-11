@@ -15,7 +15,7 @@
                     <th class="text-white bg-dark">Správa semestru</th>
                 </tr>
             </thead>
-            <tbody id="filter">
+            <tbody>
             {foreach $semesters as $semester}
                 <tr class="table-{$semester->YearTo|semesterType}">
                     <td>{$semester->YearFrom}</td>

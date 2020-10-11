@@ -189,4 +189,70 @@ class StudyClass
                 AND T2.Name = T3.Name;
                 ');
     }
+
+    public function getPointsSumBySemesterId($semesterId)
+    {
+        $this->database->query('
+            SELECT @SemesterId := ?;
+            ', $semesterId);
+
+        return $this->database->query('
+            	SELECT T1.ClassName, T1.Name AS StudentName, T1.HouseId, T2.AttendancePoints,
+            	T1.ActivityPoints, T3.MarkPoints
+                FROM
+                (
+                SELECT class.Name AS ClassName, user.Name, student.HouseId, 
+                IFNULL(SUM(activity.ActivityPoints), 0) AS ActivityPoints
+                FROM student
+                INNER JOIN class
+                ON student.ClassId = class.Id
+                INNER JOIN user
+                ON student.UserId = user.Id
+                LEFT JOIN attendance
+                ON student.UserId = attendance.StudentUserId
+                AND student.ClassId = attendance.StudentClassId
+                LEFT JOIN attendancetype
+                ON attendance.AttendanceTypeId = attendancetype.Id
+                LEFT JOIN activity
+                ON activity.AttendanceId = attendance.Id
+                WHERE class.SemesterId = @SemesterId
+                GROUP BY student.UserId
+                ORDER BY class.Name, user.Name
+                ) as T1, 
+                (
+                SELECT user.Name, IFNULL(SUM(attendancetype.Points), 0) AS AttendancePoints
+                FROM student
+                INNER JOIN class
+                ON student.ClassId = class.Id
+                INNER JOIN user
+                ON student.UserId = user.Id
+                LEFT JOIN attendance
+                ON student.UserId = attendance.StudentUserId
+                AND student.ClassId = attendance.StudentClassId
+                LEFT JOIN attendancetype
+                ON attendance.AttendanceTypeId = attendancetype.Id
+                WHERE class.SemesterId = @SemesterId
+                GROUP BY student.UserId
+                ORDER BY class.Name, user.Name
+                ) as T2,
+                (
+                SELECT user.Name, IFNULL(SUM(mark.Value), 0) AS MarkPoints
+                FROM student
+                INNER JOIN user                
+                ON student.UserId = user.Id
+                INNER JOIN class
+                ON student.ClassId = class.Id
+                LEFT JOIN studentassessment
+                ON student.UserId = studentassessment.StudentUserId
+                AND student.ClassId = studentassessment.StudentClassId
+                LEFT JOIN mark
+                ON mark.Id = studentassessment.MarkId
+                WHERE class.SemesterId = @SemesterId
+                GROUP BY student.UserId
+                ORDER BY class.Name, user.Name
+                ) as T3
+                WHERE T1.Name = T2.Name
+                AND T2.Name = T3.Name;
+                ');
+    }
 }

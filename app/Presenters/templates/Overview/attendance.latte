@@ -1,12 +1,13 @@
 {block content}
     <div class="container">
         <h1 n:block="title">Přehled docházky a aktivity</h1>
-        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        <h2>Školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $attendance}
             <div class="table-responsive">
             <table id="table" class="table table-bordered">
                 <thead>
                     <tr>
+                        <th class="text-white bg-dark">Třída</th>
                         <th class="text-white bg-dark">Student</th>
                         <th class="text-white bg-dark">#1</th>
                         <th class="text-white bg-dark">#2</th>
@@ -27,6 +28,9 @@
                 <tbody>
                 {foreach $attendance as $attendanceItem}
                     <tr>
+                        <td class="table-{$attendanceItem->HouseId|houseType}">
+                            {$attendanceItem->ClassName}
+                        </td>
                         <td class="table-{$attendanceItem->HouseId|houseType}">
                         <a href="https://bradavice.eu//ukaz.php?name={urlencode($attendanceItem->StudentName|encodeToWin1250)}" target="_blank"
                             class="text-dark">{$attendanceItem->StudentName}</a>
