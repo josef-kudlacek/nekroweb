@@ -8,15 +8,15 @@
                         {switch $rule->Type}
                             {case Povinné}
                                 <li class="list-group-item list-group-item-action list-group-item-danger">
-                                    {$rule->Description}
+                                    {$rule->Description|noescape}
                                 </li>
                             {case Info}
                                 <li class="list-group-item list-group-item-action list-group-item-info">
-                                    {$rule->Description}
+                                    {$rule->Description|noescape}
                                 </li>
                             {default}
                                 <li class="list-group-item list-group-item-action list-group-item-light">
-                                    {$rule->Description}
+                                    {$rule->Description|noescape}
                                 </li>
                         {/switch}
                     {/if}
