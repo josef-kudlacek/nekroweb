@@ -39,6 +39,16 @@ class Student
                 $semesterId);
     }
 
+    public function getCertificationInfo($studentId, $classId)
+    {
+        return $this->database->query("
+            SELECT *
+            FROM student
+            WHERE student.UserId = ?
+            AND student.ClassId = ?;",
+            $studentId, $classId);
+    }
+
     public function getStudent($studentId, $classId)
     {
         return $this->database->query("
@@ -153,5 +163,12 @@ class Student
             ON DUPLICATE KEY UPDATE
             Name = Name;',
             $username, $isactive);
+    }
+
+    public function certificateStudent($values)
+    {
+        return $this->database->table('student')
+            ->where('UserId = ? AND ClassId = ?', $values->UserId, $values->ClassId)
+            ->update($values);
     }
 }

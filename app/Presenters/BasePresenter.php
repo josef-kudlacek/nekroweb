@@ -37,6 +37,10 @@ class BasePresenter extends Nette\Application\UI\Presenter
             return Filter::houseType($houseId);
         });
 
+        $this->template->addFilter('markColor', function ($mark) {
+            return Filter::markColor($mark);
+        });
+
         $this->template->addFilter('markType', function ($markId) {
             return Filter::markType($markId);
         });

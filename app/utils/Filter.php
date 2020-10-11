@@ -114,6 +114,29 @@ class Filter
         return $markColor;
     }
 
+    public static function markColor($average)
+    {
+        $markColor = 'light';
+
+        if ($average >= 17) {
+            $markColor = 'danger';
+            return $markColor;
+        } elseif ($average >= 12.25) {
+            $markColor = 'success';
+            return $markColor;
+        } elseif ($average >= 7.25) {
+            $markColor = 'primary';
+            return $markColor;
+        } elseif ($average >= 3.25) {
+            $markColor = 'secondary';
+            return $markColor;
+        }  else {
+            $markColor = 'warning';
+            return $markColor;
+        }
+    }
+
+
     public static function semesterType($YearTo)
     {
         $semesterColor = 'primary';

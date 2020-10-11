@@ -255,4 +255,48 @@ class StudyClass
                 AND T2.Name = T3.Name;
                 ');
     }
+
+    public function getOverview($semesterId)
+    {
+        return $this->database->query('
+            SELECT T.StudentId, T.StudentName, T.ClassId, T.HouseId,
+            T.ClassName, T.Name, T.CertificateDate,
+            IF(T.AttendanceAll IS NULL, NULL, T.AttendancesCount/T.AttendanceAll) AS Attendance,
+            COUNT(IF(T.Marks IS NULL, NULL, T.Marks)) AS MarkCounts,
+            SUM(IF(T.Marks IS NULL, NULL, T.Marks*T.Weight)) AS Mark
+            FROM
+            (
+            SELECT user.Id AS StudentId, user.Name AS StudentName, class.Id AS ClassId, student.HouseId,
+            class.Name AS ClassName, certificateMark.Name, student.CertificateDate,
+            SUM(CASE WHEN attendancetype.Points >= 5 THEN 1 ELSE 0 END) AS AttendancesCount,
+            COUNT(IFNULL(attendancetype.Points, 0)) AS AttendanceAll,
+            IFNULL(mark.Value, NULL) AS Marks,
+            IFNULL(assessment.Weight, NULL) AS Weight
+            FROM student
+            INNER JOIN class
+            ON student.ClassId = class.Id
+            INNER JOIN user
+            ON user.Id = student.UserId
+            LEFT JOIN attendance
+            ON attendance.StudentUserId = student.UserId
+            AND attendance.StudentClassId = student.ClassId
+            LEFT JOIN attendancetype
+            ON attendancetype.Id = attendance.AttendanceTypeId
+            LEFT JOIN mark certificateMark
+            ON student.Certificate = certificateMark.Id
+            LEFT JOIN studentassessment
+            ON studentassessment.StudentUserId = student.UserId
+            AND studentassessment.StudentClassId = student.ClassId
+            LEFT JOIN mark
+            ON studentassessment.MarkId = mark.Id
+            LEFT JOIN assessment
+            ON assessment.Id = studentassessment.AssessmentId
+            WHERE class.SemesterId = ?
+            GROUP BY user.id, assessment.Id
+            ORDER BY ClassName, StudentName
+            ) AS T
+            GROUP BY T.StudentId
+            ORDER BY T.ClassName, T.StudentName;',
+                $semesterId);
+    }
 }
