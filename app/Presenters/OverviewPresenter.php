@@ -75,7 +75,11 @@ class OverviewPresenter extends BasePresenter
     public function renderCertificate($StudentId, $ClassId)
     {
         $certification = $this->student->getCertificationInfo($StudentId, $ClassId)->fetch();
-        $certification->CertificateDate = $certification->CertificateDate->format('Y-m-d');
+
+        if (!is_null($certification->CertificateDate))
+        {
+            $certification->CertificateDate = $certification->CertificateDate->format('Y-m-d');
+        }
 
         $this['certificateForm']->setDefaults($certification);
     }

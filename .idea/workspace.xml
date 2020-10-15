@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change of guest.latte">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix remove student from semester and class - dont affect user.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,98 +110,9 @@
       <workItem from="1601719662606" duration="3772000" />
       <workItem from="1601747866506" duration="4891000" />
       <workItem from="1601810222219" duration="21723000" />
-      <workItem from="1601835385186" duration="2086000" />
-    </task>
-    <task id="LOCAL-00002" summary="Added inserting of activity.">
-      <created>1601149234754</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1601149234754</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Fix updating od attendance.">
-      <created>1601151305818</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1601151305818</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Fix show class attendance.">
-      <created>1601153614587</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1601153614587</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add urls to E-Bradavice.">
-      <created>1601200395530</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1601200395530</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Added detail of attendance and minor fixes with redirecting.">
-      <created>1601206721119</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1601206721119</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added update of activites and change of edit ender.">
-      <created>1601209865319</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1601209865319</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Show activity and attendance points. Minor fix.">
-      <created>1601216704135</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1601216704135</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added deleting of attendance and activity.">
-      <created>1601217713931</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1601217713931</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Fix colors of attendance and displaying of attendance legend.">
-      <created>1601218428819</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1601218428819</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Added editing of student attendance and activity.">
-      <created>1601228762307</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1601228762307</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added possibility to upload arch.">
-      <created>1601233352948</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1601233352948</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Download arch.">
-      <created>1601237637160</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1601237637160</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Delete arch.">
-      <created>1601238128196</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1601238128196</updated>
+      <workItem from="1601835385186" duration="2281000" />
+      <workItem from="1602355380982" duration="5149000" />
+      <workItem from="1602403256567" duration="27929000" />
     </task>
     <task id="LOCAL-00015" summary="Download arch for students.">
       <created>1601239675843</created>
@@ -459,7 +366,98 @@
       <option name="project" value="LOCAL" />
       <updated>1601833591417</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Sum points of attendance, activity and marks.">
+      <created>1601837564629</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1601837564630</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Add maintenance of assessment for semester.">
+      <created>1602366433364</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1602366433364</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Fix responsive layout of evaluation.">
+      <created>1602366549917</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1602366549917</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Add new assessment.">
+      <created>1602409211816</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1602409211817</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Edit assessment in semester.">
+      <created>1602411408361</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1602411408361</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add manage of cards. Remove cards from attendance.">
+      <created>1602417974747</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1602417974747</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Show students points.">
+      <created>1602426148973</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1602426148973</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Fix show points for class by Id.">
+      <created>1602426236749</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1602426236749</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Add datatables and upgrade to include-1.7.">
+      <created>1602428457403</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1602428457403</updated>
+    </task>
+    <task id="LOCAL-00060" summary="No html escape for rules.">
+      <created>1602429221089</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1602429221089</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Add overviews for profesor.">
+      <created>1602439076025</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1602439076025</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Manage of certification mark.">
+      <created>1602445474007</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1602445474008</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Fix remove student from semester and class - dont affect user.">
+      <created>1602445703503</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1602445703503</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,19 +476,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix path for files and get remaining lessons for attendance." />
-    <MESSAGE value="Add filter for tables." />
-    <MESSAGE value="Fix in/active student." />
-    <MESSAGE value="Fix path for upload errors." />
-    <MESSAGE value="Minor fixes about attendance." />
-    <MESSAGE value="Change of text" />
-    <MESSAGE value="Change text of mail about forgotten password." />
-    <MESSAGE value="Add homeworks summary for class and student." />
-    <MESSAGE value="Add possibility for create assessment of homeworks. Filter tables." />
-    <MESSAGE value="Add email and change column sizes." />
-    <MESSAGE value="Add manage of homework assessments." />
-    <MESSAGE value="Minor fixes or namespace." />
-    <MESSAGE value="Responsive tables on mobile phone." />
     <MESSAGE value="Add scrollbar to tables on mobile phone." />
     <MESSAGE value="Fix padding of top and bottom." />
     <MESSAGE value="Minor fix of reaction in errors." />
@@ -503,7 +488,20 @@
     <MESSAGE value="Add evaluation of attendances." />
     <MESSAGE value="Upgrade include." />
     <MESSAGE value="Change of guest.latte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change of guest.latte" />
+    <MESSAGE value="Sum points of attendance, activity and marks." />
+    <MESSAGE value="Add maintenance of assessment for semester." />
+    <MESSAGE value="Fix responsive layout of evaluation." />
+    <MESSAGE value="Add new assessment." />
+    <MESSAGE value="Edit assessment in semester." />
+    <MESSAGE value="Add manage of cards. Remove cards from attendance." />
+    <MESSAGE value="Show students points." />
+    <MESSAGE value="Fix show points for class by Id." />
+    <MESSAGE value="Add datatables and upgrade to include-1.7." />
+    <MESSAGE value="No html escape for rules." />
+    <MESSAGE value="Add overviews for profesor." />
+    <MESSAGE value="Manage of certification mark." />
+    <MESSAGE value="Fix remove student from semester and class - dont affect user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix remove student from semester and class - dont affect user." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -519,10 +517,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601570504422" />
-    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601832914642">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602443507984">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601832914642" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602443507984" />
     <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601407595857">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -531,41 +530,48 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1601818535090">
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1602437547230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812233004" />
-    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601818535090" />
+    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602437547230" />
+    <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="768" y="222" key="RollbackChangesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602367368894" />
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog" timestamp="1601406792406">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601833595691">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602445739333">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601833595691" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601819466301" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601837594964" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602445739333" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601292357425" />
-    <state x="0" y="0" width="1610" height="1027" maximized="true" key="dock-window-1" timestamp="1601814932485">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1644" y="0" width="1396" height="1027" maximized="true" key="dock-window-1" timestamp="1602404495317">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1610" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601814932485" />
-    <state x="158" y="0" width="1574" height="1027" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601568868482" />
-    <state x="0" y="0" width="1576" height="1027" maximized="true" key="dock-window-2" timestamp="1601584580336">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1644" y="0" width="1396" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602404495317" />
+    <state x="-1674" y="0" width="1397" height="1027" maximized="true" key="dock-window-2" timestamp="1602410555518">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1576" height="1027" maximized="true" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601584580336" />
-    <state x="0" y="0" width="1474" height="1027" maximized="true" key="dock-window-3" timestamp="1601572367123">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1674" y="0" width="1397" height="1027" maximized="true" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602410555518" />
+    <state x="-1864" y="0" width="1467" height="1027" maximized="true" key="dock-window-3" timestamp="1602415930035">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1474" height="1027" maximized="true" key="dock-window-3/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601572367123" />
-    <state x="89" y="0" width="1438" height="1027" maximized="true" key="dock-window-4" timestamp="1601231432538">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1864" y="0" width="1467" height="1027" maximized="true" key="dock-window-3/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602415930035" />
+    <state x="-1499" y="0" width="1515" height="1027" maximized="true" key="dock-window-4" timestamp="1602444177339">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="89" y="0" width="1438" height="1027" maximized="true" key="dock-window-4/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601231432538" />
+    <state x="-1499" y="0" width="1515" height="1027" maximized="true" key="dock-window-4/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602444177339" />
     <state x="114" y="0" width="1574" height="847" maximized="true" key="dock-window-5" timestamp="1601239900060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -574,18 +580,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1382" y="69" width="1083" height="834" key="find.popup" timestamp="1601833282988">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1602445010061">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1382" y="69" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601833282988" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601819463102" />
-    <state x="-1304" y="240" key="run.anything.popup" timestamp="1601750242426">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602417211336" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602445010061" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601812170633">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602444425720" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602426611522">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812170633" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602426611522" />
   </component>
 </project>
