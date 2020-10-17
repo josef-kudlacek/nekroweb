@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show class on homework/show.latte.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Homework.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Homework.php" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Minor fixes of assessments and homeworks." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,14 +112,7 @@
       <workItem from="1602355380982" duration="5149000" />
       <workItem from="1602403256567" duration="27929000" />
       <workItem from="1602794787408" duration="819000" />
-      <workItem from="1602919826343" duration="1990000" />
-    </task>
-    <task id="LOCAL-00017" summary="Change layout for students and center header of tables.">
-      <created>1601240241288</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1601240241288</updated>
+      <workItem from="1602919826343" duration="2409000" />
     </task>
     <task id="LOCAL-00018" summary="Change layout of from errors.">
       <created>1601290460440</created>
@@ -463,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602920570211</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Minor fixes of assessments and homeworks.">
+      <created>1602922030822</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1602922030822</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +476,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fix of reaction in errors." />
     <MESSAGE value="Change css and js include." />
     <MESSAGE value="Change include to 1.2." />
     <MESSAGE value="CSS changes." />
@@ -507,7 +500,8 @@
     <MESSAGE value="Fix remove student from semester and class - dont affect user." />
     <MESSAGE value="Fix render default certificate date is null." />
     <MESSAGE value="Show class on homework/show.latte." />
-    <option name="LAST_COMMIT_MESSAGE" value="Show class on homework/show.latte." />
+    <MESSAGE value="Minor fixes of assessments and homeworks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes of assessments and homeworks." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

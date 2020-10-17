@@ -84,7 +84,7 @@ class Assessment
             ON assessment.Id = studentassessment.AssessmentId
             INNER JOIN mark
             ON mark.Id = studentassessment.MarkId
-            INNER JOIN homework
+            LEFT JOIN homework
             ON homework.AssessmentId = assessment.Id
             INNER JOIN semesterassessment
             ON assessment.Id = semesterassessment.AssessmentId
