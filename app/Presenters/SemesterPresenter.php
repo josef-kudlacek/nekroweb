@@ -116,8 +116,10 @@ class SemesterPresenter extends BasePresenter
         $this->user->getIdentity()->semesterFrom = $semester->YearFrom;
         $this->user->getIdentity()->semesterTo = $semester->YearTo;
         $this->user->getIdentity()->semesterId = $semester->SemesterId;
+
+        $semesterTo = (!is_null($semester->YearTo) ? '/' .$semester->YearTo : '');
         $this->flashMessage('Semestr úspěšně změněn. Vítej ve školním roce '.
-            $semester->YearFrom . '/' . $semester->YearTo . '!' ,"success");
+            $semester->YearFrom . $semesterTo . '!' ,"success");
         $this->redirect('Homepage:default');
     }
 
