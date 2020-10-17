@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix remove student from semester and class - dont affect user.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix render default certificate date is null.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,13 +113,8 @@
       <workItem from="1601835385186" duration="2281000" />
       <workItem from="1602355380982" duration="5149000" />
       <workItem from="1602403256567" duration="27929000" />
-    </task>
-    <task id="LOCAL-00015" summary="Download arch for students.">
-      <created>1601239675843</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1601239675843</updated>
+      <workItem from="1602794787408" duration="819000" />
+      <workItem from="1602919826343" duration="484000" />
     </task>
     <task id="LOCAL-00016" summary="Change layout for students and center header of tables.">
       <created>1601240136789</created>
@@ -457,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602445703503</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Fix render default certificate date is null.">
+      <created>1602794935080</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1602794935080</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +478,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add scrollbar to tables on mobile phone." />
     <MESSAGE value="Fix padding of top and bottom." />
     <MESSAGE value="Minor fix of reaction in errors." />
     <MESSAGE value="Change css and js include." />
@@ -501,7 +502,8 @@
     <MESSAGE value="Add overviews for profesor." />
     <MESSAGE value="Manage of certification mark." />
     <MESSAGE value="Fix remove student from semester and class - dont affect user." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix remove student from semester and class - dont affect user." />
+    <MESSAGE value="Fix render default certificate date is null." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix render default certificate date is null." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -543,10 +545,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602445739333">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602794948289">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601837594964" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602794948289" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602445739333" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />

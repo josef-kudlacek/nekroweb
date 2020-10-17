@@ -46,7 +46,8 @@ class Assessment
 
         return $this->database->query('
             SELECT assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, assessment.Weight AS AssessmentWeight,
-            year.Number, year.CodeName, semesterassessment.Code AS HomeworkCode, homeworktype.Name AS HomeworkTypeName, semesterassessment.SemesterId
+            class.Name AS ClassName, year.Number, year.CodeName, semesterassessment.Code AS HomeworkCode, 
+            homeworktype.Name AS HomeworkTypeName, semesterassessment.SemesterId
             FROM assessment
             INNER JOIN year
             ON assessment.YearId = year.Id
