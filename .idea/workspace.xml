@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Minor fixes of assessments and homeworks." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix of show assessments." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,14 +112,7 @@
       <workItem from="1602355380982" duration="5149000" />
       <workItem from="1602403256567" duration="27929000" />
       <workItem from="1602794787408" duration="819000" />
-      <workItem from="1602919826343" duration="2409000" />
-    </task>
-    <task id="LOCAL-00018" summary="Change layout of from errors.">
-      <created>1601290460440</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1601290460440</updated>
+      <workItem from="1602919826343" duration="2722000" />
     </task>
     <task id="LOCAL-00019" summary="Handle change of student classes.">
       <created>1601290912255</created>
@@ -457,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602922030822</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Fix of show assessments.">
+      <created>1602922717337</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1602922717337</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +476,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change css and js include." />
     <MESSAGE value="Change include to 1.2." />
     <MESSAGE value="CSS changes." />
     <MESSAGE value="Quick shortcut for change semester/class." />
@@ -501,7 +500,8 @@
     <MESSAGE value="Fix render default certificate date is null." />
     <MESSAGE value="Show class on homework/show.latte." />
     <MESSAGE value="Minor fixes of assessments and homeworks." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes of assessments and homeworks." />
+    <MESSAGE value="Fix of show assessments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix of show assessments." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
