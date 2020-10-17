@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix of show assessments." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix text of legends.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/edit.latte" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,14 +116,8 @@
       <workItem from="1602355380982" duration="5149000" />
       <workItem from="1602403256567" duration="27929000" />
       <workItem from="1602794787408" duration="819000" />
-      <workItem from="1602919826343" duration="2722000" />
-    </task>
-    <task id="LOCAL-00019" summary="Handle change of student classes.">
-      <created>1601290912255</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1601290912255</updated>
+      <workItem from="1602919826343" duration="3390000" />
+      <workItem from="1602939754563" duration="610000" />
     </task>
     <task id="LOCAL-00020" summary="Name of arc for download. Arc added for attendance detail. Layout fixes.">
       <created>1601295891944</created>
@@ -457,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602922717337</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Fix text of legends.">
+      <created>1602922808200</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1602922808200</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +481,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change include to 1.2." />
     <MESSAGE value="CSS changes." />
     <MESSAGE value="Quick shortcut for change semester/class." />
     <MESSAGE value="Show active years in curriculum." />
@@ -501,7 +505,8 @@
     <MESSAGE value="Show class on homework/show.latte." />
     <MESSAGE value="Minor fixes of assessments and homeworks." />
     <MESSAGE value="Fix of show assessments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix of show assessments." />
+    <MESSAGE value="Fix text of legends." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix text of legends." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -580,20 +585,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1602445010061">
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1602922773474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602417211336" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602445010061" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602922773474" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
     <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602444425720" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602426611522">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602922779832">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812170633" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602426611522" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602922779832" />
   </component>
 </project>
