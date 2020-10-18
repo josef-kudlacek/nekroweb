@@ -6,6 +6,10 @@
     {/foreach}
     <form n:name=homeworkForm>
         <div class="form-group col-md-4 offset-md-4">
+            <label><strong>Třída:</strong></label>
+        <select n:name=ClassId class="form-control"></select>
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
             <label><strong>Název:</strong></label>
             <input n:name=Name type="text" class="form-control" maxlength="80">
         </div>
@@ -18,7 +22,7 @@
             <select n:name=YearId class="form-control"></select>
         </div>
         <div class="form-group col-md-4 offset-md-4">
-            <label><strong>Známka:</strong></label>
+            <label><strong>Typ úkolu:</strong></label>
             <select n:name=HomeworkTypeId class="form-control"></select>
         </div>
         <div class="form-group col-md-4 offset-md-4">

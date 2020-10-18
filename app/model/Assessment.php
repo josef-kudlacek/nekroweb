@@ -14,12 +14,13 @@ class Assessment
         $this->database = $database;
     }
 
-    public function getAssessmentByIdAndSemester($AssessmentId, $SemesterId)
+    public function getSemesterAssessmentById($semesterAssessmentId)
     {
         return $this->database->query('
-            SELECT assessment.Id, assessment.Name, assessment.Weight, year.Number, year.CodeName, year.Id AS YearId,
-            homework.HomeworkTypeId, homework.Task, semesterassessment.Code, homeworktype.Name AS HomeWorkTypeName, 
-            semesterassessment.SemesterId
+            SELECT assessment.Id AS AssessmentId, assessment.Name, assessment.Weight, year.Number, year.CodeName, 
+            year.Id AS YearId, homework.HomeworkTypeId, semesterassessment.Task, semesterassessment.Code, 
+            homeworktype.Name AS HomeWorkTypeName, semesterassessment.SemesterId, semesterassessment.Id,
+            semesterassessment.ClassId
             FROM assessment
             INNER JOIN year
             ON assessment.YearId = year.Id
@@ -29,26 +30,26 @@ class Assessment
             ON homework.HomeworkTypeId = homeworktype.Id
             LEFT JOIN semesterassessment
             ON assessment.Id = semesterassessment.AssessmentId
-            AND semesterassessment.SemesterId = ?
             INNER JOIN class
             ON class.YearId = year.Id
             AND class.SemesterId = semesterassessment.SemesterId
-            WHERE assessment.Id = ?
+            LEFT JOIN class sc
+            ON sc.Id = semesterassessment.ClassId
+            WHERE semesterassessment.Id = ?
             ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId, semesterassessment.Code;
-                ', $SemesterId, $AssessmentId);
+                ', $semesterAssessmentId);
     }
 
     public function getAssessmentsBySemester($semesterId)
     {
-        $this->database->query('
-            SELECT @SemesterId := ?;
-            ', $semesterId);
-
         return $this->database->query('
-            SELECT assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, assessment.Weight AS AssessmentWeight,
-            class.Name AS ClassName, year.Number, year.CodeName, semesterassessment.Code AS HomeworkCode, 
-            homeworktype.Name AS HomeworkTypeName, semesterassessment.SemesterId
+            SELECT assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, assessment.Weight AS
+            AssessmentWeight, class.Name AS ClassName, year.Number, year.CodeName, class.Id AS ClassId,
+            semesterassessment.Code AS HomeworkCode, homeworktype.Name AS HomeworkTypeName, 
+            semesterassessment.SemesterId, semesterassessment.Id
             FROM assessment
+            INNER JOIN class
+            ON class.YearId = assessment.YearId
             INNER JOIN year
             ON assessment.YearId = year.Id
             LEFT JOIN homework
@@ -56,12 +57,13 @@ class Assessment
             LEFT JOIN homeworktype
             ON homework.HomeworkTypeId = homeworktype.Id
             LEFT JOIN semesterassessment
-            ON assessment.Id = semesterassessment.AssessmentId
-            AND semesterassessment.SemesterId = @SemesterId
-            INNER JOIN class
-            ON class.YearId = year.Id
-            AND class.SemesterId = @SemesterId
-            ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId, semesterassessment.Code;');
+            ON semesterassessment.AssessmentId = assessment.Id
+            AND semesterassessment.ClassId = class.Id
+            AND semesterassessment.SemesterId = class.SemesterId
+            WHERE class.SemesterId = ?
+            ORDER BY assessment.YearId, assessment.Weight DESC, homework.HomeworkTypeId,
+            semesterassessment.Code;',
+            $semesterId);
     }
 
     public function getAssessmentBySemester($SemesterId)
@@ -122,6 +124,17 @@ class Assessment
             WHERE studentassessment.Id = ?
             ORDER BY class.name, user.name, assessment.Name;',
             $StudentAssessmentId);
+    }
+
+    public function getAssessmentById($assessmentId)
+    {
+        return $this->database->query('
+            SELECT *
+            FROM assessment
+            LEFT JOIN homework
+            ON homework.AssessmentId = assessment.Id
+            WHERE Id = ?;',
+            $assessmentId);
     }
 
     public function insertAssessment($values)

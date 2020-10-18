@@ -28,13 +28,13 @@
                     <td>{$assessmentItem->ClassName}</td>
                     <td>{$assessmentItem->Number}. {$assessmentItem->CodeName}</td>
                     <td>
-                        <a href="{link edit $assessmentItem->AssessmentId}" class="btn btn-secondary btn-sm"
-                           role="button">Upravit</a>
                         {if $assessmentItem->SemesterId}
-                            <a href="{link delete $assessmentItem->AssessmentId}" class="btn btn-dark btn-sm"
+                            <a href="{link edit $assessmentItem->Id}" class="btn btn-secondary btn-sm"
+                               role="button">Upravit</a>
+                            <a href="{link delete $assessmentItem->Id}" class="btn btn-dark btn-sm"
                                role="button">Odebrat ze semestru</a>
                         {else}
-                            <a href="{link add $assessmentItem->AssessmentId}" class="btn btn-primary btn-sm"
+                            <a href="{link add $assessmentItem->AssessmentId, $assessmentItem->ClassId}" class="btn btn-primary btn-sm"
                                role="button">Přidat do semestru</a>
                         {/if}
                     </td>

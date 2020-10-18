@@ -17,16 +17,17 @@ class SemesterAssessment
     public function createRecord($semesterAssessment)
     {
         return $this->database->query('
-            INSERT INTO semesterassessment (SemesterId, AssessmentId, Code)
+            INSERT INTO semesterassessment (SemesterId, ClassId, AssessmentId, Code, Task)
             VALUES(
-            ?, IFNULL(?, LAST_INSERT_ID()), ?);',
-            $semesterAssessment->SemesterId, $semesterAssessment->AssessmentId, $semesterAssessment->Code);
+            ?, ?, IFNULL(?, LAST_INSERT_ID()), ?);',
+            $semesterAssessment->SemesterId, $semesterAssessment->ClassId, $semesterAssessment->AssessmentId,
+            $semesterAssessment->Code, $semesterAssessment->Task);
     }
 
     public function updateRecord($values)
     {
         return $this->database->table('semesterassessment')
-            ->where('SemesterId = ? AND AssessmentId = ?', $values['SemesterId'], $values['AssessmentId'])
+            ->where('Id = ?', $values['Id'])
             ->update($values);
     }
 
@@ -36,10 +37,10 @@ class SemesterAssessment
             ->insert($values);
     }
 
-    public function removeAssessmentFromSemester($assessmentId, $semesterId)
+    public function removeAssessmentFromSemester($semesterAssessment)
     {
         return $this->database->table('semesterassessment')
-            ->where('AssessmentId = ? AND SemesterId = ?', $assessmentId, $semesterId)
+            ->where('Id = ?', $semesterAssessment)
             ->delete();
     }
 }
