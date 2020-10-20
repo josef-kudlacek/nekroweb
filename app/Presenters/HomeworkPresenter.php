@@ -74,6 +74,8 @@ class HomeworkPresenter extends BasePresenter
 
         $assessment = $this->assessment->getAssessmentById($assessmentId)->fetch();
         $assessment->ClassId = $classId;
+        $assessment->AssessmentId = $assessment->Id;
+        $assessment->Id = NULL;
 
         $this['homeworkForm']->setDefaults($assessment);
     }
@@ -146,6 +148,7 @@ class HomeworkPresenter extends BasePresenter
 
         $this->transaction->startTransaction();
 
+        bdump($values);
         if ($values->Id)
         {
             $this->assessment->updateAssessment($assessment);
@@ -154,7 +157,11 @@ class HomeworkPresenter extends BasePresenter
 
             $this->flashMessage('Úloha úspěšně upravena.','success');
         } else {
-            $this->assessment->insertAssessment($assessment);
+            if (!$values->AssessmentId)
+            {
+                $this->assessment->insertAssessment($assessment);
+            }
+
             $this->semesterAssessment->createRecord($semesterAssessment);
             $this->homework->createRecord($homework);
             $this->flashMessage('Úloha úspěšně vytvořena a přidána do semestru.','success');
@@ -179,7 +186,7 @@ class HomeworkPresenter extends BasePresenter
     {
         $homework = new \stdClass;
 
-        $homework->AssessmentId = $values->Id;
+        $homework->AssessmentId = $values->AssessmentId;
         $homework->HomeworkTypeId = $values->HomeworkTypeId;
 
         return $homework;
@@ -192,6 +199,7 @@ class HomeworkPresenter extends BasePresenter
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
 
         $SemesterAssessment->Id = $values->Id;
+        $SemesterAssessment->AssessmentId = $values->AssessmentId;
         $SemesterAssessment->SemesterId = $SemesterId;
         $SemesterAssessment->ClassId = $values->ClassId;
         $SemesterAssessment->Code = $values->Code;

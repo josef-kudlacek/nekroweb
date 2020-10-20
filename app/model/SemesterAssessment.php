@@ -46,7 +46,7 @@ class SemesterAssessment
         return $this->database->query('
             INSERT INTO semesterassessment (SemesterId, ClassId, AssessmentId, Code, Task)
             VALUES(
-            ?, ?, IFNULL(?, LAST_INSERT_ID()), ?);',
+            ?, ?, IFNULL(?, LAST_INSERT_ID()), ?, ?);',
             $semesterAssessment->SemesterId, $semesterAssessment->ClassId, $semesterAssessment->AssessmentId,
             $semesterAssessment->Code, $semesterAssessment->Task);
     }

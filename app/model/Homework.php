@@ -34,10 +34,10 @@ class Homework
     public function createRecord($homework)
     {
         return $this->database->query('
-            INSERT INTO homework (AssessmentId, HomeworkTypeId, Task)
+            INSERT IGNORE INTO homework (AssessmentId, HomeworkTypeId)
             VALUES(
-            IFNULL(?, LAST_INSERT_ID()), ?, ?);',
-            $homework->AssessmentId, $homework->HomeworkTypeId, $homework->Task);
+            IFNULL(?, LAST_INSERT_ID()), ?);',
+            $homework->AssessmentId, $homework->HomeworkTypeId);
     }
 
     public function updateHomework($values)
