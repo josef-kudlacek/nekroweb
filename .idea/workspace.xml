@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change show marks of assessments and add tooltip about assessment name.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Delete bdumps.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/SemesterAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SemesterAssessment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,21 +119,8 @@
       <workItem from="1602939754563" duration="3448000" />
       <workItem from="1603020022998" duration="6762000" />
       <workItem from="1603212274341" duration="36000" />
-      <workItem from="1603212407278" duration="5090000" />
-    </task>
-    <task id="LOCAL-00024" summary="Fix Path for files arc and suggestion errors">
-      <created>1601321169424</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1601321169424</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Fix path for files and get remaining lessons for attendance.">
-      <created>1601405455835</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1601405455835</updated>
+      <workItem from="1603212407278" duration="6190000" />
+      <workItem from="1603225563552" duration="1351000" />
     </task>
     <task id="LOCAL-00026" summary="Add filter for tables.">
       <created>1601406397859</created>
@@ -465,7 +451,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603218401006</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Fix adding assessment to semester.">
+      <created>1603219253148</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1603219253148</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Delete bdumps.">
+      <created>1603219623243</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1603219623243</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,8 +484,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add evaluation of attendances." />
-    <MESSAGE value="Upgrade include." />
     <MESSAGE value="Change of guest.latte" />
     <MESSAGE value="Sum points of attendance, activity and marks." />
     <MESSAGE value="Add maintenance of assessment for semester." />
@@ -509,7 +507,9 @@
     <MESSAGE value="Fix change semester message." />
     <MESSAGE value="Change manage of assessments - semesterassessment.id and move task to semesterassessment." />
     <MESSAGE value="Change show marks of assessments and add tooltip about assessment name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change show marks of assessments and add tooltip about assessment name." />
+    <MESSAGE value="Fix adding assessment to semester." />
+    <MESSAGE value="Delete bdumps." />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete bdumps." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -589,11 +589,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1602922773474">
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1603219607384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602417211336" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602922773474" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603219607384" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

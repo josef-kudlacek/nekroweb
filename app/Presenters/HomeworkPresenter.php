@@ -151,8 +151,8 @@ class HomeworkPresenter extends BasePresenter
         if ($values->Id)
         {
             $this->assessment->updateAssessment($assessment);
-            $this->semesterAssessment->updateRecord((array) $semesterAssessment);
             $this->homework->updateHomework((array) $homework);
+            $this->semesterAssessment->updateRecord((array) $semesterAssessment);
 
             $this->flashMessage('Úloha úspěšně upravena.','success');
         } else {
@@ -160,9 +160,8 @@ class HomeworkPresenter extends BasePresenter
             {
                 $this->assessment->insertAssessment($assessment);
             }
-
-            $this->semesterAssessment->createRecord($semesterAssessment);
             $this->homework->createRecord($homework);
+            $this->semesterAssessment->createRecord($semesterAssessment);
             $this->flashMessage('Úloha úspěšně vytvořena a přidána do semestru.','success');
         }
 
