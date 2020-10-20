@@ -148,7 +148,6 @@ class HomeworkPresenter extends BasePresenter
 
         $this->transaction->startTransaction();
 
-        bdump($values);
         if ($values->Id)
         {
             $this->assessment->updateAssessment($assessment);

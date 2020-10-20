@@ -128,7 +128,6 @@ class OverviewPresenter extends BasePresenter
 
         $this->transaction->startTransaction();
 
-        bdump($values);
         $this->student->certificateStudent($values);
         $this->flashMessage('Známka na vysvědčení úspěšně zadána.','success');
 
