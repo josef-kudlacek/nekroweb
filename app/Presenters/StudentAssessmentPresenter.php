@@ -9,6 +9,11 @@ class StudentAssessmentPresenter extends BasePresenter
 {
     private $studentAssessment;
 
+    /** @var Model\SemesterAssessment
+     * @inject
+     */
+    public $semesterAssessment;
+
     public function __construct(Model\StudentAssessment $studentAssessment)
     {
         $this->studentAssessment = $studentAssessment;
@@ -27,6 +32,7 @@ class StudentAssessmentPresenter extends BasePresenter
     {
         $classId = $this->user->getIdentity()->classId;
 
+        $this->template->assessmentsHeader = $this->semesterAssessment->getAssessmentsInSemesterByClassId($classId)->fetchPairs('Code', 'Name');
         $this->template->assessments = $this->studentAssessment->getStudentAssessmentsByClass($classId)->fetchAll();
     }
 

@@ -9,18 +9,21 @@
                     <tr>
                         <th class="text-white bg-dark">Třída</th>
                         <th class="text-white bg-dark">Student</th>
-                        <th class="text-white bg-dark">1.N</th>
-                        <th class="text-white bg-dark">2.N</th>
-                        <th class="text-white bg-dark">3.N</th>
-                        <th class="text-white bg-dark">4.N</th>
-                        <th class="text-white bg-dark">5.N</th>
-                        <th class="text-white bg-dark">6.N</th>
-                        <th class="text-white bg-dark">7.N</th>
-                        <th class="text-white bg-dark">8.N</th>
-                        <th class="text-white bg-dark">1.P</th>
-                        <th class="text-white bg-dark">2.P</th>
+                        <th class="text-white bg-dark"><abbr title="Zkouška Smrti">ZS</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="Zkouška Smrti, druhá část">ZS2</abbr></th>
                         <th class="text-white bg-dark">Esej</th>
-                        <th class="text-white bg-dark">ZS</th>
+                        <th class="text-white bg-dark"><abbr title="1. povinný domácí úkol{ifset $assessmentsHeader['1.PDÚ']} – {$assessmentsHeader['1.PDÚ']}{/ifset}">1.P</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="2. povinný domácí úkol{ifset $assessmentsHeader['2.PDÚ']} – {$assessmentsHeader['2.PDÚ']}{/ifset}">2.P</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="1. nepovinný domácí úkol{ifset $assessmentsHeader['1.NDÚ']} – {$assessmentsHeader['1.NDÚ']}{/ifset}">1.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="2. nepovinný domácí úkol{ifset $assessmentsHeader['2.NDÚ']} – {$assessmentsHeader['2.NDÚ']}{/ifset}">2.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="3. nepovinný domácí úkol{ifset $assessmentsHeader['3.NDÚ']} – {$assessmentsHeader['3.NDÚ']}{/ifset}">3.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="4. nepovinný domácí úkol{ifset $assessmentsHeader['4.NDÚ']} – {$assessmentsHeader['4.NDÚ']}{/ifset}">4.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="5. nepovinný domácí úkol{ifset $assessmentsHeader['5.NDÚ']} – {$assessmentsHeader['5.NDÚ']}{/ifset}">5.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="6. nepovinný domácí úkol{ifset $assessmentsHeader['6.NDÚ']} – {$assessmentsHeader['6.NDÚ']}{/ifset}">6.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="7. nepovinný domácí úkol{ifset $assessmentsHeader['7.NDÚ']} – {$assessmentsHeader['7.NDÚ']}{/ifset}">7.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="8. nepovinný domácí úkol{ifset $assessmentsHeader['8.NDÚ']} – {$assessmentsHeader['8.NDÚ']}{/ifset}">8.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="9. nepovinný domácí úkol{ifset $assessmentsHeader['9.NDÚ']} – {$assessmentsHeader['9.NDÚ']}{/ifset}">9.N</abbr></th>
+                        <th class="text-white bg-dark"><abbr title="10. nepovinný domácí úkol{ifset $assessmentsHeader['10.NDÚ']} – {$assessmentsHeader['10.NDÚ']}{/ifset}">10.N</abbr></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +35,21 @@
                         <td class="table-{$assessment->HouseId|houseType}">
                             <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessment->StudentName|encodeToWin1250)}"
                                 class="text-dark" target="_blank">{$assessment->StudentName}</a>
+                        </td>
+                        <td class="text-dark bg-{$assessment->ZSid|markType}">
+                            {$assessment->ZS}
+                        </td>
+                        <td class="text-dark bg-{$assessment->ZS2id|markType}">
+                            {$assessment->ZS2}
+                        </td>
+                        <td class="text-dark bg-{$assessment->Esejid|markType}">
+                            {$assessment->Esej}
+                        </td>
+                        <td class="text-dark bg-{$assessment->PDU1id|markType}">
+                            {$assessment->PDU1}
+                        </td>
+                        <td class="text-dark bg-{$assessment->PDU2id|markType}">
+                            {$assessment->PDU2}
                         </td>
                         <td class="text-dark bg-{$assessment->NDU1id|markType}">
                             {$assessment->NDU1}
@@ -54,20 +72,14 @@
                          <td class="text-dark bg-{$assessment->NDU7id|markType}">
                             {$assessment->NDU7}
                         </td>
-                         <td class="text-dark bg-{$assessment->NDU8id|markType}">
+                        <td class="text-dark bg-{$assessment->NDU8id|markType}">
                             {$assessment->NDU8}
                         </td>
-                        <td class="text-dark bg-{$assessment->PDU1id|markType}">
-                            {$assessment->PDU1}
+                        <td class="text-dark bg-{$assessment->NDU9id|markType}">
+                            {$assessment->NDU9}
                         </td>
-                        <td class="text-dark bg-{$assessment->PDU2|markType}">
-                            {$assessment->PDU2}
-                        </td>
-                        <td class="text-dark bg-{$assessment->Esejid|markType}">
-                            {$assessment->Esej}
-                        </td>
-                        <td class="text-dark bg-{$assessment->ZSid|markType}">
-                            {$assessment->ZS}
+                        <td class="text-dark bg-{$assessment->NDU10id|markType}">
+                            {$assessment->NDU10}
                         </td>
                     </tr>
                 {/foreach}

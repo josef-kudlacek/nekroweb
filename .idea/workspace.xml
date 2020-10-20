@@ -19,15 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix change semester message.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/add.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change manage of assessments - semesterassessment.id and move task to semesterassessment.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Assessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Assessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/StudentAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudentAssessmentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/SemesterAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SemesterAssessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/StudentAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudentAssessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.7/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.7/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +123,9 @@
       <workItem from="1602794787408" duration="819000" />
       <workItem from="1602919826343" duration="3390000" />
       <workItem from="1602939754563" duration="3448000" />
-      <workItem from="1603020022998" duration="4589000" />
-    </task>
-    <task id="LOCAL-00022" summary="Add reaction to errors.">
-      <created>1601307279915</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1601307279915</updated>
+      <workItem from="1603020022998" duration="6762000" />
+      <workItem from="1603212274341" duration="36000" />
+      <workItem from="1603212407278" duration="4381000" />
     </task>
     <task id="LOCAL-00023" summary="Prod fixes">
       <created>1601315143997</created>
@@ -468,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602954883047</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Change manage of assessments - semesterassessment.id and move task to semesterassessment.">
+      <created>1603033006168</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1603033006169</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +489,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Show active years in curriculum." />
     <MESSAGE value="Show evaluations." />
     <MESSAGE value="Add evaluation of attendances." />
     <MESSAGE value="Upgrade include." />
@@ -512,7 +513,8 @@
     <MESSAGE value="Fix text of legends." />
     <MESSAGE value="Change length of reason for card to 255." />
     <MESSAGE value="Fix change semester message." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix change semester message." />
+    <MESSAGE value="Change manage of assessments - semesterassessment.id and move task to semesterassessment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change manage of assessments - semesterassessment.id and move task to semesterassessment." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

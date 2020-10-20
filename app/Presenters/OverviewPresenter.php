@@ -29,6 +29,11 @@ class OverviewPresenter extends BasePresenter
      */
     public $studentAssessment;
 
+    /** @var Model\SemesterAssessment
+     * @inject
+     */
+    public $semesterAssessment;
+
     /** @var Model\Mark
      * @inject
      */
@@ -57,7 +62,9 @@ class OverviewPresenter extends BasePresenter
     public function renderAssessment()
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
-        $this->template->assessments = $this->studentAssessment->getStudentAssessmentsBySemester($SemesterId);
+
+        $this->template->assessmentsHeader = $this->semesterAssessment->getAssessmentsInSemesterBySemesterId($SemesterId)->fetchPairs('Code', 'Name');
+        $this->template->assessments = $this->studentAssessment->getStudentAssessmentsBySemester($SemesterId)->fetchAll();
     }
 
     public function renderPoints()

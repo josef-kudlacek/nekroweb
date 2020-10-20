@@ -74,8 +74,10 @@ class StudentAssessment
     {
         return $this->database->query('
             SELECT user.Id, user.Name AS StudentName, student.HouseId AS HouseId,
-            MIN(IF(assessment.Weight = 3, mark.Shortcut, NULL)) AS ZS,
-            MIN(IF(assessment.Weight = 3, mark.Id, NULL)) AS ZSid,
+            MIN(IF(semesterassessment.Code = "ZS", mark.Shortcut, NULL)) AS ZS,
+            MIN(IF(semesterassessment.Code = "ZS", mark.Id, NULL)) AS ZSid,
+            MIN(IF(semesterassessment.Code = "ZS2", mark.Shortcut, NULL)) AS ZS2,
+            MIN(IF(semesterassessment.Code = "ZS2", mark.Id, NULL)) AS ZS2id,
             MIN(IF(semesterassessment.Code = "Esej", mark.Shortcut, NULL)) AS Esej,
             MIN(IF(semesterassessment.Code = "Esej", mark.Id, NULL)) AS Esejid,
             MAX(IF(semesterassessment.Code = "1.PDÚ", mark.Shortcut, NULL)) AS PDU1,
@@ -97,7 +99,11 @@ class StudentAssessment
             MIN(IF(semesterassessment.Code = "7.NDÚ", mark.Shortcut, NULL)) AS NDU7,
             MAX(IF(semesterassessment.Code = "7.NDÚ", mark.Id, NULL)) AS NDU7id,
             MIN(IF(semesterassessment.Code = "8.NDÚ", mark.Shortcut, NULL)) AS NDU8,
-            MAX(IF(semesterassessment.Code = "8.NDÚ", mark.Id, NULL)) AS NDU8id
+            MAX(IF(semesterassessment.Code = "8.NDÚ", mark.Id, NULL)) AS NDU8id,
+            MIN(IF(semesterassessment.Code = "9.NDÚ", mark.Shortcut, NULL)) AS NDU9,
+            MAX(IF(semesterassessment.Code = "9.NDÚ", mark.Id, NULL)) AS NDU9id,
+            MIN(IF(semesterassessment.Code = "10.NDÚ", mark.Shortcut, NULL)) AS NDU10,
+            MAX(IF(semesterassessment.Code = "10.NDÚ", mark.Id, NULL)) AS NDU10id
             FROM student
             INNER JOIN user
             ON user.Id = student.UserId
@@ -112,7 +118,7 @@ class StudentAssessment
             ON mark.Id = studentassessment.MarkId
             LEFT JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
-            LEFT JOIN semesterassessment
+            INNER JOIN semesterassessment
             ON assessment.Id = semesterassessment.AssessmentId
             AND semesterassessment.SemesterId = class.SemesterId
             WHERE class.Id = ?
@@ -125,8 +131,10 @@ class StudentAssessment
     {
         return $this->database->query('
             SELECT user.Id, user.Name AS StudentName, class.Name AS ClassName, student.HouseId AS HouseId,
-            MIN(IF(assessment.Weight = 3, mark.Shortcut, NULL)) AS ZS,
-            MIN(IF(assessment.Weight = 3, mark.Id, NULL)) AS ZSid,
+            MIN(IF(semesterassessment.Code = "ZS", mark.Shortcut, NULL)) AS ZS,
+            MIN(IF(semesterassessment.Code = "ZS", mark.Id, NULL)) AS ZSid,
+            MIN(IF(semesterassessment.Code = "ZS2", mark.Shortcut, NULL)) AS ZS2,
+            MIN(IF(semesterassessment.Code = "ZS2", mark.Id, NULL)) AS ZS2id,
             MIN(IF(semesterassessment.Code = "Esej", mark.Shortcut, NULL)) AS Esej,
             MIN(IF(semesterassessment.Code = "Esej", mark.Id, NULL)) AS Esejid,
             MAX(IF(semesterassessment.Code = "1.PDÚ", mark.Shortcut, NULL)) AS PDU1,
@@ -148,7 +156,11 @@ class StudentAssessment
             MIN(IF(semesterassessment.Code = "7.NDÚ", mark.Shortcut, NULL)) AS NDU7,
             MAX(IF(semesterassessment.Code = "7.NDÚ", mark.Id, NULL)) AS NDU7id,
             MIN(IF(semesterassessment.Code = "8.NDÚ", mark.Shortcut, NULL)) AS NDU8,
-            MAX(IF(semesterassessment.Code = "8.NDÚ", mark.Id, NULL)) AS NDU8id
+            MAX(IF(semesterassessment.Code = "8.NDÚ", mark.Id, NULL)) AS NDU8id,
+            MIN(IF(semesterassessment.Code = "9.NDÚ", mark.Shortcut, NULL)) AS NDU9,
+            MAX(IF(semesterassessment.Code = "9.NDÚ", mark.Id, NULL)) AS NDU9id,
+            MIN(IF(semesterassessment.Code = "10.NDÚ", mark.Shortcut, NULL)) AS NDU10,
+            MAX(IF(semesterassessment.Code = "10.NDÚ", mark.Id, NULL)) AS NDU10id
             FROM student
             INNER JOIN user
             ON user.Id = student.UserId
@@ -163,7 +175,7 @@ class StudentAssessment
             ON mark.Id = studentassessment.MarkId
             LEFT JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
-            LEFT JOIN semesterassessment
+            INNER JOIN semesterassessment
             ON assessment.Id = semesterassessment.AssessmentId
             AND semesterassessment.SemesterId = class.SemesterId
             WHERE class.SemesterId = ?
