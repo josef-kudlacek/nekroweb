@@ -176,7 +176,8 @@ class StudentAssessment
             LEFT JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
             INNER JOIN semesterassessment
-            ON assessment.Id = semesterassessment.AssessmentId
+            ON semesterassessment.AssessmentId = studentassessment.AssessmentId
+            AND semesterassessment.ClassId = studentassessment.StudentClassId
             AND semesterassessment.SemesterId = class.SemesterId
             WHERE class.SemesterId = ?
             GROUP BY user.name

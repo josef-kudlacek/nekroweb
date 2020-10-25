@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Delete bdumps.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade css/js to 1.8.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Assessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Assessment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +77,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -120,21 +121,9 @@
       <workItem from="1603020022998" duration="6762000" />
       <workItem from="1603212274341" duration="36000" />
       <workItem from="1603212407278" duration="6190000" />
-      <workItem from="1603225563552" duration="1351000" />
-    </task>
-    <task id="LOCAL-00026" summary="Add filter for tables.">
-      <created>1601406397859</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1601406397859</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Fix in/active student.">
-      <created>1601407623001</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1601407623001</updated>
+      <workItem from="1603225563552" duration="1668000" />
+      <workItem from="1603232861524" duration="187000" />
+      <workItem from="1603526356802" duration="2022000" />
     </task>
     <task id="LOCAL-00028" summary="Fix path for upload errors.">
       <created>1601407705129</created>
@@ -465,7 +454,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603219623243</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Fix order of creating homework and assessment.">
+      <created>1603232500646</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1603232500646</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Upgrade css/js to 1.8.">
+      <created>1603232777376</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1603232777376</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,8 +487,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change of guest.latte" />
-    <MESSAGE value="Sum points of attendance, activity and marks." />
     <MESSAGE value="Add maintenance of assessment for semester." />
     <MESSAGE value="Fix responsive layout of evaluation." />
     <MESSAGE value="Add new assessment." />
@@ -509,7 +510,9 @@
     <MESSAGE value="Change show marks of assessments and add tooltip about assessment name." />
     <MESSAGE value="Fix adding assessment to semester." />
     <MESSAGE value="Delete bdumps." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete bdumps." />
+    <MESSAGE value="Fix order of creating homework and assessment." />
+    <MESSAGE value="Upgrade css/js to 1.8." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade css/js to 1.8." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -530,10 +533,11 @@
     </state>
     <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601832914642" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602443507984" />
-    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601407595857">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1603232526451">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601407595857" />
+    <state x="92" y="92" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603232526451" />
     <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1601142931626">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -547,15 +551,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="768" y="222" key="RollbackChangesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602367368894" />
-    <state x="-1117" y="217" key="VCS.ChangeListViewerDialog" timestamp="1601406792406">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="803" y="217" key="VCS.ChangeListViewerDialog" timestamp="1603526574384">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602794948289">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603526574384" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603232780676">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602794948289" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602445739333" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603232780676" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -589,11 +594,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1603219607384">
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1603233048105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602417211336" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603219607384" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

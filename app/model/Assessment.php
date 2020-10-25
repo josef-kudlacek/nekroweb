@@ -70,7 +70,8 @@ class Assessment
     {
         return $this->database->query('
             SELECT studentassessment.Id AS StudentAssessmentId, class.Id AS ClassId, user.Id AS StudentId,
-            user.Name AS UserName, student.HouseId, class.Name AS ClassName, semesterassessment.Code AS HomeworkCode,
+            user.Name AS UserName, student.HouseId, class.Name AS ClassName, semesterassessment.Code AS
+            HomeworkCode,
             assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, mark.Value AS MarkValue,
             mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
             studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints
@@ -81,7 +82,7 @@ class Assessment
             INNER JOIN user
             ON user.Id = student.UserId
             INNER JOIN class
-            ON class.Id = student.ClassId
+            ON class.Id = studentassessment.StudentClassId
             INNER JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
             INNER JOIN mark
@@ -89,10 +90,12 @@ class Assessment
             LEFT JOIN homework
             ON homework.AssessmentId = assessment.Id
             INNER JOIN semesterassessment
-            ON assessment.Id = semesterassessment.AssessmentId
-            AND semesterassessment.SemesterId = class.SemesterId 
+            ON semesterassessment.AssessmentId = studentassessment.AssessmentId
+            AND semesterassessment.ClassId = studentassessment.StudentClassId
+            AND semesterassessment.SemesterId = class.SemesterId
             WHERE class.SemesterId = ?
-            ORDER BY class.name, user.name, assessment.Name;',
+            GROUP BY studentassessment.Id
+            ORDER BY class.name, user.name, assessment.Weight DESC, HomeworkCode;',
             $SemesterId);
     }
 
