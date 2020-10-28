@@ -262,7 +262,7 @@ class StudyClass
             SELECT T.StudentId, T.StudentName, T.ClassId, T.HouseId,
             T.ClassName, T.Name, T.CertificateDate,
             IF(T.AttendanceAll IS NULL, NULL, T.AttendancesCount/T.AttendanceAll) AS Attendance,
-            COUNT(IF(T.Marks IS NULL, NULL, T.Marks)) AS MarkCounts,
+            SUM(IF(T.Weight IS NULL, NULL, T.Weight)) AS MarkCounts,
             SUM(IF(T.Marks IS NULL, NULL, T.Marks*T.Weight)) AS Mark
             FROM
             (

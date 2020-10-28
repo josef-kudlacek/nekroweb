@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix joining of semesterassessment table.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/legend.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Assessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Assessment.php" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show students without mark in overview." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,20 +122,7 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-    </task>
-    <task id="LOCAL-00029" summary="Minor fixes about attendance.">
-      <created>1601410770473</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1601410770473</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Change of text">
-      <created>1601415883534</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1601415883534</updated>
+      <workItem from="1603887438682" duration="713000" />
     </task>
     <task id="LOCAL-00031" summary="Change text of mail about forgotten password.">
       <created>1601484202722</created>
@@ -471,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603659523239</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Fix legends and fill class when editing assessment.">
+      <created>1603887485591</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1603887485598</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Show students without mark in overview.">
+      <created>1603887551243</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1603887551243</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,8 +486,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix responsive layout of evaluation." />
-    <MESSAGE value="Add new assessment." />
     <MESSAGE value="Edit assessment in semester." />
     <MESSAGE value="Add manage of cards. Remove cards from attendance." />
     <MESSAGE value="Show students points." />
@@ -515,7 +509,9 @@
     <MESSAGE value="Fix order of creating homework and assessment." />
     <MESSAGE value="Upgrade css/js to 1.8." />
     <MESSAGE value="Fix joining of semesterassessment table." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix joining of semesterassessment table." />
+    <MESSAGE value="Fix legends and fill class when editing assessment." />
+    <MESSAGE value="Show students without mark in overview." />
+    <option name="LAST_COMMIT_MESSAGE" value="Show students without mark in overview." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
