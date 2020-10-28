@@ -16,22 +16,20 @@ class Lesson
 
     public function getLessonById($LessonId)
     {
-        return $this->database->query('
-            SELECT Id, Number, Name
-            FROM lesson            
-            WHERE lesson.Id = ?
-            ORDER BY lesson.Number;',
-            $LessonId);
+        $params = array(
+            ['lesson.Id' => $LessonId],
+        );
+
+        return $this->getLessonByParams($params);
     }
 
     public function getLessonsByYear($YearId)
     {
-        return $this->database->query('
-            SELECT Id, Number, Name
-            FROM lesson            
-            WHERE lesson.Year = ?
-            ORDER BY lesson.Number;',
-            $YearId);
+        $params = array(
+            ['lesson.Year' => $YearId],
+        );
+
+        return $this->getLessonByParams($params);
     }
 
     public function getClassRemainingLessons($YearId, $ClassId)
@@ -46,6 +44,16 @@ class Lesson
             WHERE attendance.StudentClassId = ?)
             ORDER BY lesson.Number;',
             $YearId, $ClassId);
+    }
+
+    private function getLessonByParams($params)
+    {
+        return $this->database->query('
+            SELECT Id, Number, Name
+            FROM lesson            
+            WHERE',
+                $params,
+            'ORDER BY lesson.Number;');
     }
 
 }

@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Clean code - attendance by params.">
-      <change beforePath="$PROJECT_DIR$/app/model/Evaluation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Evaluation.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix attendence overview by class - missing class name.">
+      <change beforePath="$PROJECT_DIR$/app/model/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Lesson.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +124,7 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-      <workItem from="1603887438682" duration="6959000" />
-    </task>
-    <task id="LOCAL-00037" summary="Minor fixes or namespace.">
-      <created>1601667616489</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1601667616489</updated>
+      <workItem from="1603887438682" duration="7470000" />
     </task>
     <task id="LOCAL-00038" summary="Responsive tables on mobile phone.">
       <created>1601719944783</created>
@@ -469,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603897513375</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Fix attendence overview by class - missing class name.">
+      <created>1603897831548</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1603897831548</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +488,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Manage of certification mark." />
     <MESSAGE value="Fix remove student from semester and class - dont affect user." />
     <MESSAGE value="Fix render default certificate date is null." />
     <MESSAGE value="Show class on homework/show.latte." />
@@ -513,7 +512,8 @@
     <MESSAGE value="Add overview for student." />
     <MESSAGE value="Clean code - arcs by params." />
     <MESSAGE value="Clean code - attendance by params." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean code - attendance by params." />
+    <MESSAGE value="Fix attendence overview by class - missing class name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix attendence overview by class - missing class name." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -534,10 +534,10 @@
     </state>
     <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601832914642" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602443507984" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1603232526451">
+    <state x="-92" y="-15" width="1736" height="856" maximized="true" key="DiffContextDialog" timestamp="1603898139978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601407595857" />
+    <state x="-92" y="-15" width="1736" height="856" maximized="true" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603898139978" />
     <state x="92" y="92" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603232526451" />
     <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1601142931626">
       <screen x="-1920" y="0" width="1920" height="1040" />
