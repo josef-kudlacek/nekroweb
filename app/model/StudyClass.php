@@ -256,7 +256,26 @@ class StudyClass
                 ');
     }
 
-    public function getOverview($semesterId)
+    public function getOverviewBySemester($semesterId)
+    {
+        $params = array(
+            ['class.SemesterId' => $semesterId],
+        );
+
+        return $this->getOverviewWithParams($params);
+    }
+
+    public function getOverviewByStudent($studentId, $classId)
+    {
+        $params = array(
+            ['student.UserId' => $studentId],
+            ['student.ClassId' => $classId],
+        );
+
+        return $this->getOverviewWithParams($params);
+    }
+
+    private function getOverviewWithParams($params)
     {
         return $this->database->query('
             SELECT T.StudentId, T.StudentName, T.ClassId, T.HouseId,
@@ -292,12 +311,12 @@ class StudyClass
             ON studentassessment.MarkId = mark.Id
             LEFT JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
-            WHERE class.SemesterId = ?
-            GROUP BY user.id, assessment.Id
+            WHERE',
+            $params,
+            'GROUP BY user.id, assessment.Id
             ORDER BY ClassName, StudentName
             ) AS T
             GROUP BY T.StudentId
-            ORDER BY T.ClassName, T.StudentName;',
-                $semesterId);
+            ORDER BY T.ClassName, T.StudentName;');
     }
 }

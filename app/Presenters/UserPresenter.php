@@ -46,14 +46,18 @@ class UserPresenter extends BasePresenter
         }
     }
 
-    public function actionData()
+    public function actionOverview()
     {
-        if ($this->getUser()->isInRole('Student')) {
-            $studentId = $this->getUser()->getId();
-            $classId = $this->getUser()->getIdentity()->classId;
-
-            $this->template->points = $this->dbUser->getStudentSum($studentId, $classId)->fetch();
+        if (!$this->getUser()->isInRole('Student')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
         }
+
+        $studentId = $this->getUser()->getId();
+        $classId = $this->getUser()->getIdentity()->classId;
+
+        $this->template->points = $this->dbUser->getStudentSum($studentId, $classId)->fetch();
+        $this->template->overview = $this->studyClass->getOverviewByStudent($studentId, $classId)->fetch();
     }
 
     public function actionDeleteUser()

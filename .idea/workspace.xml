@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add legend of marks for certificate overview.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Dont count attendancetypeid 5 for attendance overview.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/overview.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/StudyClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudyClass.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,14 +130,7 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-      <workItem from="1603887438682" duration="1457000" />
-    </task>
-    <task id="LOCAL-00033" summary="Add homeworks summary for class and student.">
-      <created>1601572667504</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1601572667504</updated>
+      <workItem from="1603887438682" duration="5608000" />
     </task>
     <task id="LOCAL-00034" summary="Add possibility for create assessment of homeworks. Filter tables.">
       <created>1601588252106</created>
@@ -469,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603889065459</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Dont count attendancetypeid 5 for attendance overview.">
+      <created>1603889474771</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1603889474771</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +494,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix show points for class by Id." />
     <MESSAGE value="Add datatables and upgrade to include-1.7." />
     <MESSAGE value="No html escape for rules." />
     <MESSAGE value="Add overviews for profesor." />
@@ -513,7 +518,8 @@
     <MESSAGE value="Fix calculate average mark." />
     <MESSAGE value="Fix calculate average mark for overview." />
     <MESSAGE value="Add legend of marks for certificate overview." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add legend of marks for certificate overview." />
+    <MESSAGE value="Dont count attendancetypeid 5 for attendance overview." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dont count attendancetypeid 5 for attendance overview." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

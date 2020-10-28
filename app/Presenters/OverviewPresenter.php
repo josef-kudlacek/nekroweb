@@ -76,7 +76,7 @@ class OverviewPresenter extends BasePresenter
     public function renderShow()
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
-        $this->template->students = $this->studyClass->getOverview($SemesterId);
+        $this->template->students = $this->studyClass->getOverviewBySemester($SemesterId);
     }
 
     public function renderCertificate($StudentId, $ClassId)
