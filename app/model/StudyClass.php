@@ -57,43 +57,21 @@ class StudyClass
 
     public function getClassById($studyClassId)
     {
-        return $this->database->query('
-            SELECT class.Id AS ClassId, class.Name, class.TimeFrom, class.TimeTo,
-            DATE_FORMAT(class.FirstLesson, "%Y-%m-%d") AS FirstLesson, 
-            DATE_FORMAT(class.LastLesson, "%Y-%m-%d") AS LastLesson, 
-            semester.Id AS SemesterId, semester.YearFrom, semester.YearTo,
-            year.Id AS YearId, year.Number, year.CodeName, COUNT(student.UserId) AS StudentsCount
-            FROM necromancy.class class
-            INNER JOIN necromancy.semester semester
-            ON class.SemesterId = semester.Id
-            INNER JOIN necromancy.year year
-            ON class.YearId = year.Id
-            LEFT JOIN student
-            ON student.ClassId = class.Id
-            WHERE class.Id = ?
-            GROUP BY class.Id;',
-            $studyClassId);
+        $params = array(
+            ['class.Id' => $studyClassId],
+        );
+
+        return $this->getClassByParams($params);
     }
 
     public function getStudentClassById($studyClassId, $studentId)
     {
-        return $this->database->query('
-            SELECT class.Id AS ClassId, class.Name, class.TimeFrom, class.TimeTo,
-            DATE_FORMAT(class.FirstLesson, "%Y-%m-%d") AS FirstLesson, 
-            DATE_FORMAT(class.LastLesson, "%Y-%m-%d") AS LastLesson, 
-            semester.Id AS SemesterId, semester.YearFrom, semester.YearTo,
-            year.Id AS YearId, year.Number, year.CodeName, COUNT(student.UserId) AS StudentsCount
-            FROM necromancy.class class
-            INNER JOIN necromancy.semester semester
-            ON class.SemesterId = semester.Id
-            INNER JOIN necromancy.year year
-            ON class.YearId = year.Id
-            INNER JOIN student
-            ON student.ClassId = class.Id
-            WHERE class.Id = ?
-            AND student.UserId = ?
-            GROUP BY class.Id;',
-            $studyClassId, $studentId);
+        $params = array(
+            ['class.Id' => $studyClassId],
+            ['student.UserId' => $studentId],
+        );
+
+        return $this->getClassByParams($params);
     }
 
     public function insertClass($values)
@@ -273,6 +251,27 @@ class StudyClass
         );
 
         return $this->getOverviewByParams($params);
+    }
+
+    private function getClassByParams($params)
+    {
+
+        return $this->database->query('
+            SELECT class.Id AS ClassId, class.Name, class.TimeFrom, class.TimeTo,
+            DATE_FORMAT(class.FirstLesson, "%Y-%m-%d") AS FirstLesson, 
+            DATE_FORMAT(class.LastLesson, "%Y-%m-%d") AS LastLesson, 
+            semester.Id AS SemesterId, semester.YearFrom, semester.YearTo,
+            year.Id AS YearId, year.Number, year.CodeName, COUNT(student.UserId) AS StudentsCount
+            FROM necromancy.class class
+            INNER JOIN necromancy.semester semester
+            ON class.SemesterId = semester.Id
+            INNER JOIN necromancy.year year
+            ON class.YearId = year.Id
+            INNER JOIN student
+            ON student.ClassId = class.Id
+            WHERE',
+            $params,
+            'GROUP BY class.Id;');
     }
 
     private function getOverviewByParams($params)
