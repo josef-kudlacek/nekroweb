@@ -102,7 +102,7 @@ class Assessment
     public function getStudentAssessment($StudentAssessmentId)
     {
         return $this->database->query('
-            SELECT studentassessment.Id, class.Id AS ClassId, user.Id AS StudentUserId,
+            SELECT studentassessment.Id, class.Id AS StudentClassId, user.Id AS StudentUserId,
             user.Name AS UserName, student.HouseId, class.Name AS ClassName, semesterassessment.Code AS HomeworkCode,
             assessment.Id AS AssessmentId, mark.Name AS MarkName, assessment.Name AS AssessmentName,
             mark.Value AS MarkValue, mark.Id AS MarkId, studentassessment.`Comment`,

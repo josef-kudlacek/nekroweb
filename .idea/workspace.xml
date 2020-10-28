@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade css/js to 1.8.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix joining of semesterassessment table.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/legend.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/Assessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Assessment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,14 +125,8 @@
       <workItem from="1603212407278" duration="6190000" />
       <workItem from="1603225563552" duration="1668000" />
       <workItem from="1603232861524" duration="187000" />
-      <workItem from="1603526356802" duration="2022000" />
-    </task>
-    <task id="LOCAL-00028" summary="Fix path for upload errors.">
-      <created>1601407705129</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1601407705129</updated>
+      <workItem from="1603526356802" duration="3359000" />
+      <workItem from="1603880279688" duration="2685000" />
     </task>
     <task id="LOCAL-00029" summary="Minor fixes about attendance.">
       <created>1601410770473</created>
@@ -468,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603232777376</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Fix joining of semesterassessment table.">
+      <created>1603659523239</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1603659523239</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +490,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add maintenance of assessment for semester." />
     <MESSAGE value="Fix responsive layout of evaluation." />
     <MESSAGE value="Add new assessment." />
     <MESSAGE value="Edit assessment in semester." />
@@ -512,7 +514,8 @@
     <MESSAGE value="Delete bdumps." />
     <MESSAGE value="Fix order of creating homework and assessment." />
     <MESSAGE value="Upgrade css/js to 1.8." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade css/js to 1.8." />
+    <MESSAGE value="Fix joining of semesterassessment table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix joining of semesterassessment table." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -556,11 +559,11 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603526574384" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603232780676">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603659527709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602794948289" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603232780676" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603659527709" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
