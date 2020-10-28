@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Dont count attendancetypeid 5 for attendance overview.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/overview.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/data.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add overview for student.">
+      <change beforePath="$PROJECT_DIR$/app/model/Arc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Arc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/StudyClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudyClass.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,14 +125,7 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-      <workItem from="1603887438682" duration="5608000" />
-    </task>
-    <task id="LOCAL-00034" summary="Add possibility for create assessment of homeworks. Filter tables.">
-      <created>1601588252106</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1601588252106</updated>
+      <workItem from="1603887438682" duration="6135000" />
     </task>
     <task id="LOCAL-00035" summary="Add email and change column sizes.">
       <created>1601588829307</created>
@@ -475,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603889474771</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Add overview for student.">
+      <created>1603896473086</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1603896473086</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +489,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add datatables and upgrade to include-1.7." />
     <MESSAGE value="No html escape for rules." />
     <MESSAGE value="Add overviews for profesor." />
     <MESSAGE value="Manage of certification mark." />
@@ -519,7 +513,8 @@
     <MESSAGE value="Fix calculate average mark for overview." />
     <MESSAGE value="Add legend of marks for certificate overview." />
     <MESSAGE value="Dont count attendancetypeid 5 for attendance overview." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dont count attendancetypeid 5 for attendance overview." />
+    <MESSAGE value="Add overview for student." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add overview for student." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -601,10 +596,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1603233048105">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1297" y="66" width="1083" height="834" key="find.popup" timestamp="1603896640509">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602417211336" />
+    <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603896640509" />
     <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />

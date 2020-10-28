@@ -262,7 +262,7 @@ class StudyClass
             ['class.SemesterId' => $semesterId],
         );
 
-        return $this->getOverviewWithParams($params);
+        return $this->getOverviewByParams($params);
     }
 
     public function getOverviewByStudent($studentId, $classId)
@@ -272,10 +272,10 @@ class StudyClass
             ['student.ClassId' => $classId],
         );
 
-        return $this->getOverviewWithParams($params);
+        return $this->getOverviewByParams($params);
     }
 
-    private function getOverviewWithParams($params)
+    private function getOverviewByParams($params)
     {
         return $this->database->query('
             SELECT T.StudentId, T.StudentName, T.ClassId, T.HouseId,
