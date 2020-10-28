@@ -43,7 +43,7 @@ class StudyClassPresenter extends BasePresenter
     public function renderPoints()
     {
         $classId = $this->getUser()->getIdentity()->classId;
-        $this->template->students = $this->studyClass->getClassPointsSum($classId);
+        $this->template->students = $this->studyClass->getPointsSumByClass($classId);
     }
 
     public function renderShow()

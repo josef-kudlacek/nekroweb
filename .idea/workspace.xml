@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Clean code - student asessments by params.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add information about semester while changing class.">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/StudyClassPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudyClassPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/StudyClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudyClass.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,21 +125,7 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-      <workItem from="1603887438682" duration="8330000" />
-    </task>
-    <task id="LOCAL-00040" summary="Fix padding of top and bottom.">
-      <created>1601721076683</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1601721076683</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Minor fix of reaction in errors.">
-      <created>1601721422338</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1601721422338</updated>
+      <workItem from="1603887438682" duration="9011000" />
     </task>
     <task id="LOCAL-00042" summary="Change css and js include.">
       <created>1601722777714</created>
@@ -469,7 +456,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603898652957</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Clean code - get class by params.">
+      <created>1603899126238</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1603899126238</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Add information about semester while changing class.">
+      <created>1603899331909</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1603899331909</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,8 +489,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Show class on homework/show.latte." />
-    <MESSAGE value="Minor fixes of assessments and homeworks." />
     <MESSAGE value="Fix of show assessments." />
     <MESSAGE value="Fix text of legends." />
     <MESSAGE value="Change length of reason for card to 255." />
@@ -513,7 +512,9 @@
     <MESSAGE value="Fix attendence overview by class - missing class name." />
     <MESSAGE value="Clean code - get years by params." />
     <MESSAGE value="Clean code - student asessments by params." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean code - student asessments by params." />
+    <MESSAGE value="Clean code - get class by params." />
+    <MESSAGE value="Add information about semester while changing class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add information about semester while changing class." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
