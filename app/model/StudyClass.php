@@ -280,6 +280,7 @@ class StudyClass
             LEFT JOIN attendance
             ON attendance.StudentUserId = student.UserId
             AND attendance.StudentClassId = student.ClassId
+            AND attendance.AttendanceTypeId != 5
             LEFT JOIN attendancetype
             ON attendancetype.Id = attendance.AttendanceTypeId
             LEFT JOIN mark certificateMark
