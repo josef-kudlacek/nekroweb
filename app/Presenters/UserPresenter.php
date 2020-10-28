@@ -154,7 +154,9 @@ class UserPresenter extends BasePresenter
             $this->user->getIdentity()->semesterFrom = $class->YearFrom;
             $this->user->getIdentity()->semesterTo = $class->YearTo;
 
-            $this->flashMessage('Třída úspěšně změněna. Vítej ve třídě '. $class->Name .'!' ,"success");
+            $semesterTo = (!is_null($class->YearFrom) ? '/' .$class->YearTo : '');
+            $this->flashMessage('Třída úspěšně změněna. Vítej ve třídě '. $class->Name .
+                ', školní rok: '. $class->YearFrom . $semesterTo . '!' ,"success");
             $this->redirect('User:data');
 
         } catch (Nette\Security\AuthenticationException $authenticationException) {
