@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Clean code - arcs by params.">
-      <change beforePath="$PROJECT_DIR$/app/model/Attendance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Attendance.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Clean code - attendance by params.">
+      <change beforePath="$PROJECT_DIR$/app/model/Evaluation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Evaluation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +124,7 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-      <workItem from="1603887438682" duration="6604000" />
-    </task>
-    <task id="LOCAL-00036" summary="Add manage of homework assessments.">
-      <created>1601653208109</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1601653208109</updated>
+      <workItem from="1603887438682" duration="6959000" />
     </task>
     <task id="LOCAL-00037" summary="Minor fixes or namespace.">
       <created>1601667616489</created>
@@ -469,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603896973331</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Clean code - attendance by params.">
+      <created>1603897513375</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1603897513375</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +488,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add overviews for profesor." />
     <MESSAGE value="Manage of certification mark." />
     <MESSAGE value="Fix remove student from semester and class - dont affect user." />
     <MESSAGE value="Fix render default certificate date is null." />
@@ -513,7 +512,8 @@
     <MESSAGE value="Dont count attendancetypeid 5 for attendance overview." />
     <MESSAGE value="Add overview for student." />
     <MESSAGE value="Clean code - arcs by params." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean code - arcs by params." />
+    <MESSAGE value="Clean code - attendance by params." />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean code - attendance by params." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

@@ -222,7 +222,7 @@ class Attendance
     private function getAttendanceByParams($params)
     {
         return $this->database->query('
-            SELECT DISTINCT house.Id AS HouseId, user.Id, user.Name AS StudentName,
+            SELECT DISTINCT house.Id AS HouseId, user.Id, user.Name AS StudentName, class.Name AS ClassName,
             MIN(IF(lesson.Number = 1, attendancetype.Id, NULL)) AS Lesson1AT,
             MIN(IF(lesson.Number = 1, attendancetype.Points, NULL)) AS Lesson1ATP,
             SUM(IF(lesson.Number = 1, activity.ActivityPoints, NULL)) AS Lesson1AP,

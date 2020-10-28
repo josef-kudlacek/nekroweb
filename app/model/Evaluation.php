@@ -24,8 +24,7 @@ class Evaluation
             COUNT(IF(evaluation.StarsCount = 3, evaluation.StarsCount, NULL)) AS Stars3,
             COUNT(IF(evaluation.StarsCount = 2, evaluation.StarsCount, NULL)) AS Stars2,
             COUNT(IF(evaluation.StarsCount = 1, evaluation.StarsCount, NULL)) AS Stars1
-            FROM evaluation;
-                ');
+            FROM evaluation;');
     }
 
     public function getEvaluations()
