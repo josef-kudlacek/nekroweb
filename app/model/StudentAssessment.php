@@ -175,7 +175,7 @@ class StudentAssessment
             ON mark.Id = studentassessment.MarkId
             LEFT JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
-            INNER JOIN semesterassessment
+            LEFT JOIN semesterassessment
             ON semesterassessment.AssessmentId = studentassessment.AssessmentId
             AND semesterassessment.ClassId = studentassessment.StudentClassId
             AND semesterassessment.SemesterId = class.SemesterId
