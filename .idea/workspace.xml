@@ -19,16 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Remove max length of homework task.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Manage of student assessment.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/SemesterAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SemesterAssessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/StudentAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudentAssessment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.8/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.8/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +127,7 @@
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
       <workItem from="1603887438682" duration="10143000" />
-      <workItem from="1604845920866" duration="16673000" />
-    </task>
-    <task id="LOCAL-00046" summary="Show active years in curriculum.">
-      <created>1601810473124</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1601810473124</updated>
+      <workItem from="1604845920866" duration="17456000" />
     </task>
     <task id="LOCAL-00047" summary="Show evaluations.">
       <created>1601819492481</created>
@@ -478,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604847031337</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Manage of student assessment.">
+      <created>1604863498722</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1604863498722</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +491,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change manage of assessments - semesterassessment.id and move task to semesterassessment." />
     <MESSAGE value="Change show marks of assessments and add tooltip about assessment name." />
     <MESSAGE value="Fix adding assessment to semester." />
     <MESSAGE value="Delete bdumps." />
@@ -522,7 +515,8 @@
     <MESSAGE value="Change order of queries in User.php." />
     <MESSAGE value="Change max length of assessment comment to 500." />
     <MESSAGE value="Remove max length of homework task." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove max length of homework task." />
+    <MESSAGE value="Manage of student assessment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Manage of student assessment." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -604,10 +598,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1604862842231">
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1604863648844">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604862842231" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604863648844" />
     <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -44,19 +44,19 @@ class StudentAssessment
         return $this->getStudentAssessmentsByParams($params);
     }
 
-    public function getStudentAssessmentsByClass($ClassId)
-    {
-        $params = array(
-            ['class.Id' => $ClassId],
-        );
-
-        return $this->getGroupedStudentAssessmentsByParams($params);
-    }
-
     public function getStudentAssessmentsByFileName($FileName)
     {
         $params = array(
             ['studentassessment.FileName' => $FileName],
+        );
+
+        return $this->getStudentAssessmentsByParams($params);
+    }
+
+    public function getStudentAssessmentsByClass($ClassId)
+    {
+        $params = array(
+            ['class.Id' => $ClassId],
         );
 
         return $this->getGroupedStudentAssessmentsByParams($params);
@@ -172,7 +172,7 @@ class StudentAssessment
             ON studentassessment.AssessmentId = semesterassessment.AssessmentId
             AND class.SemesterId = semesterassessment.SemesterId
             AND class.Id = semesterassessment.ClassId
-            INNER JOIN mark
+            LEFT JOIN mark
             ON mark.Id = studentassessment.MarkId
             INNER JOIN homework
             ON homework.AssessmentId = studentassessment.AssessmentId
