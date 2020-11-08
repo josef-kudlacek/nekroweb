@@ -152,10 +152,10 @@ class Assessment
 
     public function deleteAssessment($StudentAssessmentId)
     {
-        return $this->database->query('
-            DELETE
-            FROM studentassessment
-            WHERE studentassessment.Id = ?;',
-            $StudentAssessmentId);
+        return $this->database->table('studentassessment')->where('Id', $StudentAssessmentId)->update([
+            'Date' => NULL,
+            'MarkId' => NULL,
+            'Comment' => NULL
+        ]);
     }
 }
