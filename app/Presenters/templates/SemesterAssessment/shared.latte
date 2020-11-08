@@ -14,18 +14,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {foreach $assessments as $assessment}
-                        <tr>
-                            <td class="text-white bg-dark align-middle">{$assessment->YearName}</td>
-                            <td class="text-dark bg-light align-middle">{$assessment->ClassName}</td>
-                            <td class="table-warning align-middle">{$assessment->StudentName}</td>
-                            <td class="text-white bg-dark align-middle text-center">
-                                {if $arc->FileName}
-                                <a href="{link Arc:download $arc->FileName}" class="btn btn-primary btn-sm"
-                                   role="button">Stáhnout vypracování</a>
-                                {/if}
-                            </td>
-                        </tr>
+                    {foreach $assessments as $assessmentItem}
+                        {if $assessmentItem->FileName}
+                            <tr>
+                                <td class="text-white bg-dark align-middle">
+                                    {$assessmentItem->YearFrom}{if $assessmentItem->YearTo}/{$assessmentItem->YearTo}{/if}
+                                </td>
+                                <td class="text-white bg-secondary align-middle">{$assessmentItem->ClassName}</td>
+                                <td class="table-{$assessmentItem->HouseId|houseType}">
+                                    <a href="https://bradavice.eu//ukaz.php?name={urlencode($assessmentItem->StudentName|encodeToWin1250)}" target="_blank"
+                                        class="text-dark">{$assessmentItem->StudentName}</a>
+                                </td>
+                                <td class="text-white bg-light align-middle text-center">
+                                    <a href="{link SemesterAssessment:download $assessmentItem->FileName}" class="btn btn-primary btn-sm"
+                                        role="button">Stáhnout zpracování</a>
+                                </td>
+                            </tr>
+                        {/if}
                     {/foreach}
                     </tbody>
                 </table>
@@ -33,5 +38,9 @@
         {else}
             Nenalezen žádný záznam.
         {/if}
+        <div class="col-md text-center">
+            <a href="{link SemesterAssessment:show}" class="btn btn-secondary btn-sm"
+                role="button">Zpět</a>
+        </div>
     </div>
 {/block}

@@ -150,7 +150,7 @@ class StudentAssessment
     public function getStudentAssessmentsByParams($params)
     {
         return $this->database->query('
-            SELECT class.Id AS ClassId, user.Id AS StudentId, user.Name as StudentName, class.Name AS ClassName, house.Name AS HouseName, studentassessment.FileName,
+            SELECT class.Id AS ClassId, user.Id AS StudentId, user.Name as StudentName, class.Name AS ClassName, house.Id AS HouseId, studentassessment.FileName,
             semesterassessment.Code AS HomeworkCode, assessment.Name AS AssessmentName, mark.Name AS MarkName, mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
             studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints, semester.YearFrom, semester.YearTo, studentassessment.Id
             FROM studentassessment
