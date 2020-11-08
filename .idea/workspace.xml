@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add information about semester while changing class.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/StudyClassPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudyClassPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/StudyClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudyClass.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change order of queries in User.php.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/edit.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,21 +126,8 @@
       <workItem from="1603232861524" duration="187000" />
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
-      <workItem from="1603887438682" duration="9011000" />
-    </task>
-    <task id="LOCAL-00042" summary="Change css and js include.">
-      <created>1601722777714</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1601722777714</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Change include to 1.2.">
-      <created>1601722878695</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1601722878695</updated>
+      <workItem from="1603887438682" duration="10143000" />
+      <workItem from="1604845920866" duration="736000" />
     </task>
     <task id="LOCAL-00044" summary="CSS changes.">
       <created>1601749895671</created>
@@ -470,7 +458,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603899331909</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Clean code - get points sum by params.">
+      <created>1603899728771</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1603899728771</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Change order of queries in User.php.">
+      <created>1603900011807</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1603900011807</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,8 +491,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix of show assessments." />
-    <MESSAGE value="Fix text of legends." />
     <MESSAGE value="Change length of reason for card to 255." />
     <MESSAGE value="Fix change semester message." />
     <MESSAGE value="Change manage of assessments - semesterassessment.id and move task to semesterassessment." />
@@ -514,7 +514,9 @@
     <MESSAGE value="Clean code - student asessments by params." />
     <MESSAGE value="Clean code - get class by params." />
     <MESSAGE value="Add information about semester while changing class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add information about semester while changing class." />
+    <MESSAGE value="Clean code - get points sum by params." />
+    <MESSAGE value="Change order of queries in User.php." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change order of queries in User.php." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -596,10 +598,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1297" y="66" width="1083" height="834" key="find.popup" timestamp="1603896640509">
+    <state x="-1297" y="66" width="1083" height="834" key="find.popup" timestamp="1603899887569">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603896640509" />
+    <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603899887569" />
     <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
