@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="No mark of student assessment." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change name of file for download.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/AssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/AssessmentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/StudentAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudentAssessment.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,14 +129,7 @@
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
       <workItem from="1603887438682" duration="10143000" />
-      <workItem from="1604845920866" duration="17837000" />
-    </task>
-    <task id="LOCAL-00049" summary="Upgrade include.">
-      <created>1601833348125</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1601833348125</updated>
+      <workItem from="1604845920866" duration="19235000" />
     </task>
     <task id="LOCAL-00050" summary="Change of guest.latte">
       <created>1601833591416</created>
@@ -468,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604864463189</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Change name of file for download.">
+      <created>1604864688009</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1604864688009</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +493,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete bdumps." />
     <MESSAGE value="Fix order of creating homework and assessment." />
     <MESSAGE value="Upgrade css/js to 1.8." />
     <MESSAGE value="Fix joining of semesterassessment table." />
@@ -512,7 +517,8 @@
     <MESSAGE value="Manage of student assessment." />
     <MESSAGE value="Fix wrong private function for find file." />
     <MESSAGE value="No mark of student assessment." />
-    <option name="LAST_COMMIT_MESSAGE" value="No mark of student assessment." />
+    <MESSAGE value="Change name of file for download." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change name of file for download." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

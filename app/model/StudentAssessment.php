@@ -71,11 +71,6 @@ class StudentAssessment
         return $this->getGroupedStudentAssessmentsByParams($params);
     }
 
-    public function insertAssessment($values)
-    {
-        return $this->database->table('studentassessment')->insert($values);
-    }
-
     public function insertStudentAssessment($values)
     {
         $this->database->query('INSERT INTO studentassessment', $values,

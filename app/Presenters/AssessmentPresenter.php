@@ -140,7 +140,7 @@ class AssessmentPresenter extends BasePresenter
 
             $this->flashMessage('Známka úspěšně změněna.','success');
         } else {
-            $this->studentAssessment->insertAssessment($values);
+            $this->studentAssessment->insertStudentAssessment($values);
 
             $this->flashMessage('Známka úspěšně přidána.','success');
         }
