@@ -1,0 +1,42 @@
+{block content}
+    <div class="container">
+    <h1 n:block="title">Moje zpracování úkolu {$assessment->Code} – {$assessment->Name}</h1>
+        {if $studentAssessment}
+            <div class="form-group col-md-4 offset-md-4">
+                <h2>Moje zpracování</h2>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="{link SemesterAssessment:download $studentAssessment->FileName}" class="btn btn-primary btn-sm"
+                                    role="button">Stáhnout moje zpracování</a>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <a href="{link SemesterAssessment:delete $studentAssessment->FileName}" class="btn btn-danger btn-sm"
+                                    role="button">Odstranit moje zpracování</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {else}
+            <div class="form-group col-md-4 offset-md-4">
+                <h2>Nahrát zpracování</h2>
+            </div>
+            <form n:name=studentAssessmentForm>
+                <input n:name=StudentUserId class="form-control" hidden>
+                <input n:name=StudentClassId class="form-control" hidden>
+                <input n:name=AssessmentId class="form-control" hidden>
+                <div class="form-group col-md-4 offset-md-4">
+                    <input n:name=StudentAssessmentFile type="file" class="form-control-file">
+                </div>
+                <div class="form-group col-md-4 offset-md-4">
+                    <input n:name=send class="btn btn-info btn-block" value="Sdílet moje zpracování">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-secondary" href="{link SemesterAssessment:show}">Zpět</a>
+                </div>
+            </form>
+        {/if}
+    </div>
+{/block}

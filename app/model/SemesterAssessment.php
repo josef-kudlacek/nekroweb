@@ -31,14 +31,21 @@ class SemesterAssessment
 
     public function getAssessmentsInSemesterByClassId($ClassId)
     {
-        return $this->database->query('
-            SELECT semesterassessment.Code, assessment.Name
-            FROM semesterassessment
-            INNER JOIN assessment
-            ON assessment.Id = semesterassessment.AssessmentId
-            WHERE semesterassessment.ClassId = ?
-            ORDER BY assessment.Weight DESC, semesterassessment.Code;',
-                $ClassId);
+        $params = array(
+            ['semesterassessment.ClassId' => $ClassId],
+        );
+
+        return $this->getAssessmentsInSemesterByParams($params);
+    }
+
+    public function getAssessmentsInSemesterByAssessmentAndClassId($AssessmentId, $ClassId)
+    {
+        $params = array(
+            ['semesterassessment.AssessmentId' => $AssessmentId],
+            ['semesterassessment.ClassId' => $ClassId],
+        );
+
+        return $this->getAssessmentsInSemesterByParams($params);
     }
 
     public function createRecord($semesterAssessment)
@@ -69,5 +76,20 @@ class SemesterAssessment
         return $this->database->table('semesterassessment')
             ->where('Id = ?', $semesterAssessment)
             ->delete();
+    }
+
+    private function getAssessmentsInSemesterByParams($params)
+    {
+        return $this->database->query('
+            SELECT semesterassessment.Id, semesterassessment.Code, assessment.Name, semesterassessment.Task,
+            assessment.Id AS assessmentId
+            FROM semesterassessment
+            INNER JOIN assessment 
+            ON semesterassessment.AssessmentId = assessment.Id
+            INNER JOIN homework 
+            ON assessment.Id = homework.AssessmentId
+            WHERE',
+            $params,
+            'ORDER BY assessment.Weight DESC, homework.HomeworkTypeId;');
     }
 }

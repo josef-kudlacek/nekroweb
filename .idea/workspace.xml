@@ -19,10 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change order of queries in User.php.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Remove max length of homework task.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/SemesterAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SemesterAssessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/StudentAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudentAssessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.8/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.8/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,21 +133,7 @@
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
       <workItem from="1603887438682" duration="10143000" />
-      <workItem from="1604845920866" duration="736000" />
-    </task>
-    <task id="LOCAL-00044" summary="CSS changes.">
-      <created>1601749895671</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1601749895671</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Quick shortcut for change semester/class.">
-      <created>1601752583831</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1601752583831</updated>
+      <workItem from="1604845920866" duration="16673000" />
     </task>
     <task id="LOCAL-00046" summary="Show active years in curriculum.">
       <created>1601810473124</created>
@@ -472,7 +464,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603900011807</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Change max length of assessment comment to 500.">
+      <created>1604846893457</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1604846893457</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Remove max length of homework task.">
+      <created>1604847031337</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1604847031337</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,8 +497,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change length of reason for card to 255." />
-    <MESSAGE value="Fix change semester message." />
     <MESSAGE value="Change manage of assessments - semesterassessment.id and move task to semesterassessment." />
     <MESSAGE value="Change show marks of assessments and add tooltip about assessment name." />
     <MESSAGE value="Fix adding assessment to semester." />
@@ -516,26 +520,28 @@
     <MESSAGE value="Add information about semester while changing class." />
     <MESSAGE value="Clean code - get points sum by params." />
     <MESSAGE value="Change order of queries in User.php." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change order of queries in User.php." />
+    <MESSAGE value="Change max length of assessment comment to 500." />
+    <MESSAGE value="Remove max length of homework task." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove max length of homework task." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="161" key="#Plugins/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601133537657" />
-    <state x="-1193" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601750513079">
+    <state x="-1193" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604857549904">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1193" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750513079" />
+    <state x="-1193" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604857549904" />
     <state x="727" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601217921957" />
-    <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601570504422">
+    <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604848966722">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601570504422" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602443507984">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1495" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604848966722" />
+    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604863213636">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601832914642" />
+    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604863213636" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602443507984" />
     <state x="-92" y="-15" width="1736" height="856" maximized="true" key="DiffContextDialog" timestamp="1603898139978">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -546,10 +552,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1602437547230">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1196" y="243" key="NewPhpClassDialog" timestamp="1604849044522">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812233004" />
+    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604849044522" />
     <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602437547230" />
     <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -569,21 +575,21 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601292357425" />
-    <state x="1920" y="0" width="1480" height="1027" key="dock-window-1" timestamp="1603031584013">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="206" y="0" width="1515" height="1027" maximized="true" key="dock-window-1" timestamp="1604860498511">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" width="1610" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601814932485" />
+    <state x="206" y="0" width="1515" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604860498511" />
     <state x="-1644" y="0" width="1396" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602404495317" />
     <state x="1920" y="0" width="1480" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603031584013" />
-    <state x="-1674" y="0" width="1397" height="1027" maximized="true" key="dock-window-2" timestamp="1602410555518">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="136" y="0" width="1515" height="1027" maximized="true" key="dock-window-2" timestamp="1604863069765">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" width="1576" height="1027" maximized="true" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601584580336" />
+    <state x="136" y="0" width="1515" height="1027" maximized="true" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604863069765" />
     <state x="-1674" y="0" width="1397" height="1027" maximized="true" key="dock-window-2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602410555518" />
-    <state x="-1864" y="0" width="1467" height="1027" maximized="true" key="dock-window-3" timestamp="1602415930035">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="56" y="0" width="1564" height="1027" maximized="true" key="dock-window-3" timestamp="1604863069765">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" width="1474" height="1027" maximized="true" key="dock-window-3/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601572367123" />
+    <state x="56" y="0" width="1564" height="1027" maximized="true" key="dock-window-3/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604863069765" />
     <state x="-1864" y="0" width="1467" height="1027" maximized="true" key="dock-window-3/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602415930035" />
     <state x="-1499" y="0" width="1515" height="1027" maximized="true" key="dock-window-4" timestamp="1602444177339">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -598,10 +604,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1297" y="66" width="1083" height="834" key="find.popup" timestamp="1603899887569">
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1604862842231">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="66" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603899887569" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604862842231" />
     <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />

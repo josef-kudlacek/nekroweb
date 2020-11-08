@@ -16,30 +16,32 @@ class StudentAssessment
 
     public function getStudentAssessments($StudentId, $ClassId)
     {
-        return $this->database->query('
-            SELECT class.Id AS ClassId, user.Id AS StudentId, class.Name AS ClassName, semesterassessment.Code AS HomeworkCode,
-            assessment.Name AS AssessmentName, mark.Name AS MarkName, mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
-            studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints
-            FROM studentassessment
-            INNER JOIN student
-            ON studentassessment.StudentUserId = student.UserId
-            AND studentassessment.StudentClassId = student.ClassId
-            INNER JOIN user
-            ON user.Id = student.UserId
-            INNER JOIN class
-            ON class.Id = student.ClassId
-            INNER JOIN assessment
-            ON assessment.Id = studentassessment.AssessmentId
-            INNER JOIN semesterassessment
-            ON assessment.Id = semesterassessment.AssessmentId
-            AND semesterassessment.SemesterId = class.SemesterId
-            INNER JOIN mark
-            ON mark.Id = studentassessment.MarkId
-            INNER JOIN homework
-            ON homework.AssessmentId = assessment.Id
-            WHERE student.UserId = ?
-            AND student.ClassId = ?;',
-            $StudentId, $ClassId);
+        $params = array(
+            ['studentassessment.StudentUserId' => $StudentId],
+            ['studentassessment.StudentClassId' => $ClassId],
+        );
+
+        return $this->getStudentAssessmentsByParams($params);
+    }
+
+    public function getStudentAssessmentsByStudentClassAndAssesmentId($StudentId, $ClassId, $AssessmentId)
+    {
+        $params = array(
+            ['studentassessment.StudentUserId' => $StudentId],
+            ['studentassessment.StudentClassId' => $ClassId],
+            ['studentassessment.AssessmentId' => $AssessmentId],
+        );
+
+        return $this->getStudentAssessmentsByParams($params);
+    }
+
+    public function getStudentAssessmentsByAssessment($AssessmentId)
+    {
+        $params = array(
+            ['studentassessment.AssessmentId' => $AssessmentId],
+        );
+
+        return $this->getStudentAssessmentsByParams($params);
     }
 
     public function getStudentAssessmentsByClass($ClassId)
@@ -48,7 +50,16 @@ class StudentAssessment
             ['class.Id' => $ClassId],
         );
 
-        return $this->getStudentAssessmentsByParams($params);
+        return $this->getGroupedStudentAssessmentsByParams($params);
+    }
+
+    public function getStudentAssessmentsByFileName($FileName)
+    {
+        $params = array(
+            ['studentassessment.FileName' => $FileName],
+        );
+
+        return $this->getGroupedStudentAssessmentsByParams($params);
     }
 
     public function getStudentAssessmentsBySemester($SemesterId)
@@ -57,7 +68,7 @@ class StudentAssessment
             ['class.SemesterId' => $SemesterId],
         );
 
-        return $this->getStudentAssessmentsByParams($params);
+        return $this->getGroupedStudentAssessmentsByParams($params);
     }
 
     public function insertAssessment($values)
@@ -65,12 +76,25 @@ class StudentAssessment
         return $this->database->table('studentassessment')->insert($values);
     }
 
+    public function insertStudentAssessment($values)
+    {
+        $this->database->query('INSERT INTO studentassessment', $values,
+            'ON DUPLICATE KEY UPDATE', $values);
+    }
+
     public function updateAssessment($values)
     {
         return $this->database->table('studentassessment')->where('Id', $values['Id'])->update($values);
     }
 
-    private function getStudentAssessmentsByParams($params)
+    public function deleteAssessmentFileName($fileName)
+    {
+        return $this->database->table('studentassessment')->where('FileName', $fileName)->update([
+            'FileName' => NULL
+        ]);
+    }
+
+    private function getGroupedStudentAssessmentsByParams($params)
     {
         return $this->database->query('
             SELECT user.Id, user.Name AS StudentName, class.Name AS ClassName, student.HouseId AS HouseId,
@@ -126,5 +150,38 @@ class StudentAssessment
             $params,
             'GROUP BY user.name
             ORDER BY user.name;');
+    }
+
+    public function getStudentAssessmentsByParams($params)
+    {
+        return $this->database->query('
+            SELECT class.Id AS ClassId, user.Id AS StudentId, user.Name as StudentName, class.Name AS ClassName, house.Name AS HouseName, studentassessment.FileName,
+            semesterassessment.Code AS HomeworkCode, assessment.Name AS AssessmentName, mark.Name AS MarkName, mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
+            studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints, semester.YearFrom, semester.YearTo, studentassessment.Id
+            FROM studentassessment
+            INNER JOIN student
+            ON studentassessment.StudentUserId = student.UserId
+            AND studentassessment.StudentClassId = student.ClassId
+            INNER JOIN user
+            ON user.Id = studentassessment.StudentUserId
+            INNER JOIN class
+            ON class.Id = studentassessment.StudentClassId
+            INNER JOIN assessment
+            ON assessment.Id = studentassessment.AssessmentId
+            INNER JOIN semesterassessment
+            ON studentassessment.AssessmentId = semesterassessment.AssessmentId
+            AND class.SemesterId = semesterassessment.SemesterId
+            AND class.Id = semesterassessment.ClassId
+            INNER JOIN mark
+            ON mark.Id = studentassessment.MarkId
+            INNER JOIN homework
+            ON homework.AssessmentId = studentassessment.AssessmentId
+            INNER JOIN semester
+            ON class.SemesterId = semester.Id
+            INNER JOIN house
+            ON student.HouseId = house.Id  
+            WHERE',
+            $params,
+            'ORDER BY semester.YearFrom, semester.YearTo, class.Name, user.Name;');
     }
 }

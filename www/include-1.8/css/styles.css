@@ -352,3 +352,16 @@ a.nav-year {
   background: #537DA7;
   border-color: #FFFFFF;
 }
+
+.zlat {
+  color: #17a2b8;
+}
+
+.cerv {
+  color: #721c24;
+}
+
+.footnote {
+  border: 2px solid #506F7A;
+  border-radius: 9px;
+}
