@@ -16,6 +16,7 @@
             </thead>
             <tbody>
             {foreach $assessment as $assessmentItem}
+            {if $assessmentItem->MarkId}
                 <tr class="text-dark bg-{$assessmentItem->MarkId|markType}">
                     <td class="text-white bg-dark">{$assessmentItem->HomeworkCode}</td>
                     <td class="text-white bg-dark">{$assessmentItem->AssessmentName}</td>
@@ -23,6 +24,7 @@
                     <td>{$assessmentItem->MarkName}</td>
                     <td>{$assessmentItem->AssessmentComment}</td>
                 </tr>
+            {/if}
             {/foreach}
             </tbody>
         </table>
