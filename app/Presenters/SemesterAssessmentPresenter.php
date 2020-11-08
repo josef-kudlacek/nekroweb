@@ -156,6 +156,6 @@ class SemesterAssessmentPresenter extends BasePresenter
         $parts = explode('.' , $fileInfo->FileName);
         $YearTo = (!is_null($fileInfo->YearTo) ? '-' .$fileInfo->YearTo : '');
 
-        return $fileInfo->YearFrom . $YearTo . '_' . $fileInfo->StudentName . '_' . $fileInfo->HomeworkCode . $fileInfo->AssessmentName . end($parts);
+        return $fileInfo->YearFrom . $YearTo . '_' . $fileInfo->StudentName . '_' . $fileInfo->HomeworkCode . '_' . $fileInfo->AssessmentName . '.' . end($parts);
     }
 }

@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Manage of student assessment.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/StudentAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudentAssessment.php" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="No mark of student assessment." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,21 +123,7 @@
       <workItem from="1603526356802" duration="3359000" />
       <workItem from="1603880279688" duration="2685000" />
       <workItem from="1603887438682" duration="10143000" />
-      <workItem from="1604845920866" duration="17456000" />
-    </task>
-    <task id="LOCAL-00047" summary="Show evaluations.">
-      <created>1601819492481</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1601819492481</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Add evaluation of attendances.">
-      <created>1601833246841</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1601833246841</updated>
+      <workItem from="1604845920866" duration="17837000" />
     </task>
     <task id="LOCAL-00049" summary="Upgrade include.">
       <created>1601833348125</created>
@@ -472,7 +454,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604863498722</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Fix wrong private function for find file.">
+      <created>1604864293824</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1604864293824</updated>
+    </task>
+    <task id="LOCAL-00097" summary="No mark of student assessment.">
+      <created>1604864463189</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1604864463189</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,8 +487,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change show marks of assessments and add tooltip about assessment name." />
-    <MESSAGE value="Fix adding assessment to semester." />
     <MESSAGE value="Delete bdumps." />
     <MESSAGE value="Fix order of creating homework and assessment." />
     <MESSAGE value="Upgrade css/js to 1.8." />
@@ -516,7 +510,9 @@
     <MESSAGE value="Change max length of assessment comment to 500." />
     <MESSAGE value="Remove max length of homework task." />
     <MESSAGE value="Manage of student assessment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Manage of student assessment." />
+    <MESSAGE value="Fix wrong private function for find file." />
+    <MESSAGE value="No mark of student assessment." />
+    <option name="LAST_COMMIT_MESSAGE" value="No mark of student assessment." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -560,10 +556,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603526574384" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603659527709">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604864465704">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602794948289" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604864465704" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603659527709" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
