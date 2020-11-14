@@ -19,15 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show shared student assessments.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/change.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Redirect user to overview while changing class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MyAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MyAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,21 +126,7 @@
       <workItem from="1603880279688" duration="2685000" />
       <workItem from="1603887438682" duration="10143000" />
       <workItem from="1604845920866" duration="21773000" />
-      <workItem from="1605377390747" duration="4936000" />
-    </task>
-    <task id="LOCAL-00053" summary="Fix responsive layout of evaluation.">
-      <created>1602366549917</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1602366549917</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Add new assessment.">
-      <created>1602409211816</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1602409211817</updated>
+      <workItem from="1605377390747" duration="5998000" />
     </task>
     <task id="LOCAL-00055" summary="Edit assessment in semester.">
       <created>1602411408361</created>
@@ -478,7 +457,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604867898222</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Add possibility for change user and handle assessments by param.">
+      <created>1605382512414</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1605382512415</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Redirect user to overview while changing class.">
+      <created>1605382626729</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1605382626729</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,8 +490,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix legends and fill class when editing assessment." />
-    <MESSAGE value="Show students without mark in overview." />
     <MESSAGE value="Fix calculate average mark." />
     <MESSAGE value="Fix calculate average mark for overview." />
     <MESSAGE value="Add legend of marks for certificate overview." />
@@ -522,7 +513,9 @@
     <MESSAGE value="Fix update of student assessment." />
     <MESSAGE value="Fix delete of student assessment mark." />
     <MESSAGE value="Show shared student assessments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Show shared student assessments." />
+    <MESSAGE value="Add possibility for change user and handle assessments by param." />
+    <MESSAGE value="Redirect user to overview while changing class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Redirect user to overview while changing class." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

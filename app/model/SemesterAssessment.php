@@ -90,6 +90,6 @@ class SemesterAssessment
             ON assessment.Id = homework.AssessmentId
             WHERE',
             $params,
-            'ORDER BY assessment.Weight DESC, homework.HomeworkTypeId;');
+            'ORDER BY assessment.Weight DESC, homework.HomeworkTypeId, semesterassessment.Code;');
     }
 }
