@@ -209,7 +209,7 @@ class UserPresenter extends BasePresenter
             $semesterTo = (!is_null($class->YearFrom) ? '/' .$class->YearTo : '');
             $this->flashMessage('Třída úspěšně změněna. Vítej ve třídě '. $class->Name .
                 ', školní rok: '. $class->YearFrom . $semesterTo . '!' ,"success");
-            $this->redirect('User:data');
+            $this->redirect('User:overview');
 
         } catch (Nette\Security\AuthenticationException $authenticationException) {
             $this->flashMessage('Původní heslo nesouhlasí. Heslo nemohlo být změněno.' ,"danger");
