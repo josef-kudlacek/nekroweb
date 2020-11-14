@@ -19,7 +19,7 @@ class SignPresenter extends BasePresenter
     /** @var Model\User
      * @inject
      */
-    public $user;
+    public $dbUser;
 
     /** @var Model\StudyClass
      * @inject
@@ -43,7 +43,15 @@ class SignPresenter extends BasePresenter
 
     public function actionLogout()
     {
-        $this->getUser()->logout(true);
+        if ($this->getUser()->getIdentity()->oldIdentity)
+        {
+            $oldId = $this->getUser()->getIdentity()->oldIdentity;
+            $newUser =$this->authentication->changeUser($oldId);
+            $this->user->login($newUser);
+
+        } else {
+            $this->getUser()->logout(true);
+        }
 
         $this->flashMessage('Odhlášení proběhlo úspěšně.','success');
         $this->redirect('Homepage:default');
@@ -100,7 +108,7 @@ class SignPresenter extends BasePresenter
             $values->password = $this->authentication->hash($values->password);
 
             $this->transaction->startTransaction();
-            $this->user->insertStudent($values);
+            $this->dbUser->insertStudent($values);
             $this->transaction->endTransaction();
 
             $this->flashMessage('Žádost o přístup proběhla úspěšně. Pro její schválení napište sovu profesorovi a sdělte mu pro potvrzení použitý mail.' ,"success");

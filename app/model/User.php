@@ -20,6 +20,23 @@ class User
         $this->database = $database;
     }
 
+    public function getUsers()
+    {
+        return $this->database->query('
+            SELECT user.Id, user.Name
+            FROM user
+            ORDER BY user.Name;');
+    }
+
+    public function GetUserById($userId)
+    {
+        return $this->database->query('
+            SELECT Id, Name, Email, IsActive
+            FROM user
+            WHERE Id = ?;',
+            $userId);
+    }
+
     public function getStudentSum($studentId, $classId)
     {
         $this->database->query('
@@ -59,15 +76,6 @@ class User
 	            AND studentassessment.StudentClassId = @InStudentClassId
 	            ) AS markPoints; 
                 ');
-    }
-
-    public function GetUserById($userId)
-    {
-        return $this->database->query('
-            SELECT Id, Name, Email, IsActive
-            FROM user
-            WHERE Id = ?;',
-            $userId);
     }
 
     public function getUserClasses($userId)

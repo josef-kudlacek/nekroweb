@@ -1,0 +1,23 @@
+{block content}
+<script>
+        $(function() {
+            $('#frm-changeUserForm-user').filterByText($('#filterUser'));
+        });
+</script>
+<div class="container">
+    <h1 n:block="title">Změnit uživatele</h1>
+    <div class="form-group col-md-4 offset-md-4">
+        <i>Přepnutí na jiného uživatele.</i>
+    </div>
+    <form n:name=changeUserForm>
+        <div class="form-group col-md-4 offset-md-4">
+            <label>Seznam uživatelů:</label>
+            <input class="form-control" id="filterUser" type="text" placeholder="Filtrovat">
+            <select n:name=user class="form-control"></select>
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <input n:name=send class="btn btn-primary btn-block">
+        </div>
+    </form>
+</div>
+{/block}

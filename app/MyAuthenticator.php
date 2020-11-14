@@ -22,30 +22,20 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
     {
         [$username, $password] = $credentials;
 
-        try {
-            $user = $this->findUser($username);
-        } catch (Nette\Security\AuthenticationException $authenticationException) {
-            throw $authenticationException;
-        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
-            throw $unexpectedValueException;
-        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
-            throw $invalidArgumentException;
-        }
+        $user = $this->findUserByUsername($username);
 
         if (!$this->passwords->verify($password, $user->Password)) {
             throw new Nette\Security\AuthenticationException('Invalid password.');
         }
 
-        return new Nette\Security\Identity(
-            $user->Id,
-            $user->Role,
-            ['name' => $user->Name,
-                'email' => $user->Email,
-                'className' => $user->Class,
-                'classId' => $user->ClassId,
-                'semesterFrom' => $user->YearFrom,
-                'semesterTo' => $user->YearTo]
-        );
+        return $this->createIdentity($user);
+    }
+
+    public function changeUser($userId): Nette\Security\IIdentity
+    {
+        $user = $this->findUserById($userId);
+
+        return $this->createIdentity($user);
     }
 
     public function isAllowed($role, $resource, $operation): bool
@@ -108,7 +98,55 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
         $this->setPassword($values->newpassword, $username);
     }
 
-    protected function findUser($username)
+    protected function setPassword($newPassword, $username)
+    {
+        $this->database->query('
+            UPDATE user
+            SET Password = ?
+            WHERE user.Name = ?;',
+            $newPassword, $username);
+    }
+
+    public function hash($password)
+    {
+        return $this->passwords->hash($password);
+    }
+
+    public function findUserByUsername($username)
+    {
+        $params = array(
+            ['user.Name' => $username],
+        );
+
+        try {
+            return $this->findUserByParam($params);
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            throw $authenticationException;
+        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
+            throw $unexpectedValueException;
+        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
+            throw $invalidArgumentException;
+        }
+    }
+
+    public function findUserById($userId)
+    {
+        $params = array(
+            ['user.Id' => $userId],
+        );
+
+        try {
+            return $this->findUserByParam($params);
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            throw $authenticationException;
+        } catch (Nette\UnexpectedValueException $unexpectedValueException) {
+            throw $unexpectedValueException;
+        } catch (Nette\InvalidArgumentException $invalidArgumentException) {
+            throw $invalidArgumentException;
+        }
+    }
+
+    private function findUserByParam($params)
     {
         $user = $this->database->query('
             SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, 
@@ -123,10 +161,10 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
 			ON student.ClassId = class.Id			
 			LEFT JOIN semester
 			ON semester.Id = class.SemesterId
-			WHERE user.Name = ?
-			ORDER BY class.FirstLesson DESC
-			LIMIT 1;',
-                $username)
+			WHERE',
+			$params,
+			'ORDER BY class.FirstLesson DESC
+			LIMIT 1;')
                 ->fetch();
 
         if (!$user) {
@@ -144,17 +182,22 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
         return $user;
     }
 
-    protected function setPassword($newPassword, $username)
+    private function findUser($username)
     {
-        $this->database->query('
-            UPDATE user
-            SET Password = ?
-            WHERE user.Name = ?;',
-            $newPassword, $username);
+        return $this->findUserByUsername($username);
     }
 
-    public function hash($password)
+    private function createIdentity($user) : Nette\Security\IIdentity
     {
-        return $this->passwords->hash($password);
+        return new Nette\Security\Identity(
+            $user->Id,
+            $user->Role,
+            ['name' => $user->Name,
+                'email' => $user->Email,
+                'className' => $user->Class,
+                'classId' => $user->ClassId,
+                'semesterFrom' => $user->YearFrom,
+                'semesterTo' => $user->YearTo]
+        );
     }
 }

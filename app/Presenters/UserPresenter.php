@@ -78,6 +78,14 @@ class UserPresenter extends BasePresenter
         $this->template->history = $this->dbUser->getUserHistory($userId);
     }
 
+    public function actionChange()
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     protected function createComponentChangePassForm(): Form
     {
         $form = new Form;
@@ -118,6 +126,50 @@ class UserPresenter extends BasePresenter
 
         } catch (Nette\Security\AuthenticationException $authenticationException) {
             $this->flashMessage('Původní heslo nesouhlasí. Heslo nemohlo být změněno.' ,"danger");
+        }
+    }
+
+    protected function createComponentChangeUserForm(): Form
+    {
+        $form = new Form;
+
+        $users = $this->dbUser->getUsers()->fetchPairs('Id', 'Name');
+
+        $form->addSelect('user')
+            ->setItems($users)
+            ->setRequired();
+
+        $form->addSubmit('send', 'Změnit uživatele');
+
+        $form->addProtection();
+
+        $form->onError[] = array($this, 'errorForm');
+        $form->onSuccess[] = [$this, 'changeUserFormSucceeded'];
+
+        return $form;
+    }
+
+    public function changeUserFormSucceeded(Form $form, \stdClass $values): void
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+
+        try {
+            $currentUser = $this->user->getId();
+
+            $newUser =$this->authentication->changeUser($values->user);
+            $this->user->login($newUser);
+            $this->user->getIdentity()->oldIdentity = $currentUser;
+
+            $semesterTo = (!is_null($this->user->getIdentity()->semesterFrom) ? '/' . $this->user->getIdentity()->semesterTo : '');
+            $this->flashMessage('Uživatel změněn. Vítej ' . $this->user->getIdentity()->name .' ve třídě '. $this->user->getIdentity()->className .
+                ', školní rok: '. $this->user->getIdentity()->semesterFrom . $semesterTo . '!' ,"success");
+            $this->redirect('Homepage:default');
+
+        } catch (Nette\Security\AuthenticationException $authenticationException) {
+            $this->flashMessage('Nepodařilo se změnit uživatele.' ,"danger");
         }
     }
 

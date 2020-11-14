@@ -45,26 +45,42 @@ class SemesterAssessmentPresenter extends BasePresenter
         $this->template->assessments = $this->semesterAssessment->getAssessmentsInSemesterByClassId($classId)->fetchAll();
     }
 
-    public function renderMy($assessmentId)
+    public function actionMy($assessmentId)
     {
         $userId = $this->user->getId();
         $classId = $this->user->getIdentity()->classId;
 
-        $this->template->assessment = $this->semesterAssessment->getAssessmentsInSemesterByAssessmentAndClassId($assessmentId, $classId)->fetch();
-        $this->template->studentAssessment = $this->studentAssessment->getStudentAssessmentsByStudentClassAndAssesmentId($userId, $classId, $assessmentId)->fetch();
+        $assessment = $this->semesterAssessment->getAssessmentsInSemesterByAssessmentAndClassId($assessmentId, $classId)->fetch();
+        $studentAssessment = $this->studentAssessment->getStudentAssessmentsByStudentClassAndAssesmentId($userId, $classId, $assessmentId)->fetch();
         $this['studentAssessmentForm']->setDefaults([
             'StudentUserId' => $userId,
             'StudentClassId' => $classId,
             'AssessmentId' => $assessmentId
         ]);
+
+        if (!$assessment) {
+            $this->flashMessage('Takový úkol neexistuje.','danger');
+            $this->redirect('SemesterAssessment:show');
+        }
+
+        $this->template->assessment = $assessment;
+        $this->template->studentAssessment = $studentAssessment;
     }
 
     public function renderShared($assessmentId)
     {
         $classId = $this->user->getIdentity()->classId;
 
-        $this->template->assessment = $this->semesterAssessment->getAssessmentsInSemesterByAssessmentAndClassId($assessmentId, $classId)->fetch();
-        $this->template->assessments = $this->studentAssessment->getStudentAssessmentsByAssessment($assessmentId)->fetchAll();
+        $assessment = $this->semesterAssessment->getAssessmentsInSemesterByAssessmentAndClassId($assessmentId, $classId)->fetch();
+        $assessments = $this->studentAssessment->getStudentAssessmentsByAssessment($assessmentId)->fetchAll();
+
+        if (!$assessment) {
+            $this->flashMessage('Takový úkol neexistuje.','danger');
+            $this->redirect('SemesterAssessment:show');
+        }
+
+        $this->template->assessment = $assessment;
+        $this->template->assessments = $assessments;
     }
 
     public function actionDownload($fileName)
