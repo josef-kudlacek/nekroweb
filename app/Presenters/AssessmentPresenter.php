@@ -62,12 +62,6 @@ class AssessmentPresenter extends BasePresenter
         $this->template->assessments = $this->assessment->getAssessmentBySemester($SemesterId);
     }
 
-    public function renderCreate()
-    {
-        $SemesterId = $this->getUser()->getIdentity()->semesterId;
-        $this->template->assessments = $this->assessment->getAssessmentBySemester($SemesterId);
-    }
-
     public function renderEdit($StudentAssessmentId)
     {
         $assessment = $this->assessment->getStudentAssessment($StudentAssessmentId)->fetch();

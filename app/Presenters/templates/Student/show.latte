@@ -15,6 +15,7 @@
                     <th class="text-white bg-dark">Email</th>
                     <th class="text-white bg-dark">Třída</th>
                     <th class="text-white bg-dark">Aktivní</th>
+                    <th class="text-white bg-dark">Studuje</th>
                     <th class="text-white bg-dark">Správa studenta</th>
                 </tr>
             </thead>
@@ -26,11 +27,17 @@
                     <td>{$student->Email}</td>
                     <td>{$student->ClassName}</td>
                     <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
+                    <td>{$student->StudentIsActive ? 'Ano' : 'Ne'}</td>
                     <td>
                         <a href="{link edit $student->UserId, $student->ClassId}" class="btn btn-secondary btn-sm"
                            role="button">Upravit</a>
-                        <a href="{link delete $student->UserId, $student->ClassId}" class="btn btn-dark btn-sm"
-                           role="button">Odebrat</a>
+                        {if $student->StudentIsActive}
+                            <a href="{link delete $student->UserId, $student->ClassId}" class="btn btn-dark btn-sm"
+                                role="button">Vyřadit</a>
+                        {else}
+                            <a href="{link add $student->UserId, $student->ClassId}" class="btn btn-primary btn-sm"
+                                role="button">Přidat</a>
+                        {/if}
                         {if !$student->IsActive}
                             <a href="{link active $student->UserId, $student->UserName}" class="btn btn-light btn-sm"
                                 role="button">Aktivovat</a>

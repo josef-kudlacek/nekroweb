@@ -49,7 +49,7 @@ class StudentPresenter extends BasePresenter
     {
         $semesterId = $this->getUser()->getIdentity()->semesterId;
 
-        $this->template->students = $this->student->getActualStudents($semesterId);
+        $this->template->students = $this->student->getStudentsBySemesterId($semesterId);
     }
 
     public function actionActive($studentId, $studentName)
@@ -62,17 +62,20 @@ class StudentPresenter extends BasePresenter
     public function actionDelete($studentId, $classId)
     {
         $this->transaction->startTransaction();
-
-        $result = $this->student->deleteStudent($studentId, $classId);
-
+        $this->student->setActive($studentId, $classId, 0);
         $this->transaction->endTransaction();
 
-        if ($result !== 1) {
-            $this->flashMessage('Studenta se nepodařilo odstranit ze semestru.', "danger");
-        } else {
-            $this->flashMessage('Student úspěšně odebrán ze třídy a semestru.', "success");
-        }
+        $this->flashMessage('Student vyřazen ze třídy.', "success");
+        $this->redirect('Student:show');
+    }
 
+    public function actionAdd($studentId, $classId)
+    {
+        $this->transaction->startTransaction();
+        $this->student->setActive($studentId, $classId, 1);
+        $this->transaction->endTransaction();
+
+        $this->flashMessage('Student přidán do třídy.', "success");
         $this->redirect('Student:show');
     }
 

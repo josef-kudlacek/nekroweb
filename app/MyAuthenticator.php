@@ -116,6 +116,10 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
     {
         $params = array(
             ['user.Name' => $username],
+            $this->database::literal('?or', [
+            'student.IsActive' => 1,
+            'user.RoleId' => 1,
+            ]),
         );
 
         try {
@@ -151,7 +155,7 @@ class MyAuthenticator implements Nette\Security\IAuthenticator
         $user = $this->database->query('
             SELECT user.Id, user.Name, user.Email, user.Password, user.IsActive, 
             role.Name AS Role, student.ClassId as ClassId, class.Name AS Class,
-            semester.YearFrom, semester.YearTo
+            semester.YearFrom, semester.YearTo, student.IsActive AS StudentIsActive
             FROM user
             INNER JOIN role
             ON user.RoleId = role.Id

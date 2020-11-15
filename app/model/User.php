@@ -89,6 +89,7 @@ class User
             INNER JOIN semester
             ON semester.Id = class.SemesterId
             WHERE student.UserId = ?
+            AND student.IsActive = 1
             ORDER BY class.FirstLesson DESC;',
             $userId);
     }
@@ -97,7 +98,7 @@ class User
     {
         return $this->database->query('
             SELECT semester.YearFrom, semester.YearTo, class.Name AS ClassName,
-            mark.Shortcut, student.CertificateDate
+            mark.Shortcut, student.CertificateDate, student.IsActive
             FROM student
             INNER JOIN class
             ON student.ClassId = class.Id

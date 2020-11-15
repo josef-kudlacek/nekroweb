@@ -6,13 +6,39 @@
                 <ul class="timeline">
                     {if $history}
                         {foreach $history as $historyItem}
-                            <li><strong>{$historyItem->YearFrom}{if $historyItem->YearTo}/{$historyItem->YearTo}{/if}</strong><br />
+                            <li class="{$historyItem->IsActive ? $historyItem->Shortcut ? 'text-info' : 'text-dark' : 'text-danger'}">
+                                <strong>{$historyItem->YearFrom}{if $historyItem->YearTo}/{$historyItem->YearTo}{/if}</strong><br />
                                 <strong>Třída:</strong> {$historyItem->ClassName}<br />
-                                <strong>Vysvědčení:</strong> {$historyItem->Shortcut} {if $historyItem->CertificateDate}({$historyItem->CertificateDate|date:"%d. %m. %y"}){/if}</li>
+                                <strong>Vysvědčení:</strong> {$historyItem->Shortcut} {if $historyItem->CertificateDate}({$historyItem->CertificateDate|date:"%d. %m. %y"}){/if}
+                           </li>
                         {/foreach}
                     {/if}
                 </ul>
             </div>
         </div>
+
+    <h2>Legenda</h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th class="text-white bg-dark text-center">Barva</th>
+            <th class="text-white bg-dark text-center">Význam</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="text-info bg-light">
+            <td class="text-dark bg-info">Tyrkysová</td>
+            <td><abbr title="Ročník dokončen známkou na vysvědčení.">Dokončené studium</abbr></td>
+        </tr>
+        <tr class="text-dark bg-light">
+            <td class="text-light bg-dark">Černá</td>
+            <td><abbr title="Ročník nebyl dokončen známkou na vysvědčení. Buď stále probíhá nebo byla třída zrušena.">Nedokončené studium</abbr></td>
+        </tr>
+        <tr class="text-danger bg-light">
+            <td class="text-dark bg-danger">Červená</td>
+            <td><abbr title="Ročník nebyl úspěšně dokončen. Došlo k vyřazení z hodin.">Neúspěšné studium</abbr></td>
+        </tr>
+        </tbody>
+    </table>
     </div>
 {/block}

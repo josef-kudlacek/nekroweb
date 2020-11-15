@@ -19,24 +19,43 @@ class Student
         $this->database = $database;
     }
 
+    public function getStudentsBySemesterId($semesterId)
+    {
+        $params = array(
+            ['semester.Id' => $semesterId],
+        );
+
+        return $this->getStudentByParams($params);
+    }
+
     public function getActualStudents($semesterId)
     {
-        return $this->database->query('
-            SELECT user.Id AS UserId, user.Name AS UserName, user.IsActive,
-            user.Email, house.Id AS HouseId, student.ClassId,
-            class.Name AS ClassName
-            FROM student
-            INNER JOIN user
-            ON user.Id = student.UserId
-            INNER JOIN class
-            ON class.Id = student.ClassId
-            LEFT JOIN house
-            ON house.Id = student.HouseId
-            INNER JOIN semester
-            ON semester.Id = class.SemesterId
-            WHERE semester.Id = ?
-            ORDER BY class.Name, user.Name;',
-                $semesterId);
+        $params = array(
+            ['semester.Id' => $semesterId],
+            ['student.IsActive' => 1],
+        );
+
+        return $this->getStudentByParams($params);
+    }
+
+    public function getStudent($studentId, $classId)
+    {
+        $params = array(
+            ['student.UserId' => $studentId],
+            ['student.ClassId' => $classId],
+        );
+
+        return $this->getStudentByParams($params);
+    }
+
+    public function getStudentsByClassId($classId)
+    {
+        $params = array(
+            ['student.ClassId' => $classId],
+            ['student.IsActive' => 1],
+        );
+
+        return $this->getStudentByParams($params);
     }
 
     public function getCertificationInfo($studentId, $classId)
@@ -47,42 +66,6 @@ class Student
             WHERE student.UserId = ?
             AND student.ClassId = ?;",
             $studentId, $classId);
-    }
-
-    public function getStudent($studentId, $classId)
-    {
-        return $this->database->query("
-            SELECT user.Id AS UserId, user.name AS UserName, user.IsActive, user.Email,
-            student.HouseId, house.Name AS HouseName, 
-            student.ClassId, class.Name AS ClassName
-            FROM student
-            INNER JOIN user
-            ON user.Id = student.UserId
-            INNER JOIN class
-            ON class.Id = student.ClassId
-            LEFT JOIN house
-            ON house.Id = student.HouseId
-            WHERE student.UserId = ?
-            AND student.ClassId = ?;",
-            $studentId, $classId);
-    }
-
-    public function getStudentsByClassId($classId)
-    {
-        return $this->database->query("
-            SELECT user.Id AS UserId, user.name AS UserName, user.IsActive, user.Email,
-            student.HouseId, house.Name AS HouseName, 
-            student.ClassId, class.Name AS ClassName
-            FROM student
-            INNER JOIN user
-            ON user.Id = student.UserId
-            INNER JOIN class
-            ON class.Id = student.ClassId
-            LEFT JOIN house
-            ON house.Id = student.HouseId
-            WHERE student.ClassId = ?
-            ORDER BY user.name;",
-            $classId);
     }
 
     public function insertStudent($values)
@@ -123,23 +106,21 @@ class Student
         }
     }
 
-    public function deleteStudent($studentId, $classId)
+    public function setActive($studentId, $classId, $isActive)
     {
         return $this->database->query("
-            DELETE student.*, attendance.*, studentanswer.*, studentassessment.*
-            FROM student
-            LEFT JOIN attendance
-            ON student.UserId = attendance.StudentUserId
-            AND student.ClassId = attendance.StudentClassId
-            LEFT JOIN studentanswer
-            ON student.UserId = studentanswer.StudentUserId
-            AND student.ClassId = studentanswer.StudentClassId
-            LEFT JOIN studentassessment
-            ON student.UserId = studentassessment.StudentUserId
-            AND student.ClassId = studentassessment.StudentClassId
+            UPDATE student
+            SET IsActive = ?
             WHERE student.UserId = ?
             AND student.ClassId = ?;",
-                $studentId, $classId)->getRowCount();
+                $isActive, $studentId, $classId);
+    }
+
+    public function certificateStudent($values)
+    {
+        return $this->database->table('student')
+            ->where('UserId = ? AND ClassId = ?', $values->UserId, $values->ClassId)
+            ->update($values);
     }
 
     private function updateStudentInfo($studentId, $values)
@@ -150,8 +131,8 @@ class Student
             Email = ?,
             IsActive = ?
             WHERE Id = ?;',
-                $values->username, $values->email, $values->isactive,
-                $studentId);
+            $values->username, $values->email, $values->isactive,
+            $studentId);
     }
 
     private function insertUser($username, $isactive)
@@ -165,10 +146,23 @@ class Student
             $username, $isactive);
     }
 
-    public function certificateStudent($values)
+    private function getStudentByParams($params)
     {
-        return $this->database->table('student')
-            ->where('UserId = ? AND ClassId = ?', $values->UserId, $values->ClassId)
-            ->update($values);
+        return $this->database->query('
+            SELECT user.Id AS UserId, user.name AS UserName, user.IsActive, user.Email,
+            student.HouseId, student.ClassId, student.IsActive AS StudentIsActive,
+            house.Name AS HouseName, class.Name AS ClassName
+            FROM student
+            INNER JOIN user
+            ON user.Id = student.UserId
+            INNER JOIN class
+            ON class.Id = student.ClassId
+            LEFT JOIN house
+            ON house.Id = student.HouseId
+            INNER JOIN semester
+            ON semester.Id = class.SemesterId
+            WHERE',
+            $params,
+            'ORDER BY class.Name, user.Name;');
     }
 }
