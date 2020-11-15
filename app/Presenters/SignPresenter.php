@@ -48,6 +48,7 @@ class SignPresenter extends BasePresenter
             $oldId = $this->getUser()->getIdentity()->oldIdentity;
             $newUser =$this->authentication->changeUser($oldId);
             $this->user->login($newUser);
+            Utils::setActualSemester($this->getUser()->getIdentity(), $this->semester->GetActualSemester());
 
         } else {
             $this->getUser()->logout(true);
