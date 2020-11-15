@@ -45,7 +45,7 @@ class Filter
                 $attendanceColor = 'danger';
                 break;
             case 5:
-                $attendanceColor = 'default';
+                $attendanceColor = 'light';
                 break;
             case 6:
                 $attendanceColor = 'info';
