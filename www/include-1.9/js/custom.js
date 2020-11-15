@@ -99,4 +99,15 @@ $(document).ready(function(){
         "pageLength": -1,
         hideEmptyCols: true
     } );
+
+    $("#criteria").hide();
+    $("#show-criteria").on('click', function(){
+        if($("#criteria").is(":hidden")){
+            $("#criteria").show();
+            $("#show-criteria").text("[Skrýt kritéria hodnocení.]");
+        }else{
+            $("#criteria").hide();
+            $("#show-criteria").text("[Zobrazit kritéria hodnocení.]");
+        }
+    });
 });

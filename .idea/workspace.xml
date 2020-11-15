@@ -19,15 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Set actual semester when changing identity back to professor.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add student state in class - active, non-active.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MyAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MyAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/AssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/AssessmentPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/StudentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudentPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.9/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.9/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,14 +129,7 @@
       <workItem from="1603887438682" duration="10143000" />
       <workItem from="1604845920866" duration="21773000" />
       <workItem from="1605377390747" duration="6684000" />
-      <workItem from="1605403069122" duration="6339000" />
-    </task>
-    <task id="LOCAL-00058" summary="Fix show points for class by Id.">
-      <created>1602426236749</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1602426236749</updated>
+      <workItem from="1605403069122" duration="9264000" />
     </task>
     <task id="LOCAL-00059" summary="Add datatables and upgrade to include-1.7.">
       <created>1602428457403</created>
@@ -479,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605447219406</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Add student state in class - active, non-active.">
+      <created>1605455154243</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1605455154243</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +493,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dont count attendancetypeid 5 for attendance overview." />
     <MESSAGE value="Add overview for student." />
     <MESSAGE value="Clean code - arcs by params." />
     <MESSAGE value="Clean code - attendance by params." />
@@ -523,7 +517,8 @@
     <MESSAGE value="Add order for SemesterAssessment.php by code." />
     <MESSAGE value="Fix header of student assessment table." />
     <MESSAGE value="Set actual semester when changing identity back to professor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set actual semester when changing identity back to professor." />
+    <MESSAGE value="Add student state in class - active, non-active." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add student state in class - active, non-active." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
