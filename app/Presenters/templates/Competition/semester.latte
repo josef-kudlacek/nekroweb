@@ -1,0 +1,41 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Správa CS</h1>
+        <div class="form-group col-md-4 offset-md-5">
+            <a href="{link create}" class="btn btn-primary btn-sm"
+                role="button">Vytvořit zadání CS</a>
+        </div>
+        <h2>Přehled zadání CS</h2>
+        {if $competitions}
+        <div class="table-responsive">
+        <table id="table" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-white bg-dark">Třída</th>
+                    <th class="text-white bg-dark">Číslo</th>
+                    <th class="text-white bg-dark">Název</th>
+                    <th class="text-white bg-dark">Datum</th>
+                    <th class="text-white bg-dark">Správa</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $competitions as $competitionItem}
+                <tr class="table-info">
+                    <td>{$competitionItem->ClassName}</td>
+                    <td>{$competitionItem->CompetitionNumber}</td>
+                    <td>{$competitionItem->CompetitionName}</td>
+                    <td>{$competitionItem->CompetitionDate|date:"%d. %m. %Y"}</td>
+                    <td class="align-middle text-dark bg-light">
+                        <a href="{link edit $competitionItem->Id}" class="btn btn-secondary btn-sm"
+                           role="button">Upravit</a>
+                    </td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+        </div>
+        {else}
+        Nenalezen žádný záznam.
+        {/if}
+    </div>
+{/block}

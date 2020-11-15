@@ -19,56 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Minor fixes and add show criteria.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade js.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/admin.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/create.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/detail.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/edit.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/show.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/upload.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Competition.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/Filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Filter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Contact-Form-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Contact-Form-Clean.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Footer-Basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Footer-Basic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Footer-Dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Footer-Dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Login-Form-Dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Login-Form-Dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Navigation-with-Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Navigation-with-Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Team-Boxed.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Team-Boxed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/Team-Grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/Team-Grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/datatables.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fontawesome-all.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/ionicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/ionicons.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/ionicons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/js/datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/js/datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.9/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.91/js/jquery.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,14 +141,8 @@
       <workItem from="1603887438682" duration="10143000" />
       <workItem from="1604845920866" duration="21773000" />
       <workItem from="1605377390747" duration="6684000" />
-      <workItem from="1605403069122" duration="10035000" />
-    </task>
-    <task id="LOCAL-00060" summary="No html escape for rules.">
-      <created>1602429221089</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1602429221089</updated>
+      <workItem from="1605403069122" duration="18511000" />
+      <workItem from="1605477533004" duration="989000" />
     </task>
     <task id="LOCAL-00061" summary="Add overviews for profesor.">
       <created>1602439076025</created>
@@ -520,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605458750815</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Upgrade js.">
+      <created>1605459542463</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1605459542463</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +506,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean code - arcs by params." />
     <MESSAGE value="Clean code - attendance by params." />
     <MESSAGE value="Fix attendence overview by class - missing class name." />
     <MESSAGE value="Clean code - get years by params." />
@@ -564,7 +530,8 @@
     <MESSAGE value="Set actual semester when changing identity back to professor." />
     <MESSAGE value="Add student state in class - active, non-active." />
     <MESSAGE value="Minor fixes and add show criteria." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes and add show criteria." />
+    <MESSAGE value="Upgrade js." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade js." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -594,11 +561,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="-1196" y="243" key="NewPhpClassDialog" timestamp="1604849044522">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605465158543">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604849044522" />
-    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602437547230" />
+    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605465158543" />
     <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -608,10 +575,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603526574384" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604871038132">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605459546050">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604871038132" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605459546050" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603659527709" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -646,20 +613,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1604867869719">
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1605477234651">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604867869719" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605477234651" />
     <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
     <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602444425720" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605379039404">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605476814018">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601812170633" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605476814018" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605379039404" />
   </component>
 </project>

@@ -136,6 +136,53 @@ class Filter
         }
     }
 
+    public static function competitionNoStyle($competitionNumber)
+    {
+
+        switch ($competitionNumber) {
+            case 1:
+                $numberType = 'I.';
+                break;
+            case 2:
+                $numberType = 'II.';
+                break;
+            case 3:
+                $numberType = 'III.';
+                break;
+            case 4:
+                $numberType = 'IV.';
+                break;
+            case 5:
+                $numberType = 'V.';
+                break;
+            case 6:
+                $numberType = 'VI.';
+                break;
+            case 7:
+                $numberType = 'VII.';
+                break;
+            case 8:
+                $numberType = 'VIII.';
+                break;
+            case 9:
+                $numberType = 'IX.';
+                break;
+            case 10:
+                $numberType = 'X.';
+                break;
+            case 11:
+                $numberType = 'XI.';
+                break;
+            case 12:
+                $numberType = 'XII.';
+                break;
+            default:
+                $numberType = '';
+        }
+
+        return $numberType;
+    }
+
 
     public static function semesterType($YearTo)
     {

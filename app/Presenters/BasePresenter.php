@@ -49,6 +49,10 @@ class BasePresenter extends Nette\Application\UI\Presenter
             return Filter::semesterType($YearTo);
         });
 
+        $this->template->addFilter('competitionNoStyle', function ($competitionNumber) {
+            return Filter::competitionNoStyle($competitionNumber);
+        });
+
         $this->template->addFilter('weekDayCZ', function ($number) {
             return Filter::weekDayCZ($number);
         });

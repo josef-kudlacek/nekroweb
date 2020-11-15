@@ -1,0 +1,34 @@
+{block content}
+<div class="container">
+    <h1 n:block=title>Přidat zadání CS</h1>
+    {foreach $flashes as $flash}
+        <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
+    {/foreach}
+    <form n:name=competitionForm>
+        <input n:name=Id class="form-control" hidden>
+        <input n:name=SemesterId class="form-control" hidden>
+        <div class="form-group col-md-4 offset-md-4">
+            <label><strong>Třída:</strong></label>
+        <select n:name=ClassId class="form-control"></select>
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <label><strong>Číslo CS:</strong></label>
+            <input n:name=CompetitionNumber type="text" class="form-control" maxlength="2">
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <label><strong>Název:</strong></label>
+            <input n:name=CompetitionName type="text" class="form-control" maxlength="30">
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <label><strong>Datum:</strong></label>
+            <input n:name=CompetitionDate type="date" class="form-control">
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+            <input n:name=send class="btn btn-secondary btn-block" value="Přidat zadání">
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary" href="{link Competition:semester}">Zpět</a>
+        </div>
+    </form>
+</div>
+{/block}

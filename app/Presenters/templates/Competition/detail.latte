@@ -1,0 +1,23 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Celoroční Soutěž {$competition->CompetitionNumber|competitionNoStyle} – {$competition->CompetitionName}</h1>
+        <p>
+            <div class="row">
+                <div class="col-7 offset-3 col-about">
+                    <strong>Datum zadání:</strong> {$competition->CompetitionDate|date:"%d. %m. %Y"}
+                    <hr class="footnote">
+                    {$competition->CompetitionTask|noescape}
+                </div>
+            </div>
+        </p>
+        <div class="col-md text-center">
+            {if $user->isInRole('Profesor')}
+                <a href="{link Competition:admin}" class="btn btn-secondary btn-sm"
+                    role="button">Zpět</a>
+            {else}
+                <a href="{link Competition:show}" class="btn btn-secondary btn-sm"
+                    role="button">Zpět</a>
+            {/if}
+        </div>
+    </div>
+{/block}

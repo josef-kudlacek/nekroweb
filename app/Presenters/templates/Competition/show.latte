@@ -1,0 +1,27 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Zadání celoroční soutěže</h1>
+        <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        {if $competitions}
+            {foreach $competitions as $competitionItem}
+                <p>
+                    <div class="row">
+                        <div class="col-7 offset-3 col-about">
+                            <strong>Celoroční soutěž {$competitionItem->CompetitionNumber|competitionNoStyle} – {$competitionItem->CompetitionName}</strong><br />
+                            <strong>Datum zadání:</strong> {$competitionItem->CompetitionDate|date:"%d. %m. %Y"}
+                            <hr class="footnote">
+                            <div class="text-left">
+                                <a href="{link Competition:detail $competitionItem->Id}" class="btn btn-info btn-sm"
+                                    role="button">Zobrazit zadání</a>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+            {/foreach}
+        {else}
+            <div class="row">
+                Nenalezen žádný záznam.
+            </div>
+        {/if}
+    </div>
+{/block}
