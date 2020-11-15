@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Redirect user to overview while changing class.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add order for SemesterAssessment.php by code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,14 +127,8 @@
       <workItem from="1603880279688" duration="2685000" />
       <workItem from="1603887438682" duration="10143000" />
       <workItem from="1604845920866" duration="21773000" />
-      <workItem from="1605377390747" duration="5998000" />
-    </task>
-    <task id="LOCAL-00055" summary="Edit assessment in semester.">
-      <created>1602411408361</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1602411408361</updated>
+      <workItem from="1605377390747" duration="6684000" />
+      <workItem from="1605403069122" duration="150000" />
     </task>
     <task id="LOCAL-00056" summary="Add manage of cards. Remove cards from attendance.">
       <created>1602417974747</created>
@@ -471,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605382626729</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Add order for SemesterAssessment.php by code.">
+      <created>1605383569446</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1605383569446</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +492,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix calculate average mark." />
     <MESSAGE value="Fix calculate average mark for overview." />
     <MESSAGE value="Add legend of marks for certificate overview." />
     <MESSAGE value="Dont count attendancetypeid 5 for attendance overview." />
@@ -515,7 +516,8 @@
     <MESSAGE value="Show shared student assessments." />
     <MESSAGE value="Add possibility for change user and handle assessments by param." />
     <MESSAGE value="Redirect user to overview while changing class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Redirect user to overview while changing class." />
+    <MESSAGE value="Add order for SemesterAssessment.php by code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add order for SemesterAssessment.php by code." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
