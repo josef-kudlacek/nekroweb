@@ -67,7 +67,8 @@ class Competition
     {
         return $this->database->query('
             SELECT semestercompetition.Id, class.Name AS ClassName, class.Id AS ClassId, semestercompetition.CompetitionNumber,
-            semestercompetition.CompetitionName, semestercompetition.CompetitionDate, semestercompetition.CompetitionTask
+            semestercompetition.CompetitionName, semestercompetition.CompetitionDate, semestercompetition.CompetitionTask,
+            semestercompetition.SemesterId
             FROM semestercompetition
             INNER JOIN class
             ON class.Id = semestercompetition.ClassId            

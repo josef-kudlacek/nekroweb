@@ -162,9 +162,9 @@ class SemesterAssessmentPresenter extends BasePresenter
     {
         $dateNamePart = date("Ymd");
         $generateNamePart = Utils::generateString(31);
-        $parts = explode('.' , $StudentAssessmentFile->name);
+        $fileExtension = explode('.' , $StudentAssessmentFile->name);
 
-        return $dateNamePart.$generateNamePart.'.'.end($parts);
+        return $dateNamePart.$generateNamePart.'.'.end($fileExtension);
     }
 
     private function createFileNameforDown($fileInfo)

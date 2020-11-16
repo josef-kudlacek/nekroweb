@@ -24,6 +24,11 @@ class CompetitionPresenter extends BasePresenter
      */
     public $studyClass;
 
+    /** @var Model\CompetitionFile
+     * @inject
+     */
+    public $competitionFile;
+
     public function __construct(Model\Competition $competition)
     {
         $this->competition = $competition;
@@ -185,15 +190,9 @@ class CompetitionPresenter extends BasePresenter
 
         $this->transaction->startTransaction();
 
-        if ($values->Id)
-        {
-
-            $this->flashMessage('Upload úspěšně proveden.','success');
-        } else {
-
-            $this->flashMessage('Upload úspěšně proveden.','success');
-        }
-
+        $values = $this->prepareCompetitionFiles($values);
+        $this->competitionFile->insertCompetitionFile($values);
+        $this->flashMessage('Upload úspěšně proveden.','success');
         $this->transaction->endTransaction();
 
         $this->redirect('Competition:admin');
@@ -205,5 +204,31 @@ class CompetitionPresenter extends BasePresenter
             $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
             $this->redirect('Homepage:default');
         }
+    }
+
+    private function prepareCompetitionFiles($values)
+    {
+        $competition = $this->competition->getCompetitionById($values->CompetitionId)->fetch();
+
+        $fileNames = array();
+        foreach ($values->CompetitionFiles as $key => $value)
+        {
+            $fileName = $this->createCompetitionFileName($competition, $key);
+            $fileExtension = explode('.' , $value->name);
+            $fileName = $fileName.'.'.end($fileExtension);
+
+            array_push($fileNames, array("CompetitionId" => $competition->Id, "FileName" => $fileName));
+            $value->move(Utils::getAbsolutePath() . DIRECTORY_SEPARATOR . 'cs' . DIRECTORY_SEPARATOR . $fileName);
+        }
+
+        return $fileNames;
+    }
+
+    private function createCompetitionFileName($competition, $index)
+    {
+        $dateNamePart = $competition->SemesterId.'_'.$competition->ClassName.'_'.$competition->CompetitionNumber.'_'.$index;
+        $generateNamePart = Utils::generateString(15);
+
+        return $dateNamePart.'_'.$generateNamePart;
     }
 }

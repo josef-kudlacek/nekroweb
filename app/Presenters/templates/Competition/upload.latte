@@ -6,7 +6,7 @@
             <div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
         {/foreach}
         <form n:name=competitionFilesForm>
-            <input n:name=CompetitionId class="form-control" hidden>
+            <input n:name=CompetitionId class="form-control" value="{$competition->Id}" hidden>
             <div class="form-group col-md-4 offset-md-4">
                 <input n:name=CompetitionFiles type="file" class="form-control-file" multiple>
             </div>

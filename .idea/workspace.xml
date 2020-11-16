@@ -19,22 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade js.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/admin.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/create.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/detail.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/edit.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/show.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/upload.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Competition.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add manage of semester competitions.">
+      <change afterPath="$PROJECT_DIR$/app/model/CompetitionFile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/Filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Filter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/upload.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/upload.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Competition.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Competition.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,14 +133,8 @@
       <workItem from="1604845920866" duration="21773000" />
       <workItem from="1605377390747" duration="6684000" />
       <workItem from="1605403069122" duration="18511000" />
-      <workItem from="1605477533004" duration="989000" />
-    </task>
-    <task id="LOCAL-00061" summary="Add overviews for profesor.">
-      <created>1602439076025</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1602439076025</updated>
+      <workItem from="1605477533004" duration="1037000" />
+      <workItem from="1605546312868" duration="3643000" />
     </task>
     <task id="LOCAL-00062" summary="Manage of certification mark.">
       <created>1602445474007</created>
@@ -487,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605459542463</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Add manage of semester competitions.">
+      <created>1605478570371</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1605478570371</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +498,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean code - attendance by params." />
     <MESSAGE value="Fix attendence overview by class - missing class name." />
     <MESSAGE value="Clean code - get years by params." />
     <MESSAGE value="Clean code - student asessments by params." />
@@ -531,7 +522,8 @@
     <MESSAGE value="Add student state in class - active, non-active." />
     <MESSAGE value="Minor fixes and add show criteria." />
     <MESSAGE value="Upgrade js." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade js." />
+    <MESSAGE value="Add manage of semester competitions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add manage of semester competitions." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -561,11 +553,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605465158543">
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605550097445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604849044522" />
-    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605465158543" />
+    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605550097445" />
     <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -584,11 +576,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601292357425" />
-    <state x="206" y="0" width="1515" height="1027" maximized="true" key="dock-window-1" timestamp="1604860498511">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1488" y="0" width="1504" height="1027" maximized="true" key="dock-window-1" timestamp="1605548158592">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="206" y="0" width="1515" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604860498511" />
-    <state x="-1644" y="0" width="1396" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602404495317" />
+    <state x="-1488" y="0" width="1504" height="1027" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605548158592" />
     <state x="1920" y="0" width="1480" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603031584013" />
     <state x="136" y="0" width="1515" height="1027" maximized="true" key="dock-window-2" timestamp="1604863069765">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -29,6 +29,7 @@ services:
 	- App\Model\Card
 	- App\Model\Character
 	- App\Model\Competition
+	- App\Model\CompetitionFile
 	- App\Model\Disquisition
 	- App\Model\Error
 	- App\Model\Evaluation
