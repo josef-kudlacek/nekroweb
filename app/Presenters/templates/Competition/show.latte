@@ -7,7 +7,7 @@
                 <p>
                     <div class="row">
                         <div class="col-7 offset-3 col-about">
-                            <strong>Celoroční soutěž {$competitionItem->CompetitionNumber|competitionNoStyle} – {$competitionItem->CompetitionName}</strong><br />
+                            <strong>Celoroční soutěž {$competitionItem->CompetitionNumber|competitionNoStyle} – {$competitionItem->CompetitionName|upper}</strong><br />
                             <strong>Datum zadání:</strong> {$competitionItem->CompetitionDate|date:"%d. %m. %Y"}
                             <hr class="footnote">
                             <div class="text-left">
@@ -19,9 +19,13 @@
                 </p>
             {/foreach}
         {else}
-            <div class="row">
-                Nenalezen žádný záznam.
-            </div>
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
     </div>
 {/block}

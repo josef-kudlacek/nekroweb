@@ -15,7 +15,7 @@
 
     <div class="container">
         <h1 n:block="title">Upravit aktivitu na hodině</h1>
-        <h2>{$lesson->Number}. hodina ({$lesson->Name}) třídy {$class->Name} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        <h2>{$lesson->Number}. {$lesson->Name} třída {$class->Name} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $student}
         <form n:name="activityForm">
             <div class="row">

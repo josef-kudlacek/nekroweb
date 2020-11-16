@@ -62,7 +62,7 @@ class CompetitionPresenter extends BasePresenter
     public function actionShow()
     {
         $classId = $this->getUser()->getIdentity()->classId;
-        $this->template->competitions = $this->competition->getCompetitionByClassId($classId);
+        $this->template->competitions = $this->competition->getCompetitionByClassId($classId)->fetchAll();
     }
 
     public function actionCreate()
@@ -85,6 +85,28 @@ class CompetitionPresenter extends BasePresenter
         $this->checkAccess();
 
         $this->template->competition = $this->competition->getCompetitionById($competitionId)->fetch();
+    }
+
+    public function actionTask($competitionId)
+    {
+        $this->checkAccess();
+
+        $competition = $this->competition->getCompetitionById($competitionId)->fetch();
+
+        $this['competitionForm']->setDefaults($competition);
+        $this->template->competition = $competition;
+        $this->template->competitionFiles = $this->competitionFile->getCompetitionFileByCompetitionId($competitionId);
+    }
+
+    public function actionDeleteFile($competitionFileId)
+    {
+        $this->checkAccess();
+
+        $competitionFile = $this->competitionFile->getCompetitionFileById($competitionFileId)->fetch();
+        $this->competitionFile->deleteCompetitionFile($competitionFileId);
+
+        $this->flashMessage('Soubor úspěšně smazán.','success');
+        $this->redirect('Competition:task', $competitionFile->CompetitionId);
     }
 
     public function actionDetail($competitionId)
@@ -131,6 +153,8 @@ class CompetitionPresenter extends BasePresenter
         $form->addText('CompetitionDate')
             ->setRequired();
 
+        $form->addTextArea('CompetitionTask');
+
         $form->addSubmit('send');
 
         $form->addProtection();
@@ -161,7 +185,11 @@ class CompetitionPresenter extends BasePresenter
 
         $this->transaction->endTransaction();
 
-        $this->redirect('Competition:semester');
+        if ($values->CompetitionTask)
+        {
+            $this->redirect('Competition:admin');
+        }
+        $this->redirect('Competition:show');
     }
 
     protected function createComponentCompetitionFilesForm(): Form
@@ -185,7 +213,7 @@ class CompetitionPresenter extends BasePresenter
 
     public function competitionFilesFormSucceeded(Form $form, \stdClass $values): void
     {
-
+        $competitionId = $values->CompetitionId;
         $values = Utils::convertEmptyToNull($form->values);
 
         $this->transaction->startTransaction();
@@ -195,7 +223,7 @@ class CompetitionPresenter extends BasePresenter
         $this->flashMessage('Upload úspěšně proveden.','success');
         $this->transaction->endTransaction();
 
-        $this->redirect('Competition:admin');
+        $this->redirect('Competition:task', $competitionId);
     }
 
     private function checkAccess()

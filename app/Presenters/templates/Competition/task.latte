@@ -1,0 +1,45 @@
+{block content}
+<div class="container">
+    <h1 n:block=title>Upravit zadání CS</h1>
+    <p>
+        <div class="row">
+            <div class="col-7 offset-3 col-about">
+                <strong>Celoroční soutěž {$competition->CompetitionNumber|competitionNoStyle} – {$competition->CompetitionName}</strong><br />
+                <strong>Datum zadání:</strong> {$competition->CompetitionDate|date:"%d. %m. %Y"}
+                <hr class="footnote">
+                <strong>Soubory:</strong>
+                {foreach $competitionFiles as $competitionFile}
+                    <div class="text-left">
+                        <div>
+                            <input type="text" readonly class="form-control-plaintext" value="https://nekromancie.eu/cs/{$competitionFile->FileName}">
+                        </div>
+                        <a href="{$basePath}/cs/{$competitionFile->FileName}" class="btn btn-info btn-sm" target="_blank"
+                           role="button">Zobrazit</a>
+                       <a href="{link Competition:deleteFile $competitionFile->Id}" class="btn btn-danger btn-sm"
+                           role="button">Smazat soubor</a>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+    </p>
+
+    <form n:name=competitionForm>
+        <input n:name=Id class="form-control" hidden>
+        <input n:name=SemesterId class="form-control" hidden>
+        <select n:name=ClassId class="form-control" hidden></select>
+        <input n:name=CompetitionNumber class="form-control" hidden>
+        <input n:name=CompetitionName class="form-control" hidden>
+        <input n:name=CompetitionDate class="form-control" hidden>
+        <div class="form-group col-7 offset-md-3">
+        <label><strong>Zadání:</strong></label>
+            <textarea n:name=CompetitionTask class="form-control" rows="10"></textarea>
+        </div>
+        <div class="form-group col-7 offset-md-3">
+            <input n:name=send class="btn btn-secondary btn-block" value="Upravit zadání">
+        </div>
+        <div class="text-center  offset-md-1">
+            <a class="btn btn-primary" href="{link Competition:admin}">Zpět</a>
+        </div>
+    </form>
+</div>
+{/block}

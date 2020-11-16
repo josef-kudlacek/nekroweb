@@ -14,8 +14,8 @@
 
 
     <div class="container">
-        <h1 n:block="title">Upravit aktivitu v hodině</h1>
-        <h2>{$lesson->Number}. hodina ({$lesson->Name}) třídy {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
+        <h1 n:block="title">Upravit aktivitu na hodině</h1>
+        <h2>{$lesson->Number}. {$lesson->Name} třída {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
         {if $students}
         <form n:name="activityForm">
             <div class="row">
