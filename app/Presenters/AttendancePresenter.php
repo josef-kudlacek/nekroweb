@@ -171,9 +171,11 @@ class AttendancePresenter extends BasePresenter
     {
         $form = new Form;
 
-        $form->addSelect('LessonId');
+        $form->addSelect('LessonId')
+            ->setRequired();
 
-        $form->addText('AttendanceDate');
+        $form->addText('AttendanceDate')
+            ->setRequired();
 
         $form->addInteger('StudentClassId');
 

@@ -19,18 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upload multiple CompetitionFiles.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/task.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade include to 1.92.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/detailEdit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/detailEdit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/CompetitionFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/CompetitionFile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,21 +129,8 @@
       <workItem from="1605377390747" duration="6684000" />
       <workItem from="1605403069122" duration="18511000" />
       <workItem from="1605477533004" duration="1037000" />
-      <workItem from="1605546312868" duration="11886000" />
-    </task>
-    <task id="LOCAL-00063" summary="Fix remove student from semester and class - dont affect user.">
-      <created>1602445703503</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1602445703503</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Fix render default certificate date is null.">
-      <created>1602794935080</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1602794935080</updated>
+      <workItem from="1605546312868" duration="12297000" />
+      <workItem from="1605730238638" duration="415000" />
     </task>
     <task id="LOCAL-00065" summary="Show class on homework/show.latte.">
       <created>1602920570210</created>
@@ -484,7 +461,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605550647502</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Create competition with files and minor fixes.">
+      <created>1605569531375</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1605569531375</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Upgrade include to 1.92.">
+      <created>1605569682806</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1605569682806</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,8 +494,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean code - get years by params." />
-    <MESSAGE value="Clean code - student asessments by params." />
     <MESSAGE value="Clean code - get class by params." />
     <MESSAGE value="Add information about semester while changing class." />
     <MESSAGE value="Clean code - get points sum by params." />
@@ -528,7 +517,9 @@
     <MESSAGE value="Upgrade js." />
     <MESSAGE value="Add manage of semester competitions." />
     <MESSAGE value="Upload multiple CompetitionFiles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload multiple CompetitionFiles." />
+    <MESSAGE value="Create competition with files and minor fixes." />
+    <MESSAGE value="Upgrade include to 1.92." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade include to 1.92." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -572,10 +563,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603526574384" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605459546050">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605569689169">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605459546050" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569689169" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603659527709" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -610,20 +601,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1605566529125">
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1605569599232">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605566529125" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569599232" />
     <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
     <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602444425720" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605476814018">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605569574486">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605476814018" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569574486" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605379039404" />
   </component>
 </project>
