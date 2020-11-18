@@ -175,7 +175,8 @@ class AttendancePresenter extends BasePresenter
             ->setRequired();
 
         $form->addText('AttendanceDate')
-            ->setRequired();
+            ->setRequired()
+            ->setDefaultValue((new \DateTime)->format('Y-m-d'));
 
         $form->addInteger('StudentClassId');
 

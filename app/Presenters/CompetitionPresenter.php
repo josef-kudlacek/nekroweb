@@ -151,7 +151,8 @@ class CompetitionPresenter extends BasePresenter
             ->setRequired();
 
         $form->addText('CompetitionDate')
-            ->setRequired();
+            ->setRequired()
+            ->setDefaultValue((new \DateTime)->format('Y-m-d'));
 
         $form->addTextArea('CompetitionTask');
 
