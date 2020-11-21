@@ -44,7 +44,13 @@
             </table>
         </div>
         {else}
-            Nenalezen žádný záznam.
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
         <div class="offset-md-3">
             <a class="btn btn-warning" href="{link Attendance:edit, $arc->ClassId, $arc->LessonId}">Upravit docházku a aktivitu třídy</a>

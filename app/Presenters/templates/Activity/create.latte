@@ -1,18 +1,16 @@
 {block content}
-<script>
-    $(document).ready(function() {
-        $("input").change(function() {
-            var studentid = $(this).attr("student");
-            var target = $("[name='SUMA-"+studentid+"']");
-            var currentvalue = target.val();
+    <script>
+        $(document).ready(function() {
+            $("input").change(function() {
+                var studentid = $(this).attr("student");
+                var target = $("[name='SUMA-"+studentid+"']");
+                var currentvalue = target.val();
 
-            var suma = parseInt(currentvalue, 10) + parseInt($(this).val(), 10);
-            target.val(suma);
+                var suma = parseInt(currentvalue, 10) + parseInt($(this).val(), 10);
+                target.val(suma);
+            });
         });
-    });
-</script>
-
-
+    </script>
     <div class="container">
         <h1 n:block="title">Zapsat aktivitu v hodině</h1>
         <h2>{$lesson->Number}. {$lesson->Name} třída {$class->Name} za školní rok {$class->YearFrom}{if $class->YearTo}/{$class->YearTo}{/if}</h2>
@@ -94,7 +92,13 @@
                 </div>
             </form>
         {else}
-            Nenalezen žádný záznam.
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
     </div>
 {/block}

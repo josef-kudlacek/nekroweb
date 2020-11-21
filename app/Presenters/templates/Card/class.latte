@@ -4,41 +4,47 @@
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $cards}
             <div class="table-responsive">
-            <table id="table" class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th class="text-white bg-dark">Student</th>
-                        <th class="text-white bg-dark">Číslo karty</th>
-                        <th class="text-white bg-dark">Karta</th>
-                        <th class="text-white bg-dark">Důvod</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {foreach $cards as $card}
-                    <tr class="table-{$card->HouseId|houseType}">
-                        <td>
-                        <a href="https://bradavice.eu//ukaz.php?name={urlencode($card->StudentName|encodeToWin1250)}" target="_blank"
-                            class="text-dark">{$card->StudentName}</a>
-                        </td>
-                        <td>
-                            {$card->CardNumber}
-                        </td>
-                        <td class="text-center">
-                            <a href="https://bradavice.eu//karty/{$card->CardNumber}.jpg" target="_blank">
-                                <img src="https://bradavice.eu//karty/{$card->CardNumber}.jpg" alt="Karta č. {$card->CardNumber}" class="img-thumbnail">
-                            </a>
-                        </td>
-                        <td>
-                            <strong>{$card->Date|date:'%d.%m.%Y %H:%M:%S'}:</strong><br />
-                            {$card->Reason}
-                        </td>
-                    </tr>
-                {/foreach}
-                </tbody>
-            </table>
-        </div>
+                <table id="table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-white bg-dark">Student</th>
+                            <th class="text-white bg-dark">Číslo karty</th>
+                            <th class="text-white bg-dark">Karta</th>
+                            <th class="text-white bg-dark">Důvod</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $cards as $card}
+                        <tr class="table-{$card->HouseId|houseType}">
+                            <td>
+                            <a href="https://bradavice.eu//ukaz.php?name={urlencode($card->StudentName|encodeToWin1250)}" target="_blank"
+                                class="text-dark">{$card->StudentName}</a>
+                            </td>
+                            <td>
+                                {$card->CardNumber}
+                            </td>
+                            <td class="text-center">
+                                <a href="https://bradavice.eu//karty/{$card->CardNumber}.jpg" target="_blank">
+                                    <img src="https://bradavice.eu//karty/{$card->CardNumber}.jpg" alt="Karta č. {$card->CardNumber}" class="img-thumbnail">
+                                </a>
+                            </td>
+                            <td>
+                                <strong>{$card->Date|date:'%d.%m.%Y %H:%M:%S'}:</strong><br />
+                                {$card->Reason}
+                            </td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
         {else}
-            Nenalezen žádný záznam.
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
     </div>
 {/block}

@@ -3,7 +3,7 @@
         <h1 n:block="title">Třídní kniha</h1>
         <h2>Přehled tříd</h2>
         {if $classes}
-        <div class="table-responsive">
+            <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -31,58 +31,70 @@
                     {/foreach}
                     </tbody>
                 </table>
-        </div>
-                {else}
-                Nenalezen žádný záznam.
-                {/if}
+            </div>
+        {else}
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
+        {/if}
 
         <h2>Přehled odučených hodin</h2>
         {if $classAttendance}
-        <div class="table-responsive">
-            <table id="table" class="table table-bordered">
-                <thead>
-                <tr>
-                    <th class="text-white bg-dark">Třída</th>
-                    <th class="text-white bg-dark">Datum konání</th>
-                    <th class="text-white bg-dark">Aktivita</th>
-                    <th class="text-white bg-dark">Správa</th>
-                    <th class="text-white bg-dark">Arch</th>
-                </tr>
-                </thead>
-                <tbody>
-                {foreach $classAttendance as $attendance}
+            <div class="table-responsive">
+                <table id="table" class="table table-bordered">
+                    <thead>
                     <tr>
-                        <td class="text-white bg-dark">{$attendance->ClassName}</td>
-                        <td class="text-dark bg-light">{$attendance->AttendanceDate|date:"%d. %m. %Y"}</td>
-                        <td class="text-white bg-dark">{$attendance->LessonNumber}. hodina ({$attendance->LessonName})</td>
-                        <td>
-                            <a href="{link detail $attendance->ClassId, $attendance->LessonId}" class="btn btn-secondary btn-sm"
-                               role="button">Detail</a>
-                            <a href="{link edit $attendance->ClassId, $attendance->LessonId}" class="btn btn-dark btn-sm"
-                               role="button">Upravit</a>
-                            <a href="{link delete $attendance->ClassId, $attendance->LessonId}" class="btn btn-light btn-sm"
-                               role="button">Odebrat</a>
-                        </td>
-                        {if $attendance->FileName}
-                            <td>
-                                <a href="{link Arc:download $attendance->FileName}" class="btn btn-secondary btn-sm"
-                                   role="button">Stáhnout</a>
-                                <a href="{link Arc:delete $attendance->FileName}" class="btn btn-danger btn-sm"
-                                   role="button">Smazat</a>
-                            </td>
-                        {else}
-                            <td>
-                                <a href="{link Arc:new $attendance->ClassId, $attendance->LessonId}" class="btn btn-info btn-sm"
-                                   role="button">Přidat Arch</a>
-                            </td>
-                        {/if}
+                        <th class="text-white bg-dark">Třída</th>
+                        <th class="text-white bg-dark">Datum konání</th>
+                        <th class="text-white bg-dark">Aktivita</th>
+                        <th class="text-white bg-dark">Správa</th>
+                        <th class="text-white bg-dark">Arch</th>
                     </tr>
-                {/foreach}
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                    {foreach $classAttendance as $attendance}
+                        <tr>
+                            <td class="text-white bg-dark">{$attendance->ClassName}</td>
+                            <td class="text-dark bg-light">{$attendance->AttendanceDate|date:"%d. %m. %Y"}</td>
+                            <td class="text-white bg-dark">{$attendance->LessonNumber}. hodina ({$attendance->LessonName})</td>
+                            <td>
+                                <a href="{link detail $attendance->ClassId, $attendance->LessonId}" class="btn btn-secondary btn-sm"
+                                   role="button">Detail</a>
+                                <a href="{link edit $attendance->ClassId, $attendance->LessonId}" class="btn btn-dark btn-sm"
+                                   role="button">Upravit</a>
+                                <a href="{link delete $attendance->ClassId, $attendance->LessonId}" class="btn btn-light btn-sm"
+                                   role="button">Odebrat</a>
+                            </td>
+                            {if $attendance->FileName}
+                                <td>
+                                    <a href="{link Arc:download $attendance->FileName}" class="btn btn-secondary btn-sm"
+                                       role="button">Stáhnout</a>
+                                    <a href="{link Arc:delete $attendance->FileName}" class="btn btn-danger btn-sm"
+                                       role="button">Smazat</a>
+                                </td>
+                            {else}
+                                <td>
+                                    <a href="{link Arc:new $attendance->ClassId, $attendance->LessonId}" class="btn btn-info btn-sm"
+                                       role="button">Přidat Arch</a>
+                                </td>
+                            {/if}
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
         {else}
-            Nenalezen žádný záznam.
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
     </div>
 {/block}

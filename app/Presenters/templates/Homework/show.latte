@@ -7,44 +7,50 @@
         </div>
         <h2>Přehled úkolů</h2>
         {if $assessments}
-        <div class="table-responsive">
-        <table id="table" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th class="text-white bg-dark">Název</th>
-                    <th class="text-white bg-dark">Váha</th>
-                    <th class="text-white bg-dark">Další info</th>
-                    <th class="text-white bg-dark">Třída</th>
-                    <th class="text-white bg-dark">Ročník</th>
-                    <th class="text-white bg-dark">Správa</th>
-                </tr>
-            </thead>
-            <tbody>
-            {foreach $assessments as $assessmentItem}
-                <tr class="table-{$assessmentItem->AssessmentWeight|assessmentWeight}">
-                    <td>{$assessmentItem->AssessmentName}</td>
-                    <td>{$assessmentItem->AssessmentWeight}</td>
-                    <td>{$assessmentItem->HomeworkCode} – {$assessmentItem->HomeworkTypeName}</td>
-                    <td>{$assessmentItem->ClassName}</td>
-                    <td>{$assessmentItem->Number}. {$assessmentItem->CodeName}</td>
-                    <td>
-                        {if $assessmentItem->SemesterId}
-                            <a href="{link edit $assessmentItem->Id}" class="btn btn-secondary btn-sm"
-                               role="button">Upravit</a>
-                            <a href="{link delete $assessmentItem->Id}" class="btn btn-dark btn-sm"
-                               role="button">Odebrat ze semestru</a>
-                        {else}
-                            <a href="{link add $assessmentItem->AssessmentId, $assessmentItem->ClassId}" class="btn btn-primary btn-sm"
-                               role="button">Přidat do semestru</a>
-                        {/if}
-                    </td>
-                </tr>
-            {/foreach}
-            </tbody>
-        </table>
-        </div>
+            <div class="table-responsive">
+                <table id="table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-white bg-dark">Název</th>
+                            <th class="text-white bg-dark">Váha</th>
+                            <th class="text-white bg-dark">Další info</th>
+                            <th class="text-white bg-dark">Třída</th>
+                            <th class="text-white bg-dark">Ročník</th>
+                            <th class="text-white bg-dark">Správa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $assessments as $assessmentItem}
+                        <tr class="table-{$assessmentItem->AssessmentWeight|assessmentWeight}">
+                            <td>{$assessmentItem->AssessmentName}</td>
+                            <td>{$assessmentItem->AssessmentWeight}</td>
+                            <td>{$assessmentItem->HomeworkCode} – {$assessmentItem->HomeworkTypeName}</td>
+                            <td>{$assessmentItem->ClassName}</td>
+                            <td>{$assessmentItem->Number}. {$assessmentItem->CodeName}</td>
+                            <td>
+                                {if $assessmentItem->SemesterId}
+                                    <a href="{link edit $assessmentItem->Id}" class="btn btn-secondary btn-sm"
+                                       role="button">Upravit</a>
+                                    <a href="{link delete $assessmentItem->Id}" class="btn btn-dark btn-sm"
+                                       role="button">Odebrat ze semestru</a>
+                                {else}
+                                    <a href="{link add $assessmentItem->AssessmentId, $assessmentItem->ClassId}" class="btn btn-primary btn-sm"
+                                       role="button">Přidat do semestru</a>
+                                {/if}
+                            </td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
         {else}
-        Nenalezen žádný záznam.
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
     </div>
 {/block}

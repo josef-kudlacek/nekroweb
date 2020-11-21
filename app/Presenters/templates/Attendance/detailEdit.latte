@@ -1,73 +1,79 @@
 {block content}
-<div class="container">
-    <h1 n:block="title">Upravit docházku</h1>
-    <h2>Úprava docházky {$student->UserName} na {$student->LessonNumber}. hodině ({$student->LessonName})
-    třídy {$student->ClassName} za školní rok {$student->YearFrom}{if $student->YearTo}/{$student->YearTo}{/if}</h2>
-    {if $student}
-    <form n:name="attendanceForm">
-        <div class="row">
-            <label class="col">
-                Hodina:
-                <select name=LessonId class="form-control">
-                    <option value="{$student->LessonId}" selected>{$student->LessonNumber}. {$student->LessonName}</option>
-                </select>
-            </label>
-            <label class="col">
-                Datum konání:
-                <input n:name=AttendanceDate value="{$student->AttendanceDate|date:'%Y-%m-%d'}" type="date" class="form-control">
-            </label>
-        </div>
-        <div class="row">
-            <div class="col text-white text-center bg-dark">
-                Jméno studenta
-            </div>
-            <div class="col-sm-1 text-black text-center bg-warning border border-dark">
-                <abbr title="Přítomnost">1</abbr>
-            </div>
-            <div class="col-sm-1 text-white text-center bg-primary border border-dark">
-                <abbr title="Přítomnost poloviční">1/2</abbr>
-            </div>
-            <div class="col-sm-1 text-black text-center bg-info border border-dark">
-                <abbr title="Omluveno">0</abbr>
-            </div>
-            <div class="col-sm-1 text-black text-center bg-danger border border-dark">
-                <abbr title="Neomluveno">-1</abbr>
-            </div>
-            <div class="col-sm-1 text-black text-center bg-secondary border border-dark">
-                <abbr title="Náhradní hodina">NH</abbr>
-            </div>
-            <div class="col-sm-1 text-black text-center bg-success border border-dark">
-                <abbr title="Omluveno předem">0+</abbr>
-            </div>
-        </div>
-        <input name="StudentUserId[{$student->UserId}]" class="form-control" type="number" value="{$student->UserId}" hidden>
-        <input name="StudentClassId[{$student->UserId}]" class="form-control" type="number" value="{$student->ClassId}" hidden>
-        <div class="row">
-            <div class="col table-{$student->HouseId|houseType}">
-                      <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
-                            class="text-{$student->HouseId|houseType}">{$student->UserName}</a>
-            </div>
-            {foreach $attendancetypes as $attendanceTypeItem}
-                <label class="col-sm-1 text-center border border-dark form-check-label">
-                    <div class="col">
-                        <input class="form-check-input" type="radio" name="AttendanceTypeId[{$student->UserId}]" value="{$attendanceTypeItem->Id}"
-                        {if $student->AttendanceTypeId == $attendanceTypeItem->Id}checked{/if}>
-                        {$attendanceTypeItem->Points}
+    <div class="container">
+        <h1 n:block="title">Upravit docházku</h1>
+        <h2>Úprava docházky {$student->UserName} na {$student->LessonNumber}. hodině ({$student->LessonName})
+            třídy {$student->ClassName} za školní rok {$student->YearFrom}{if $student->YearTo}/{$student->YearTo}{/if}</h2>
+        {if $student}
+            <form n:name="attendanceForm">
+                <div class="row">
+                    <label class="col">
+                        Hodina:
+                        <select name=LessonId class="form-control">
+                            <option value="{$student->LessonId}" selected>{$student->LessonNumber}. {$student->LessonName}</option>
+                        </select>
+                    </label>
+                    <label class="col">
+                        Datum konání:
+                        <input n:name=AttendanceDate value="{$student->AttendanceDate|date:'%Y-%m-%d'}" type="date" class="form-control">
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col text-white text-center bg-dark">
+                        Jméno studenta
                     </div>
-                </label>
-            {/foreach}
-        </div>
-        <br />
-        <div class="text-center">
-            <input n:name=send class="btn btn-secondary btn-block" value="Zapsat docházku">
-        </div>
-        <br />
-        <div class="text-center">
-            <a class="btn btn-primary" href="{link Attendance:admin}">Zpět do třídní knihy</a>
-        </div>
-    </form>
-    {else}
-    Nenalezen žádný záznam.
-    {/if}
-</div>
+                    <div class="col-sm-1 text-black text-center bg-warning border border-dark">
+                        <abbr title="Přítomnost">1</abbr>
+                    </div>
+                    <div class="col-sm-1 text-white text-center bg-primary border border-dark">
+                        <abbr title="Přítomnost poloviční">1/2</abbr>
+                    </div>
+                    <div class="col-sm-1 text-black text-center bg-info border border-dark">
+                        <abbr title="Omluveno">0</abbr>
+                    </div>
+                    <div class="col-sm-1 text-black text-center bg-danger border border-dark">
+                        <abbr title="Neomluveno">-1</abbr>
+                    </div>
+                    <div class="col-sm-1 text-black text-center bg-secondary border border-dark">
+                        <abbr title="Náhradní hodina">NH</abbr>
+                    </div>
+                    <div class="col-sm-1 text-black text-center bg-success border border-dark">
+                        <abbr title="Omluveno předem">0+</abbr>
+                    </div>
+                </div>
+                <input name="StudentUserId[{$student->UserId}]" class="form-control" type="number" value="{$student->UserId}" hidden>
+                <input name="StudentClassId[{$student->UserId}]" class="form-control" type="number" value="{$student->ClassId}" hidden>
+                <div class="row">
+                    <div class="col table-{$student->HouseId|houseType}">
+                              <a href="https://bradavice.eu//ukaz.php?name={urlencode($student->UserName|encodeToWin1250)}" target="_blank"
+                                    class="text-{$student->HouseId|houseType}">{$student->UserName}</a>
+                    </div>
+                    {foreach $attendancetypes as $attendanceTypeItem}
+                        <label class="col-sm-1 text-center border border-dark form-check-label">
+                            <div class="col">
+                                <input class="form-check-input" type="radio" name="AttendanceTypeId[{$student->UserId}]" value="{$attendanceTypeItem->Id}"
+                                {if $student->AttendanceTypeId == $attendanceTypeItem->Id}checked{/if}>
+                                {$attendanceTypeItem->Points}
+                            </div>
+                        </label>
+                    {/foreach}
+                </div>
+                <br />
+                <div class="text-center">
+                    <input n:name=send class="btn btn-secondary btn-block" value="Zapsat docházku">
+                </div>
+                <br />
+                <div class="text-center">
+                    <a class="btn btn-primary" href="{link Attendance:admin}">Zpět do třídní knihy</a>
+                </div>
+            </form>
+        {else}
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
+        {/if}
+    </div>
 {/block}

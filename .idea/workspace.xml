@@ -19,9 +19,40 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Filter evaluations.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Filter competition and semester assessment.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/detailEdit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/detailEdit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/attendance.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/attendance.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/points.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/points.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Semester/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Semester/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/points.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/points.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/error.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/error.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/errorAdmin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/errorAdmin.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,14 +163,7 @@
       <workItem from="1605477533004" duration="1037000" />
       <workItem from="1605546312868" duration="12297000" />
       <workItem from="1605730238638" duration="994000" />
-      <workItem from="1605954793528" duration="11174000" />
-    </task>
-    <task id="LOCAL-00071" summary="Change manage of assessments - semesterassessment.id and move task to semesterassessment.">
-      <created>1603033006168</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1603033006169</updated>
+      <workItem from="1605954793528" duration="11825000" />
     </task>
     <task id="LOCAL-00072" summary="Change show marks of assessments and add tooltip about assessment name.">
       <created>1603218401006</created>
@@ -477,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605969849791</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Filter competition and semester assessment.">
+      <created>1605970415092</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1605970415092</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +527,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Manage of student assessment." />
     <MESSAGE value="Fix wrong private function for find file." />
     <MESSAGE value="No mark of student assessment." />
     <MESSAGE value="Change name of file for download." />
@@ -521,7 +551,8 @@
     <MESSAGE value="Fix elements margin-bottom 30px for footer." />
     <MESSAGE value="Filter evaluations" />
     <MESSAGE value="Filter evaluations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter evaluations." />
+    <MESSAGE value="Filter competition and semester assessment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter competition and semester assessment." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -603,20 +634,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1605968208186">
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1605970821435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605959680761" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605968208186" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605970821435" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601750242426" />
     <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602444425720" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605569574486">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605970660006">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569574486" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605379039404" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605970660006" />
   </component>
 </project>
