@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change required fields for attendance form.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Dynamically sum of activity points.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,14 +132,7 @@
       <workItem from="1605477533004" duration="1037000" />
       <workItem from="1605546312868" duration="12297000" />
       <workItem from="1605730238638" duration="994000" />
-      <workItem from="1605954793528" duration="13782000" />
-    </task>
-    <task id="LOCAL-00074" summary="Delete bdumps.">
-      <created>1603219623243</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1603219623243</updated>
+      <workItem from="1605954793528" duration="14910000" />
     </task>
     <task id="LOCAL-00075" summary="Fix order of creating homework and assessment.">
       <created>1603232500646</created>
@@ -477,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605971870685</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Dynamically sum of activity points.">
+      <created>1605972998774</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1605972998774</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +496,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change name of file for download." />
     <MESSAGE value="Fix update of student assessment." />
     <MESSAGE value="Fix delete of student assessment mark." />
     <MESSAGE value="Show shared student assessments." />
@@ -521,7 +520,8 @@
     <MESSAGE value="Filter competition and semester assessment." />
     <MESSAGE value="No record found styling." />
     <MESSAGE value="Change required fields for attendance form." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change required fields for attendance form." />
+    <MESSAGE value="Dynamically sum of activity points." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dynamically sum of activity points." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
