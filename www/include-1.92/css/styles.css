@@ -156,7 +156,7 @@ p {
   border-color: #506F7A;
   border-radius: 9px;
   border-style: solid;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   padding: .7em;
 }
 
@@ -215,6 +215,7 @@ div.curriculum-item {
   border-style: solid;
   padding: .7em;
   border-radius: 9px;
+  margin-bottom: 30px;
 }
 
 .list-group-item {
