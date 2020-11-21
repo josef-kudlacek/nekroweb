@@ -1,12 +1,22 @@
 {block content}
+    <script>
+        $(function() {
+            $("#filterCompetition").on('change paste keyup', function() {
+                $("#filterCompetition").filterDivByParams($('.competition-row'), $('.filter-competition'));
+            });
+        });
+    </script>
     <div class="container">
         <h1 n:block="title">Zadání celoroční soutěže</h1>
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+        <div class="row">
+            <input class="col-7 offset-3 form-control" id="filterCompetition" type="text" placeholder="Filtrovat zadání CS">
+        </div>
         {if $competitions}
             {foreach $competitions as $competitionItem}
                 <p>
-                    <div class="row">
-                        <div class="col-7 offset-3 col-about">
+                    <div class="row competition-row">
+                        <div class="col-7 offset-3 col-about filter-competition">
                             <strong>Celoroční soutěž {$competitionItem->CompetitionNumber|competitionNoStyle} – {$competitionItem->CompetitionName|upper}</strong><br />
                             <strong>Datum zadání:</strong> {$competitionItem->CompetitionDate|date:"%d. %m. %Y"}
                             <hr class="footnote">

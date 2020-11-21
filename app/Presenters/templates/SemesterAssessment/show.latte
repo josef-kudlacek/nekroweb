@@ -1,13 +1,23 @@
 {block content}
+    <script>
+        $(function() {
+            $("#filterAssessment").on('change paste keyup', function() {
+                $("#filterAssessment").filterDivByParams($('.assessment-row'), $('.filter-assessment'));
+            });
+        });
+    </script>
     <div class="container">
     <h1 n:block="title">Zadané domácí úkoly</h1>
     <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
+    <div class="row">
+        <input class="col-7 offset-3 form-control" id="filterAssessment" type="text" placeholder="Filtrovat úkoly">
+    </div>
         {if $assessments}
             {foreach $assessments as $assessment}
                 {if $assessment->Task}
                     <p>
-                        <div class="row">
-                            <div class="col-7 offset-3 col-about">
+                        <div class="row assessment-row">
+                            <div class="col-7 offset-3 col-about filter-assessment">
                                 <strong>{$assessment->Code} – {$assessment->Name}</strong>
                                 <hr class="footnote">
                                 <div class="row">
@@ -25,6 +35,14 @@
                     </p>
                 {/if}
             {/foreach}
+        {else}
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
         {/if}
     </div>
 {/block}
