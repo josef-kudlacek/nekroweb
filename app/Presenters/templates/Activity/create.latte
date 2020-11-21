@@ -4,9 +4,14 @@
             $("input").change(function() {
                 var studentid = $(this).attr("student");
                 var target = $("[name='SUMA-"+studentid+"']");
-                var currentvalue = target.val();
 
-                var suma = parseInt(currentvalue, 10) + parseInt($(this).val(), 10);
+                var suma = 0;
+                $(document).find("input").each(function () {
+                    if ($(this).attr("student") === studentid && $(this).val()) {
+                         suma += parseInt($(this).val());
+                    }
+                });
+
                 target.val(suma);
             });
         });
