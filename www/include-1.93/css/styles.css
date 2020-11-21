@@ -217,6 +217,10 @@ div.curriculum-item {
   margin-bottom: 30px;
 }
 
+.list-group {
+  margin-bottom: 30px;
+}
+
 .list-group-item {
   position: relative;
   display: block;

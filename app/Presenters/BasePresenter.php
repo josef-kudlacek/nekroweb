@@ -90,7 +90,8 @@ class BasePresenter extends Nette\Application\UI\Presenter
 
     private function generateQuote($quotes)
     {
-        $number = rand(1, count($quotes));
+        $number = rand(0, count($quotes)-1);
+        bdump($quotes);
         return $quotes[$number];
     }
 }

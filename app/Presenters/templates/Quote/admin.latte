@@ -1,0 +1,45 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Správa hlášek</h1>
+        <h2>Přehled hlášek</h2>
+        {if $quotes}
+            <div class="table-responsive">
+                <table id="table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-white bg-dark">Třída</th>
+                            <th class="text-white bg-dark">Student</th>
+                            <th class="text-white bg-dark">Hláška</th>
+                            <th class="text-white bg-dark">Citace</th>
+                            <th class="text-white bg-dark">Správa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $quotes as $quoteItem}
+                        <tr class="table-info">
+                            <td>{$quoteItem->ClassName}</td>
+                            <td>{$quoteItem->UserName}</td>
+                            <td>{$quoteItem->Text}</td>
+                            <td>{$quoteItem->Source}</td>
+                            <td>
+                                <a href="{link edit $quoteItem->Id}" class="btn btn-secondary btn-sm"
+                                   role="button">Upravit</a>
+                                <a href="{link delete $quoteItem->Id}" class="btn btn-danger btn-sm"
+                                   role="button">Smazat</a>
+                            </td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
+        {else}
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
+        {/if}
+    </div>
+{/block}

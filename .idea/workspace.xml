@@ -19,12 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change text of flash message about changing class.">
-      <change afterPath="$PROJECT_DIR$/app/model/Quote.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Prepare generate quotes">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/QuotePresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/admin.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/create.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/edit.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/show.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Quote.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/include-1.93/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.93/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,14 +143,7 @@
       <workItem from="1605730238638" duration="994000" />
       <workItem from="1605954793528" duration="20082000" />
       <workItem from="1605980336521" duration="1195000" />
-      <workItem from="1605990541644" duration="2229000" />
-    </task>
-    <task id="LOCAL-00081" summary="Add legend of marks for certificate overview.">
-      <created>1603889065459</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1603889065459</updated>
+      <workItem from="1605990541644" duration="6022000" />
     </task>
     <task id="LOCAL-00082" summary="Dont count attendancetypeid 5 for attendance overview.">
       <created>1603889474771</created>
@@ -483,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605980930955</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Prepare generate quotes">
+      <created>1605993104960</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1605993104960</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +507,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix header of student assessment table." />
     <MESSAGE value="Set actual semester when changing identity back to professor." />
     <MESSAGE value="Add student state in class - active, non-active." />
     <MESSAGE value="Minor fixes and add show criteria." />
@@ -527,7 +531,8 @@
     <MESSAGE value="Natural sort of datatables and save state for week." />
     <MESSAGE value="Upgrade to include-1.93" />
     <MESSAGE value="Change text of flash message about changing class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change text of flash message about changing class." />
+    <MESSAGE value="Prepare generate quotes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare generate quotes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -557,11 +562,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="-1196" y="243" key="NewPhpClassDialog" timestamp="1605992137111">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605993132171">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605992137111" />
-    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605550097445" />
+    <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605993132170" />
     <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
