@@ -10,7 +10,7 @@
     <h1 n:block="title">Zadané domácí úkoly</h1>
     <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
     <div class="row">
-        <input class="col-7 offset-3 form-control" id="filterAssessment" type="text" placeholder="Filtrovat úkoly">
+        <input class="col-7 offset-3 form-control" id="filterAssessment" type="search" placeholder="Filtrovat úkoly">
     </div>
         {if $assessments}
             {foreach $assessments as $assessment}

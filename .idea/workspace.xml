@@ -19,49 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Manage of quotes.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/class.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/attendance.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/attendance.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/points.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/points.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Semester/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Semester/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/points.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/points.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/error.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/error.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/errorAdmin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/errorAdmin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/Footer-Basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/Footer-Basic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/Login-Form-Dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/Login-Form-Dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/Navigation-with-Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/Navigation-with-Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/Team-Boxed.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/Team-Boxed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/datatables.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/js/datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/js/datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/js/datatables.natural.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/js/datatables.natural.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.93/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/js/jquery.min.js" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Create unique id of tables and upgrade include-1.94">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,14 +133,7 @@
       <workItem from="1605730238638" duration="994000" />
       <workItem from="1605954793528" duration="20082000" />
       <workItem from="1605980336521" duration="1195000" />
-      <workItem from="1605990541644" duration="6583000" />
-    </task>
-    <task id="LOCAL-00083" summary="Add overview for student.">
-      <created>1603896473086</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1603896473086</updated>
+      <workItem from="1605990541644" duration="7245000" />
     </task>
     <task id="LOCAL-00084" summary="Clean code - arcs by params.">
       <created>1603896973331</created>
@@ -519,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605996911685</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Create unique id of tables and upgrade include-1.94">
+      <created>1605997435550</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1605997435550</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +497,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add student state in class - active, non-active." />
     <MESSAGE value="Minor fixes and add show criteria." />
     <MESSAGE value="Upgrade js." />
     <MESSAGE value="Add manage of semester competitions." />
@@ -563,7 +521,8 @@
     <MESSAGE value="Change text of flash message about changing class." />
     <MESSAGE value="Prepare generate quotes" />
     <MESSAGE value="Manage of quotes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Manage of quotes." />
+    <MESSAGE value="Create unique id of tables and upgrade include-1.94" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create unique id of tables and upgrade include-1.94" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -607,11 +566,11 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605978530581">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605997441002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569689169" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605978530581" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605997441002" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
