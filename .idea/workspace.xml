@@ -19,12 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add abbr for evaluation and add back buttons for edit evaluation.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change evaluation styling.">
+      <change afterPath="$PROJECT_DIR$/www/include-1.92/js/datatables.natural.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.92/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.92/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,14 +135,7 @@
       <workItem from="1605477533004" duration="1037000" />
       <workItem from="1605546312868" duration="12297000" />
       <workItem from="1605730238638" duration="994000" />
-      <workItem from="1605954793528" duration="16694000" />
-    </task>
-    <task id="LOCAL-00077" summary="Fix joining of semesterassessment table.">
-      <created>1603659523239</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1603659523239</updated>
+      <workItem from="1605954793528" duration="18295000" />
     </task>
     <task id="LOCAL-00078" summary="Fix legends and fill class when editing assessment.">
       <created>1603887485591</created>
@@ -480,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605974394463</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Change evaluation styling.">
+      <created>1605975870186</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1605975870186</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +499,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Show shared student assessments." />
     <MESSAGE value="Add possibility for change user and handle assessments by param." />
     <MESSAGE value="Redirect user to overview while changing class." />
     <MESSAGE value="Add order for SemesterAssessment.php by code." />
@@ -524,7 +523,8 @@
     <MESSAGE value="Dynamically sum of activity points." />
     <MESSAGE value="Change student navbar." />
     <MESSAGE value="Add abbr for evaluation and add back buttons for edit evaluation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add abbr for evaluation and add back buttons for edit evaluation." />
+    <MESSAGE value="Change evaluation styling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change evaluation styling." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

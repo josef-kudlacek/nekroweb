@@ -99,6 +99,10 @@ $(document).ready(function(){
     });
 
     $('#table').DataTable( {
+        stateSave: true,
+        info: false,
+        stateDuration: 60 * 60 * 24 * 7,
+        hideEmptyCols: true,
         "language": {
             "lengthMenu": "Zobrazit _MENU_ záznamů na stránku",
             "zeroRecords": "Nenalezen žádný záznam. Omlouváme se.",
@@ -111,9 +115,11 @@ $(document).ready(function(){
                 "next": "Následující",
             }
         },
+        "columnDefs": [
+            { "type": "natural", targets: '_all' }
+        ],
         "lengthMenu": [[5, 10, 15, 20, -1], [5, 10, 15, 20, "Vše"]],
         "pageLength": -1,
-        hideEmptyCols: true
     } );
 
     $("#criteria").hide();
