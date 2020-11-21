@@ -206,7 +206,7 @@ class UserPresenter extends BasePresenter
             $this->user->getIdentity()->semesterFrom = $class->YearFrom;
             $this->user->getIdentity()->semesterTo = $class->YearTo;
 
-            $semesterTo = (!is_null($class->YearFrom) ? '/' .$class->YearTo : '');
+            $semesterTo = (!is_null($class->YearTo) ? '/' .$class->YearTo : '');
             $this->flashMessage('Třída úspěšně změněna. Vítej ve třídě '. $class->Name .
                 ', školní rok: '. $class->YearFrom . $semesterTo . '!' ,"success");
             $this->redirect('User:overview');

@@ -19,44 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Natural sort of datatables and save state for week.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.93">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/css/Contact-Form-Clean.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/css/Footer-Dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/ionicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/ionicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/ionicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.92/fonts/ionicons.woff" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,14 +131,8 @@
       <workItem from="1605477533004" duration="1037000" />
       <workItem from="1605546312868" duration="12297000" />
       <workItem from="1605730238638" duration="994000" />
-      <workItem from="1605954793528" duration="19222000" />
-    </task>
-    <task id="LOCAL-00079" summary="Show students without mark in overview.">
-      <created>1603887551243</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1603887551243</updated>
+      <workItem from="1605954793528" duration="20082000" />
+      <workItem from="1605980336521" duration="473000" />
     </task>
     <task id="LOCAL-00080" summary="Fix calculate average mark for overview.">
       <created>1603888967411</created>
@@ -512,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605977405646</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Upgrade to include-1.93">
+      <created>1605978514740</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1605978514740</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +496,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Redirect user to overview while changing class." />
     <MESSAGE value="Add order for SemesterAssessment.php by code." />
     <MESSAGE value="Fix header of student assessment table." />
     <MESSAGE value="Set actual semester when changing identity back to professor." />
@@ -556,7 +520,8 @@
     <MESSAGE value="Add abbr for evaluation and add back buttons for edit evaluation." />
     <MESSAGE value="Change evaluation styling." />
     <MESSAGE value="Natural sort of datatables and save state for week." />
-    <option name="LAST_COMMIT_MESSAGE" value="Natural sort of datatables and save state for week." />
+    <MESSAGE value="Upgrade to include-1.93" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.93" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -600,11 +565,11 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605569689169">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605978530581">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569689169" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603659527709" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605978530581" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -638,11 +603,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1605977751555">
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1605978489143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605959680761" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605977751555" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605978489143" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
