@@ -19,8 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.93">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change text of flash message about changing class.">
+      <change afterPath="$PROJECT_DIR$/app/model/Quote.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.93/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.93/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,14 +137,8 @@
       <workItem from="1605546312868" duration="12297000" />
       <workItem from="1605730238638" duration="994000" />
       <workItem from="1605954793528" duration="20082000" />
-      <workItem from="1605980336521" duration="473000" />
-    </task>
-    <task id="LOCAL-00080" summary="Fix calculate average mark for overview.">
-      <created>1603888967411</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1603888967411</updated>
+      <workItem from="1605980336521" duration="1195000" />
+      <workItem from="1605990541644" duration="2229000" />
     </task>
     <task id="LOCAL-00081" summary="Add legend of marks for certificate overview.">
       <created>1603889065459</created>
@@ -477,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605978514740</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Change text of flash message about changing class.">
+      <created>1605980930954</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1605980930955</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +502,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add order for SemesterAssessment.php by code." />
     <MESSAGE value="Fix header of student assessment table." />
     <MESSAGE value="Set actual semester when changing identity back to professor." />
     <MESSAGE value="Add student state in class - active, non-active." />
@@ -521,7 +526,8 @@
     <MESSAGE value="Change evaluation styling." />
     <MESSAGE value="Natural sort of datatables and save state for week." />
     <MESSAGE value="Upgrade to include-1.93" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.93" />
+    <MESSAGE value="Change text of flash message about changing class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change text of flash message about changing class." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -551,10 +557,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601142931626" />
-    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605550097445">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1196" y="243" key="NewPhpClassDialog" timestamp="1605992137111">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604849044522" />
+    <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605992137111" />
     <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605550097445" />
     <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -32,6 +32,12 @@
 		<div class="p-3 mb-2 bg-{$flash->type} text-white">{$flash->message}</div>
 	{/foreach}
 
+	{if $quote}
+	<blockquote class="blockquote text-center">
+		<p class="mb-0">{$quote->Text}</p>
+		<footer class="blockquote-footer">{$quote->Source}</footer>
+	</blockquote>
+	{/if}
 	{include content}
 
     {include "Homepage/footer.latte"}

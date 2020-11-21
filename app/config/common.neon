@@ -38,6 +38,7 @@ services:
 	- App\Model\Homework
 	- App\Model\HomeworkType
 	- App\Model\House
+	- App\Model\Quote
 	- App\Model\Rule
 	- App\Model\Curriculum
 	- App\Model\Semester

@@ -3,6 +3,7 @@
 
 namespace App\Presenters;
 
+use App\Model;
 use App\Utils\Filter;
 use App\Utils\Functions;
 use Nette;
@@ -11,6 +12,11 @@ use Nette\Application\UI\Form;
 
 class BasePresenter extends Nette\Application\UI\Presenter
 {
+    /** @var Model\Quote
+     * @inject
+     */
+    public $quote;
+
 
     protected function startup()
     {
@@ -21,6 +27,10 @@ class BasePresenter extends Nette\Application\UI\Presenter
     {
         $this->loadTemplateFilters();
         $this->loadTemplateFunctions();
+
+        //$quotes = $this->quote->getQuotes()->fetchAll();
+        //$this->template->quote = $this->generateQuote($quotes);
+        $this->template->quote = null;
     }
 
     private function loadTemplateFilters()
@@ -78,11 +88,9 @@ class BasePresenter extends Nette\Application\UI\Presenter
         }
     }
 
-    private function checkAccess()
+    private function generateQuote($quotes)
     {
-        if (!$this->getUser()->isInRole('Profesor')) {
-            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
-            $this->redirect('Homepage:default');
-        }
+        $number = rand(1, count($quotes));
+        return $quotes[$number];
     }
 }
