@@ -56,7 +56,7 @@ $(document).ready(function(){
             });
             $(select).data('options', options);
 
-            $(textbox).bind('change keyup', function() {
+            $(textbox).bind('change paste keyup search', function() {
                 var options = $(select).empty().data('options');
                 var search = $.trim($(this).val());
                 var regex = new RegExp(search, "gi");

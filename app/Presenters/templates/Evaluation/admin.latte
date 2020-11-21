@@ -1,7 +1,7 @@
 {block content}
     <script>
         $(function() {
-            $("#filterEvaluation").on('change paste keyup', function() {
+            $("#filterEvaluation").on('change paste keyup search', function() {
                 $("#filterEvaluation").filterDivByParams($('.rating-row'), $('.filter-evaluate'));
             });
         });

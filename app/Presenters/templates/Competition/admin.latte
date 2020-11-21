@@ -1,7 +1,7 @@
 {block content}
     <script>
         $(function() {
-            $("#filterCompetition").on('change paste keyup', function() {
+            $("#filterCompetition").on('change paste keyup search', function() {
                 $("#filterCompetition").filterDivByParams($('.competition-row'), $('.filter-competition'));
             });
         });

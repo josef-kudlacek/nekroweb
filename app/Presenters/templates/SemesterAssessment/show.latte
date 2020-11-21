@@ -1,7 +1,7 @@
 {block content}
     <script>
         $(function() {
-            $("#filterAssessment").on('change paste keyup', function() {
+            $("#filterAssessment").on('change paste keyup search', function() {
                 $("#filterAssessment").filterDivByParams($('.assessment-row'), $('.filter-assessment'));
             });
         });

@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Create unique id of tables and upgrade include-1.94">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change input filter type to search.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.94/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.94/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +136,7 @@
       <workItem from="1605730238638" duration="994000" />
       <workItem from="1605954793528" duration="20082000" />
       <workItem from="1605980336521" duration="1195000" />
-      <workItem from="1605990541644" duration="7245000" />
-    </task>
-    <task id="LOCAL-00084" summary="Clean code - arcs by params.">
-      <created>1603896973331</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1603896973331</updated>
+      <workItem from="1605990541644" duration="7878000" />
     </task>
     <task id="LOCAL-00085" summary="Clean code - attendance by params.">
       <created>1603897513375</created>
@@ -478,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605997435550</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Change input filter type to search.">
+      <created>1605998546385</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1605998546386</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +500,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fixes and add show criteria." />
     <MESSAGE value="Upgrade js." />
     <MESSAGE value="Add manage of semester competitions." />
     <MESSAGE value="Upload multiple CompetitionFiles." />
@@ -522,7 +524,8 @@
     <MESSAGE value="Prepare generate quotes" />
     <MESSAGE value="Manage of quotes." />
     <MESSAGE value="Create unique id of tables and upgrade include-1.94" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create unique id of tables and upgrade include-1.94" />
+    <MESSAGE value="Change input filter type to search." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change input filter type to search." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -566,11 +569,11 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605997441002">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605998550675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569689169" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605997441002" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605998550675" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -604,11 +607,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="459" y="51" width="1083" height="834" key="find.popup" timestamp="1605997393602">
+    <state x="459" y="51" width="1083" height="834" key="find.popup" timestamp="1605998995282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605959680761" />
-    <state x="459" y="51" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605997393602" />
+    <state x="459" y="51" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605998995282" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
