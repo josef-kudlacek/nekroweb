@@ -144,6 +144,11 @@
                         </div>
                         <div class="review-block-evaluation filter-evaluate">
                             {$evaluation->Description}
+                            <br />
+                            <a href="{link Evaluation:edit $evaluation->Id}" class="btn btn-warning btn-sm"
+                               role="button">Upravit hodnocení</a>
+                            <a href="{link Evaluation:delete $evaluation->Id}" class="btn btn-danger btn-sm"
+                               role="button">Smazat hodnocení</a>
                         </div>
                     </div>
                 </div>
