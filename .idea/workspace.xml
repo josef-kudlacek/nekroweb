@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Default date for attendance as today.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix elements margin-bottom 30px for footer.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/CurriculumPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/CurriculumPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Curriculum/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Curriculum/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.92/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.92/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,21 +134,7 @@
       <workItem from="1605477533004" duration="1037000" />
       <workItem from="1605546312868" duration="12297000" />
       <workItem from="1605730238638" duration="994000" />
-      <workItem from="1605954793528" duration="1167000" />
-    </task>
-    <task id="LOCAL-00067" summary="Fix of show assessments.">
-      <created>1602922717337</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1602922717337</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Fix text of legends.">
-      <created>1602922808200</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1602922808200</updated>
+      <workItem from="1605954793528" duration="9232000" />
     </task>
     <task id="LOCAL-00069" summary="Change length of reason for card to 255.">
       <created>1602950306732</created>
@@ -478,7 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605731221608</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Get actual semester for curriculum.">
+      <created>1605960164216</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1605960164217</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Fix elements margin-bottom 30px for footer.">
+      <created>1605960463218</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1605960463218</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,8 +498,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean code - get points sum by params." />
-    <MESSAGE value="Change order of queries in User.php." />
     <MESSAGE value="Change max length of assessment comment to 500." />
     <MESSAGE value="Remove max length of homework task." />
     <MESSAGE value="Manage of student assessment." />
@@ -522,7 +521,9 @@
     <MESSAGE value="Upgrade include to 1.92." />
     <MESSAGE value="Minor fix - defect caused by no date for download arc." />
     <MESSAGE value="Default date for attendance as today." />
-    <option name="LAST_COMMIT_MESSAGE" value="Default date for attendance as today." />
+    <MESSAGE value="Get actual semester for curriculum." />
+    <MESSAGE value="Fix elements margin-bottom 30px for footer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix elements margin-bottom 30px for footer." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -604,11 +605,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1605959680761">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup" timestamp="1605968208186">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605959680761" />
-    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603233048105" />
+    <state x="679" y="129" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605968208186" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

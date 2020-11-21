@@ -1,4 +1,11 @@
 {block content}
+    <script>
+        $(function() {
+            $("#filterEvaluation").on('change paste keyup', function() {
+                $("#filterEvaluation").filterDivByParams($('.rating-row'), $('.filter-evaluate'));
+            });
+        });
+    </script>
     <div class="container">
         <h1 n:block="title">Hodnocení všech hodin</h1>
             {if $user->isInRole('Student')}
@@ -99,16 +106,18 @@
             {else}
                 <i>Nenalezen žádný záznam.</i>
             {/if}
+            <div class="row">
+                 <h3>Jednotlivá hodnocení</h3>
+                 <input class="form-control" id="filterEvaluation" type="text" placeholder="Filtrovat jednotlivá hodnocení">
+            </div>
+            <br />
             {foreach $evaluations as $evaluation}
                 <div class="row rating-row">
                     <div class="col-3">
-                        <div class="review-block-name">
-                            Školní rok: {$evaluation->YearFrom}{if $evaluation->YearTo}/{$evaluation->YearTo}{/if}<br />
+                        <div class="review-block-name filter-evaluate">
+                            Školní rok: {$evaluation->YearFrom}{if $evaluation->YearTo}/{$evaluation->YearTo|substr: 2, 2}{/if}<br />
                             <a href="https://bradavice.eu//ukaz.php?name={urlencode($evaluation->UserName|encodeToWin1250)}" target="_blank"
                             class="text-{$evaluation->HouseId|houseType}">{$evaluation->UserName}, {$evaluation->ClassName}</a>
-                        </div>
-                        <div class="review-block-date">
-                            {$evaluation->Date|date:'%d. %m. %Y'}
                         </div>
                         <div class="review-block-stars">
                             {for $counter = 1; $counter < 6; $counter++}
@@ -125,10 +134,10 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="review-block-name">
+                        <div class="review-block-name filter-evaluate">
                             {$evaluation->LessonNumber}. hodina ({$evaluation->LessonName})
                         </div>
-                        <div class="review-block-evaluation">
+                        <div class="review-block-evaluation filter-evaluate">
                             {$evaluation->Description}
                         </div>
                     </div>

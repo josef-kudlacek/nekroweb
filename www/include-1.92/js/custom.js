@@ -34,6 +34,8 @@
     });
 })(window, document, jQuery);
 
+
+
 $(document).ready(function(){
     $("#tableFilter").on("keyup", function() {
         var value = $(this).val().toLowerCase();
@@ -70,6 +72,20 @@ $(document).ready(function(){
             });
         });
     };
+
+    jQuery.fn.filterDivByParams = function(divToHide, divForFilter) {
+        var filter = $(this).val().toLowerCase();
+
+        divToHide.each(function() {
+            var _this = $(this);
+            var title = _this.find(divForFilter).text().toLowerCase();
+            if (title.indexOf(filter) < 0) {
+                _this.hide();
+            } else {
+                _this.show();
+            }
+        });
+    }
 
     $(function() {
         $("#filter select").filterByText($("#selectFilter"));
