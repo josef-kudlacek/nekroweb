@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add quote example and enable generating of quotes.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/certification.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add student certification.">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/certification.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/certification.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,14 +135,7 @@
       <workItem from="1605954793528" duration="20082000" />
       <workItem from="1605980336521" duration="1195000" />
       <workItem from="1605990541644" duration="8057000" />
-      <workItem from="1606075145976" duration="3899000" />
-    </task>
-    <task id="LOCAL-00088" summary="Clean code - student asessments by params.">
-      <created>1603898652957</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1603898652957</updated>
+      <workItem from="1606075145976" duration="4136000" />
     </task>
     <task id="LOCAL-00089" summary="Clean code - get class by params.">
       <created>1603899126238</created>
@@ -484,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606076632358</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Add student certification.">
+      <created>1606079070981</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1606079070981</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +499,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create competition with files and minor fixes." />
     <MESSAGE value="Upgrade include to 1.92." />
     <MESSAGE value="Minor fix - defect caused by no date for download arc." />
     <MESSAGE value="Default date for attendance as today." />
@@ -528,7 +523,8 @@
     <MESSAGE value="Fix input filter cleared." />
     <MESSAGE value="Upgrade to include-1.95" />
     <MESSAGE value="Add quote example and enable generating of quotes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add quote example and enable generating of quotes." />
+    <MESSAGE value="Add student certification." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add student certification." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
