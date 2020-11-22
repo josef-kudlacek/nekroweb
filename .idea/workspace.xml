@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.95">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add quote example and enable generating of quotes.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/certification.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +85,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nekroweb\app\Presenters\templates\User" />
       <recent name="C:\xampp\htdocs\nekroweb\www\include-1.2" />
       <recent name="C:\xampp\htdocs\nekroweb\www" />
       <recent name="C:\xampp\htdocs\nekroweb\www\include-1.1." />
@@ -136,14 +139,7 @@
       <workItem from="1605954793528" duration="20082000" />
       <workItem from="1605980336521" duration="1195000" />
       <workItem from="1605990541644" duration="8057000" />
-      <workItem from="1606075145976" duration="1370000" />
-    </task>
-    <task id="LOCAL-00087" summary="Clean code - get years by params.">
-      <created>1603898179515</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1603898179515</updated>
+      <workItem from="1606075145976" duration="3899000" />
     </task>
     <task id="LOCAL-00088" summary="Clean code - student asessments by params.">
       <created>1603898652957</created>
@@ -481,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605999211974</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Add quote example and enable generating of quotes.">
+      <created>1606076632357</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1606076632358</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +503,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upload multiple CompetitionFiles." />
     <MESSAGE value="Create competition with files and minor fixes." />
     <MESSAGE value="Upgrade include to 1.92." />
     <MESSAGE value="Minor fix - defect caused by no date for download arc." />
@@ -525,7 +527,8 @@
     <MESSAGE value="Change input filter type to search." />
     <MESSAGE value="Fix input filter cleared." />
     <MESSAGE value="Upgrade to include-1.95" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.95" />
+    <MESSAGE value="Add quote example and enable generating of quotes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add quote example and enable generating of quotes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">

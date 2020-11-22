@@ -86,6 +86,14 @@ class UserPresenter extends BasePresenter
         }
     }
 
+    public function actionCertification()
+    {
+        $studentId = $this->getUser()->getId();
+        $classId = $this->getUser()->getIdentity()->classId;
+
+        $this->template->certification = $this->dbUser->getCertification($studentId, $classId)->fetch();
+    }
+
     protected function createComponentChangePassForm(): Form
     {
         $form = new Form;

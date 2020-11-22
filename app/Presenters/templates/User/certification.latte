@@ -1,0 +1,30 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Moje vysvědčení</h1>
+        {if $certification}
+        <div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
+        <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
+               <span style="font-size:50px; font-weight:bold">Vysvědčení</span>
+               <br><br>
+               <span style="font-size:25px"><i><strong>Školní rok {$certification->YearFrom}{ifset $certification->YearTo}/{$certification->YearTo|substr: 2, 2}{/ifset}
+                                </strong></i></span>
+               <br><br>
+               <span style="font-size:30px"><b>{$certification->StudentName}</b></span><br/><br/>
+               <span style="font-size:25px"><i>Třída {$certification->ClassName}</i></span> <br/><br/>
+               <span style="font-size:30px">{$certification->YearNumber}. ročník – {$certification->CodeName}</span> <br/><br/>
+               <span style="font-size:20px"><div class="text-{$certification->Certificate|markType}""><strong>{$certification->MarkName}</strong></div></b></span> <br/><br/>
+               <span style="font-size:15px"><i>Uděleno dne {$certification->CertificateDate|date:'%d. %m. %Y'}
+               <br>profesorem Richardem Buflerem</i></span>
+        </div>
+        </div>
+        {else}
+            <p>
+                <div class="row">
+                    <div class="col-7 offset-3 col-about">
+                        <strong>Nenalezen žádný záznam.</strong>
+                    </div>
+                </div>
+            </p>
+        {/if}
+    </div>
+{/block}

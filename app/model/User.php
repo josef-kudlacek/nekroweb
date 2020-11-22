@@ -111,6 +111,27 @@ class User
             $userId);
     }
 
+    public function getCertification($studentId, $classId)
+    {
+        return $this->database->query('
+            SELECT semester.YearFrom, semester.YearTo, user.Name AS StudentName, student.Certificate, mark.Name AS MarkName,
+            student.CertificateDate, class.Name AS ClassName, year.Number AS YearNumber, year.CodeName
+            FROM student
+            INNER JOIN mark
+            ON student.Certificate = mark.Id
+            INNER JOIN user
+            ON student.UserId = user.Id
+            INNER JOIN class
+            ON student.ClassId = class.Id
+            INNER JOIN semester
+            ON class.SemesterId = semester.Id
+            INNER JOIN year
+            ON class.YearId = year.Id
+            WHERE student.UserId = ?
+            AND student.ClassId = ?;',
+                $studentId, $classId);
+    }
+
     public function insertStudent($values)
     {
         $this->insertUser($values);
