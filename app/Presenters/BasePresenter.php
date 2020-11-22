@@ -28,9 +28,8 @@ class BasePresenter extends Nette\Application\UI\Presenter
         $this->loadTemplateFilters();
         $this->loadTemplateFunctions();
 
-        //$quotes = $this->quote->getQuotes()->fetchAll();
-        //$this->template->quote = $this->generateQuote($quotes);
-        $this->template->quote = null;
+        $quotes = $this->quote->getQuotes()->fetchAll();
+        $this->template->quote = $this->generateQuote($quotes);
     }
 
     private function loadTemplateFilters()
@@ -80,7 +79,7 @@ class BasePresenter extends Nette\Application\UI\Presenter
     }
 
     public function errorForm(Form $form){
-        if($form->getErrors()){
+        if ($form->getErrors()){
             foreach ($form->getErrors() as $value)
             {
                 $this->flashMessage($value,'danger');
@@ -90,8 +89,14 @@ class BasePresenter extends Nette\Application\UI\Presenter
 
     private function generateQuote($quotes)
     {
-        $number = rand(0, count($quotes)-1);
-        bdump($quotes);
+        $quotesCount = count($quotes);
+        $number = rand(0, $quotesCount * 3);
+
+        if ($number > $quotesCount - 1)
+        {
+            return null;
+        }
+
         return $quotes[$number];
     }
 }
