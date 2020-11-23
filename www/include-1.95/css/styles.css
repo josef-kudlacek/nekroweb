@@ -369,3 +369,10 @@ a.nav-year {
   border: 2px solid #506F7A;
   border-radius: 9px;
 }
+
+div.border-certification {
+  border-width: 5px !important;
+  border-style: solid !important;
+  background-color: #979797;
+  padding: 20px;
+}

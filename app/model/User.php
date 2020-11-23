@@ -115,7 +115,7 @@ class User
     {
         return $this->database->query('
             SELECT semester.YearFrom, semester.YearTo, user.Name AS StudentName, student.Certificate, mark.Name AS MarkName,
-            student.CertificateDate, class.Name AS ClassName, year.Number AS YearNumber, year.CodeName
+            student.CertificateDate, class.Name AS ClassName, year.Number AS YearNumber, year.CodeName, student.HouseId
             FROM student
             INNER JOIN mark
             ON student.Certificate = mark.Id

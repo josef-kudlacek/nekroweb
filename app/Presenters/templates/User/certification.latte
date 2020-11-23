@@ -2,35 +2,45 @@
     <div class="container">
         <h1 n:block="title">Moje vysvědčení</h1>
         {if $certification}
-            <div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
-                <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
-                    <span style="font-size:50px; font-weight:bold">Vysvědčení</span>
+            <div class="col-6 offset-3 text-center border border-info border-certification">
+                <div class="border border-info border-certification">
+                    <div style="font-size:3vw;" class="display-4">
+                        <strong>Vysvědčení</strong>
+                    </div>
                     <br/>
                     <br/>
-                    <span style="font-size:25px">
-                    <i><strong>Školní rok {$certification->YearFrom}{ifset $certification->YearTo}/{$certification->YearTo|substr: 2, 2}{/ifset}
-                    </strong></i>
-                    </span>
+                    <div style="font-size:1.75vw;">
+                        <i>
+                            <strong>Školní rok {$certification->YearFrom}{ifset $certification->YearTo}/{$certification->YearTo|substr: 2, 2}{/ifset}
+                            </strong>
+                        </i>
+                    </div>
+                    <br/>
+                    <h4 style="font-size:1.0vw;" class="text-{$certification->HouseId|houseType}">
+                        <strong>{$certification->StudentName}</strong>
+                    </h4>
+                    <br/>
+                    <h3 style="font-size:1.25vw;">
+                        <i>Třída {$certification->ClassName}</i>
+                    </h3>
                     <br/>
                     <br/>
-                    <span style="font-size:30px"><b>{$certification->StudentName}</b></span>
-                    <br/>
-                    <br/>
-                    <span style="font-size:25px"><i>Třída {$certification->ClassName}</i></span>
-                    <br/>
-                    <br/>
-                    <span style="font-size:30px">{$certification->YearNumber}. ročník – {$certification->CodeName}</span>
+                    <h3 style="font-size:1.25vw;">
+                        {$certification->YearNumber}. ročník – {$certification->CodeName}
+                    </h3>
+                    <br />
+                    <h4 style="font-size:1.0vw;">
+                        <div class="text-{$certification->Certificate|markType}">
+                            <strong>{$certification->MarkName}</strong>
+                        </div>
+                    </h4>
                     <br />
                     <br />
-                    <span style="font-size:20px">
-                        <div class="text-{$certification->Certificate|markType}""><strong>{$certification->MarkName}</strong></div></b>
-                    </span>
-                    <br />
-                    <br />
-                    <span style="font-size:15px"><i>Uděleno dne {$certification->CertificateDate|date:'%d. %m. %Y'}
+                    <div style="font-size:0.75vw;">
+                        <i>Uděleno dne {$certification->CertificateDate|date:'%d. %m. %Y'}
                         <br />
                         profesorem Richardem Buflerem</i>
-                    </span>
+                    </div>
                 </div>
             </div>
         {else}
