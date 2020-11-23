@@ -98,7 +98,7 @@ $(document).ready(function(){
         $(this).parent().addClass('checked');
     });
 
-    $('.table').DataTable( {
+    $('.data-table').DataTable( {
         stateSave: true,
         info: false,
         stateDuration: 60 * 60 * 24 * 7,

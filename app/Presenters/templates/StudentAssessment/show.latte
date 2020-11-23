@@ -4,7 +4,7 @@
         <h2>Třída {$user->getIdentity()->className} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $assessment}
         <div class="table-responsive">
-        <table id="studentassessment-show-table" class="table table-bordered">
+        <table id="studentassessment-show-table" class="table table-bordered data-table">
             <thead>
                 <tr>
                     <th class="text-white bg-dark text-center">Kód</th>

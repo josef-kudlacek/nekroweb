@@ -4,7 +4,7 @@
         <h2>Školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}</h2>
         {if $students}
             <div class="table-responsive">
-            <table id="overview-points-table" class="table table-bordered">
+            <table id="overview-points-table" class="table table-bordered data-table">
                 <thead>
                     <tr>
                         <th class="text-white bg-dark">Třída</th>
