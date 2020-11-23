@@ -56,8 +56,16 @@ class ArcPresenter extends BasePresenter
     {
         $this->checkAccess();
 
-        $this->template->class = $this->studyClass->getClassById($ClassId)->fetch();
-        $this->template->lesson = $this->lesson->getLessonById($LessonId)->fetch();
+        $class = $this->studyClass->getClassById($ClassId)->fetch();
+        $lesson = $this->lesson->getLessonById($LessonId)->fetch();
+
+        $this['arcForm']->setDefaults([
+            'ClassId' => $class->ClassId,
+            'LessonId' => $lesson->Id
+        ]);
+
+        $this->template->class = $class;
+        $this->template->lesson = $lesson;
     }
 
     public function actionDelete($fileName)

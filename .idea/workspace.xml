@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Disquisition removed for now.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Remove data-table CSS from legend.latte">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/ArcPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ArcPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Arc/new.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Arc/new.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,14 +139,7 @@
       <workItem from="1605990541644" duration="8057000" />
       <workItem from="1606075145976" duration="4136000" />
       <workItem from="1606080815818" duration="490000" />
-      <workItem from="1606158508440" duration="731000" />
-    </task>
-    <task id="LOCAL-00092" summary="Change order of queries in User.php.">
-      <created>1603900011807</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1603900011807</updated>
+      <workItem from="1606158508440" duration="1638000" />
     </task>
     <task id="LOCAL-00093" summary="Change max length of assessment comment to 500.">
       <created>1604846893457</created>
@@ -482,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606159094441</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Remove data-table CSS from legend.latte">
+      <created>1606159260342</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1606159260342</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +503,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Get actual semester for curriculum." />
     <MESSAGE value="Fix elements margin-bottom 30px for footer." />
     <MESSAGE value="Filter evaluations" />
     <MESSAGE value="Filter evaluations." />
@@ -526,7 +527,8 @@
     <MESSAGE value="Curriculum table without datatables." />
     <MESSAGE value="Create new class for data-table." />
     <MESSAGE value="Disquisition removed for now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Disquisition removed for now." />
+    <MESSAGE value="Remove data-table CSS from legend.latte" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove data-table CSS from legend.latte" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -608,10 +610,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="459" y="51" width="1083" height="834" key="find.popup" timestamp="1606158828901">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1606160130703">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605959680761" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606160130703" />
     <state x="459" y="51" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606158828901" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
