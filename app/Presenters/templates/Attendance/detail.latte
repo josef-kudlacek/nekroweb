@@ -1,7 +1,7 @@
 {block content}
     <div class="container">
         <h1 n:block="title">Přehled docházky a aktivity</h1>
-        <h2>{$arc->LessonNumber}. hodina ({$arc->LessonName})<br />
+        <h2>{$arc->LessonNumber}. {$arc->LessonName}<br />
             třídy {$arc->ClassName} za školní rok {$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if}
         </h2>
         {if $attendance}
