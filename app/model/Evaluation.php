@@ -29,26 +29,11 @@ class Evaluation
 
     public function getEvaluations()
     {
-        return $this->database->query('
-            SELECT evaluation.Id, user.Name AS UserName, class.Name AS ClassName, student.HouseId,
-            semester.YearFrom, semester.YearTo, evaluation.Date, evaluation.StarsCount, 
-            evaluation.Description, lesson.Number AS LessonNumber, lesson.Name AS LessonName
-            FROM evaluation
-            INNER JOIN attendance
-            ON attendance.Id = evaluation.AttendanceId
-            INNER JOIN student
-            ON student.UserId = attendance.StudentUserId
-            AND student.ClassId = attendance.StudentClassId
-            INNER JOIN class
-            ON class.Id = student.ClassId
-            INNER JOIN user
-            ON user.Id = student.UserId
-            INNER JOIN semester
-            ON semester.Id = class.SemesterId
-            INNER JOIN lesson
-            ON lesson.Id = attendance.LessonId
-            ORDER BY class.SemesterId DESC, class.Name, lesson.Number, user.Name;
-                ');
+        $params = array(
+            ['1' => 1],
+        );
+
+        return $this->getEvaluationByParams($params);
     }
 
     public function getStudentEvaluationStatsByClass($StudentId, $ClassId)
@@ -71,28 +56,12 @@ class Evaluation
 
     public function getStudentEvaluationsByClass($StudentId, $ClassId)
     {
-        return $this->database->query('
-            SELECT evaluation.Id, user.Name AS UserName, class.Name AS ClassName, student.HouseId,
-            semester.YearFrom, semester.YearTo, evaluation.Date, evaluation.StarsCount, 
-            evaluation.Description, lesson.Number AS LessonNumber, lesson.Name AS LessonName
-            FROM evaluation
-            INNER JOIN attendance
-            ON attendance.Id = evaluation.AttendanceId
-            INNER JOIN student
-            ON student.UserId = attendance.StudentUserId
-            AND student.ClassId = attendance.StudentClassId
-            INNER JOIN class
-            ON class.Id = student.ClassId
-            INNER JOIN user
-            ON user.Id = student.UserId
-            INNER JOIN semester
-            ON semester.Id = class.SemesterId
-            INNER JOIN lesson
-            ON lesson.Id = attendance.LessonId
-            WHERE attendance.StudentUserId = ?
-            AND attendance.StudentClassId = ?
-            ORDER BY class.SemesterId DESC, class.Name, lesson.Number, user.Name;',
-                $StudentId, $ClassId);
+        $params = array(
+            ['attendance.StudentUserId' => $StudentId],
+            ['attendance.StudentClassId' => $ClassId],
+        );
+
+        return $this->getEvaluationByParams($params);
     }
 
     public function getRemainingClassForEvaluation($StudentId, $ClassId)
@@ -138,6 +107,32 @@ class Evaluation
     public function deleteEvaluation($EvaluationId)
     {
         return $this->database->table('evaluation')->where('Id', $EvaluationId)->delete();
+    }
+
+    private function getEvaluationByParams($params)
+    {
+        return $this->database->query('
+            SELECT evaluation.Id, user.Name AS UserName, class.Name AS ClassName, student.HouseId,
+            semester.YearFrom, semester.YearTo, evaluation.Date, evaluation.StarsCount, 
+            evaluation.Description, lesson.Number AS LessonNumber, lesson.Name AS LessonName,
+            attendance.AttendanceDate
+            FROM evaluation
+            INNER JOIN attendance
+            ON attendance.Id = evaluation.AttendanceId
+            INNER JOIN student
+            ON student.UserId = attendance.StudentUserId
+            AND student.ClassId = attendance.StudentClassId
+            INNER JOIN class
+            ON class.Id = student.ClassId
+            INNER JOIN user
+            ON user.Id = student.UserId
+            INNER JOIN semester
+            ON semester.Id = class.SemesterId
+            INNER JOIN lesson
+            ON lesson.Id = attendance.LessonId
+            WHERE',
+            $params,
+            'ORDER BY class.SemesterId DESC, evaluation.Date DESC;');
     }
 
 }

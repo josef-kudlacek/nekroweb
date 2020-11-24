@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Remove data-table CSS from legend.latte">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Missing )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/ArcPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ArcPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Arc/new.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Arc/new.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Evaluation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Evaluation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.96/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.96/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,49 +141,8 @@
       <workItem from="1605990541644" duration="8057000" />
       <workItem from="1606075145976" duration="4136000" />
       <workItem from="1606080815818" duration="490000" />
-      <workItem from="1606158508440" duration="1638000" />
-    </task>
-    <task id="LOCAL-00093" summary="Change max length of assessment comment to 500.">
-      <created>1604846893457</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1604846893457</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Remove max length of homework task.">
-      <created>1604847031337</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1604847031337</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Manage of student assessment.">
-      <created>1604863498722</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1604863498722</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Fix wrong private function for find file.">
-      <created>1604864293824</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1604864293824</updated>
-    </task>
-    <task id="LOCAL-00097" summary="No mark of student assessment.">
-      <created>1604864463189</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1604864463189</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Change name of file for download.">
-      <created>1604864688009</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1604864688009</updated>
+      <workItem from="1606158508440" duration="6726000" />
+      <workItem from="1606252045918" duration="1257000" />
     </task>
     <task id="LOCAL-00099" summary="Fix update of student assessment.">
       <created>1604866161294</created>
@@ -484,7 +445,49 @@
       <option name="project" value="LOCAL" />
       <updated>1606159260342</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Hide form fields while creating new arc.">
+      <created>1606160364776</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1606160364776</updated>
+    </task>
+    <task id="LOCAL-00143" summary="Change lesson name on attendance detail.">
+      <created>1606166408461</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1606166408461</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Styling of certification page.">
+      <created>1606171141188</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1606171141188</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Upgrade to include-1.96.">
+      <created>1606171207178</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1606171207178</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Upgrade to include-1.96.">
+      <created>1606171230547</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1606171230547</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Missing )">
+      <created>1606171524346</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1606171524346</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,12 +506,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix elements margin-bottom 30px for footer." />
-    <MESSAGE value="Filter evaluations" />
-    <MESSAGE value="Filter evaluations." />
-    <MESSAGE value="Filter competition and semester assessment." />
-    <MESSAGE value="No record found styling." />
-    <MESSAGE value="Change required fields for attendance form." />
     <MESSAGE value="Dynamically sum of activity points." />
     <MESSAGE value="Change student navbar." />
     <MESSAGE value="Add abbr for evaluation and add back buttons for edit evaluation." />
@@ -528,7 +525,13 @@
     <MESSAGE value="Create new class for data-table." />
     <MESSAGE value="Disquisition removed for now." />
     <MESSAGE value="Remove data-table CSS from legend.latte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove data-table CSS from legend.latte" />
+    <MESSAGE value="Hide form fields while creating new arc." />
+    <MESSAGE value="Change lesson name on detail." />
+    <MESSAGE value="Change lesson name on attendance detail." />
+    <MESSAGE value="Styling of certification page." />
+    <MESSAGE value="Upgrade to include-1.96." />
+    <MESSAGE value="Missing )" />
+    <option name="LAST_COMMIT_MESSAGE" value="Missing )" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -572,10 +575,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605999214130">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606171526731">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605569689169" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606171526731" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605999214130" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -610,10 +613,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1606160130703">
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1606171224822">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606160130703" />
+    <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606171224822" />
     <state x="459" y="51" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606158828901" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />

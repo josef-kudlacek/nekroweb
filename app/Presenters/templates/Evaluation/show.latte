@@ -141,8 +141,8 @@
                     </div>
                     <div class="col">
                         <div class="review-block-name filter-evaluate">
-                            {$evaluation->LessonNumber}. hodina ({$evaluation->LessonName})
-                            <br /><small><strong>Datum hodiny:</strong> {$evaluation->Date|date:"%d. %m. %Y"}</small>
+                            {$evaluation->LessonNumber}. {$evaluation->LessonName} ({$evaluation->AttendanceDate|date:"%d. %m. %Y"})
+                            <br /><small><strong>Datum a čas hodnocení:</strong> {$evaluation->Date|date:"%d. %m. %Y %H:%M:%S"}</small>
                         </div>
                         <div class="review-block-evaluation filter-evaluate">
                             {$evaluation->Description}
