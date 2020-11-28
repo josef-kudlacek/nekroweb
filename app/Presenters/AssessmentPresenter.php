@@ -108,7 +108,7 @@ class AssessmentPresenter extends BasePresenter
         $form->addSelect('MarkId')
             ->setItems($marks);
 
-        $form->addInteger('AdditionalPoints');
+        $form->addText('AdditionalPoints');
 
         $form->addText('Date');
 
