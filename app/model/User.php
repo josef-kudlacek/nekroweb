@@ -68,7 +68,7 @@ class User
 	            GROUP BY attendance.StudentUserId
 	            ) AS activityPoints,
 	            (
-	            SELECT SUM(mark.Value)
+	            SELECT SUM(mark.Value) + SUM(studentassessment.AdditionalPoints)
 	            FROM studentassessment
 	            INNER JOIN mark
 	            ON mark.Id = studentassessment.MarkId

@@ -15,7 +15,7 @@
                     <th class="text-white bg-dark">Student</th>
                     <th class="text-white bg-dark">Typ</th>
                     <th class="text-white bg-dark">Úkol</th>
-                    <th class="text-white bg-dark">Známka</th>
+                    <th class="text-white bg-dark">Body</th>
                     <th class="text-white bg-dark">Datum</th>
                     <th class="text-white bg-dark">Komentář</th>
                     <th class="text-white bg-dark">Správa</th>
@@ -31,7 +31,7 @@
                         </td>
                         <td class="text-white bg-dark">{$assessment->HomeworkCode}</td>
                         <td class="text-white bg-dark">{$assessment->AssessmentName}</td>
-                        <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->MarkValue}</td>
+                        <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->MarkValue} {if $assessment->AdditionalPoints}+ {$assessment->AdditionalPoints}{/if}</td>
                         <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->AssessmentDate|date:"%d. %m. %Y"}</td>
                         <td class="text-dark bg-{$assessment->MarkId|markType}">{$assessment->AssessmentComment}</td>
                         <td>

@@ -256,7 +256,7 @@ class StudyClass
                 ORDER BY class.Name, user.Name
                 ) as T2,
                 (
-                SELECT user.Name, IFNULL(SUM(mark.Value), 0) AS MarkPoints
+                SELECT user.Name, IFNULL(SUM(mark.Value), 0) + IFNULL(SUM(studentassessment.AdditionalPoints), 0) AS MarkPoints
                 FROM student
                 INNER JOIN user                
                 ON student.UserId = user.Id

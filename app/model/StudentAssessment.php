@@ -99,6 +99,7 @@ class StudentAssessment
             MIN(IF(semesterassessment.Code = "ZS2", mark.Id, NULL)) AS ZS2id,
             MIN(IF(semesterassessment.Code = "Esej", mark.Shortcut, NULL)) AS Esej,
             MIN(IF(semesterassessment.Code = "Esej", mark.Id, NULL)) AS Esejid,
+            MIN(IF(semesterassessment.Code = "Esej", studentassessment.AdditionalPoints, NULL)) AS EsejPoints,
             MAX(IF(semesterassessment.Code = "1.PDÚ", mark.Shortcut, NULL)) AS PDU1,
             MAX(IF(semesterassessment.Code = "1.PDÚ", mark.Id, NULL)) AS PDU1id,
             MAX(IF(semesterassessment.Code = "2.PDÚ", mark.Shortcut, NULL)) AS PDU2,
@@ -151,8 +152,9 @@ class StudentAssessment
     {
         return $this->database->query('
             SELECT class.Id AS ClassId, user.Id AS StudentId, user.Name as StudentName, class.Name AS ClassName, house.Id AS HouseId, studentassessment.FileName,
-            semesterassessment.Code AS HomeworkCode, assessment.Name AS AssessmentName, mark.Name AS MarkName, mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
-            studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints, semester.YearFrom, semester.YearTo, studentassessment.Id
+            semesterassessment.Code AS HomeworkCode, assessment.Name AS AssessmentName, mark.Name AS MarkName, mark.Id AS MarkId, mark.Value AS MarkValue,
+            studentassessment.`Comment` AS AssessmentComment, studentassessment.Date AS AssessmentDate, studentassessment.AdditionalPoints, 
+            semester.YearFrom, semester.YearTo, studentassessment.Id
             FROM studentassessment
             INNER JOIN student
             ON studentassessment.StudentUserId = student.UserId

@@ -101,7 +101,6 @@ $(document).ready(function(){
     $('.data-table').DataTable( {
         stateSave: true,
         info: false,
-        stateDuration: 60 * 60 * 24 * 7,
         hideEmptyCols: true,
         "language": {
             "lengthMenu": "Zobrazit _MENU_ záznamů na stránku",

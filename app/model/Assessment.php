@@ -74,7 +74,7 @@ class Assessment
             HomeworkCode,
             assessment.Id AS AssessmentId, assessment.Name AS AssessmentName, mark.Value AS MarkValue,
             mark.Id AS MarkId, studentassessment.`Comment` AS AssessmentComment,
-            studentassessment.Date AS AssessmentDate, studentassessment.ResultPoints
+            studentassessment.Date AS AssessmentDate, studentassessment.AdditionalPoints
             FROM studentassessment
             INNER JOIN student
             ON studentassessment.StudentUserId = student.UserId
@@ -106,7 +106,7 @@ class Assessment
             user.Name AS UserName, student.HouseId, class.Name AS ClassName, semesterassessment.Code AS HomeworkCode,
             assessment.Id AS AssessmentId, mark.Name AS MarkName, assessment.Name AS AssessmentName,
             mark.Value AS MarkValue, mark.Id AS MarkId, studentassessment.`Comment`,
-            studentassessment.Date, studentassessment.ResultPoints
+            studentassessment.Date, studentassessment.AdditionalPoints
             FROM studentassessment
             INNER JOIN student
             ON studentassessment.StudentUserId = student.UserId
