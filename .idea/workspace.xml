@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Body padding-top fix">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.98/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.98/css/styles.css" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.99">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.99/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.99/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,21 +141,7 @@
       <workItem from="1606158508440" duration="6726000" />
       <workItem from="1606252045918" duration="2281000" />
       <workItem from="1606571146184" duration="2507000" />
-      <workItem from="1606573740078" duration="2693000" />
-    </task>
-    <task id="LOCAL-00104" summary="Add order for SemesterAssessment.php by code.">
-      <created>1605383569446</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1605383569446</updated>
-    </task>
-    <task id="LOCAL-00105" summary="Fix header of student assessment table.">
-      <created>1605446396194</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1605446396195</updated>
+      <workItem from="1606573740078" duration="4980000" />
     </task>
     <task id="LOCAL-00106" summary="Set actual semester when changing identity back to professor.">
       <created>1605447219406</created>
@@ -486,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606651138187</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Add snowflakes.latte">
+      <created>1606651571937</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1606651571937</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Upgrade to include-1.99">
+      <created>1606651644089</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1606651644089</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,8 +505,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upgrade to include-1.93" />
-    <MESSAGE value="Change text of flash message about changing class." />
     <MESSAGE value="Prepare generate quotes" />
     <MESSAGE value="Manage of quotes." />
     <MESSAGE value="Create unique id of tables and upgrade include-1.94" />
@@ -530,7 +528,9 @@
     <MESSAGE value="Upgrade to include-1.98 and add points for esej." />
     <MESSAGE value="Change Additional Points to text caused of integer required." />
     <MESSAGE value="Body padding-top fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Body padding-top fix" />
+    <MESSAGE value="Add snowflakes.latte" />
+    <MESSAGE value="Upgrade to include-1.99" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.99" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -574,10 +574,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606574572040">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606651647688">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606574572040" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606651647688" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605999214130" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
