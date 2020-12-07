@@ -17,7 +17,7 @@
             <tbody>
             {foreach $assessment as $assessmentItem}
             {if $assessmentItem->MarkId}
-                <tr class="text-dark bg-{$assessmentItem->MarkId|markType}">
+                <tr class="text-{$assessmentItem->MarkId|markType} bg-dark">
                     <td class="text-white bg-dark">{$assessmentItem->HomeworkCode}</td>
                     <td class="text-white bg-dark">{$assessmentItem->AssessmentName}</td>
                     <td class="text-dark bg-light">{$assessmentItem->AssessmentDate|date:"%d. %m. %Y"}</td>
