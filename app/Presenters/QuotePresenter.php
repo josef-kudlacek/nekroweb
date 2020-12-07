@@ -93,11 +93,11 @@ class QuotePresenter extends BasePresenter
 
         $form->addTextArea('Text')
             ->setRequired()
-            ->setMaxLength(255);
+            ->setMaxLength(320);
 
         $form->addTextArea('Source')
             ->setRequired()
-            ->setMaxLength(60);
+            ->setMaxLength(100);
 
         $form->addSubmit('send');
 

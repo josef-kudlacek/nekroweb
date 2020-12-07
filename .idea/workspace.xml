@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.99">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Remove css demo for snowflakes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.99/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.99/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/edit.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,14 +142,11 @@
       <workItem from="1606158508440" duration="6726000" />
       <workItem from="1606252045918" duration="2281000" />
       <workItem from="1606571146184" duration="2507000" />
-      <workItem from="1606573740078" duration="4980000" />
-    </task>
-    <task id="LOCAL-00106" summary="Set actual semester when changing identity back to professor.">
-      <created>1605447219406</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1605447219406</updated>
+      <workItem from="1606573740078" duration="5001000" />
+      <workItem from="1606770978128" duration="4000" />
+      <workItem from="1607161072059" duration="2389000" />
+      <workItem from="1607374779546" duration="4000" />
+      <workItem from="1607374923836" duration="411000" />
     </task>
     <task id="LOCAL-00107" summary="Add student state in class - active, non-active.">
       <created>1605455154243</created>
@@ -486,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606651644089</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="Remove css demo for snowflakes.">
+      <created>1606679390616</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1606679390617</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +510,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Prepare generate quotes" />
     <MESSAGE value="Manage of quotes." />
     <MESSAGE value="Create unique id of tables and upgrade include-1.94" />
     <MESSAGE value="Change input filter type to search." />
@@ -530,7 +534,8 @@
     <MESSAGE value="Body padding-top fix" />
     <MESSAGE value="Add snowflakes.latte" />
     <MESSAGE value="Upgrade to include-1.99" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.99" />
+    <MESSAGE value="Remove css demo for snowflakes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove css demo for snowflakes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -612,11 +617,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="64" y="0" width="1574" height="847" maximized="true" key="dock-window-6/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601240267313" />
-    <state x="-1455" y="162" width="1083" height="834" key="find.popup" timestamp="1606573805370">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="459" y="51" width="1083" height="834" key="find.popup" timestamp="1607161514723">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1455" y="162" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606573805370" />
-    <state x="459" y="51" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606158828901" />
+    <state x="459" y="51" width="1083" height="834" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607161514723" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602444425720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
