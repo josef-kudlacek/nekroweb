@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change colors of assessments comment." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Secure routing for forms to HTTPS." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,13 +143,7 @@
       <workItem from="1607161072059" duration="2389000" />
       <workItem from="1607374779546" duration="4000" />
       <workItem from="1607374923836" duration="1258000" />
-    </task>
-    <task id="LOCAL-00109" summary="Upgrade js.">
-      <created>1605459542463</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1605459542463</updated>
+      <workItem from="1607773176841" duration="321000" />
     </task>
     <task id="LOCAL-00110" summary="Add manage of semester competitions.">
       <created>1605478570371</created>
@@ -487,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607375916794</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Secure routing for forms to HTTPS.">
+      <created>1607773326602</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1607773326602</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +507,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change input filter type to search." />
     <MESSAGE value="Fix input filter cleared." />
     <MESSAGE value="Upgrade to include-1.95" />
     <MESSAGE value="Add quote example and enable generating of quotes." />
@@ -531,7 +531,8 @@
     <MESSAGE value="Remove css demo for snowflakes." />
     <MESSAGE value="Change max length of quotes." />
     <MESSAGE value="Change colors of assessments comment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change colors of assessments comment." />
+    <MESSAGE value="Secure routing for forms to HTTPS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Secure routing for forms to HTTPS." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -575,10 +576,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607375936410">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607773331394">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606651647688" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607773331394" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607375936410" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
