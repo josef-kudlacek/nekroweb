@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Secure routing for forms to HTTPS." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add namespace for routes.">
+      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,14 +145,7 @@
       <workItem from="1607161072059" duration="2389000" />
       <workItem from="1607374779546" duration="4000" />
       <workItem from="1607374923836" duration="1258000" />
-      <workItem from="1607773176841" duration="321000" />
-    </task>
-    <task id="LOCAL-00110" summary="Add manage of semester competitions.">
-      <created>1605478570371</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1605478570371</updated>
+      <workItem from="1607773176841" duration="630000" />
     </task>
     <task id="LOCAL-00111" summary="Upload multiple CompetitionFiles.">
       <created>1605550647502</created>
@@ -488,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607773326602</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="Add namespace for routes.">
+      <created>1607773671089</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1607773671089</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +509,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix input filter cleared." />
     <MESSAGE value="Upgrade to include-1.95" />
     <MESSAGE value="Add quote example and enable generating of quotes." />
     <MESSAGE value="Add student certification." />
@@ -532,7 +533,8 @@
     <MESSAGE value="Change max length of quotes." />
     <MESSAGE value="Change colors of assessments comment." />
     <MESSAGE value="Secure routing for forms to HTTPS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Secure routing for forms to HTTPS." />
+    <MESSAGE value="Add namespace for routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add namespace for routes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
