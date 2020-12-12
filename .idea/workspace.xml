@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change max length of quotes.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change colors of assessments comment." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,14 +142,7 @@
       <workItem from="1606770978128" duration="4000" />
       <workItem from="1607161072059" duration="2389000" />
       <workItem from="1607374779546" duration="4000" />
-      <workItem from="1607374923836" duration="754000" />
-    </task>
-    <task id="LOCAL-00108" summary="Minor fixes and add show criteria.">
-      <created>1605458750815</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1605458750815</updated>
+      <workItem from="1607374923836" duration="1258000" />
     </task>
     <task id="LOCAL-00109" summary="Upgrade js.">
       <created>1605459542463</created>
@@ -489,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607375597945</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Change colors of assessments comment.">
+      <created>1607375916794</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1607375916794</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +506,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create unique id of tables and upgrade include-1.94" />
     <MESSAGE value="Change input filter type to search." />
     <MESSAGE value="Fix input filter cleared." />
     <MESSAGE value="Upgrade to include-1.95" />
@@ -533,7 +530,8 @@
     <MESSAGE value="Upgrade to include-1.99" />
     <MESSAGE value="Remove css demo for snowflakes." />
     <MESSAGE value="Change max length of quotes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change max length of quotes." />
+    <MESSAGE value="Change colors of assessments comment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change colors of assessments comment." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -577,11 +575,11 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606651647688">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607375936410">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606651647688" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605999214130" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607375936410" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
