@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add namespace for routes.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Secure route deprecated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,14 +146,7 @@
       <workItem from="1607161072059" duration="2389000" />
       <workItem from="1607374779546" duration="4000" />
       <workItem from="1607374923836" duration="1258000" />
-      <workItem from="1607773176841" duration="630000" />
-    </task>
-    <task id="LOCAL-00111" summary="Upload multiple CompetitionFiles.">
-      <created>1605550647502</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1605550647502</updated>
+      <workItem from="1607773176841" duration="1052000" />
     </task>
     <task id="LOCAL-00112" summary="Create competition with files and minor fixes.">
       <created>1605569531375</created>
@@ -490,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607773671089</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="Secure route deprecated">
+      <created>1607773867520</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1607773867520</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +510,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upgrade to include-1.95" />
     <MESSAGE value="Add quote example and enable generating of quotes." />
     <MESSAGE value="Add student certification." />
     <MESSAGE value="Curriculum table without datatables." />
@@ -534,7 +534,8 @@
     <MESSAGE value="Change colors of assessments comment." />
     <MESSAGE value="Secure routing for forms to HTTPS." />
     <MESSAGE value="Add namespace for routes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add namespace for routes." />
+    <MESSAGE value="Secure route deprecated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Secure route deprecated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -578,10 +579,10 @@
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607773331394">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607773674153">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607773331394" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607773674153" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607375936410" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />

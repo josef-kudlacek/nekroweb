@@ -17,7 +17,7 @@ final class RouterFactory
 		$router = new RouteList;
 		$router->addRoute
         (
-            'https://%host%/<presenter>/<action>[/<id>]',
+            '<presenter>/<action>[/<id>]',
             'Homepage:default'
         );
 		return $router;
