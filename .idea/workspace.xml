@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Secure route deprecated">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Secure route deprecated.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Homework.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Homework.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -146,14 +147,9 @@
       <workItem from="1607161072059" duration="2389000" />
       <workItem from="1607374779546" duration="4000" />
       <workItem from="1607374923836" duration="1258000" />
-      <workItem from="1607773176841" duration="1052000" />
-    </task>
-    <task id="LOCAL-00112" summary="Create competition with files and minor fixes.">
-      <created>1605569531375</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1605569531375</updated>
+      <workItem from="1607773176841" duration="2942000" />
+      <workItem from="1607776812798" duration="2364000" />
+      <workItem from="1607878347576" duration="298000" />
     </task>
     <task id="LOCAL-00113" summary="Upgrade include to 1.92.">
       <created>1605569682806</created>
@@ -491,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607773867520</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Secure route deprecated.">
+      <created>1607774243904</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1607774243904</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +513,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add quote example and enable generating of quotes." />
     <MESSAGE value="Add student certification." />
     <MESSAGE value="Curriculum table without datatables." />
     <MESSAGE value="Create new class for data-table." />
@@ -535,7 +537,8 @@
     <MESSAGE value="Secure routing for forms to HTTPS." />
     <MESSAGE value="Add namespace for routes." />
     <MESSAGE value="Secure route deprecated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Secure route deprecated" />
+    <MESSAGE value="Secure route deprecated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Secure route deprecated." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="161" key="#Plugins" timestamp="1601133537657">
@@ -570,19 +573,20 @@
     </state>
     <state x="-1196" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1605992137111" />
     <state x="724" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605993132170" />
-    <state x="768" y="222" key="RollbackChangesDialog" timestamp="1602367368894">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1152" y="222" key="RollbackChangesDialog" timestamp="1607776644024">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1152" y="222" key="RollbackChangesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607776644024" />
     <state x="768" y="222" key="RollbackChangesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602367368894" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog" timestamp="1605974339523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1117" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601406792406" />
     <state x="803" y="217" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605974339523" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607773674153">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607774246510">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607773674153" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607774246510" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607375936410" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601292357425">
       <screen x="-1920" y="0" width="1920" height="1040" />

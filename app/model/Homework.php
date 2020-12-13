@@ -17,10 +17,14 @@ class Homework
     public function getHomeworksBySemester($SemesterId)
     {
         return $this->database->query("
-            SELECT assessment.Id, CONCAT(IFNULL(CONCAT(semesterassessment.Code, ' - '), ''), assessment.Name) AS HomeworkName
+            SELECT assessment.Id, CONCAT(IFNULL(CONCAT(semesterassessment.Code, ' - '), ''), assessment.Name, ' (', class.Name, ')') AS HomeworkName
             FROM semesterassessment
-            INNER JOIN assessment ON assessment.Id = semesterassessment.AssessmentId
-            LEFT JOIN homework ON homework.AssessmentId = assessment.Id
+            INNER JOIN assessment
+                ON assessment.Id = semesterassessment.AssessmentId
+            LEFT JOIN homework
+                ON homework.AssessmentId = assessment.Id
+            INNER JOIN class
+                ON semesterassessment.ClassId = class.Id
             WHERE semesterassessment.SemesterId = ?
             ORDER BY homework.HomeworkTypeId, semesterassessment.Code;",
             $SemesterId);
