@@ -9,7 +9,7 @@
                 <select n:name=AttendanceId class="form-control"></select>
             </div>
             <div class="form-group col-md-4 offset-md-4">
-                <label><strong><abbr title="Hodnotí se zprava. Čím více plných, tím vyšší je hodnocení.">Hodnocení</abbr>:</strong></label>
+                <label><strong><abbr title="Hodnotí se zprava. Čím více plných, tím vyšší je hodnocení." tabindex="0">Hodnocení</abbr>:</strong></label>
                 <div class="StarsCount">
                 {for $counter = 5; $counter > 0; $counter--}
                     <span><input type="radio" name="StarsCount" id="{$counter}" value="{$counter}"><label for="{$counter}"></label></span>

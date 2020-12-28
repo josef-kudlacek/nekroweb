@@ -19,7 +19,7 @@
                     <td class="text-dark bg-light">{$attendanceItem->AttendanceDate|date:"%d. %m. %Y"}</td>
                     <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
                         {$attendanceItem->ActivityPoints}{if $attendanceItem->ActivityOverall} +
-                        <abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityOverall}</abbr>
+                        <abbr title="{$attendanceItem->ActivityDescription}" tabindex="0">{$attendanceItem->ActivityOverall}</abbr>
                         {/if}
                     </td>
                 </tr>

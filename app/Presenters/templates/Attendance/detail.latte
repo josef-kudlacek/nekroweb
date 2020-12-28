@@ -27,7 +27,7 @@
                         </td>
                         <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
                             {$attendanceItem->AttendanceTypePoints}{if $attendanceItem->ActivityPoints} +
-                            <abbr title="{$attendanceItem->ActivityDescription}">{$attendanceItem->ActivityPoints}</abbr>
+                            <abbr title="{$attendanceItem->ActivityDescription}" tabindex="0">{$attendanceItem->ActivityPoints}</abbr>
                             {/if}
                         </td>
                         <td>

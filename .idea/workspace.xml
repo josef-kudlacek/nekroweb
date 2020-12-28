@@ -19,10 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show shared assessments by name.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Accept only supported file extensions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Activity/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Activity/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.99/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.99/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +167,7 @@
       <workItem from="1607878347576" duration="1064000" />
       <workItem from="1607886450662" duration="599000" />
       <workItem from="1607937760960" duration="3028000" />
-      <workItem from="1609157327877" duration="8959000" />
-    </task>
-    <task id="LOCAL-00119" summary="Filter evaluations.">
-      <created>1605969849791</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1605969849791</updated>
+      <workItem from="1609157327877" duration="9754000" />
     </task>
     <task id="LOCAL-00120" summary="Filter competition and semester assessment.">
       <created>1605970415092</created>
@@ -498,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609169256056</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Accept only supported file extensions.">
+      <created>1609171599413</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1609171599413</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +531,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change lesson name on detail." />
     <MESSAGE value="Change lesson name on attendance detail." />
     <MESSAGE value="Styling of certification page." />
     <MESSAGE value="Upgrade to include-1.96." />
@@ -542,6 +555,7 @@
     <MESSAGE value="Change curriculum by logged user data." />
     <MESSAGE value="Refactor - rename private function for logged data." />
     <MESSAGE value="Show shared assessments by name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Show shared assessments by name." />
+    <MESSAGE value="Accept only supported file extensions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Accept only supported file extensions." />
   </component>
 </project>
