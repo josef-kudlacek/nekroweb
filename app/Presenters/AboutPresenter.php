@@ -17,6 +17,18 @@ class AboutPresenter extends BasePresenter
 
     public function renderShow()
     {
-        $this->template->history = $this->about->getHistory();
+        $this->template->history = $this->isLogged();
+    }
+
+    private function isLogged()
+    {
+        parent::startup();
+        if ($this->getUser()->loggedIn) {
+            $userIdentity = $this->getUser()->getIdentity();
+
+            return $this->about->getHistoryBySemester($userIdentity->semesterFrom, $userIdentity->semesterTo);
+        } else {
+            return $this->about->getHistory();
+        }
     }
 }
