@@ -384,6 +384,7 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
+@media (max-width: 800px) {
 abbr[title]:hover::after,
 abbr[title]:focus::after {
   content: attr(title);
@@ -393,7 +394,6 @@ abbr[title]:focus::after {
   left: 0;
   bottom: -30px;
   width: auto;
-  white-space: nowrap;
 
   /* style tooltip */
   background-color: #1e1e1e;
@@ -402,6 +402,7 @@ abbr[title]:focus::after {
   box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
   font-size: 14px;
   padding: 3px 5px;
+}
 }
 
 /* customizable snowflake styling */
