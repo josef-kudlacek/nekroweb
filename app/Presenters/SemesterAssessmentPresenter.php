@@ -128,7 +128,9 @@ class SemesterAssessmentPresenter extends BasePresenter
         $form->addInteger('AssessmentId');
 
         $form->addUpload('StudentAssessmentFile', 'Nahrát moje zpracování')
-            ->addRule(Form::MAX_FILE_SIZE, 'Soubor je příliš velký, limit je 15 MB!', 15 * 1024 * 1024)
+            ->addRule(Form::MAX_FILE_SIZE, 'Soubor je příliš velký, limit je 30 MB!', 30 * 1024 * 1024)
+            ->addRule(Form::MIME_TYPE, 'Soubor není podporovaného formátu!',
+                '.bmp, .doc, .docx, .gif, .jpg, .odp, .ods, .odt, .pdf, .png, .ppt, .pptx, .rtf, .txt, .xls, .xlsx')
             ->setRequired();
 
         $form->addSubmit('send');

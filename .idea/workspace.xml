@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Refactor - rename private function for logged data.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show shared assessments by name.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/StudentAssessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudentAssessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/my.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +153,7 @@
       <workItem from="1607878347576" duration="1064000" />
       <workItem from="1607886450662" duration="599000" />
       <workItem from="1607937760960" duration="3028000" />
-      <workItem from="1609157327877" duration="6716000" />
-    </task>
-    <task id="LOCAL-00118" summary="Filter evaluations">
-      <created>1605968240623</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1605968240623</updated>
+      <workItem from="1609157327877" duration="8959000" />
     </task>
     <task id="LOCAL-00119" summary="Filter evaluations.">
       <created>1605969849791</created>
@@ -498,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609164567134</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Show shared assessments by name.">
+      <created>1609169256056</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1609169256056</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +517,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hide form fields while creating new arc." />
     <MESSAGE value="Change lesson name on detail." />
     <MESSAGE value="Change lesson name on attendance detail." />
     <MESSAGE value="Styling of certification page." />
@@ -542,6 +541,7 @@
     <MESSAGE value="Change characters by logged user data." />
     <MESSAGE value="Change curriculum by logged user data." />
     <MESSAGE value="Refactor - rename private function for logged data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor - rename private function for logged data." />
+    <MESSAGE value="Show shared assessments by name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Show shared assessments by name." />
   </component>
 </project>
