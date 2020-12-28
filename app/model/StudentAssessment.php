@@ -35,10 +35,14 @@ class StudentAssessment
         return $this->getStudentAssessmentsByParams($params);
     }
 
-    public function getStudentAssessmentsByAssessment($AssessmentId)
+    public function getStudentAssessmentsByAssessmentId($assessmentId)
     {
         $params = array(
-            ['studentassessment.AssessmentId' => $AssessmentId],
+            [$this->database::literal('assessment.Name =
+                (SELECT assessment.Name
+                FROM assessment
+                WHERE assessment.Id = ?)',
+                    $assessmentId)],
         );
 
         return $this->getStudentAssessmentsByParams($params);

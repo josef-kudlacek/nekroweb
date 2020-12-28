@@ -72,7 +72,7 @@ class SemesterAssessmentPresenter extends BasePresenter
         $classId = $this->user->getIdentity()->classId;
 
         $assessment = $this->semesterAssessment->getAssessmentsInSemesterByAssessmentAndClassId($assessmentId, $classId)->fetch();
-        $assessments = $this->studentAssessment->getStudentAssessmentsByAssessment($assessmentId)->fetchAll();
+        $assessments = $this->studentAssessment->getStudentAssessmentsByAssessmentId($assessmentId)->fetchAll();
 
         if (!$assessment) {
             $this->flashMessage('Takový úkol neexistuje.','danger');
