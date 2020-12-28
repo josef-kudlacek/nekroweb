@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Show class when creating assessment.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change history by logged user data.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/AboutPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/AboutPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/About.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/About.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/CharacterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/CharacterPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Character.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Character.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +153,7 @@
       <workItem from="1607878347576" duration="1064000" />
       <workItem from="1607886450662" duration="599000" />
       <workItem from="1607937760960" duration="3028000" />
-      <workItem from="1609157327877" duration="1890000" />
-    </task>
-    <task id="LOCAL-00114" summary="Minor fix - defect caused by no date for download arc.">
-      <created>1605730730283</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1605730730288</updated>
+      <workItem from="1609157327877" duration="3131000" />
     </task>
     <task id="LOCAL-00115" summary="Default date for attendance as today.">
       <created>1605731221608</created>
@@ -498,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607878805956</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Change history by logged user data.">
+      <created>1609159477314</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1609159477315</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +517,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Curriculum table without datatables." />
     <MESSAGE value="Create new class for data-table." />
     <MESSAGE value="Disquisition removed for now." />
     <MESSAGE value="Remove data-table CSS from legend.latte" />
@@ -542,6 +541,7 @@
     <MESSAGE value="Secure route deprecated" />
     <MESSAGE value="Secure route deprecated." />
     <MESSAGE value="Show class when creating assessment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Show class when creating assessment." />
+    <MESSAGE value="Change history by logged user data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change history by logged user data." />
   </component>
 </project>

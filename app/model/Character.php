@@ -16,9 +16,39 @@ class Character
 
     public function getCharacters()
     {
+        $params = array(
+            ['1' => 1],
+        );
+
+        return $this->getCharactersByParams($params);
+    }
+
+    public function getCharactersByClassId($classId)
+    {
+        $params = array(
+            [$this->database::literal('year.Number
+                <=
+                (
+                SELECT year.Number
+                FROM year
+                INNER JOIN class
+                	ON year.Id = class.YearId
+                WHERE class.Id = ?
+                )', $classId)],
+        );
+
+        return $this->getCharactersByParams($params);
+    }
+
+    private function getCharactersByParams($params)
+    {
         return $this->database->query('
-            SELECT *
+            SELECT necromancy.character.*
             FROM necromancy.character
-            ORDER BY Id;');
+            INNER JOIN year
+	        ON necromancy.character.YearId = year.Id
+            WHERE',
+            $params,
+            'ORDER BY Id;');
     }
 }

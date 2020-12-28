@@ -17,6 +17,18 @@ class CharacterPresenter extends BasePresenter
 
     public function renderShow()
     {
-        $this->template->characters = $this->character->getCharacters();
+        $this->template->characters = $this->isLogged();
+    }
+
+    private function isLogged()
+    {
+        parent::startup();
+        if ($this->getUser()->loggedIn) {
+            $userIdentity = $this->getUser()->getIdentity();
+
+            return $this->character->getCharactersByClassId($userIdentity->classId);
+        } else {
+            return $this->character->getCharacters();
+        }
     }
 }
