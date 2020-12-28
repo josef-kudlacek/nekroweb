@@ -17,10 +17,10 @@ class AboutPresenter extends BasePresenter
 
     public function renderShow()
     {
-        $this->template->history = $this->isLogged();
+        $this->template->history = $this->getAboutData();
     }
 
-    private function isLogged()
+    private function getAboutData()
     {
         parent::startup();
         if ($this->getUser()->loggedIn) {

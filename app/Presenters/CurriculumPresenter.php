@@ -22,10 +22,10 @@ class CurriculumPresenter extends BasePresenter
 
     public function renderShow()
     {
-        $this->template->lessons = $this->isLogged();
+        $this->template->lessons = $this->getCurriculumData();
     }
 
-    private function isLogged()
+    private function getCurriculumData()
     {
         parent::startup();
         if ($this->getUser()->loggedIn) {
