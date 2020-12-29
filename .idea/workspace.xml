@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Support tooltip for another devices.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade include to 1.992.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.99/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.99/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,21 +151,8 @@
       <workItem from="1607878347576" duration="1064000" />
       <workItem from="1607886450662" duration="599000" />
       <workItem from="1607937760960" duration="3028000" />
-      <workItem from="1609157327877" duration="10490000" />
-    </task>
-    <task id="LOCAL-00121" summary="No record found styling.">
-      <created>1605970840351</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1605970840351</updated>
-    </task>
-    <task id="LOCAL-00122" summary="Change required fields for attendance form.">
-      <created>1605971870685</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1605971870685</updated>
+      <workItem from="1609157327877" duration="10856000" />
+      <workItem from="1609240629178" duration="1385000" />
     </task>
     <task id="LOCAL-00123" summary="Dynamically sum of activity points.">
       <created>1605972998774</created>
@@ -497,7 +483,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609172322409</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="Support tooltip for another devices.">
+      <created>1609173062347</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1609173062347</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Upgrade include to 1.992.">
+      <created>1609173178297</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1609173178297</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +516,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Styling of certification page." />
     <MESSAGE value="Upgrade to include-1.96." />
     <MESSAGE value="Missing )" />
     <MESSAGE value="Change evaluation order and date." />
@@ -541,6 +540,7 @@
     <MESSAGE value="Show shared assessments by name." />
     <MESSAGE value="Accept only supported file extensions." />
     <MESSAGE value="Support tooltip for another devices." />
-    <option name="LAST_COMMIT_MESSAGE" value="Support tooltip for another devices." />
+    <MESSAGE value="Upgrade include to 1.992." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade include to 1.992." />
   </component>
 </project>

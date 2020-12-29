@@ -229,6 +229,7 @@ class StudyClass
                 LEFT JOIN attendance
                 ON student.UserId = attendance.StudentUserId
                 AND student.ClassId = attendance.StudentClassId
+                AND attendance.AttendanceTypeId != 5
                 LEFT JOIN attendancetype
                 ON attendance.AttendanceTypeId = attendancetype.Id
                 LEFT JOIN activity
