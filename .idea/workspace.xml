@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade include to 1.992.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix: dont count spare hour to overview points.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,14 +152,7 @@
       <workItem from="1607886450662" duration="599000" />
       <workItem from="1607937760960" duration="3028000" />
       <workItem from="1609157327877" duration="10856000" />
-      <workItem from="1609240629178" duration="1385000" />
-    </task>
-    <task id="LOCAL-00123" summary="Dynamically sum of activity points.">
-      <created>1605972998774</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1605972998774</updated>
+      <workItem from="1609240629178" duration="4328000" />
     </task>
     <task id="LOCAL-00124" summary="Change student navbar.">
       <created>1605974121555</created>
@@ -497,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609173178297</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Fix: dont count spare hour to overview points.">
+      <created>1609248416414</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1609248416415</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +516,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upgrade to include-1.96." />
     <MESSAGE value="Missing )" />
     <MESSAGE value="Change evaluation order and date." />
     <MESSAGE value="Upgrade to include-1.97 and define variable in base presenter." />
@@ -541,6 +540,7 @@
     <MESSAGE value="Accept only supported file extensions." />
     <MESSAGE value="Support tooltip for another devices." />
     <MESSAGE value="Upgrade include to 1.992." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade include to 1.992." />
+    <MESSAGE value="Fix: dont count spare hour to overview points." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: dont count spare hour to overview points." />
   </component>
 </project>

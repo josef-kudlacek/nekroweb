@@ -35,14 +35,25 @@ class StudentAssessment
         return $this->getStudentAssessmentsByParams($params);
     }
 
-    public function getStudentAssessmentsByAssessmentId($assessmentId)
+    public function getStudentAssessmentsByAssessmentIdAndClass($assessmentId, $classId)
     {
         $params = array(
             [$this->database::literal('assessment.Name =
-                (SELECT assessment.Name
+                (
+                SELECT assessment.Name
                 FROM assessment
-                WHERE assessment.Id = ?)',
+                WHERE assessment.Id = ?
+                )',
                     $assessmentId)],
+            [$this->database::literal('year.Number =
+                (
+                SELECT year.Number
+                FROM class
+                INNER JOIN year
+                 ON class.YearId = year.Id
+                WHERE class.Id = ?
+                )',
+                $classId)],
         );
 
         return $this->getStudentAssessmentsByParams($params);
@@ -167,6 +178,8 @@ class StudentAssessment
             ON user.Id = studentassessment.StudentUserId
             INNER JOIN class
             ON class.Id = studentassessment.StudentClassId
+            INNER JOIN year
+            ON class.YearId = year.Id
             INNER JOIN assessment
             ON assessment.Id = studentassessment.AssessmentId
             INNER JOIN semesterassessment
