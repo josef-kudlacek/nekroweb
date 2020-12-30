@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix: dont count spare hour to overview points.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix: show shared assessments by year of class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Attendance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Attendance.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,14 +153,7 @@
       <workItem from="1607886450662" duration="599000" />
       <workItem from="1607937760960" duration="3028000" />
       <workItem from="1609157327877" duration="10856000" />
-      <workItem from="1609240629178" duration="4328000" />
-    </task>
-    <task id="LOCAL-00124" summary="Change student navbar.">
-      <created>1605974121555</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1605974121555</updated>
+      <workItem from="1609240629178" duration="5819000" />
     </task>
     <task id="LOCAL-00125" summary="Add abbr for evaluation and add back buttons for edit evaluation.">
       <created>1605974394463</created>
@@ -497,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609248416415</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Fix: show shared assessments by year of class.">
+      <created>1609264289515</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1609264289515</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +517,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Missing )" />
     <MESSAGE value="Change evaluation order and date." />
     <MESSAGE value="Upgrade to include-1.97 and define variable in base presenter." />
     <MESSAGE value="Upgrade to include-1.98 and add points for esej." />
@@ -541,6 +541,7 @@
     <MESSAGE value="Support tooltip for another devices." />
     <MESSAGE value="Upgrade include to 1.992." />
     <MESSAGE value="Fix: dont count spare hour to overview points." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: dont count spare hour to overview points." />
+    <MESSAGE value="Fix: show shared assessments by year of class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: show shared assessments by year of class." />
   </component>
 </project>
