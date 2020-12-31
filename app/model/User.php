@@ -128,7 +128,8 @@ class User
             INNER JOIN year
             ON class.YearId = year.Id
             WHERE student.UserId = ?
-            AND student.ClassId = ?;',
+            AND student.ClassId = ?
+            AND student.CertificateDate <= NOW();',
                 $studentId, $classId);
     }
 
