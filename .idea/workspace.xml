@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Order activity description.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Hide certification before certification date.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/StudyClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudyClass.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +155,7 @@
       <workItem from="1609157327877" duration="10856000" />
       <workItem from="1609240629178" duration="6259000" />
       <workItem from="1609443135837" duration="45000" />
-      <workItem from="1609443235837" duration="353000" />
-    </task>
-    <task id="LOCAL-00126" summary="Change evaluation styling.">
-      <created>1605975870186</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1605975870186</updated>
+      <workItem from="1609443235837" duration="1800000" />
     </task>
     <task id="LOCAL-00127" summary="Natural sort of datatables and save state for week.">
       <created>1605977405646</created>
@@ -499,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609289435335</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="Hide certification before certification date.">
+      <created>1609443786075</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1609443786077</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +519,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upgrade to include-1.97 and define variable in base presenter." />
     <MESSAGE value="Upgrade to include-1.98 and add points for esej." />
     <MESSAGE value="Change Additional Points to text caused of integer required." />
     <MESSAGE value="Body padding-top fix" />
@@ -543,6 +543,7 @@
     <MESSAGE value="Fix: dont count spare hour to overview points." />
     <MESSAGE value="Fix: show shared assessments by year of class." />
     <MESSAGE value="Order activity description." />
-    <option name="LAST_COMMIT_MESSAGE" value="Order activity description." />
+    <MESSAGE value="Hide certification before certification date." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hide certification before certification date." />
   </component>
 </project>

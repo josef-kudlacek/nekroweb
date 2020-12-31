@@ -131,6 +131,7 @@ class StudyClass
     {
         $params = array(
             ['class.SemesterId' => $semesterId],
+            ['student.IsActive' => 1],
         );
 
         return $this->getOverviewByParams($params);
