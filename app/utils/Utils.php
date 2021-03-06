@@ -84,25 +84,25 @@ class Utils
 
     public static function sendEmail($recipient, $subject, $newPassword)
     {
-        $to = $recipient;
-        $subject = $subject;
+        $sender = "\"Profesor Richard Bufler\" <joseph.kudlacek@gmail.com>";
 
-        $message = "<html>";
-        $message .= "<body style=\"font-family:Arial; \">";
-        $message .= "<p>Dobrý den,<br />";
-        $message .= "Na základě Vašeho zapomenutého hesla Vám bylo vygenerováno heslo nové: <strong>".$newPassword."</strong>.<br />";
-        $message .= "Heslo si můžete kdykoliv změnit v nastavení.</p>";
-        $message .= "<p><i>S pozdravem a přáním pěkného dne,<br /> R.B.</i><br />";
-        $message .= "<a href=https://www.nekromancie.eu>www.nekromancie.eu</a></p>";
-        $message .= "</body><br />";
-        $message .= "</html><br />";
+        $body = "<html>";
+        $body .= "<body style=\"font-family:Arial; \">";
+        $body .= "<p>Dobrý den,<br />";
+        $body .= "Na základě Vašeho zapomenutého hesla Vám bylo vygenerováno heslo nové: <strong>".$newPassword."</strong>.<br />";
+        $body .= "Heslo si můžete kdykoliv změnit v nastavení.</p>";
+        $body .= "<p><i>S pozdravem a přáním pěkného dne,<br /> R.B.</i><br />";
+        $body .= "<a href=https://www.nekromancie.eu>www.nekromancie.eu</a></p>";
+        $body .= "</body>";
+        $body .= "</html>";
 
         $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
         $headers .= "Content-Transfer-Encoding: 7bit" . "\r\n";
-        $headers .= 'From: Profesor Richard Bufler <joseph.kudlacek@gmail.com>' . "\r\n";
+        $headers .= "Message-ID: <" . time() . "." . md5($sender . $recipient) . "@fenek.stable.cz>" . "\r\n";
+        $headers .= "From: " . $sender . "\r\n";
 
-        mail($to,$subject,$message,$headers);
+        mail($recipient, $subject, $body, $headers);
     }
 
     public static function getAbsolutePath()

@@ -193,7 +193,7 @@ class SignPresenter extends BasePresenter
             $this->authentication->forgotPassword($values);
             $this->transaction->endTransaction();
 
-            $this->flashMessage('Na email ' . $values->email . ' bylo zasláno nové heslo.' ,"success");
+            $this->flashMessage('Na email ' . $values->email . ' bylo zasláno nové heslo. Zkontrolujte případně spam.' ,"success");
             $this->redirect('Homepage:default');
 
         } catch (Nette\Security\AuthenticationException $authenticationException) {
