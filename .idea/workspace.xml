@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Hide certification before certification date.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Remove snowflakes.">
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteApplication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteForms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteForms.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/StudyClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/StudyClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utils/Utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Utils.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,21 +158,12 @@
       <workItem from="1609157327877" duration="10856000" />
       <workItem from="1609240629178" duration="6259000" />
       <workItem from="1609443135837" duration="45000" />
-      <workItem from="1609443235837" duration="1800000" />
-    </task>
-    <task id="LOCAL-00127" summary="Natural sort of datatables and save state for week.">
-      <created>1605977405646</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1605977405646</updated>
-    </task>
-    <task id="LOCAL-00128" summary="Upgrade to include-1.93">
-      <created>1605978514740</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1605978514740</updated>
+      <workItem from="1609443235837" duration="2843000" />
+      <workItem from="1609505095571" duration="22000" />
+      <workItem from="1613813029990" duration="19000" />
+      <workItem from="1613813120039" duration="1518000" />
+      <workItem from="1614369427989" duration="1020000" />
+      <workItem from="1615038389594" duration="347000" />
     </task>
     <task id="LOCAL-00129" summary="Change text of flash message about changing class.">
       <created>1605980930954</created>
@@ -500,7 +494,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609443786077</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Show only active student for certification.">
+      <created>1609445167096</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1609445167096</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Remove snowflakes.">
+      <created>1614369779197</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1614369779197</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,8 +527,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upgrade to include-1.98 and add points for esej." />
-    <MESSAGE value="Change Additional Points to text caused of integer required." />
     <MESSAGE value="Body padding-top fix" />
     <MESSAGE value="Add snowflakes.latte" />
     <MESSAGE value="Upgrade to include-1.99" />
@@ -544,6 +550,8 @@
     <MESSAGE value="Fix: show shared assessments by year of class." />
     <MESSAGE value="Order activity description." />
     <MESSAGE value="Hide certification before certification date." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hide certification before certification date." />
+    <MESSAGE value="Show only active student for certification." />
+    <MESSAGE value="Remove snowflakes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove snowflakes." />
   </component>
 </project>
