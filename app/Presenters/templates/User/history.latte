@@ -9,7 +9,7 @@
                             <li class="{$historyItem->IsActive ? $historyItem->Shortcut ? 'text-info' : 'text-dark' : 'text-danger'}">
                                 <strong>{$historyItem->YearFrom}{if $historyItem->YearTo}/{$historyItem->YearTo}{/if}</strong><br />
                                 <strong>Třída:</strong> {$historyItem->ClassName}<br />
-                                <strong>Vysvědčení:</strong> {$historyItem->Shortcut} {if $historyItem->CertificateDate}({$historyItem->CertificateDate|date:"%d. %m. %y"}){/if}
+                                <strong>Vysvědčení:</strong> {$historyItem->Shortcut} {if $historyItem->CertificateDate}({$historyItem->CertificateDate|date:"%d. %m. %Y"}){/if}
                            </li>
                         {/foreach}
                     {/if}

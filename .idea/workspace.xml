@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add suggestions and change layout with evaluation.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/Filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Filter.php" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add tracking of last login.">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,14 +169,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="30703000" />
-    </task>
-    <task id="LOCAL-00144" summary="Styling of certification page.">
-      <created>1606171141188</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1606171141188</updated>
+      <workItem from="1617429724640" duration="31006000" />
     </task>
     <task id="LOCAL-00145" summary="Upgrade to include-1.96.">
       <created>1606171207178</created>
@@ -516,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617465866255</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Add tracking of last login.">
+      <created>1617466462091</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1617466462091</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change characters by logged user data." />
     <MESSAGE value="Change curriculum by logged user data." />
     <MESSAGE value="Refactor - rename private function for logged data." />
     <MESSAGE value="Show shared assessments by name." />
@@ -560,7 +557,8 @@
     <MESSAGE value="Change naming of datatables based on value." />
     <MESSAGE value="Set version of website." />
     <MESSAGE value="Add suggestions and change layout with evaluation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add suggestions and change layout with evaluation." />
+    <MESSAGE value="Add tracking of last login." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tracking of last login." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
