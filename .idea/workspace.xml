@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add new type of attendancetype." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.993.">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,14 +161,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="1898000" />
-    </task>
-    <task id="LOCAL-00134" summary="Fix input filter cleared.">
-      <created>1605999143713</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1605999143713</updated>
+      <workItem from="1617429724640" duration="2240000" />
     </task>
     <task id="LOCAL-00135" summary="Upgrade to include-1.95">
       <created>1605999211974</created>
@@ -504,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617431469658</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="Upgrade to include-1.993.">
+      <created>1617431782427</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1617431782427</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +525,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove css demo for snowflakes." />
     <MESSAGE value="Change max length of quotes." />
     <MESSAGE value="Change colors of assessments comment." />
     <MESSAGE value="Secure routing for forms to HTTPS." />
@@ -548,7 +549,8 @@
     <MESSAGE value="Fix sending mail." />
     <MESSAGE value="Fix semesterTo in dialog when changing user." />
     <MESSAGE value="Add new type of attendancetype." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new type of attendancetype." />
+    <MESSAGE value="Upgrade to include-1.993." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.993." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
