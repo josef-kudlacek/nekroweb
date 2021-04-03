@@ -171,7 +171,7 @@ class UserPresenter extends BasePresenter
             $this->user->login($newUser);
             $this->user->getIdentity()->oldIdentity = $currentUser;
 
-            $semesterTo = (!is_null($this->user->getIdentity()->semesterFrom) ? '/' . $this->user->getIdentity()->semesterTo : '');
+            $semesterTo = (!is_null($this->user->getIdentity()->semesterTo) ? '/' . $this->user->getIdentity()->semesterTo : '');
             $this->flashMessage('Uživatel změněn. Vítej ' . $this->user->getIdentity()->name .' ve třídě '. $this->user->getIdentity()->className .
                 ', školní rok: '. $this->user->getIdentity()->semesterFrom . $semesterTo . '!' ,"success");
             $this->redirect('Homepage:default');

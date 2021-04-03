@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix sending mail.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/Utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Utils.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,14 +159,8 @@
       <workItem from="1613813029990" duration="19000" />
       <workItem from="1613813120039" duration="1518000" />
       <workItem from="1614369427989" duration="1020000" />
-      <workItem from="1615038389594" duration="3355000" />
-    </task>
-    <task id="LOCAL-00130" summary="Prepare generate quotes">
-      <created>1605993104960</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1605993104960</updated>
+      <workItem from="1615038389594" duration="3632000" />
+      <workItem from="1617429410314" duration="260000" />
     </task>
     <task id="LOCAL-00131" summary="Manage of quotes.">
       <created>1605996911685</created>
@@ -506,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615038859984</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Fix sending mail.">
+      <created>1615041755642</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1615041755642</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,5 +550,16 @@
     <MESSAGE value="Remove snowflakes." />
     <MESSAGE value="Fix sending mail." />
     <option name="LAST_COMMIT_MESSAGE" value="Fix sending mail." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Presenters/UserPresenter.php</url>
+          <line>174</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
