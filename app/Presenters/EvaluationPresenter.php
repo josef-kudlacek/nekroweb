@@ -11,10 +11,17 @@ class EvaluationPresenter extends BasePresenter
 {
     private $evaluation;
 
+    private $attendances;
+
     /** @var Model\Attendance
      * @inject
      */
     public $attendance;
+
+    /** @var Model\Lesson
+     * @inject
+     */
+    public $lesson;
 
     /** @var Model\Transaction
      * @inject
@@ -43,7 +50,7 @@ class EvaluationPresenter extends BasePresenter
         $this->template->evaluations = $this->evaluation->getStudentEvaluationsByClass($studentId, $classId);
     }
 
-    public function renderEdit($EvaluationId)
+    public function actionEdit($EvaluationId)
     {
         $this->checkAccess();
 
@@ -58,6 +65,9 @@ class EvaluationPresenter extends BasePresenter
 
         $evaluation->Date = $evaluation->Date->format('Y-m-d');
         $this->template->evaluation = $evaluation;
+
+        $this['evaluationForm'] = $this->createEvaluationForm($evaluation->AttendanceId);
+        bdump($evaluation);
         $this['evaluationForm']->setDefaults($evaluation);
     }
 
@@ -75,39 +85,14 @@ class EvaluationPresenter extends BasePresenter
 
     protected function createComponentEvaluationForm(): Form
     {
-        $studentId = $this->user->getId();
-        $classId = $this->user->getIdentity()->classId;
-
-        $attendances = $this->evaluation->getRemainingClassForEvaluation($studentId, $classId)->fetchPairs('Id', 'LessonName');
-
-        $form = new Form;
-
-        $form->addText('Id');
-
-        $form->addText('StarsCount')
-            ->addRule($form::RANGE, 'Hodnocení může být nejméně %d a nejvíce %d', [1, 5]);
-
-        $form->addTextArea('Description')
-            ->setRequired();
-
-        $form->addSelect('AttendanceId')
-            ->setItems($attendances)
-            ->setRequired();
-
-        $form->addSubmit('send');
-
-        $form->addProtection();
-
-        $form->onError[] = array($this, 'errorForm');
-        $form->onSuccess[] = [$this, 'evaluationFormSucceeded'];
-
-        return $form;
+        return $this->createEvaluationForm(null);
     }
 
     public function evaluationFormSucceeded(Form $form, \stdClass $values): void
     {
         $values = Utils::convertEmptyToNull($form->values);
         $this->transaction->startTransaction();
+        bdump($values);
         if ($values->Id)
         {
             try {
@@ -134,5 +119,41 @@ class EvaluationPresenter extends BasePresenter
             $this->redirect('Homepage:default');
         }
     }
+
+    private function createEvaluationForm($attendanceId)
+    {
+        $studentId = $this->user->getId();
+        $classId = $this->user->getIdentity()->classId;
+
+        if (is_null($attendanceId)) {
+            $this->attendance = $this->evaluation->getRemainingClassForEvaluation($studentId, $classId)->fetchPairs('Id', 'LessonName');
+        } else {
+            $this->attendance = $this->evaluation->getStudentEvaluationsByAttendance($attendanceId)->fetchPairs('AttendanceId', 'LessonLongName');
+        }
+
+        $form = new Form;
+
+        $form->addText('Id');
+
+        $form->addInteger('StarsCount')
+            ->setRequired("Je třeba zvolit hodnocení.");
+
+        $form->addTextArea('Description')
+            ->setRequired("Je třeba vyplnit komentář hodnocení.");
+
+        $form->addSelect('AttendanceId')
+            ->setItems($this->attendance)
+            ->setRequired();
+
+        $form->addSubmit('send');
+
+        $form->addProtection();
+
+        $form->onError[] = array($this, 'errorForm');
+        $form->onSuccess[] = [$this, 'evaluationFormSucceeded'];
+
+        return $form;
+    }
+
 
 }

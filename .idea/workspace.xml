@@ -19,14 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix show characters and curriculum for professor.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add lesson types.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Curriculum/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Curriculum/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Arc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Arc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Attendance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Attendance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Curriculum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Curriculum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Evaluation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Evaluation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,14 +173,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="5292000" />
-    </task>
-    <task id="LOCAL-00139" summary="Create new class for data-table.">
-      <created>1606159026247</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1606159026247</updated>
+      <workItem from="1617429724640" duration="10613000" />
     </task>
     <task id="LOCAL-00140" summary="Disquisition removed for now.">
       <created>1606159094441</created>
@@ -520,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617433239308</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Add lesson types.">
+      <created>1617436328869</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1617436328869</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +537,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add namespace for routes." />
     <MESSAGE value="Secure route deprecated" />
     <MESSAGE value="Secure route deprecated." />
     <MESSAGE value="Show class when creating assessment." />
@@ -564,7 +561,8 @@
     <MESSAGE value="Add new attendance type to legend." />
     <MESSAGE value="Fix curriculum show for user when more classes in past." />
     <MESSAGE value="Fix show characters and curriculum for professor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix show characters and curriculum for professor." />
+    <MESSAGE value="Add lesson types." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add lesson types." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,12 +10,16 @@
                 <select n:name=AttendanceId class="form-control"></select>
             </div>
             <div class="form-group col-md-4 offset-md-4">
-                <label><strong><abbr title="Hodnotí se zprava. Čím více plných, tím vyšší je hodnocení." tabindex="0">Hodnocení</abbr>:</strong></label>
-                <div class="StarsCount">
-                {for $counter = 5; $counter > 0; $counter--}
-                    <span><input type="radio" name="StarsCount" id="{$counter}" value="{$counter}"><label for="{$counter}"></label></span>
+                <label><strong>Hodnocení:</strong></label>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                {for $counter = 1; $counter < 6; $counter++}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="StarsCount" id="{$counter}" value="{$counter}"
+                               {if $evaluation->StarsCount == $counter}checked{/if}>
+                        <label class="form-check-label" for="{$counter}">{$counter}</label>
+                    </div>
                 {/for}
-                </div>
             </div>
             <div class="form-group col-md-4 offset-md-4">
                 <label><strong>Komentář:</strong></label>

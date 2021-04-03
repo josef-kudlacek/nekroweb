@@ -64,6 +64,15 @@ class Evaluation
         return $this->getEvaluationByParams($params);
     }
 
+    public function getStudentEvaluationsByAttendance($Attendance)
+    {
+        $params = array(
+            ['attendance.Id' => $Attendance],
+        );
+
+        return $this->getEvaluationByParams($params);
+    }
+
     public function getRemainingClassForEvaluation($StudentId, $ClassId)
     {
         return $this->database->query('
@@ -74,7 +83,8 @@ class Evaluation
             INNER JOIN lesson
             ON attendance.LessonId = lesson.Id
             WHERE attendance.StudentUserId = ?
-            AND attendance.StudentClassId = ?;',
+            AND attendance.StudentClassId = ?
+            AND evaluation.Id IS NULL;;',
                 $StudentId, $ClassId);
     }
 
@@ -114,8 +124,9 @@ class Evaluation
         return $this->database->query('
             SELECT evaluation.Id, user.Name AS UserName, class.Name AS ClassName, student.HouseId,
             semester.YearFrom, semester.YearTo, evaluation.Date, evaluation.StarsCount, 
-            evaluation.Description, lesson.Number AS LessonNumber, lesson.Name AS LessonName,
-            attendance.AttendanceDate
+            evaluation.Description, lesson.Id AS LessonId, lesson.Number AS LessonNumber,
+            attendance.Id AS AttendanceId, CONCAT(lesson.Number, ". ", lesson.Name) AS LessonLongName,
+            lesson.Name AS LessonName, attendance.AttendanceDate
             FROM evaluation
             INNER JOIN attendance
             ON attendance.Id = evaluation.AttendanceId
