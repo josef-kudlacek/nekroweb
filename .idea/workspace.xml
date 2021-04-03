@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix semesterTo in dialog when changing user.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/AttendanceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/AttendanceType.php" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add new type of attendancetype." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,21 +159,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="1592000" />
-    </task>
-    <task id="LOCAL-00132" summary="Create unique id of tables and upgrade include-1.94">
-      <created>1605997435550</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1605997435550</updated>
-    </task>
-    <task id="LOCAL-00133" summary="Change input filter type to search.">
-      <created>1605998546385</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1605998546386</updated>
+      <workItem from="1617429724640" duration="1898000" />
     </task>
     <task id="LOCAL-00134" summary="Fix input filter cleared.">
       <created>1605999143713</created>
@@ -510,7 +490,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617429976004</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="Add new type of attendancetype.">
+      <created>1617431347402</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1617431347402</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Add new type of attendancetype.">
+      <created>1617431469658</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1617431469658</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +523,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Upgrade to include-1.99" />
     <MESSAGE value="Remove css demo for snowflakes." />
     <MESSAGE value="Change max length of quotes." />
     <MESSAGE value="Change colors of assessments comment." />
@@ -554,7 +547,8 @@
     <MESSAGE value="Remove snowflakes." />
     <MESSAGE value="Fix sending mail." />
     <MESSAGE value="Fix semesterTo in dialog when changing user." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix semesterTo in dialog when changing user." />
+    <MESSAGE value="Add new type of attendancetype." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new type of attendancetype." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
