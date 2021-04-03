@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to include-1.993.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/legend.latte" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add new attendance type to legend." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,21 +159,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="2240000" />
-    </task>
-    <task id="LOCAL-00135" summary="Upgrade to include-1.95">
-      <created>1605999211974</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1605999211974</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Add quote example and enable generating of quotes.">
-      <created>1606076632357</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1606076632358</updated>
+      <workItem from="1617429724640" duration="2919000" />
     </task>
     <task id="LOCAL-00137" summary="Add student certification.">
       <created>1606079070981</created>
@@ -506,7 +490,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617431782427</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Add new attendance type to legend.">
+      <created>1617432016438</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1617432016438</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Add new attendance type to legend.">
+      <created>1617432063645</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1617432063645</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +523,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change max length of quotes." />
     <MESSAGE value="Change colors of assessments comment." />
     <MESSAGE value="Secure routing for forms to HTTPS." />
     <MESSAGE value="Add namespace for routes." />
@@ -550,7 +547,8 @@
     <MESSAGE value="Fix semesterTo in dialog when changing user." />
     <MESSAGE value="Add new type of attendancetype." />
     <MESSAGE value="Upgrade to include-1.993." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to include-1.993." />
+    <MESSAGE value="Add new attendance type to legend." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new attendance type to legend." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

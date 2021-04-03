@@ -62,6 +62,7 @@ class Curriculum
             ON lesson.Year = year.Id
             WHERE',
             $params,
-            'ORDER BY year.Number, lesson.Number;');
+            'GROUP BY year.Number, lesson.Number
+            ORDER BY year.Number, lesson.Number;');
     }
 }
