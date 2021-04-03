@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix sending mail.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Fix semesterTo in dialog when changing user.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/create.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detailEdit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/AttendanceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/AttendanceType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,13 +165,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-    </task>
-    <task id="LOCAL-00131" summary="Manage of quotes.">
-      <created>1605996911685</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1605996911685</updated>
+      <workItem from="1617429724640" duration="1592000" />
     </task>
     <task id="LOCAL-00132" summary="Create unique id of tables and upgrade include-1.94">
       <created>1605997435550</created>
@@ -505,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615041755642</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="Fix semesterTo in dialog when changing user.">
+      <created>1617429976004</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1617429976004</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +529,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add snowflakes.latte" />
     <MESSAGE value="Upgrade to include-1.99" />
     <MESSAGE value="Remove css demo for snowflakes." />
     <MESSAGE value="Change max length of quotes." />
@@ -549,7 +553,8 @@
     <MESSAGE value="Show only active student for certification." />
     <MESSAGE value="Remove snowflakes." />
     <MESSAGE value="Fix sending mail." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix sending mail." />
+    <MESSAGE value="Fix semesterTo in dialog when changing user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix semesterTo in dialog when changing user." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

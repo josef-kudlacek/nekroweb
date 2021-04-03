@@ -18,7 +18,8 @@ class AttendanceType
     {
         return $this->database->query('
             SELECT Id, Name, Points
-            FROM attendancetype;');
+            FROM attendancetype Type
+            ORDER BY Type.Points DESC, Type.Id;');
     }
 
 }
