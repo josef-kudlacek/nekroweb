@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to version 2.000." />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change homepage text, order changelog and upgrade to v2.001." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,14 +167,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="37424000" />
-    </task>
-    <task id="LOCAL-00149" summary="Upgrade to include-1.97 and define variable in base presenter.">
-      <created>1606253726386</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1606253726386</updated>
+      <workItem from="1617429724640" duration="37842000" />
     </task>
     <task id="LOCAL-00150" summary="Upgrade to include-1.98 and add points for esej.">
       <created>1606573848658</created>
@@ -512,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617472932452</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="Change homepage text, order changelog and upgrade to v2.001.">
+      <created>1617473246225</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1617473246225</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +543,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Accept only supported file extensions." />
     <MESSAGE value="Support tooltip for another devices." />
     <MESSAGE value="Upgrade include to 1.992." />
     <MESSAGE value="Fix: dont count spare hour to overview points." />
@@ -568,7 +567,8 @@
     <MESSAGE value="Change format of year in study history." />
     <MESSAGE value="Add changelog." />
     <MESSAGE value="Upgrade to version 2.000." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to version 2.000." />
+    <MESSAGE value="Change homepage text, order changelog and upgrade to v2.001." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change homepage text, order changelog and upgrade to v2.001." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
