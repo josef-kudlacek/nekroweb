@@ -8,7 +8,9 @@
                     {foreach $lessons as $lesson}
                         {if $lesson->YearNumber == $year}
                             <tr>
-                                <td>{$lesson->LessonNumber}. <strong>{$lesson->Name}</strong></td>
+                                <td>{$lesson->LessonNumber}. <strong>{$lesson->Name}</strong>
+                                    {ifset $lesson->TypeName}[<abbr title="{$lesson->TypeDescription}" tabindex="0">{$lesson->TypeName}</abbr>]{/ifset}
+                                </td>
                             </tr>
                         {else}
                             {if $iterator->first}
@@ -30,7 +32,9 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>{$lesson->LessonNumber}. <strong>{$lesson->Name}</strong></td>
+                                                <td>{$lesson->LessonNumber}. <strong>{$lesson->Name}</strong>
+                                                    {ifset $lesson->TypeName}[<abbr title="{$lesson->TypeDescription}" tabindex="0">{$lesson->TypeName}</abbr>]{/ifset}
+                                                </td>
                                             </tr>
                         {/if}
                     {/foreach}

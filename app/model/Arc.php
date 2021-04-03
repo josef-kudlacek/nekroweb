@@ -72,10 +72,13 @@ class Arc
     {
         return $this->database->query('
             SELECT attendance.AttendanceDate, lesson.Number AS LessonNumber, lesson.Name AS LessonName,
+            lessontype.Name AS LessonTypeName, lessontype.Description AS LessonTypeDescription,
             arc.FileName, class.Name AS ClassName, lesson.Id AS LessonId, class.Id AS ClassId
             FROM attendance
             INNER JOIN lesson
             ON attendance.LessonId = lesson.Id
+            LEFT JOIN lessontype
+            ON lesson.LessonTypeId = lessontype.Id
             INNER JOIN class
             ON attendance.StudentClassId = class.Id
             LEFT JOIN arc

@@ -56,10 +56,13 @@ class Curriculum
     private function getLessonsByParams($params)
     {
         return $this->database->query('
-            SELECT lesson.Id, year.Number AS YearNumber, year.CodeName, lesson.Number AS LessonNumber, lesson.Name 
+            SELECT lesson.Id, year.Number AS YearNumber, year.CodeName, lesson.Number AS LessonNumber,
+                   lesson.Name, type.Name AS TypeName, type.Description AS TypeDescription 
             FROM necromancy.lesson lesson
             INNER JOIN necromancy.year year
             ON lesson.Year = year.Id
+            LEFT JOIN lessontype type
+            ON lesson.lessontypeid = type.id
             WHERE',
             $params,
             'GROUP BY year.Number, lesson.Number

@@ -19,7 +19,9 @@ class Attendance
         return $this->database->query('
             SELECT attendance.Id, house.Id AS HouseId, user.Name AS StudentName,
             attendance.AttendanceTypeId, attendancetype.Name AS AttendanceName, 
-            lesson.Number AS LessonNumber, lesson.Name AS LessonName, attendance.AttendanceDate,
+            lesson.Number AS LessonNumber, lesson.Name AS LessonName,
+            lessontype.Name AS LessonTypeName, lessontype.Description AS LessonTypeDescription,
+            attendance.AttendanceDate,
             SUM(ActivityPoints) AS ActivityOverall, 
             GROUP_CONCAT(CONCAT_WS(" ", activity.ActivityPoints, CONCAT("(", activitytype.Name, ")"))
             ORDER BY activitytype.Name SEPARATOR " + ") AS ActivityDescription,
@@ -36,6 +38,8 @@ class Attendance
             AND student.ClassId = attendance.StudentClassId
             INNER JOIN lesson
             ON lesson.Id = attendance.LessonId
+            LEFT JOIN lessontype
+            ON lesson.LessonTypeId = lessontype.Id
             INNER JOIN class
             ON class.Id = attendance.StudentClassId
             INNER JOIN user

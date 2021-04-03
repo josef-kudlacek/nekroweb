@@ -17,7 +17,9 @@
                     {foreach $arcs as $arc}
                         <tr>
                             <td class="text-white bg-dark align-middle">{$arc->ClassName}</td>
-                            <td class="text-dark bg-light align-middle">{$arc->LessonNumber}. {$arc->LessonName}</td>
+                            <td class="text-dark bg-light align-middle">{$arc->LessonNumber}. {$arc->LessonName}
+                                {ifset $arc->LessonTypeName}[<abbr title="{$arc->LessonTypeDescription}" tabindex="0">{$arc->LessonTypeName}</abbr>]{/ifset}
+                            </td>
                             <td class="table-warning align-middle">{$arc->AttendanceDate|weekDayCZ} ({$arc->AttendanceDate|date:'%d.%m.%Y'})</td>
                             <td class="text-white bg-dark align-middle text-center">
                                 {if $arc->FileName}

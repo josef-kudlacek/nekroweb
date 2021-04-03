@@ -15,7 +15,9 @@
             <tbody>
             {foreach $attendance as $attendanceItem}
                 <tr>
-                    <td class="text-white bg-dark">{$attendanceItem->LessonNumber}. hodina ({$attendanceItem->LessonName})</td>
+                    <td class="text-white bg-dark">{$attendanceItem->LessonNumber}. hodina ({$attendanceItem->LessonName})
+                        {ifset $attendanceItem->LessonTypeName}[<abbr title="{$attendanceItem->LessonTypeDescription}" tabindex="0">{$attendanceItem->LessonTypeName}</abbr>]{/ifset}
+                    </td>
                     <td class="text-dark bg-light">{$attendanceItem->AttendanceDate|date:"%d. %m. %Y"}</td>
                     <td class="text-dark bg-{$attendanceItem->AttendanceTypeId|attendanceType}">
                         {$attendanceItem->ActivityPoints}{if $attendanceItem->ActivityOverall} +
