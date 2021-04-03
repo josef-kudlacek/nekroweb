@@ -25,7 +25,7 @@ class BasePresenter extends Nette\Application\UI\Presenter
 
     protected function beforeRender()
     {
-        $this->template->include = 'include-1.994';
+        $this->template->version = '1.994';
 
         $this->loadTemplateFilters();
         $this->loadTemplateFunctions();
