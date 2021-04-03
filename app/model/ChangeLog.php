@@ -17,7 +17,8 @@ class ChangeLog
     public function getChangelog()
     {
         return $this->database->query('
-            SELECT * FROM changelog');
+            SELECT * FROM changelog
+            ORDER BY changelog.Datetime');
     }
 
     public function getChangelogItemById($itemId)

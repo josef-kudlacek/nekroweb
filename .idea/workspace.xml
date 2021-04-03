@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to version 2.000.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/guest.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/guest.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/student.latte" afterDir="false" />
-    </list>
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Upgrade to version 2.000." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,14 +167,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="37122000" />
-    </task>
-    <task id="LOCAL-00148" summary="Change evaluation order and date.">
-      <created>1606253319734</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1606253319735</updated>
+      <workItem from="1617429724640" duration="37424000" />
     </task>
     <task id="LOCAL-00149" summary="Upgrade to include-1.97 and define variable in base presenter.">
       <created>1606253726386</created>
@@ -516,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617470872176</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="Upgrade to version 2.000.">
+      <created>1617472932452</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1617472932452</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
