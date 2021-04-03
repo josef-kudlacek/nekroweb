@@ -14,21 +14,86 @@ class Suggestion
         $this->database = $database;
     }
 
-    public function GetSuggestions()
+    public function getSuggestionParents()
     {
         return $this->database->query('
-            SELECT suggestion.Id, user.Name, suggestion.Datetime, suggestion.Text
+            SELECT suggestion.Id
             FROM suggestion
-            INNER JOIN user
-            ON user.Id = suggestion.UserId;');
+            WHERE suggestion.ParentId IS NULL;');
     }
 
-    public function GetSuggestionComments()
+    public function getSuggestions()
+    {
+        $params = array(
+            ['1' => 1]
+        );
+
+        return $this->getSuggestionsByParam($params);
+    }
+
+    public function getSuggestionsByParent($suggestionParentId)
+    {
+        $params = array(
+            ['suggestion.ParentId' => $suggestionParentId]
+        );
+
+        return $this->getSuggestionsByParam($params);
+    }
+
+    public function getSuggestionById($suggestionId)
+    {
+        $params = array(
+            ['suggestion.Id' => $suggestionId]
+        );
+
+        return $this->getSuggestionsByParam($params);
+    }
+
+    public function getUserSuggestion($suggestionId, $userId)
+    {
+        $params = array(
+            ['suggestion.Id' => $suggestionId],
+            ['suggestion.UserId' => $userId]
+        );
+
+        return $this->getSuggestionsByParam($params);
+    }
+
+    public function insertSuggestion($values)
+    {
+        return $this->database->table('suggestion')->insert($values);
+    }
+
+    public function updateSuggestion($values)
+    {
+        return $this->database->query("
+            UPDATE suggestion
+            SET Subject = ?,
+            Text = ?,
+            UDatetime = ?    
+            WHERE suggestion.Id = ?;",
+            $values->Subject, $values->Text, $values->Datetime, $values->Id);
+    }
+
+    private function getSuggestionsByParam($params)
     {
         return $this->database->query('
-            SELECT com.SuggestionId, user.Name, com.Datetime, com.Text
-            FROM suggestioncomment com
+            SELECT suggestion.Id, suggestion.ParentId, suggestion.Subject, suggestion.Datetime,
+            suggestion.Text, suggestion.UDatetime,
+            user.Name AS UserName, user.Id AS UserId, class.Name AS ClassName, student.HouseId,
+            semester.YearFrom, semester.YearTo
+            FROM suggestion
             INNER JOIN user
-            ON user.Id = com.UserId;');
+            ON user.Id = suggestion.UserId
+            LEFT JOIN student
+            ON user.Id = student.UserId            
+            LEFT JOIN class
+            ON class.Id = student.ClassId
+            LEFT JOIN semester
+            ON class.SemesterId = semester.Id
+            WHERE',
+            $params,
+            'GROUP BY suggestion.id, user.Id
+            ORDER BY suggestion.Datetime ASC;');
     }
 }

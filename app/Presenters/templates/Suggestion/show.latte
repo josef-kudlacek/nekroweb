@@ -1,16 +1,63 @@
 {block content}
+    <script>
+        $(function() {
+            $("#filterSuggestions").on('change paste keyup search', function() {
+                $("#filterSuggestions").filterDivByParams($('.suggestion-row'), $('.filter-suggestion'));
+            });
+        });
+    </script>
     <div class="container">
-        <h1 n:block="title">Pravidla hodin</h1>
-        {if suggestion}
-            <form>
-                {foreach $suggestion as $suggestionItem}
-                <div class="form-group">
-                    <span>{$suggestionItem->Name}</span>
-                    <label>{$suggestionItem->Datetime}</label>
-                    <label>{$suggestionItem->Text}</label>
+        <h1 n:block="title">Návrhy a připomínky</h1>
+        <div class="text-center">
+            <a class="btn btn-primary" href="{link Suggestion:create}">Vytvořit příspěvek</a>
+        </div>
+        {if $suggestions}
+            <h3>Příspěvky uživatelů</h3>
+            <div class="row">
+                <input class="form-control" id="filterSuggestions" type="search" placeholder="Filtrovat jednotlivé příspěvky">
+            </div>
+            <br />
+            {foreach $suggestionParents as $suggestionParent}
+                <div class="row suggestion-row justify-content-md-center">
+                    <div class="col-lg-10">
+                    {foreach $suggestions as $suggestion}
+                        {if $suggestionParent->Id == $suggestion->ParentId || $suggestionParent->Id == $suggestion->Id}
+                            {if $suggestionParent->Id == $suggestion->Id}
+                            {else}
+                                <hr class="footnote">
+                            {/if}
+                            <div class="review-block-name filter-suggestion">
+                                <a href="https://bradavice.eu//ukaz.php?name={urlencode($suggestion->UserName|encodeToWin1250)}" target="_blank"
+                                   class="text-{$suggestion->HouseId|houseType}">{$suggestion->UserName}, {$suggestion->ClassName}</a>
+                                <br /><small><strong>Datum a čas příspěvku:</strong> {$suggestion->Datetime|date:"%d. %m. %Y %H:%M:%S"}</small><br />
+                                {$suggestion->Subject}
+                            </div>
+                            <div class="review-block-evaluation filter-suggestion">
+                                {$suggestion->Text}
+                                {if $suggestion->UDatetime}<br /><small><i>(<strong>Upraveno:</strong> {$suggestion->UDatetime|date:"%d. %m. %Y %H:%M:%S"})</i></small>{/if}
+                                <br />
+                                {if $suggestion->UserId == $user->getIdentity()->getId()}
+                                    <a class="btn btn-warning btn-sm" href="{link Suggestion:edit $suggestion->Id}">Upravit příspěvek</a>
+                                    <a class="btn btn-danger btn-sm" href="{link Suggestion:delete $suggestion->Id}">Smazat příspěvek</a>
+                                {/if}
+                            </div>
+                        {/if}
+                    {/foreach}
+                        <br />
+                        <div class="text-center">
+                            <a class="btn btn-info btn-sm" href="{link Suggestion:react $suggestionParent->Id}">Reagovat na vlákno</a>
+                        </div>
+                    </div>
                 </div>
-                {/foreach}
-            </form>
+            {/foreach}
+        {else}
+            <p>
+            <div class="row">
+                <div class="col-7 offset-3 col-about">
+                    <strong>Nenalezen žádný záznam.</strong>
+                </div>
+            </div>
+            </p>
         {/if}
     </div>
 {/block}

@@ -1,0 +1,23 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Uprav příspěvek</h1>
+        <form n:name="suggestionForm">
+            <input n:name=Id class="form-control" type="number" value="{$suggestion->Id}" hidden>
+            <input n:name=UserId class="form-control" type="number" value="{$user->getIdentity()->getId()}" hidden>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Předmět:</strong></label>
+                <input n:name=Subject class="form-control">
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <label><strong>Komentář:</strong></label>
+                <textarea n:name=Text class="form-control" rows="5" maxlength="800"></textarea>
+            </div>
+            <div class="form-group col-md-4 offset-md-4">
+                <input n:name=send class="btn btn-secondary btn-block" value="Přidat příspěvek">
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href="{link Suggestion:show}">Zpět</a>
+            </div>
+        </form>
+    </div>
+{/block}

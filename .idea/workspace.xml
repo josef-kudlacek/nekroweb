@@ -19,14 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change naming of datatables based on value.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Set version of website.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/create.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/edit.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/react.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/footer.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/footer.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/access.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/forgot.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SuggestionPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SuggestionPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Suggestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Suggestion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.994/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.994/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,14 +181,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="18686000" />
-    </task>
-    <task id="LOCAL-00142" summary="Hide form fields while creating new arc.">
-      <created>1606160364776</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1606160364776</updated>
+      <workItem from="1617429724640" duration="30365000" />
     </task>
     <task id="LOCAL-00143" summary="Change lesson name on attendance detail.">
       <created>1606166408461</created>
@@ -520,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617450667511</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="Set version of website.">
+      <created>1617453147552</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1617453147552</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +545,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Show class when creating assessment." />
     <MESSAGE value="Change history by logged user data." />
     <MESSAGE value="Change characters by logged user data." />
     <MESSAGE value="Change curriculum by logged user data." />
@@ -564,7 +569,8 @@
     <MESSAGE value="Add lesson types." />
     <MESSAGE value="Change system of evaluation." />
     <MESSAGE value="Change naming of datatables based on value." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change naming of datatables based on value." />
+    <MESSAGE value="Set version of website." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set version of website." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

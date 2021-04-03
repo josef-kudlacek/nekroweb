@@ -117,11 +117,11 @@
             <br />
             {foreach $evaluations as $evaluation}
                 <div class="row rating-row">
-                    <div class="col-3">
+                    <div class="col">
                         <div class="review-block-name filter-evaluate">
                             Školní rok: {$evaluation->YearFrom}{if $evaluation->YearTo}/{$evaluation->YearTo|substr: 2, 2}{/if}<br />
                             <a href="https://bradavice.eu//ukaz.php?name={urlencode($evaluation->UserName|encodeToWin1250)}" target="_blank"
-                            class="text-{$evaluation->HouseId|houseType}">{$evaluation->UserName}, {$evaluation->ClassName}</a>
+                               class="text-{$evaluation->HouseId|houseType}">{$evaluation->UserName}, {$evaluation->ClassName}</a>
                         </div>
                         <div class="review-block-stars">
                             {for $counter = 1; $counter < 6; $counter++}
@@ -136,8 +136,6 @@
                                 {/if}
                             {/for}
                         </div>
-                    </div>
-                    <div class="col">
                         <div class="review-block-name filter-evaluate">
                             {$evaluation->LessonNumber}. {$evaluation->LessonName} ({$evaluation->AttendanceDate|date:"%d. %m. %Y"})
                             <br /><small><strong>Datum a čas hodnocení:</strong> {$evaluation->Date|date:"%d. %m. %Y %H:%M:%S"}</small>

@@ -67,13 +67,21 @@ class EvaluationPresenter extends BasePresenter
         $this->template->evaluation = $evaluation;
 
         $this['evaluationForm'] = $this->createEvaluationForm($evaluation->AttendanceId);
-        bdump($evaluation);
         $this['evaluationForm']->setDefaults($evaluation);
     }
 
     public function actionDelete($EvaluationId)
     {
         $this->checkAccess();
+
+        $studentId = $this->user->getId();
+        $evaluation = $this->evaluation->getStudentEvaluation($EvaluationId, $studentId)->fetch();
+
+        if (!$evaluation)
+        {
+            $this->flashMessage('Hodnocení nenalezeno.','danger');
+            $this->redirect('Evaluation:admin');
+        }
 
         $this->transaction->startTransaction();
         $this->evaluation->deleteEvaluation($EvaluationId);
@@ -91,8 +99,8 @@ class EvaluationPresenter extends BasePresenter
     public function evaluationFormSucceeded(Form $form, \stdClass $values): void
     {
         $values = Utils::convertEmptyToNull($form->values);
+
         $this->transaction->startTransaction();
-        bdump($values);
         if ($values->Id)
         {
             try {

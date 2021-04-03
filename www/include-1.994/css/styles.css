@@ -147,7 +147,6 @@ p {
 
 .review-block-name {
   font-weight: bold;
-  padding-top: 20px;
 }
 
 .row.rating-row {
@@ -160,6 +159,20 @@ p {
 }
 
 .rating-row .col-3 {
+  border-right-style: solid;
+  border-color: #537DA7;
+}
+
+.row.suggestion-row {
+  background-color: #FFF8DC;
+  border-color: #506F7A;
+  border-radius: 9px;
+  border-style: solid;
+  margin-bottom: 30px;
+  padding: .7em;
+}
+
+.suggestion-row .col-3 {
   border-right-style: solid;
   border-color: #537DA7;
 }

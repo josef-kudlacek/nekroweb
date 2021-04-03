@@ -38,8 +38,42 @@ class SuggestionPresenter extends BasePresenter
 
     public function renderShow()
     {
-        $this->template->suggestion = $this->suggestion->GetSuggestions();
-        $this->template->suggestionComments = $this->suggestion->GetSuggestionComments();
+        $this->template->suggestionParents = $this->suggestion->getSuggestionParents();
+        $this->template->suggestions = $this->suggestion->getSuggestions()->fetchAll();
+    }
+
+    public function renderEdit($suggestionId)
+    {
+        $userId = $this->user->getId();
+        $suggestion = $this->suggestion->getUserSuggestion($suggestionId, $userId)->fetch();
+
+        if (!$suggestion)
+        {
+            $this->flashMessage('Příspěvek nenalezen.','danger');
+            $this->redirect('Suggestion:show');
+        }
+
+        $this['suggestionForm']->setDefaults($suggestion);
+        $this->template->suggestion = $suggestion;
+    }
+
+    public function renderDelete($suggestionId)
+    {
+        $userId = $this->user->getId();
+        $suggestion = $this->suggestion->getUserSuggestion($suggestionId, $userId)->fetch();
+
+        if (!$suggestion)
+        {
+            $this->flashMessage('Příspěvek nenalezen.','danger');
+            $this->redirect('Suggestion:show');
+        }
+    }
+
+    public function actionReact($suggestionParentId)
+    {
+        $this->template->suggestions = $this->suggestion->getSuggestionsByParent($suggestionParentId);
+
+        $this->template->parentId = $suggestionParentId;
     }
 
     public function actionError()
@@ -128,6 +162,52 @@ class SuggestionPresenter extends BasePresenter
 
         $this->flashMessage('Vyjádření k chybě zaznamenáno.','success');
         $this->redirect('Suggestion:errorAdmin');
+    }
+
+    protected function createComponentSuggestionForm(): Form
+    {
+        $form = new Form;
+
+        $form->addInteger('Id');
+
+        $form->addInteger('ParentId');
+
+        $form->addInteger('UserId');
+
+        $form->addText('Subject')
+            ->setRequired('Prosím vyplňte předmět příspěvku.')
+            ->setMaxLength(60);
+
+        $form->addTextArea('Text')
+            ->setRequired('Prosím vyplňte obsah příspěvku.');
+
+        $form->addSubmit('send');
+
+        $form->addProtection();
+
+        $form->onError[] = array($this, 'suggestionForm');
+        $form->onSuccess[] = [$this, 'suggestionFormSucceeded'];
+
+        return $form;
+    }
+
+    public function suggestionFormSucceeded(Form $form): void
+    {
+        $values = Utils::convertEmptyToNull($form->getValues());
+        $values->Datetime = date("Y-m-d H:i:s");
+
+        $this->transaction->startTransaction();
+        if ($values->Id) {
+            $this->suggestion->updateSuggestion($values);
+            $message = 'Příspěvek byl úspěšně upraven.';
+        } else {
+            $this->suggestion->insertSuggestion($values);
+            $message = 'Příspěvek byl úspěšně přidán.';
+        }
+        $this->transaction->endTransaction();
+
+        $this->flashMessage($message,'success');
+        $this->redirect('Suggestion:show');
     }
 
     private function createErrorFile($file)
