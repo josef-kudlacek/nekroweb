@@ -19,8 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add tracking of last login.">
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/history.latte" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change format of year in study history.">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/ChangelogPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Changelog/admin.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Changelog/create.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Changelog/edit.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Changelog/show.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/ChangeLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/footer.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/footer.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +99,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nekroweb\app\Presenters" />
       <recent name="C:\xampp\htdocs\nekroweb\app\Presenters\templates\User" />
       <recent name="C:\xampp\htdocs\nekroweb\www\include-1.2" />
       <recent name="C:\xampp\htdocs\nekroweb\www" />
       <recent name="C:\xampp\htdocs\nekroweb\www\include-1.1." />
-      <recent name="C:\xampp\htdocs\nekroweb\arch" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -169,14 +178,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="31006000" />
-    </task>
-    <task id="LOCAL-00145" summary="Upgrade to include-1.96.">
-      <created>1606171207178</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1606171207178</updated>
+      <workItem from="1617429724640" duration="35168000" />
     </task>
     <task id="LOCAL-00146" summary="Upgrade to include-1.96.">
       <created>1606171230547</created>
@@ -514,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617466462091</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="Change format of year in study history.">
+      <created>1617466554139</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1617466554139</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +534,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -533,7 +554,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change curriculum by logged user data." />
     <MESSAGE value="Refactor - rename private function for logged data." />
     <MESSAGE value="Show shared assessments by name." />
     <MESSAGE value="Accept only supported file extensions." />
@@ -558,7 +578,8 @@
     <MESSAGE value="Set version of website." />
     <MESSAGE value="Add suggestions and change layout with evaluation." />
     <MESSAGE value="Add tracking of last login." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tracking of last login." />
+    <MESSAGE value="Change format of year in study history." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change format of year in study history." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

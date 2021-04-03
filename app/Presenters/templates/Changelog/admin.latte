@@ -1,0 +1,27 @@
+{block content}
+    <div class="container">
+        <h1 n:block="title">Historie změn</h1>
+        <div class="text-center">
+            <a class="btn btn-info" href="{link Changelog:create}">Přidat záznam</a>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-7 offset-3 col-about">
+                <ul class="timeline">
+                    {if $changelog}
+                        {foreach $changelog as $changelogItem}
+                            <li>
+                                <strong>{$changelogItem->Version}</strong> ({$changelogItem->Datetime|date:"%d. %m. %Y %H:%M"})<br />
+                                {$changelogItem->Description}<br />
+                                <a href="{link edit $changelogItem->Id}" class="btn btn-warning btn-sm"
+                                   role="button">Upravit</a>
+                                <a href="{link delete $changelogItem->Id}" class="btn btn-danger btn-sm"
+                                   role="button">Odebrat</a>
+                            </li>
+                        {/foreach}
+                    {/if}
+                </ul>
+            </div>
+        </div>
+    </div>
+{/block}

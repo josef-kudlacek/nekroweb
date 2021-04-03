@@ -28,6 +28,7 @@ services:
 	- App\Model\AttendanceType
 	- App\Model\Card
 	- App\Model\Character
+	- App\Model\ChangeLog
 	- App\Model\Competition
 	- App\Model\CompetitionFile
 	- App\Model\Disquisition
