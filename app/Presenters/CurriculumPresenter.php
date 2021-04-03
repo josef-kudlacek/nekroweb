@@ -28,7 +28,7 @@ class CurriculumPresenter extends BasePresenter
     private function getCurriculumData()
     {
         parent::startup();
-        if ($this->getUser()->loggedIn) {
+        if ($this->getUser()->loggedIn && !$this->getUser()->isInRole('Profesor')) {
             $userIdentity = $this->getUser()->getIdentity();
 
             return $this->curriculum->getLessonsByUserAndSemester($userIdentity->getId(), $userIdentity->semesterFrom, $userIdentity->semesterTo);

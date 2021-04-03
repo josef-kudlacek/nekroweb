@@ -23,7 +23,7 @@ class CharacterPresenter extends BasePresenter
     private function getCharacterData()
     {
         parent::startup();
-        if ($this->getUser()->loggedIn) {
+        if ($this->getUser()->loggedIn && !$this->getUser()->isInRole('Profesor')) {
             $userIdentity = $this->getUser()->getIdentity();
 
             return $this->character->getCharactersByClassId($userIdentity->classId);
