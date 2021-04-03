@@ -81,7 +81,7 @@ class Filter
                 $houseColor = 'info';
                 break;
             default:
-                $houseColor = 'dark';
+                $houseColor = 'info';
         }
 
         return $houseColor;

@@ -203,4 +203,13 @@ class User
             $studentId);
     }
 
+    public function updateLastLogin($userId)
+    {
+        return $this->database->query('
+            UPDATE user
+            SET LastLogin = NOW()
+            WHERE Id = ?;',
+            $userId);
+    }
+
 }

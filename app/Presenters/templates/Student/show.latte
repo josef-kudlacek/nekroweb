@@ -16,6 +16,7 @@
                     <th class="text-white bg-dark">Třída</th>
                     <th class="text-white bg-dark">Aktivní</th>
                     <th class="text-white bg-dark">Studuje</th>
+                    <th class="text-white bg-dark">PP</th>
                     <th class="text-white bg-dark">Správa studenta</th>
                 </tr>
             </thead>
@@ -28,6 +29,7 @@
                     <td>{$student->ClassName}</td>
                     <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
                     <td>{$student->StudentIsActive ? 'Ano' : 'Ne'}</td>
+                    <td title="{$student->LastLogin|date:"%d. %m. %Y %H:%M:%S"}">{$student->LastLogin ? 'Ano' : 'Ne'}</td>
                     <td>
                         <a href="{link edit $student->UserId, $student->ClassId}" class="btn btn-secondary btn-sm"
                            role="button">Upravit</a>

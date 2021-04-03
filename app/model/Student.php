@@ -151,7 +151,7 @@ class Student
         return $this->database->query('
             SELECT user.Id AS UserId, user.name AS UserName, user.IsActive, user.Email,
             student.HouseId, student.ClassId, student.IsActive AS StudentIsActive,
-            house.Name AS HouseName, class.Name AS ClassName
+            user.LastLogin, house.Name AS HouseName, class.Name AS ClassName
             FROM student
             INNER JOIN user
             ON user.Id = student.UserId

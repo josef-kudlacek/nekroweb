@@ -151,6 +151,7 @@ class SignPresenter extends BasePresenter
             if ($this->getUser()->isInRole('Profesor')) {
                 Utils::setActualSemester($this->getUser()->getIdentity(), $this->semester->GetActualSemester());
             }
+            $this->dbUser->updateLastLogin($this->getUser()->getId());
 
             $this->flashMessage('Přihlášení proběhlo úspěšně.' ,"success");
             $this->redirect('Homepage:default');

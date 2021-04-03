@@ -19,20 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Set version of website.">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/create.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/edit.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/react.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SuggestionPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SuggestionPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/profesor.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Navbar/student.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Suggestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Suggestion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/include-1.994/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.994/css/styles.css" afterDir="false" />
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add suggestions and change layout with evaluation.">
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/Filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Filter.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,14 +171,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="30365000" />
-    </task>
-    <task id="LOCAL-00143" summary="Change lesson name on attendance detail.">
-      <created>1606166408461</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1606166408461</updated>
+      <workItem from="1617429724640" duration="30703000" />
     </task>
     <task id="LOCAL-00144" summary="Styling of certification page.">
       <created>1606171141188</created>
@@ -526,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617453147552</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="Add suggestions and change layout with evaluation.">
+      <created>1617465866255</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1617465866255</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change history by logged user data." />
     <MESSAGE value="Change characters by logged user data." />
     <MESSAGE value="Change curriculum by logged user data." />
     <MESSAGE value="Refactor - rename private function for logged data." />
@@ -570,7 +559,8 @@
     <MESSAGE value="Change system of evaluation." />
     <MESSAGE value="Change naming of datatables based on value." />
     <MESSAGE value="Set version of website." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set version of website." />
+    <MESSAGE value="Add suggestions and change layout with evaluation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add suggestions and change layout with evaluation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
