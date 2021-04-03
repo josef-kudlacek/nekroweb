@@ -1,7 +1,7 @@
 <div>
     <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button">
         <a class="navbar-brand" href="{link Homepage:default}">Nekromancie<span class="text-primary">R.B.</span></a>
-        <a class="nav-year text-light" href="{link User:class}">
+        <a class="nav-year text-light" href="{link User:class}" title="Umožňuje přepnutí mezi studovanými třídami nekromancie">
             {$user->getIdentity()->className}
             ({$user->getIdentity()->semesterFrom}{if $user->getIdentity()->semesterTo}/{$user->getIdentity()->semesterTo}{/if})
         </a>
