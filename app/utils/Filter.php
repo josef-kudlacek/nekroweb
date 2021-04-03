@@ -50,6 +50,9 @@ class Filter
             case 6:
                 $attendanceColor = 'info';
                 break;
+            case 7:
+                $attendanceColor = 'primary';
+                break;
             default:
                 $attendanceColor = 'dark';
         }
