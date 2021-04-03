@@ -32,6 +32,7 @@ class StudentAssessmentPresenter extends BasePresenter
     {
         $classId = $this->user->getIdentity()->classId;
 
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->assessmentsHeader = $this->semesterAssessment->getAssessmentsInSemesterByClassId($classId)->fetchPairs('Code', 'Name');
         $this->template->assessments = $this->studentAssessment->getStudentAssessmentsByClass($classId)->fetchAll();
     }
@@ -41,6 +42,7 @@ class StudentAssessmentPresenter extends BasePresenter
         $userId = $this->user->getId();
         $classId = $this->user->getIdentity()->classId;
 
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->assessment = $this->studentAssessment->getStudentAssessments($userId, $classId)->fetchAll();
     }
 

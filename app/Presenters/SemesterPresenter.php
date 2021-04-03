@@ -27,6 +27,7 @@ class SemesterPresenter extends BasePresenter
 
     public function renderShow()
     {
+        $this->template->userId = hash('ripemd160', $this->getUser()->getId());
         $this->template->semesters = $this->semester->getSemesters();
     }
 

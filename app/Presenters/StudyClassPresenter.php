@@ -43,6 +43,8 @@ class StudyClassPresenter extends BasePresenter
     public function renderPoints()
     {
         $classId = $this->getUser()->getIdentity()->classId;
+
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->students = $this->studyClass->getPointsSumByClass($classId);
     }
 
@@ -51,6 +53,8 @@ class StudyClassPresenter extends BasePresenter
         $this->checkAccess();
 
         $semesterId = $this->getUser()->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $semesterId);
         $this->template->studyClass = $this->studyClass->getClassesBySemester($semesterId);
     }
 

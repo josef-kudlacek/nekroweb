@@ -35,6 +35,7 @@ class QuotePresenter extends BasePresenter
             $this->redirect('Homepage:default');
         }
 
+        $this->template->userId = hash('ripemd160', $this->getUser()->getId());
         $this->template->quotes = $this->quote->getQuotes();
     }
 
@@ -42,6 +43,7 @@ class QuotePresenter extends BasePresenter
     {
         $studentId = $this->getUser()->getId();
 
+        $this->template->studentId = $this->template->classId = hash('ripemd160', $studentId);
         $this->template->quotes = $this->quote->getQuotesByStudent($studentId);
     }
 

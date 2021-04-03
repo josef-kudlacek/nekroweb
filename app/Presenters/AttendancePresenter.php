@@ -76,6 +76,7 @@ class AttendancePresenter extends BasePresenter
         $this->checkAccess();
         $semesterId = $this->getUser()->getIdentity()->semesterId;
 
+        $this->template->semesterId = hash('ripemd160', $semesterId);
         $this->template->classes = $this->studyClass->getClassesBySemester($semesterId);
         $this->template->classAttendance = $this->attendance->getAttendancesBySemesterId($semesterId);
     }
@@ -84,6 +85,7 @@ class AttendancePresenter extends BasePresenter
     {
         $this->checkAccess();
 
+        $this->template->attendanceId = hash('ripemd160', $ClassId+$LessonId);
         $this->template->attendance = $this->attendance->getClassAttendanceSummary($ClassId, $LessonId)->fetchAll();
         $this->template->arc = $this->arc->getArcsByAttendance($ClassId, $LessonId)->fetch();
     }
@@ -156,7 +158,7 @@ class AttendancePresenter extends BasePresenter
         $userId = $this->user->getId();
         $classId = $this->user->getIdentity()->classId;
 
-
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->attendance = $this->attendance->getAttendanceByStudent($userId, $classId)->fetchAll();
     }
 
@@ -164,6 +166,7 @@ class AttendancePresenter extends BasePresenter
     {
         $classId = $this->user->getIdentity()->classId;
 
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->attendance = $this->attendance->getAttendanceByClass($classId)->fetchAll();
     }
 

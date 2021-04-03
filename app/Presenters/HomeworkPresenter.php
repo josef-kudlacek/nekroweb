@@ -59,6 +59,8 @@ class HomeworkPresenter extends BasePresenter
     public function actionShow()
     {
         $semesterId = $this->user->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $semesterId);
         $this->template->assessments = $this->assessment->getAssessmentsBySemester($semesterId);
     }
 

@@ -4,7 +4,7 @@
         <h2>Přehled vypracování úkolu {$assessment->Code} – {$assessment->Name}</h2>
         {if $assessments}
         <div class="table-responsive">
-                <table id="shared-table" class="table table-bordered data-table">
+                <table id="shared-table" class="table table-bordered data-table" data-key="{$assessmentId}">
                     <thead>
                         <tr>
                             <th class="text-white bg-dark text-center">Školní rok</th>

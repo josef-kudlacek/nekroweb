@@ -45,6 +45,7 @@ class CardPresenter extends BasePresenter
         $this->checkAccess();
         $semesterId = $this->getUser()->getIdentity()->semesterId;
 
+        $this->template->semesterId = hash('ripemd160', $semesterId);
         $this->template->cards = $this->card->getCardsBySemester($semesterId);
     }
 
@@ -53,6 +54,7 @@ class CardPresenter extends BasePresenter
         $studentId = $this->user->getId();
         $classId = $this->user->getIdentity()->classId;
 
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->cards = $this->card->getCardsByStudent($studentId, $classId);
     }
 
@@ -60,6 +62,7 @@ class CardPresenter extends BasePresenter
     {
         $classId = $this->user->getIdentity()->classId;
 
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->cards = $this->card->getCardsByClass($classId);
     }
 

@@ -56,6 +56,8 @@ class OverviewPresenter extends BasePresenter
     public function renderAttendance()
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $SemesterId);
         $this->template->attendance = $this->attendance->getAttendanceBySemester($SemesterId);
     }
 
@@ -63,6 +65,7 @@ class OverviewPresenter extends BasePresenter
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
 
+        $this->template->semesterId = hash('ripemd160', $SemesterId);
         $this->template->assessmentsHeader = $this->semesterAssessment->getAssessmentsInSemesterBySemesterId($SemesterId)->fetchPairs('Code', 'Name');
         $this->template->assessments = $this->studentAssessment->getStudentAssessmentsBySemester($SemesterId)->fetchAll();
     }
@@ -70,12 +73,16 @@ class OverviewPresenter extends BasePresenter
     public function renderPoints()
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $SemesterId);
         $this->template->students = $this->studyClass->getPointsSumBySemesterId($SemesterId);
     }
 
     public function renderShow()
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $SemesterId);
         $this->template->students = $this->studyClass->getOverviewBySemester($SemesterId);
     }
 

@@ -44,11 +44,13 @@ class SuggestionPresenter extends BasePresenter
 
     public function actionError()
     {
+        $this->template->userId = hash('ripemd160', $this->getUser()->getId());
         $this->template->errors = $this->error->getErrors();
     }
 
     public function actionErrorAdmin()
     {
+        $this->template->userId = hash('ripemd160', $this->getUser()->getId());
         $this->template->errors = $this->error->getErrors();
     }
 

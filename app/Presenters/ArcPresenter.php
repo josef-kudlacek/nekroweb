@@ -48,6 +48,7 @@ class ArcPresenter extends BasePresenter
     {
         $classId = $this->getUser()->getIdentity()->classId;
 
+        $this->template->classId = hash('ripemd160', $classId);
         $this->template->class = $this->studyClass->getClassById($classId)->fetch();
         $this->template->arcs = $this->arc->getArcsByClass($classId);
     }

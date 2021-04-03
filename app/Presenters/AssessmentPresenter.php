@@ -59,6 +59,8 @@ class AssessmentPresenter extends BasePresenter
     public function renderShow()
     {
         $SemesterId = $this->getUser()->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $SemesterId);
         $this->template->assessments = $this->assessment->getAssessmentBySemester($SemesterId);
     }
 

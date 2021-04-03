@@ -79,6 +79,7 @@ class SemesterAssessmentPresenter extends BasePresenter
             $this->redirect('SemesterAssessment:show');
         }
 
+        $this->template->assessmentId = hash('ripemd160', $assessmentId);
         $this->template->assessment = $assessment;
         $this->template->assessments = $assessments;
     }

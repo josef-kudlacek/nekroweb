@@ -19,12 +19,49 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Add lesson types.">
+    <list default="true" id="96b97206-729d-483a-a322-2b75d06d9b5f" name="Default Changelist" comment="Change system of evaluation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/EvaluationPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Evaluation/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Evaluation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Evaluation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/ArcPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ArcPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/AssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/AssessmentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/AttendancePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/AttendancePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/CardPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/CardPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/CompetitionPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomeworkPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/OverviewPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/QuotePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/QuotePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterAssessmentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SemesterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SemesterPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/StudentAssessmentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudentAssessmentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/StudentPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudentPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/StudyClassPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/StudyClassPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SuggestionPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SuggestionPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Arc/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Assessment/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/detail.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Attendance/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Card/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Card/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Competition/semester.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homework/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/assessment.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/attendance.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/attendance.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/points.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/points.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Overview/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Overview/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/admin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Quote/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Quote/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Semester/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Semester/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/SemesterAssessment/shared.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Student/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/class.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudentAssessment/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/points.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/points.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/StudyClass/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/error.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/error.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/errorAdmin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Suggestion/errorAdmin.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/include-1.993/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/include-1.993/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,14 +210,7 @@
       <workItem from="1614369427989" duration="1020000" />
       <workItem from="1615038389594" duration="3632000" />
       <workItem from="1617429410314" duration="260000" />
-      <workItem from="1617429724640" duration="10613000" />
-    </task>
-    <task id="LOCAL-00140" summary="Disquisition removed for now.">
-      <created>1606159094441</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1606159094441</updated>
+      <workItem from="1617429724640" duration="16898000" />
     </task>
     <task id="LOCAL-00141" summary="Remove data-table CSS from legend.latte">
       <created>1606159260342</created>
@@ -518,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617436328869</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="Change system of evaluation.">
+      <created>1617441725216</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1617441725216</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +574,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Secure route deprecated" />
     <MESSAGE value="Secure route deprecated." />
     <MESSAGE value="Show class when creating assessment." />
     <MESSAGE value="Change history by logged user data." />
@@ -562,7 +598,8 @@
     <MESSAGE value="Fix curriculum show for user when more classes in past." />
     <MESSAGE value="Fix show characters and curriculum for professor." />
     <MESSAGE value="Add lesson types." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add lesson types." />
+    <MESSAGE value="Change system of evaluation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change system of evaluation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

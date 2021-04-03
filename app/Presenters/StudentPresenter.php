@@ -49,6 +49,7 @@ class StudentPresenter extends BasePresenter
     {
         $semesterId = $this->getUser()->getIdentity()->semesterId;
 
+        $this->template->semesterId = hash('ripemd160', $semesterId);
         $this->template->students = $this->student->getStudentsBySemesterId($semesterId);
     }
 

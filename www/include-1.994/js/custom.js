@@ -100,6 +100,14 @@ $(document).ready(function(){
 
     $('.data-table').DataTable( {
         stateSave: true,
+        "stateSaveCallback": function(settings,data) {
+            localStorage.setItem( window.location.pathname
+                +'='+$(this).attr('data-key'), JSON.stringify(data) )
+        },
+        "stateLoadCallback": function(settings) {
+            return JSON.parse( localStorage.getItem(window.location.pathname
+                +'='+$(this).attr('data-key') ) )
+        },
         info: false,
         hideEmptyCols: true,
         "language": {

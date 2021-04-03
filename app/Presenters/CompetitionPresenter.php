@@ -48,6 +48,8 @@ class CompetitionPresenter extends BasePresenter
         $this->checkAccess();
 
         $semesterId = $this->getUser()->getIdentity()->semesterId;
+
+        $this->template->semesterId = hash('ripemd160', $semesterId);
         $this->template->competitions = $this->competition->getCompetitionBySemester($semesterId);
     }
 
