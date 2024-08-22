@@ -41,6 +41,14 @@ class SignPresenter extends BasePresenter
      */
     public $house;
 
+    public function actionAccess()
+    {
+        if (!$this->getUser()->isInRole('Profesor')) {
+            $this->flashMessage('Přístup do neoprávněné sekce. Proběhlo přesměrování na hlavní stránku.','danger');
+            $this->redirect('Homepage:default');
+        }
+    }
+
     public function actionLogout()
     {
         if ($this->getUser()->getIdentity()->oldIdentity)

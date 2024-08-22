@@ -29,7 +29,7 @@
                     <td>{$student->ClassName}</td>
                     <td>{$student->IsActive ? 'Ano' : 'Ne'}</td>
                     <td>{$student->StudentIsActive ? 'Ano' : 'Ne'}</td>
-                    <td title="{$student->LastLogin|date:"%d. %m. %Y %H:%M:%S"}">{$student->LastLogin ? 'Ano' : 'Ne'}</td>
+                    <td>{$student->LastLogin ? $student->LastLogin|date:"%d. %m. %Y %H:%M:%S" : 'Ne'}</td>
                     <td>
                         <a href="{link edit $student->UserId, $student->ClassId}" class="btn btn-secondary btn-sm"
                            role="button">Upravit</a>
