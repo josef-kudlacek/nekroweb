@@ -1,7 +1,13 @@
 {block content}
-<h1 n:block=title>Access Denied</h1>
+    <div class="container">
+        <h1 n:block="title">Přístup zamítnut</h1>
+        <p>
+            Nemáte oprávnění vstoupit na tuto stránku.<br />
+            Pokud je to chyba, kontakujte prosím <b>
+                <a href="https://bradavice.eu//ukaz.php?name=Richard+Bufler"
+                   target="_blank" class="text-info">profesora Buflera</a>.</b>
+        </p>
+        <p><small>chyba 403</small></p>
+    </div>
+{/block}
 
-<p>You do not have permission to view this page. Please try contact the web
-site administrator if you believe you should be able to view this page.</p>
-
-<p><small>error 403</small></p>
